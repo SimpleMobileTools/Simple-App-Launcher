@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="social_padding">12dp</dimen>
+    <dimen name="social_logo">50dp</dimen>
+</resources>
