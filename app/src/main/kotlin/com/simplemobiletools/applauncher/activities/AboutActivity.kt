@@ -1,6 +1,7 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.text.Html
@@ -21,9 +22,10 @@ class AboutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_about)
 
         setupEmail()
-        setupCopyright()
         setupRateUs()
+        setupLicense()
         setupSocial()
+        setupCopyright()
     }
 
     private fun setupEmail() {
@@ -32,12 +34,6 @@ class AboutActivity : AppCompatActivity() {
         val href = "<a href=\"mailto:$email?subject=$appName\">$email</a>"
         about_email.text = Html.fromHtml(href)
         about_email.movementMethod = LinkMovementMethod.getInstance()
-    }
-
-    private fun setupCopyright() {
-        val versionName = BuildConfig.VERSION_NAME
-        val year = Calendar.getInstance().get(Calendar.YEAR)
-        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
     private fun setupRateUs() {
@@ -50,6 +46,12 @@ class AboutActivity : AppCompatActivity() {
         }
     }
 
+    private fun setupLicense() {
+        about_license.setOnClickListener {
+            startActivity(Intent(applicationContext, LicenseActivity::class.java))
+        }
+    }
+
     private fun setupSocial() {
         about_facebook.setOnClickListener {
             startActivity(viewIntent(getFacebookUrl()))
@@ -59,6 +61,12 @@ class AboutActivity : AppCompatActivity() {
             val link = "https://plus.google.com/communities/104880861558693868382"
             startActivity(viewIntent(link))
         }
+    }
+
+    private fun setupCopyright() {
+        val versionName = BuildConfig.VERSION_NAME
+        val year = Calendar.getInstance().get(Calendar.YEAR)
+        about_copyright.text = String.format(getString(R.string.copyright), versionName, year)
     }
 
     private fun getFacebookUrl(): String {

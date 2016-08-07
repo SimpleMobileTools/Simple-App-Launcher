@@ -21,5 +21,10 @@
             android:name=".activities.AboutActivity"
             android:label="@string/about"
             android:parentActivityName=".activities.MainActivity"/>
+
+        <activity
+            android:name=".activities.LicenseActivity"
+            android:label="@string/third_party_licences"
+            android:parentActivityName=".activities.AboutActivity"/>
     </application>
 </manifest>
