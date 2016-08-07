@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            R.id.settings -> {
+                startActivity(Intent(applicationContext, SettingsActivity::class.java))
+                return true
+            }
             R.id.about -> {
                 startActivity(Intent(applicationContext, AboutActivity::class.java))
                 return true
