@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.extensions.isFirstRun
+import com.simplemobiletools.applauncher.extensions.preferences
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,5 +29,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        preferences().isFirstRun(false)
     }
 }
