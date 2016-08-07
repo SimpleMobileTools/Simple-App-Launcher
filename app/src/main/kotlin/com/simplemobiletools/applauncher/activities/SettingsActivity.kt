@@ -20,7 +20,7 @@ class SettingsActivity : AppCompatActivity() {
         settings_dark_theme.isChecked = preferences.isDarkTheme
 
         settings_dark_theme_holder.setOnClickListener {
-            settings_dark_theme.isChecked = !settings_dark_theme.isChecked
+            settings_dark_theme.toggle()
             preferences.isDarkTheme = settings_dark_theme.isChecked
             restartActivity()
         }
