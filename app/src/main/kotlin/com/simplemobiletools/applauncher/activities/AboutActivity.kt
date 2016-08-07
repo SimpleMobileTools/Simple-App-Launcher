@@ -37,7 +37,7 @@ class AboutActivity : AppCompatActivity() {
     }
 
     private fun setupRateUs() {
-        if (preferences().isFirstRun) {
+        if (preferences.isFirstRun) {
             about_rate_us.visibility = View.GONE
         }
 
