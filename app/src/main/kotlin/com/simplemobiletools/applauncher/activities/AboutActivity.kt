@@ -3,7 +3,6 @@ package com.simplemobiletools.applauncher.activities
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
@@ -15,7 +14,7 @@ import com.simplemobiletools.applauncher.extensions.viewIntent
 import kotlinx.android.synthetic.main.activity_about.*
 import java.util.*
 
-class AboutActivity : AppCompatActivity() {
+class AboutActivity : SimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

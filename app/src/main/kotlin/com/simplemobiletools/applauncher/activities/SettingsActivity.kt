@@ -2,13 +2,12 @@ package com.simplemobiletools.applauncher.activities
 
 import android.os.Bundle
 import android.support.v4.app.TaskStackBuilder
-import android.support.v7.app.AppCompatActivity
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.isDarkTheme
 import com.simplemobiletools.applauncher.extensions.preferences
 import kotlinx.android.synthetic.main.activity_settings.*
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivity : SimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

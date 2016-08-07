@@ -1,12 +1,11 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.viewIntent
 import kotlinx.android.synthetic.main.activity_license.*
 
-class LicenseActivity : AppCompatActivity() {
+class LicenseActivity : SimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
