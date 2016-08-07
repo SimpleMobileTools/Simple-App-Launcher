@@ -14,8 +14,10 @@ fun Context.preferences(init: SharedPreferences.() -> Unit = defaultInit): Share
     return defaultPreferences
 }
 
-val SharedPreferences.isFirstRun: Boolean get() = getBoolean(IS_FIRST_RUN, true)
-
-fun SharedPreferences.isFirstRun(isFirstRun: Boolean) {
-    edit().putBoolean(IS_FIRST_RUN, isFirstRun).apply()
-}
+var SharedPreferences.isFirstRun: Boolean
+    set(isFirstRun: Boolean) {
+        edit().putBoolean(IS_FIRST_RUN, isFirstRun).apply()
+    }
+    get() {
+        return getBoolean(IS_FIRST_RUN, true)
+    }
