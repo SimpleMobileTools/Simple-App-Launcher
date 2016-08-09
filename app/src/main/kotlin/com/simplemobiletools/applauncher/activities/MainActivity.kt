@@ -32,6 +32,7 @@ class MainActivity : SimpleActivity() {
             apps.add(AppLauncher(componentInfo.loadLabel(pm).toString(), componentInfo.loadIcon(pm)))
         }
 
+        apps.sortBy { it.name }
         launchers_holder.adapter = LaunchersAdapter(apps)
     }
 
