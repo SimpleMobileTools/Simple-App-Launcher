@@ -29,11 +29,16 @@ class MainActivity : SimpleActivity() {
         val list = pm.queryIntentActivities(intent, PackageManager.PERMISSION_GRANTED)
         for (info in list) {
             val componentInfo = info.activityInfo.applicationInfo
-            apps.add(AppLauncher(componentInfo.loadLabel(pm).toString(), componentInfo.loadIcon(pm)))
+            apps.add(AppLauncher(componentInfo.loadLabel(pm).toString(), componentInfo.loadIcon(pm), componentInfo.packageName))
         }
 
         apps.sortBy { it.name }
-        launchers_holder.adapter = LaunchersAdapter(apps)
+        launchers_holder.adapter = LaunchersAdapter(apps) {
+            val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
+            if (launchIntent != null) {
+                startActivity(launchIntent)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
