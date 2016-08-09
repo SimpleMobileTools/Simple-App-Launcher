@@ -3,4 +3,8 @@
     <dimen name="social_padding">8dp</dimen>
     <dimen name="social_logo">40dp</dimen>
     <dimen name="settings_padding">8dp</dimen>
+    <dimen name="launcher_padding">4dp</dimen>
+    <dimen name="icon_size">60dp</dimen>
+
+    <dimen name="font_size">12sp</dimen>
 </resources>
