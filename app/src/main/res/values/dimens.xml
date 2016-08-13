@@ -6,6 +6,8 @@
     <dimen name="launcher_padding_small">4dp</dimen>
     <dimen name="launcher_padding_large">8dp</dimen>
     <dimen name="icon_size">60dp</dimen>
+    <dimen name="icon_size_smaller">50dp</dimen>
 
     <dimen name="font_size">12sp</dimen>
+    <dimen name="font_size_smaller">11sp</dimen>
 </resources>

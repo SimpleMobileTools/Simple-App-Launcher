@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
-import kotlinx.android.synthetic.main.app_launcher_item.view.*
+import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 import java.util.*
 
 class RecyclerAdapter(val launchers: ArrayList<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
@@ -17,7 +17,7 @@ class RecyclerAdapter(val launchers: ArrayList<AppLauncher>, val itemClick: (App
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(R.layout.app_launcher_item, parent, false)
+        val view = LayoutInflater.from(parent?.context).inflate(R.layout.app_launcher_dialog_item, parent, false)
         return ViewHolder(view, itemClick)
     }
 

@@ -6,6 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
-    android:paddingTop="@dimen/activity_margin"
+    android:padding="@dimen/launcher_padding_large"
     app:layoutManager="android.support.v7.widget.GridLayoutManager"
     app:spanCount="@integer/columns"/>
