@@ -19,7 +19,10 @@ class MainActivity : SimpleActivity() {
         setContentView(R.layout.activity_main)
         dbHelper = DbHelper(applicationContext)
         launchers_holder.adapter = MyCursorAdapter(applicationContext, dbHelper.getLaunchers()) {
-
+            val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
+            if (launchIntent != null) {
+                startActivity(launchIntent)
+            }
         }
     }
 
