@@ -7,6 +7,7 @@ import android.view.MenuItem
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.MyCursorAdapter
 import com.simplemobiletools.applauncher.databases.DbHelper
+import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.extensions.isFirstRun
 import com.simplemobiletools.applauncher.extensions.preferences
 import com.simplemobiletools.applauncher.extensions.viewIntent
@@ -27,7 +28,10 @@ class MainActivity : SimpleActivity() {
                 startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
             }
         }
-        fab.setOnClickListener { }
+
+        fab.setOnClickListener {
+            AddAppDialog().show(fragmentManager, "")
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
