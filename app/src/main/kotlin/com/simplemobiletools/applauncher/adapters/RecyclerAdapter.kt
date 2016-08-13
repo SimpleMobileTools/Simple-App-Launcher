@@ -7,9 +7,8 @@ import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
-import java.util.*
 
-class RecyclerAdapter(val launchers: ArrayList<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
+class RecyclerAdapter(val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

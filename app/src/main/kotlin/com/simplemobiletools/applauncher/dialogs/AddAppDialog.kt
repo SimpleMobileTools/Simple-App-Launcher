@@ -12,6 +12,7 @@ import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.launcher_picker.view.*
 import java.util.*
+import kotlin.comparisons.compareBy
 
 class AddAppDialog() : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
@@ -38,11 +39,15 @@ class AddAppDialog() : DialogFragment() {
         val list = packageManager.queryIntentActivities(intent, PackageManager.PERMISSION_GRANTED)
         for (info in list) {
             val componentInfo = info.activityInfo.applicationInfo
-            apps.add(AppLauncher(componentInfo.loadLabel(packageManager).toString(), componentInfo.packageName, 0, componentInfo.loadIcon(packageManager)))
+            val label = componentInfo.loadLabel(packageManager).toString()
+            val pkgName = componentInfo.packageName
+            val icon = componentInfo.loadIcon(packageManager)
+            apps.add(AppLauncher(label, pkgName, 0, icon))
         }
 
-        apps.sortBy { it.name }
-        recyclerView.launchers_holder.adapter = RecyclerAdapter(apps) {
+        val sorted = apps.sortedWith(compareBy { it.name.toLowerCase() })
+        val unique = sorted.distinctBy { it.pkgName }
+        recyclerView.launchers_holder.adapter = RecyclerAdapter(unique) {
 
         }
     }
