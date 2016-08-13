@@ -27,6 +27,7 @@ class MainActivity : SimpleActivity() {
                 startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
             }
         }
+        fab.setOnClickListener { }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
