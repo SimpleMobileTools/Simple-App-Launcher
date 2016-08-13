@@ -52,7 +52,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
                 val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
                 val pkgName = cursor.getString(cursor.getColumnIndex(DbHelper.PKG_NAME))
                 val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
-                launchers.add(AppLauncher(name, pkgName, icon, null))
+                launchers.add(AppLauncher(name, pkgName, icon))
             }
         } finally {
             cursor.close()

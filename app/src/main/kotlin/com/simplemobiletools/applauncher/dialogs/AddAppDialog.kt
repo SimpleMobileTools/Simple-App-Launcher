@@ -41,8 +41,7 @@ class AddAppDialog() : DialogFragment() {
             val componentInfo = info.activityInfo.applicationInfo
             val label = componentInfo.loadLabel(packageManager).toString()
             val pkgName = componentInfo.packageName
-            val icon = componentInfo.loadIcon(packageManager)
-            apps.add(AppLauncher(label, pkgName, 0, icon))
+            apps.add(AppLauncher(label, pkgName, 0))
         }
 
         val sorted = apps.sortedWith(compareBy { it.name.toLowerCase() })
