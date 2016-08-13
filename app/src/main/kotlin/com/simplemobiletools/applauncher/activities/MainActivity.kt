@@ -9,6 +9,7 @@ import com.simplemobiletools.applauncher.adapters.MyCursorAdapter
 import com.simplemobiletools.applauncher.databases.DbHelper
 import com.simplemobiletools.applauncher.extensions.isFirstRun
 import com.simplemobiletools.applauncher.extensions.preferences
+import com.simplemobiletools.applauncher.extensions.viewIntent
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : SimpleActivity() {
@@ -22,6 +23,8 @@ class MainActivity : SimpleActivity() {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
+            } else {
+                startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
             }
         }
     }
