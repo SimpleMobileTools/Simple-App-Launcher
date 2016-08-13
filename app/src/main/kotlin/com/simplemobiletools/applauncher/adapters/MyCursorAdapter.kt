@@ -24,9 +24,9 @@ class MyCursorAdapter(cxt: Context, dataCursor: Cursor, val itemClick: (AppLaunc
         cursor.moveToPosition(position)
         val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
         val pkgName = cursor.getString(cursor.getColumnIndex(DbHelper.PKG_NAME))
-        val icon = context.resources.getDrawable(R.mipmap.launcher)
+        val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
         val launcher = AppLauncher(name, icon, pkgName)
-        holder.bindView(launcher)
+        holder.bindView(context, launcher)
     }
 
     override fun getItemCount(): Int {
@@ -34,10 +34,10 @@ class MyCursorAdapter(cxt: Context, dataCursor: Cursor, val itemClick: (AppLaunc
     }
 
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> Unit) : RecyclerView.ViewHolder(view) {
-        fun bindView(launcher: AppLauncher) {
+        fun bindView(context: Context, launcher: AppLauncher) {
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
-                itemView.launcher_icon.setImageDrawable(launcher.icon)
+                itemView.launcher_icon.setImageDrawable(context.resources.getDrawable(launcher.icon))
                 itemView.setOnClickListener { itemClick(this) }
             }
         }
