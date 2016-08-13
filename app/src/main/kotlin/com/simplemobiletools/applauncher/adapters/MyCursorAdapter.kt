@@ -25,7 +25,7 @@ class MyCursorAdapter(cxt: Context, dataCursor: Cursor, val itemClick: (AppLaunc
         val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
         val pkgName = cursor.getString(cursor.getColumnIndex(DbHelper.PKG_NAME))
         val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
-        val launcher = AppLauncher(name, icon, pkgName)
+        val launcher = AppLauncher(name, pkgName, icon, null)
         holder.bindView(context, launcher)
     }
 
@@ -37,7 +37,7 @@ class MyCursorAdapter(cxt: Context, dataCursor: Cursor, val itemClick: (AppLaunc
         fun bindView(context: Context, launcher: AppLauncher) {
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
-                itemView.launcher_icon.setImageDrawable(context.resources.getDrawable(launcher.icon))
+                itemView.launcher_icon.setImageDrawable(context.resources.getDrawable(launcher.iconId))
                 itemView.setOnClickListener { itemClick(this) }
             }
         }
