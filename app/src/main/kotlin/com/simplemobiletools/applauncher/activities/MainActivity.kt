@@ -24,7 +24,7 @@ class MainActivity : SimpleActivity() {
         setContentView(R.layout.activity_main)
         dbHelper = DbHelper(applicationContext)
         launchers = dbHelper.getLaunchers()
-        launchers_holder.adapter = RecyclerAdapter(applicationContext, launchers) {
+        launchers_holder.adapter = RecyclerAdapter(applicationContext, false, launchers) {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
                 startActivity(launchIntent)

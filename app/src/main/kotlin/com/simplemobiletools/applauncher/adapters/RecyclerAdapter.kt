@@ -6,15 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.extensions.hide
+import com.simplemobiletools.applauncher.extensions.isVisible
+import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 
 
-class RecyclerAdapter(val cxt: Context, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
+class RecyclerAdapter(val cxt: Context, val displayChecks: Boolean, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(cxt, launchers[position])
+        holder.bindView(cxt, displayChecks, launchers[position])
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -26,11 +29,16 @@ class RecyclerAdapter(val cxt: Context, val launchers: List<AppLauncher>, val it
         return launchers.count()
     }
 
-    class ViewHolder(view: View, val itemClick: (AppLauncher) -> Unit) : RecyclerView.ViewHolder(view) {
-        fun bindView(context: Context, launcher: AppLauncher) {
+    class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : RecyclerView.ViewHolder(view) {
+        fun bindView(context: Context, displayChecks: Boolean, launcher: AppLauncher) {
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
-                itemView.setOnClickListener { itemClick(this) }
+                itemView.setOnClickListener {
+                    itemClick(this)
+
+                    if (displayChecks)
+                        handleCheck(itemView.launcher_check)
+                }
 
                 if (launcher.iconId != 0) {
                     val icon = context.resources.getDrawable(launcher.iconId)
@@ -40,6 +48,13 @@ class RecyclerAdapter(val cxt: Context, val launchers: List<AppLauncher>, val it
                     itemView.launcher_icon.setImageDrawable(icon)
                 }
             }
+        }
+
+        fun handleCheck(check: View) {
+            if (check.isVisible)
+                check.hide()
+            else
+                check.show()
         }
     }
 }

@@ -25,6 +25,7 @@
         android:textSize="@dimen/font_size_smaller"/>
 
     <ImageView
+        android:id="@+id/launcher_check"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="top|right"

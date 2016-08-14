@@ -46,7 +46,7 @@ class AddAppDialog() : DialogFragment() {
 
         val sorted = apps.sortedWith(compareBy { it.name.toLowerCase() })
         val unique = sorted.distinctBy { it.pkgName }
-        recyclerView.launchers_holder.adapter = RecyclerAdapter(activity, unique) {
+        recyclerView.launchers_holder.adapter = RecyclerAdapter(activity, true, unique) {
 
         }
     }
