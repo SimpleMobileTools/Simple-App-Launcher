@@ -26,17 +26,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         dbHelper = DbHelper(applicationContext)
-        launchers = dbHelper.getLaunchers()
-        launchers_holder.adapter = RecyclerAdapter(applicationContext, false, launchers) {
-            val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
-            if (launchIntent != null) {
-                startActivity(launchIntent)
-            } else {
-                startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
-            }
-        }
-
-        remainingLaunchers = getNotDisplayedLaunchers()
+        setupLaunchers()
 
         fab.setOnClickListener {
             AddAppDialog.newInstance(this, remainingLaunchers).show(fragmentManager, "")
@@ -62,6 +52,20 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
         return super.onOptionsItemSelected(item)
     }
 
+    private fun setupLaunchers() {
+        launchers = dbHelper.getLaunchers()
+        launchers_holder.adapter = RecyclerAdapter(applicationContext, false, launchers) {
+            val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
+            if (launchIntent != null) {
+                startActivity(launchIntent)
+            } else {
+                startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
+            }
+        }
+
+        remainingLaunchers = getNotDisplayedLaunchers()
+    }
+
     private fun getNotDisplayedLaunchers(): ArrayList<AppLauncher> {
         val apps = ArrayList<AppLauncher>()
         val intent = Intent(Intent.ACTION_MAIN, null)
@@ -84,6 +88,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
         for ((name, pkgName) in launchers) {
             dbHelper.addLauncher(name, pkgName)
         }
+        setupLaunchers()
     }
 
     override fun onDestroy() {
