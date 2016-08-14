@@ -15,6 +15,7 @@ class AddAppDialog() : DialogFragment() {
     companion object {
         lateinit var launchers: ArrayList<AppLauncher>
         var callback: AddLaunchersInterface? = null
+
         fun newInstance(cb: AddLaunchersInterface, appLaunchers: ArrayList<AppLauncher>): AddAppDialog {
             callback = cb
             launchers = appLaunchers
@@ -27,10 +28,7 @@ class AddAppDialog() : DialogFragment() {
         builder.setTitle(R.string.add_apps)
 
         val recyclerView = View.inflate(activity, R.layout.launcher_picker, null)
-        recyclerView.launchers_holder.adapter = RecyclerAdapter(activity, true, launchers) {
-
-        }
-
+        recyclerView.launchers_holder.adapter = RecyclerAdapter(activity, true, launchers) { }
         builder.setView(recyclerView)
 
         builder.setPositiveButton(android.R.string.ok, { dialogInterface, i ->
