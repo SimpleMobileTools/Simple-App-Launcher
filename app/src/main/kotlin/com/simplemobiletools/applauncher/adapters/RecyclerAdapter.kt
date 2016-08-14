@@ -12,7 +12,6 @@ import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 
-
 class RecyclerAdapter(val cxt: Context, val displayChecks: Boolean, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
