@@ -36,7 +36,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         addLauncher("Simple Notes", "com.simplemobiletools.notes", R.mipmap.notes, db)
     }
 
-    fun addLauncher(name: String, pkgName: String, iconId: Int, db: SQLiteDatabase = writableDatabase) {
+    fun addLauncher(name: String, pkgName: String, iconId: Int = 0, db: SQLiteDatabase = writableDatabase) {
         val contentValues = ContentValues()
         contentValues.put(NAME, name)
         contentValues.put(PKG_NAME, pkgName)

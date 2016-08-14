@@ -81,7 +81,9 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
     }
 
     override fun selectedLaunchers(launchers: ArrayList<AppLauncher>) {
-
+        for ((name, pkgName) in launchers) {
+            dbHelper.addLauncher(name, pkgName)
+        }
     }
 
     override fun onDestroy() {
