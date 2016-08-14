@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.hide
-import com.simplemobiletools.applauncher.extensions.isVisible
 import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
@@ -35,10 +34,13 @@ class RecyclerAdapter(val cxt: Context, val displayChecks: Boolean, val launcher
                 itemView.setOnClickListener {
                     itemClick(this)
 
-                    if (displayChecks)
-                        handleCheck(itemView.launcher_check)
+                    if (displayChecks) {
+                        launcher.isChecked = !launcher.isChecked
+                        handleCheck(itemView.launcher_check, launcher)
+                    }
                 }
 
+                handleCheck(itemView.launcher_check, launcher)
                 if (launcher.iconId != 0) {
                     val icon = context.resources.getDrawable(launcher.iconId)
                     itemView.launcher_icon.setImageDrawable(icon)
@@ -49,11 +51,12 @@ class RecyclerAdapter(val cxt: Context, val displayChecks: Boolean, val launcher
             }
         }
 
-        fun handleCheck(check: View) {
-            if (check.isVisible)
-                check.hide()
-            else
+        fun handleCheck(check: View, launcher: AppLauncher) {
+            if (launcher.isChecked) {
                 check.show()
+            } else {
+                check.hide()
+            }
         }
     }
 }

@@ -26,11 +26,11 @@
 
     <ImageView
         android:id="@+id/launcher_check"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="top|right"
-        android:scaleType="fitEnd"
-        android:src="@mipmap/check"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@mipmap/check"
         android:visibility="invisible"/>
 
 </RelativeLayout>
