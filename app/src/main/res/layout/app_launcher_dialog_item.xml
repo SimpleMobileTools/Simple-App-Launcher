@@ -31,6 +31,6 @@
         android:gravity="top|right"
         android:scaleType="fitEnd"
         android:src="@mipmap/check"
-        android:visibility="gone"/>
+        android:visibility="invisible"/>
 
 </RelativeLayout>
