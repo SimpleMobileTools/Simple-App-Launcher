@@ -14,9 +14,5 @@ class LicenseActivity : SimpleActivity() {
         license_kotlin_title.setOnClickListener {
             startActivity(viewIntent(getString(R.string.kotlin_url)))
         }
-
-        license_gson_title.setOnClickListener {
-            startActivity(viewIntent(getString(R.string.gson_url)))
-        }
     }
 }
