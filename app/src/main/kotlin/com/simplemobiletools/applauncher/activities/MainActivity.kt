@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import com.google.gson.Gson
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.databases.DbHelper
@@ -18,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.comparisons.compareBy
 
-class MainActivity : SimpleActivity() {
+class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
     lateinit var dbHelper: DbHelper
     lateinit var launchers: ArrayList<AppLauncher>
     lateinit var remainingLaunchers: ArrayList<AppLauncher>
@@ -40,11 +39,7 @@ class MainActivity : SimpleActivity() {
         remainingLaunchers = getNotDisplayedLaunchers()
 
         fab.setOnClickListener {
-            val dialog = AddAppDialog()
-            val args = Bundle()
-            args.putString(dialog.LAUNCHERS, Gson().toJson(remainingLaunchers))
-            dialog.arguments = args
-            dialog.show(fragmentManager, "")
+            AddAppDialog.newInstance(this, remainingLaunchers).show(fragmentManager, "")
         }
     }
 
@@ -83,6 +78,10 @@ class MainActivity : SimpleActivity() {
         val unique = sorted.distinctBy { it.pkgName }
         val filtered = unique.filter { !launchers.contains(it) }
         return filtered as ArrayList<AppLauncher>
+    }
+
+    override fun selectedLaunchers(launchers: ArrayList<AppLauncher>) {
+
     }
 
     override fun onDestroy() {
