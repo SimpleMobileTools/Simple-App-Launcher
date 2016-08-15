@@ -46,13 +46,14 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
 
     fun getLaunchers(): ArrayList<AppLauncher> {
         val launchers = ArrayList<AppLauncher>()
-        val cursor = readableDatabase.query(TABLE, arrayOf(NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
+        val cursor = readableDatabase.query(TABLE, arrayOf(ID, NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
         try {
             while (cursor.moveToNext()) {
+                val id = cursor.getInt(cursor.getColumnIndex(DbHelper.ID))
                 val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
                 val pkgName = cursor.getString(cursor.getColumnIndex(DbHelper.PKG_NAME))
                 val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
-                launchers.add(AppLauncher(name, pkgName, icon))
+                launchers.add(AppLauncher(id, name, pkgName, icon))
             }
         } finally {
             cursor.close()

@@ -25,6 +25,11 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     val deleteMode = object : ModalMultiSelectorCallback(multiSelector) {
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
+            when (item?.itemId) {
+                R.id.cab_delete -> {
+                    return true
+                }
+            }
             return false
         }
 

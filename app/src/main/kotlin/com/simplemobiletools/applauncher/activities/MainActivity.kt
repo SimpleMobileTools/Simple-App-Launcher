@@ -67,7 +67,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
     }
 
     private fun getNotDisplayedLaunchers(): ArrayList<AppLauncher> {
-        val apps = ArrayList<AppLauncher>()
+        val allApps = ArrayList<AppLauncher>()
         val intent = Intent(Intent.ACTION_MAIN, null)
         intent.addCategory(Intent.CATEGORY_LAUNCHER)
         val list = packageManager.queryIntentActivities(intent, PackageManager.PERMISSION_GRANTED)
@@ -75,17 +75,17 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
             val componentInfo = info.activityInfo.applicationInfo
             val label = componentInfo.loadLabel(packageManager).toString()
             val pkgName = componentInfo.packageName
-            apps.add(AppLauncher(label, pkgName, 0))
+            allApps.add(AppLauncher(0, label, pkgName, 0))
         }
 
-        val sorted = apps.sortedWith(compareBy { it.name.toLowerCase() })
+        val sorted = allApps.sortedWith(compareBy { it.name.toLowerCase() })
         val unique = sorted.distinctBy { it.pkgName }
         val filtered = unique.filter { !launchers.contains(it) }
         return filtered as ArrayList<AppLauncher>
     }
 
     override fun selectedLaunchers(launchers: ArrayList<AppLauncher>) {
-        for ((name, pkgName) in launchers) {
+        for ((id, name, pkgName) in launchers) {
             dbHelper.addLauncher(name, pkgName)
         }
         setupLaunchers()
