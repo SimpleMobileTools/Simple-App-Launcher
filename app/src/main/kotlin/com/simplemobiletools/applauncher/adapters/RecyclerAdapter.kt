@@ -9,6 +9,8 @@ import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.extensions.hide
+import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 
@@ -65,6 +67,11 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     if (multiSelector.isSelectable) {
                         val isSelected = multiSelector.selectedPositions.contains(viewHolder.layoutPosition)
                         multiSelector.setSelected(viewHolder, !isSelected)
+                        if (isSelected) {
+                            itemView.launcher_check.hide()
+                        } else {
+                            itemView.launcher_check.show()
+                        }
 
                         val selectedCnt = multiSelector.selectedPositions.size
                         if (selectedCnt == 0) {
@@ -78,9 +85,12 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 }
 
                 itemView.setOnLongClickListener {
-                    (act as AppCompatActivity).startSupportActionMode(deleteMode)
-                    multiSelector.setSelected(viewHolder, true)
-                    actMode?.title = multiSelector.selectedPositions.size.toString()
+                    if (!multiSelector.isSelectable) {
+                        (act as AppCompatActivity).startSupportActionMode(deleteMode)
+                        multiSelector.setSelected(viewHolder, true)
+                        actMode?.title = multiSelector.selectedPositions.size.toString()
+                        itemView.launcher_check.show()
+                    }
                     true
                 }
 
