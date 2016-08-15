@@ -17,6 +17,10 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     val multiSelector = MultiSelector()
 
+    companion object {
+        var actMode: ActionMode? = null
+    }
+
     val deleteMode = object : ModalMultiSelectorCallback(multiSelector) {
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
             return false
@@ -24,6 +28,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
         override fun onCreateActionMode(actionMode: ActionMode?, menu: Menu?): Boolean {
             super.onCreateActionMode(actionMode, menu)
+            actMode = actionMode
             act.menuInflater.inflate(R.menu.cab, menu)
             return true
         }
@@ -52,16 +57,23 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
         val viewHolder = this
+
         fun bindView(act: Activity, deleteMode: ModalMultiSelectorCallback, multiSelector: MultiSelector, launcher: AppLauncher) {
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
                 itemView.setOnClickListener {
-                    itemClick(this)
+                    if (multiSelector.isSelectable) {
+                        multiSelector.setSelected(viewHolder, true)
+                        actMode?.title = multiSelector.selectedPositions.size.toString()
+                    } else {
+                        itemClick(this)
+                    }
                 }
 
                 itemView.setOnLongClickListener {
                     (act as AppCompatActivity).startSupportActionMode(deleteMode)
                     multiSelector.setSelected(viewHolder, true)
+                    actMode?.title = multiSelector.selectedPositions.size.toString()
                     true
                 }
 
