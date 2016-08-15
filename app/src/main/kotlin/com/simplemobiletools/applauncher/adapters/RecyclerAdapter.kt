@@ -64,24 +64,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
                 itemView.setOnClickListener {
-                    if (multiSelector.isSelectable) {
-                        val isSelected = multiSelector.selectedPositions.contains(viewHolder.layoutPosition)
-                        multiSelector.setSelected(viewHolder, !isSelected)
-                        if (isSelected) {
-                            itemView.launcher_check.hide()
-                        } else {
-                            itemView.launcher_check.show()
-                        }
-
-                        val selectedCnt = multiSelector.selectedPositions.size
-                        if (selectedCnt == 0) {
-                            actMode?.finish()
-                        } else {
-                            actMode?.title = selectedCnt.toString()
-                        }
-                    } else {
-                        itemClick(this)
-                    }
+                    viewClicked(multiSelector, launcher)
                 }
 
                 itemView.setOnLongClickListener {
@@ -101,6 +84,27 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     val icon = act.packageManager.getApplicationIcon(launcher.pkgName)
                     itemView.launcher_icon.setImageDrawable(icon)
                 }
+            }
+        }
+
+        fun viewClicked(multiSelector: MultiSelector, appLauncher: AppLauncher) {
+            if (multiSelector.isSelectable) {
+                val isSelected = multiSelector.selectedPositions.contains(viewHolder.layoutPosition)
+                multiSelector.setSelected(viewHolder, !isSelected)
+                if (isSelected) {
+                    itemView.launcher_check.hide()
+                } else {
+                    itemView.launcher_check.show()
+                }
+
+                val selectedCnt = multiSelector.selectedPositions.size
+                if (selectedCnt == 0) {
+                    actMode?.finish()
+                } else {
+                    actMode?.title = selectedCnt.toString()
+                }
+            } else {
+                itemClick(appLauncher)
             }
         }
     }
