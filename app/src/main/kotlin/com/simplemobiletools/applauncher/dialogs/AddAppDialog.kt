@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.support.v7.app.AlertDialog
 import android.view.View
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
+import com.simplemobiletools.applauncher.adapters.RecyclerDialogAdapter
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.launcher_picker.view.*
 import java.util.*
@@ -28,7 +28,7 @@ class AddAppDialog() : DialogFragment() {
         builder.setTitle(R.string.add_apps)
 
         val recyclerView = View.inflate(activity, R.layout.launcher_picker, null)
-        recyclerView.launchers_holder.adapter = RecyclerAdapter(activity, true, launchers) { }
+        recyclerView.launchers_holder.adapter = RecyclerDialogAdapter(activity, launchers)
         builder.setView(recyclerView)
 
         builder.setPositiveButton(android.R.string.ok, { dialogInterface, i ->

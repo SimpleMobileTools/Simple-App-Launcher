@@ -54,7 +54,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface {
 
     private fun setupLaunchers() {
         launchers = dbHelper.getLaunchers()
-        launchers_holder.adapter = RecyclerAdapter(applicationContext, false, launchers) {
+        launchers_holder.adapter = RecyclerAdapter(applicationContext, launchers) {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
