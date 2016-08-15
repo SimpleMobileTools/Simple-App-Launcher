@@ -63,8 +63,15 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 itemView.launcher_label.text = launcher.name
                 itemView.setOnClickListener {
                     if (multiSelector.isSelectable) {
-                        multiSelector.setSelected(viewHolder, true)
-                        actMode?.title = multiSelector.selectedPositions.size.toString()
+                        val isSelected = multiSelector.selectedPositions.contains(viewHolder.layoutPosition)
+                        multiSelector.setSelected(viewHolder, !isSelected)
+
+                        val selectedCnt = multiSelector.selectedPositions.size
+                        if (selectedCnt == 0) {
+                            actMode?.finish()
+                        } else {
+                            actMode?.title = selectedCnt.toString()
+                        }
                     } else {
                         itemClick(this)
                     }
