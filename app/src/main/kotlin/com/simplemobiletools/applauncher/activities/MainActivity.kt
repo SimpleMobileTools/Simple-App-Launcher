@@ -54,6 +54,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
 
     private fun setupLaunchers() {
         launchers = dbHelper.getLaunchers()
+        checkInvalidApps()
         launchers_holder.adapter = RecyclerAdapter(this, launchers) {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
@@ -82,6 +83,18 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         val unique = sorted.distinctBy { it.pkgName }
         val filtered = unique.filter { !launchers.contains(it) }
         return filtered as ArrayList<AppLauncher>
+    }
+
+    private fun checkInvalidApps() {
+        val invalidIds = ArrayList<String>()
+        for ((id, name, pkgName) in launchers) {
+            val launchIntent = packageManager.getLaunchIntentForPackage(pkgName)
+            if (launchIntent == null && !pkgName.startsWith("com.simplemobiletools")) {
+                invalidIds.add(id.toString())
+            }
+        }
+        dbHelper.deleteLaunchers(invalidIds)
+        launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
     override fun selectedLaunchers(launchers: ArrayList<AppLauncher>) {
