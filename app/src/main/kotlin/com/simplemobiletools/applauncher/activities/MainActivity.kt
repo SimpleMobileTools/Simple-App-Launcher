@@ -104,12 +104,15 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         setupLaunchers()
     }
 
-    override fun launchersDeleted(indexes: List<Int>) {
+    override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
         val reversed = indexes.reversed()
         for (index in reversed) {
             launchers.removeAt(index)
             launchers_holder.adapter.notifyItemRemoved(index)
         }
+
+        remainingLaunchers.addAll(deletedLaunchers)
+        remainingLaunchers.sortBy { it.name }
     }
 
     override fun onDestroy() {

@@ -31,12 +31,14 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 R.id.cab_delete -> {
                     val positions = multiSelector.selectedPositions
                     val deleteIds = ArrayList<String>(positions.size)
+                    val deletedLaunchers = ArrayList<AppLauncher>(positions.size)
                     for (i in positions) {
+                        deletedLaunchers.add(launchers[i])
                         deleteIds.add(launchers[i].id.toString())
                     }
                     DbHelper(act).deleteLaunchers(deleteIds)
                     actMode?.finish()
-                    (act as EditLaunchersInterface).launchersDeleted(positions)
+                    (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
                     return true
                 }
             }
@@ -117,6 +119,6 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
     }
 
     interface EditLaunchersInterface {
-        fun launchersDeleted(indexes: List<Int>)
+        fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>)
     }
 }
