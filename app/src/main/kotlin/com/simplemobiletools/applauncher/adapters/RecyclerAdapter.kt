@@ -9,10 +9,12 @@ import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.databases.DbHelper
 import com.simplemobiletools.applauncher.extensions.hide
 import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
+import java.util.*
 
 class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -27,6 +29,12 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
             when (item?.itemId) {
                 R.id.cab_delete -> {
+                    val positions = multiSelector.selectedPositions
+                    val deleteIds = ArrayList<String>(positions.size)
+                    for (i in positions) {
+                        deleteIds.add(launchers[i].id.toString())
+                    }
+                    DbHelper(act).deleteLaunchers(deleteIds)
                     return true
                 }
             }

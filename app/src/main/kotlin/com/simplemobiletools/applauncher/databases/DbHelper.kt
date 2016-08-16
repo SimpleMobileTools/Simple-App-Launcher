@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.text.TextUtils
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
 import java.util.*
@@ -42,6 +43,11 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         contentValues.put(PKG_NAME, pkgName)
         contentValues.put(ICON_ID, iconId)
         db.insert(TABLE, null, contentValues)
+    }
+
+    fun deleteLaunchers(ids: ArrayList<String>) {
+        val args = TextUtils.join(", ", ids.toArray())
+        writableDatabase.delete(TABLE, "$ID IN ($args)", null)
     }
 
     fun getLaunchers(): ArrayList<AppLauncher> {
