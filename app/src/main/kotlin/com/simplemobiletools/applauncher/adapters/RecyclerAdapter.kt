@@ -35,6 +35,8 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                         deleteIds.add(launchers[i].id.toString())
                     }
                     DbHelper(act).deleteLaunchers(deleteIds)
+                    actMode?.finish()
+                    (act as EditLaunchersInterface).launchersDeleted(positions)
                     return true
                 }
             }
@@ -112,5 +114,9 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 itemClick(appLauncher)
             }
         }
+    }
+
+    interface EditLaunchersInterface {
+        fun launchersDeleted(indexes: List<Int>)
     }
 }
