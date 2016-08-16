@@ -49,14 +49,6 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         }
     }
 
-    override fun onAttachedToRecyclerView(recyclerView: RecyclerView?) {
-        super.onAttachedToRecyclerView(recyclerView)
-        if (multiSelector.isSelectable) {
-            deleteMode.setClearOnPrepare(false)
-            (act as AppCompatActivity).startSupportActionMode(deleteMode)
-        }
-    }
-
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindView(act, deleteMode, multiSelector, launchers[position])
     }
