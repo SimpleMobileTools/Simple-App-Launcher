@@ -32,16 +32,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
                 }
                 R.id.cab_delete -> {
-                    val positions = multiSelector.selectedPositions
-                    val deleteIds = ArrayList<String>(positions.size)
-                    val deletedLaunchers = ArrayList<AppLauncher>(positions.size)
-                    for (i in positions) {
-                        deletedLaunchers.add(launchers[i])
-                        deleteIds.add(launchers[i].id.toString())
-                    }
-                    DbHelper(act).deleteLaunchers(deleteIds)
-                    actMode?.finish()
-                    (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
+                    deleteSelectedItems()
                     return true
                 }
             }
@@ -73,6 +64,19 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     override fun getItemCount(): Int {
         return launchers.count()
+    }
+
+    private fun deleteSelectedItems() {
+        val positions = multiSelector.selectedPositions
+        val deleteIds = ArrayList<String>(positions.size)
+        val deletedLaunchers = ArrayList<AppLauncher>(positions.size)
+        for (i in positions) {
+            deletedLaunchers.add(launchers[i])
+            deleteIds.add(launchers[i].id.toString())
+        }
+        DbHelper(act).deleteLaunchers(deleteIds)
+        actMode?.finish()
+        (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
     }
 
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
