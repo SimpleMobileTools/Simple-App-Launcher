@@ -2,6 +2,9 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
+    <string name="rename_launcher">Rename launcher</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 
     <!-- About -->
     <string name="about">About</string>

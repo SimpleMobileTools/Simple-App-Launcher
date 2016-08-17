@@ -1,6 +1,7 @@
 package com.simplemobiletools.applauncher.adapters
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
@@ -14,6 +15,7 @@ import com.simplemobiletools.applauncher.extensions.hide
 import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
+import kotlinx.android.synthetic.main.edit_launcher.view.*
 import java.util.*
 
 class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
@@ -29,7 +31,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
             when (item?.itemId) {
                 R.id.cab_edit -> {
-
+                    showEditDialog()
                 }
                 R.id.cab_delete -> {
                     deleteSelectedItems()
@@ -64,6 +66,25 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     override fun getItemCount(): Int {
         return launchers.count()
+    }
+
+    private fun showEditDialog() {
+        val selectedLauncher = launchers[multiSelector.selectedPositions[0]]
+        val editView = act.layoutInflater.inflate(R.layout.edit_launcher, null)
+        editView.edit_launcher_edittext.setText(selectedLauncher.name)
+
+        val builder = AlertDialog.Builder(act)
+        builder.setTitle(act.getString(R.string.rename_launcher))
+        builder.setView(editView)
+
+        builder.setPositiveButton(R.string.ok, null)
+        builder.setNegativeButton(R.string.cancel, null)
+
+        val alertDialog = builder.create()
+        alertDialog.show()
+        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+            alertDialog.dismiss()
+        }
     }
 
     private fun deleteSelectedItems() {
