@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
 import android.view.*
+import android.widget.Toast
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
@@ -17,6 +18,7 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 import kotlinx.android.synthetic.main.edit_launcher.view.*
 import java.util.*
+import java.util.regex.Pattern
 
 class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -83,8 +85,18 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         val alertDialog = builder.create()
         alertDialog.show()
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            alertDialog.dismiss()
+            val newName = editView.edit_launcher_edittext.text.toString()
+            if (isValidName(newName)) {
+                alertDialog.dismiss()
+            } else {
+                Toast.makeText(act, act.resources.getString(R.string.invalid_characters), Toast.LENGTH_SHORT).show()
+            }
         }
+    }
+
+    private fun isValidName(newName: String): Boolean {
+        val pattern = Pattern.compile("[0-9a-zA-Z-_. ]+")
+        return pattern.matcher(newName).matches()
     }
 
     private fun deleteSelectedItems() {
