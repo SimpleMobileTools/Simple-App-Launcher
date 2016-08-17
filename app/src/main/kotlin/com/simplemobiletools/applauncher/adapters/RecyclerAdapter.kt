@@ -28,6 +28,9 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
     val deleteMode = object : ModalMultiSelectorCallback(multiSelector) {
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
             when (item?.itemId) {
+                R.id.cab_edit -> {
+
+                }
                 R.id.cab_delete -> {
                     val positions = multiSelector.selectedPositions
                     val deleteIds = ArrayList<String>(positions.size)
@@ -49,6 +52,12 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             super.onCreateActionMode(actionMode, menu)
             actMode = actionMode
             act.menuInflater.inflate(R.menu.cab, menu)
+            return true
+        }
+
+        override fun onPrepareActionMode(actionMode: ActionMode?, menu: Menu?): Boolean {
+            val menuItem = menu?.findItem(R.id.cab_edit)
+            menuItem?.isVisible = multiSelector.selectedPositions.size == 1
             return true
         }
     }
@@ -112,6 +121,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 } else {
                     actMode?.title = selectedCnt.toString()
                 }
+                actMode?.invalidate()
             } else {
                 itemClick(appLauncher)
             }
