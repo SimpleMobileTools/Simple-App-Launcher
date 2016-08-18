@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
 import android.view.*
-import android.widget.Toast
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
@@ -14,6 +13,7 @@ import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.databases.DbHelper
 import com.simplemobiletools.applauncher.extensions.hide
 import com.simplemobiletools.applauncher.extensions.show
+import com.simplemobiletools.applauncher.extensions.toast
 import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 import kotlinx.android.synthetic.main.edit_launcher.view.*
@@ -93,10 +93,10 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     finishActionMode()
                     alertDialog.dismiss()
                 } else {
-                    Toast.makeText(act, act.resources.getString(R.string.unknown_error), Toast.LENGTH_SHORT).show()
+                    act.toast(R.string.unknown_error)
                 }
             } else {
-                Toast.makeText(act, act.resources.getString(R.string.enter_launcher_name), Toast.LENGTH_SHORT).show()
+                act.toast(R.string.enter_launcher_name)
             }
         }
     }
