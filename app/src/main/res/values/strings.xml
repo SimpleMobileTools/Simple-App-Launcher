@@ -6,6 +6,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="invalid_characters">New launcher name contains invalid characters</string>
+    <string name="unknown_error">An unknown error occurred</string>
 
     <!-- About -->
     <string name="about">About</string>

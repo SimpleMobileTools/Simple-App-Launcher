@@ -85,9 +85,15 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         val alertDialog = builder.create()
         alertDialog.show()
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            val newName = editView.edit_launcher_edittext.text.toString()
+            val newName = editView.edit_launcher_edittext.text.toString().trim()
             if (isValidName(newName)) {
-                alertDialog.dismiss()
+                if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
+                    (act as EditLaunchersInterface).launcherRenamed()
+                    actMode?.finish()
+                    alertDialog.dismiss()
+                } else {
+                    Toast.makeText(act, act.resources.getString(R.string.unknown_error), Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(act, act.resources.getString(R.string.invalid_characters), Toast.LENGTH_SHORT).show()
             }
@@ -167,5 +173,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     interface EditLaunchersInterface {
         fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>)
+
+        fun launcherRenamed()
     }
 }

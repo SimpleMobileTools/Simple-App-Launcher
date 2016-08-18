@@ -115,6 +115,10 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         remainingLaunchers.sortBy { it.name }
     }
 
+    override fun launcherRenamed() {
+        setupLaunchers()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         preferences.isFirstRun = false

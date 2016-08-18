@@ -52,6 +52,14 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         writableDatabase.delete(TABLE, "$ID IN ($args)", null)
     }
 
+    fun updateLauncherName(id: Int, newName: String): Int {
+        val values = ContentValues()
+        values.put(NAME, newName)
+        val selection = ID + " = ?"
+        val selectionArgs = Array(1) { id.toString() }
+        return writableDatabase.update(TABLE, values, selection, selectionArgs)
+    }
+
     fun getLaunchers(): ArrayList<AppLauncher> {
         val launchers = ArrayList<AppLauncher>()
         val cursor = readableDatabase.query(TABLE, arrayOf(ID, NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
