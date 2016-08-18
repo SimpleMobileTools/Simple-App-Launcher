@@ -34,6 +34,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             when (item?.itemId) {
                 R.id.cab_edit -> {
                     showEditDialog()
+                    return true
                 }
                 R.id.cab_delete -> {
                     deleteSelectedItems()
@@ -89,7 +90,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             if (isValidName(newName)) {
                 if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
                     (act as EditLaunchersInterface).launcherRenamed()
-                    actMode?.finish()
+                    finishActionMode()
                     alertDialog.dismiss()
                 } else {
                     Toast.makeText(act, act.resources.getString(R.string.unknown_error), Toast.LENGTH_SHORT).show()
@@ -98,6 +99,10 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 Toast.makeText(act, act.resources.getString(R.string.invalid_characters), Toast.LENGTH_SHORT).show()
             }
         }
+    }
+
+    fun finishActionMode() {
+        actMode?.finish()
     }
 
     private fun isValidName(newName: String): Boolean {
@@ -114,7 +119,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             deleteIds.add(launchers[i].id.toString())
         }
         DbHelper(act).deleteLaunchers(deleteIds)
-        actMode?.finish()
+        finishActionMode()
         (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
     }
 

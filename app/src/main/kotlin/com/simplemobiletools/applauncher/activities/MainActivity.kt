@@ -97,11 +97,11 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
-    override fun selectedLaunchers(launchers: ArrayList<AppLauncher>) {
+    override fun addLaunchers(launchers: ArrayList<AppLauncher>) {
         for ((id, name, pkgName) in launchers) {
             dbHelper.addLauncher(name, pkgName)
         }
-        setupLaunchers()
+        refreshLaunchers()
     }
 
     override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
@@ -116,6 +116,15 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     }
 
     override fun launcherRenamed() {
+        refreshLaunchers()
+    }
+
+    override fun updateLaunchers() {
+        refreshLaunchers()
+    }
+
+    fun refreshLaunchers() {
+        (launchers_holder.adapter as RecyclerAdapter).finishActionMode()
         setupLaunchers()
     }
 

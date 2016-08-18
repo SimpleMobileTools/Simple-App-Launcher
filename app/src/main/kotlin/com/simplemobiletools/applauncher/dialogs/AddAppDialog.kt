@@ -33,14 +33,18 @@ class AddAppDialog() : DialogFragment() {
 
         builder.setPositiveButton(android.R.string.ok, { dialogInterface, i ->
             val selectedApps = launchers.filter { it.isChecked } as ArrayList<AppLauncher>
-            callback?.selectedLaunchers(selectedApps)
+            callback?.addLaunchers(selectedApps)
         })
 
-        builder.setNegativeButton(android.R.string.cancel, null)
+        builder.setNegativeButton(android.R.string.cancel, { dialogInterface, i ->
+            callback?.updateLaunchers()
+        })
         return builder.create()
     }
 
     interface AddLaunchersInterface {
-        fun selectedLaunchers(launchers: ArrayList<AppLauncher>)
+        fun addLaunchers(launchers: ArrayList<AppLauncher>)
+
+        fun updateLaunchers()
     }
 }
