@@ -84,6 +84,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         builder.setNegativeButton(R.string.cancel, null)
 
         val alertDialog = builder.create()
+        alertDialog.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
         alertDialog.show()
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
             val newName = editView.edit_launcher_edittext.text.toString().trim()
