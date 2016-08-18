@@ -5,7 +5,7 @@
     <string name="rename_launcher">Rename launcher</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
-    <string name="invalid_characters">New launcher name contains invalid characters</string>
+    <string name="enter_launcher_name">Please enter a launcher name</string>
     <string name="unknown_error">An unknown error occurred</string>
 
     <!-- About -->

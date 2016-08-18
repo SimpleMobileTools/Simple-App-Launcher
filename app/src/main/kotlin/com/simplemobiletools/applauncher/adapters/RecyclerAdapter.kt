@@ -18,7 +18,6 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
 import kotlinx.android.synthetic.main.edit_launcher.view.*
 import java.util.*
-import java.util.regex.Pattern
 
 class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
@@ -88,7 +87,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         alertDialog.show()
         alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
             val newName = editView.edit_launcher_edittext.text.toString().trim()
-            if (isValidName(newName)) {
+            if (!newName.isEmpty()) {
                 if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
                     (act as EditLaunchersInterface).launcherRenamed()
                     finishActionMode()
@@ -97,18 +96,13 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     Toast.makeText(act, act.resources.getString(R.string.unknown_error), Toast.LENGTH_SHORT).show()
                 }
             } else {
-                Toast.makeText(act, act.resources.getString(R.string.invalid_characters), Toast.LENGTH_SHORT).show()
+                Toast.makeText(act, act.resources.getString(R.string.enter_launcher_name), Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     fun finishActionMode() {
         actMode?.finish()
-    }
-
-    private fun isValidName(newName: String): Boolean {
-        val pattern = Pattern.compile("[0-9a-zA-Z-_. ]+")
-        return pattern.matcher(newName).matches()
     }
 
     private fun deleteSelectedItems() {
