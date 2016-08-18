@@ -110,12 +110,20 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         val deleteIds = ArrayList<String>(positions.size)
         val deletedLaunchers = ArrayList<AppLauncher>(positions.size)
         for (i in positions) {
-            deletedLaunchers.add(launchers[i])
-            deleteIds.add(launchers[i].id.toString())
+            val launcher = launchers[i]
+            deleteIds.add(launcher.id.toString())
+
+            launcher.name = getRealAppName(launcher)
+            deletedLaunchers.add(launcher)
         }
         DbHelper(act).deleteLaunchers(deleteIds)
         finishActionMode()
         (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
+    }
+
+    private fun getRealAppName(launcher: AppLauncher): String {
+        val applicationInfo = act.packageManager.getApplicationInfo(launcher.pkgName, 0)
+        return act.packageManager.getApplicationLabel(applicationInfo).toString()
     }
 
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
