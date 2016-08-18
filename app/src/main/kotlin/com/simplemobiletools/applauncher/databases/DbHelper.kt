@@ -15,7 +15,8 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
             "$ID INTEGER PRIMARY KEY AUTOINCREMENT," +
             "$NAME TEXT," +
             "$PKG_NAME TEXT UNIQUE," +
-            "$ICON_ID INTEGER " +
+            "$ICON_ID INTEGER, " +
+            "$POSITION INTEGER " +
             ")"
 
     companion object {
@@ -23,6 +24,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         val NAME: String = "name"
         val PKG_NAME: String = "pkgName"
         val ICON_ID: String = "icon"
+        val POSITION: String = "position"
     }
 
     fun addInitialLaunchers(db: SQLiteDatabase) {
