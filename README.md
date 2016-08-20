@@ -1,7 +1,9 @@
 # Simple App Launcher
 <img alt="Logo" src="app/src/main/res/mipmap-xxxhdpi/launcher.png" width="80">
 
-A simple holder for your favourite app launchers. You can easily rename or delete any app launcher after long pressing an item. Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+A simple holder for your favourite app launchers.
+
+You can easily rename or delete any app launcher after long pressing an item. Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
 
 <img alt="App image" src="screenshots/app.png" width="250">
 <img alt="App image" src="screenshots/app_2.png" width="250">
