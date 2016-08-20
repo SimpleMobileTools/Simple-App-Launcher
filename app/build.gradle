@@ -36,7 +36,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:recyclerview-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
-    compile 'com.google.firebase:firebase-invites:9.4.0'
     compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
@@ -56,8 +55,6 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-android-extensions:$kotlin_version"
     }
 }
-
-apply plugin: 'com.google.gms.google-services'
 
 def Properties props = new Properties()
 def propFile = new File('signing.properties')

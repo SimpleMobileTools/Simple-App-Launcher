@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.text.Html
 import android.text.method.LinkMovementMethod
 import android.view.View
-import com.google.android.gms.appinvite.AppInviteInvitation
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.isFirstRun
@@ -39,12 +38,8 @@ class AboutActivity : SimpleActivity() {
 
 
     private fun setupInvite() {
-        val intent = AppInviteInvitation.IntentBuilder(getString(R.string.invite_friends))
-                .setMessage(String.format(getString(R.string.come_check_out), getString(R.string.app_name), 1))
-                .build()
-
         about_invite.setOnClickListener {
-            startActivityForResult(intent, 1)
+
         }
     }
 

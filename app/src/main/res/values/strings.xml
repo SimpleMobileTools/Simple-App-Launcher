@@ -14,7 +14,6 @@
     <string name="email_label">Send your feedback or suggestions to:</string>
     <string name="email" translatable="false">hello@simplemobiletools.com</string>
     <string name="third_party_licences_underlined"><u>Third party licences</u></string>
-    <string name="invite_friends">Invite friends</string>
     <string name="invite_friends_underlined"><u>Invite friends</u></string>
     <string name="come_check_out">Come check out %s</string>
     <string name="rate_us_underlined"><u>Rate us in the Play Store</u></string>
