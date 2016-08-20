@@ -36,10 +36,16 @@ class AboutActivity : SimpleActivity() {
         about_email.movementMethod = LinkMovementMethod.getInstance()
     }
 
-
     private fun setupInvite() {
-        about_invite.setOnClickListener {
+        val intent = Intent()
+        val text = String.format(getString(R.string.share_text), getString(R.string.app_name), getStoreUrl())
+        intent.action = Intent.ACTION_SEND
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+        intent.putExtra(Intent.EXTRA_TEXT, text)
+        intent.type = "text/plain"
 
+        about_invite.setOnClickListener {
+            startActivity(Intent.createChooser(intent, getString(R.string.invite_via)))
         }
     }
 
@@ -89,7 +95,11 @@ class AboutActivity : SimpleActivity() {
         try {
             return "market://details?id=" + packageName
         } catch (ignored: ActivityNotFoundException) {
-            return "http://play.google.com/store/apps/details?id=" + packageName
+            return getStoreUrl()
         }
+    }
+
+    private fun getStoreUrl(): String {
+        return "https://play.google.com/store/apps/details?id=" + packageName
     }
 }
