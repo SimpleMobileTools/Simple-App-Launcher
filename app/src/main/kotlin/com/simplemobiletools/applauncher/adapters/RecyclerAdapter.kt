@@ -2,6 +2,7 @@ package com.simplemobiletools.applauncher.adapters
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.content.pm.PackageManager
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
@@ -114,7 +115,8 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             deleteIds.add(launcher.id.toString())
 
             launcher.name = getRealAppName(launcher)
-            deletedLaunchers.add(launcher)
+            if (launcher.name.isNotEmpty())
+                deletedLaunchers.add(launcher)
         }
         DbHelper(act).deleteLaunchers(deleteIds)
         finishActionMode()
@@ -122,8 +124,12 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
     }
 
     private fun getRealAppName(launcher: AppLauncher): String {
-        val applicationInfo = act.packageManager.getApplicationInfo(launcher.pkgName, 0)
-        return act.packageManager.getApplicationLabel(applicationInfo).toString()
+        try {
+            val applicationInfo = act.packageManager.getApplicationInfo(launcher.pkgName, 0)
+            return act.packageManager.getApplicationLabel(applicationInfo).toString()
+        } catch (e: PackageManager.NameNotFoundException) {
+            return ""
+        }
     }
 
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
