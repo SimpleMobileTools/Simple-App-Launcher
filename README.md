@@ -5,6 +5,9 @@ A simple holder for your favourite app launchers.
 
 You can easily rename or delete any app launcher after long pressing an item. Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
 
+<a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.applauncher'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height=60/></a>
+<a href="https://f-droid.org/app/com.simplemobiletools.applauncher"><img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="60"></a>
+ 
 <img alt="App image" src="screenshots/app.png" width="250">
 <img alt="App image" src="screenshots/app_2.png" width="250">
 <img alt="App image" src="screenshots/app_3.png" width="250">
