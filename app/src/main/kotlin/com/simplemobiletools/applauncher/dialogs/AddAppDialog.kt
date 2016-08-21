@@ -31,12 +31,12 @@ class AddAppDialog() : DialogFragment() {
         recyclerView.launchers_holder.adapter = RecyclerDialogAdapter(activity, launchers)
         builder.setView(recyclerView)
 
-        builder.setPositiveButton(android.R.string.ok, { dialogInterface, i ->
+        builder.setPositiveButton(R.string.ok, { dialogInterface, i ->
             val selectedApps = launchers.filter { it.isChecked } as ArrayList<AppLauncher>
             callback?.addLaunchers(selectedApps)
         })
 
-        builder.setNegativeButton(android.R.string.cancel, { dialogInterface, i ->
+        builder.setNegativeButton(R.string.cancel, { dialogInterface, i ->
             callback?.updateLaunchers()
         })
         return builder.create()
