@@ -56,6 +56,11 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             menuItem?.isVisible = multiSelector.selectedPositions.size == 1
             return true
         }
+
+        override fun onDestroyActionMode(actionMode: ActionMode?) {
+            super.onDestroyActionMode(actionMode)
+            (act as RecyclerInterface).refreshLauncherIcons()
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -90,7 +95,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             val newName = editView.edit_launcher_edittext.text.toString().trim()
             if (!newName.isEmpty()) {
                 if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
-                    (act as EditLaunchersInterface).launcherRenamed()
+                    (act as RecyclerInterface).launcherRenamed()
                     finishActionMode()
                     alertDialog.dismiss()
                 } else {
@@ -120,7 +125,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         }
         DbHelper(act).deleteLaunchers(deleteIds)
         finishActionMode()
-        (act as EditLaunchersInterface).launchersDeleted(positions, deletedLaunchers)
+        (act as RecyclerInterface).launchersDeleted(positions, deletedLaunchers)
     }
 
     private fun getRealAppName(launcher: AppLauncher): String {
@@ -185,9 +190,11 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         }
     }
 
-    interface EditLaunchersInterface {
+    interface RecyclerInterface {
         fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>)
 
         fun launcherRenamed()
+
+        fun refreshLauncherIcons()
     }
 }

@@ -17,7 +17,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import kotlin.comparisons.compareBy
 
-class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.EditLaunchersInterface {
+class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
     lateinit var dbHelper: DbHelper
     lateinit var launchers: ArrayList<AppLauncher>
     lateinit var remainingLaunchers: ArrayList<AppLauncher>
@@ -101,7 +101,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         for ((id, name, pkgName) in launchers) {
             dbHelper.addLauncher(name, pkgName)
         }
-        refreshLaunchers()
+        refreshLauncherIcons()
     }
 
     override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
@@ -125,6 +125,10 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
 
     fun refreshLaunchers() {
         (launchers_holder.adapter as RecyclerAdapter).finishActionMode()
+        setupLaunchers()
+    }
+
+    override fun refreshLauncherIcons() {
         setupLaunchers()
     }
 
