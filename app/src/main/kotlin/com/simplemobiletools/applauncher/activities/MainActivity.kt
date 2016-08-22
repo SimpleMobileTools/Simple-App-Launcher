@@ -133,7 +133,6 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         for (pos in 0..launchers_holder.childCount - 1) {
             launchers_holder.getChildAt(pos).findViewById(R.id.launcher_check).visibility = View.INVISIBLE
         }
-        setupLaunchers()
     }
 
     override fun onDestroy() {
