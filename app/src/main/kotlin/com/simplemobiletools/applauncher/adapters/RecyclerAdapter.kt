@@ -16,7 +16,7 @@ import com.simplemobiletools.applauncher.extensions.hide
 import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.extensions.toast
 import com.simplemobiletools.applauncher.models.AppLauncher
-import kotlinx.android.synthetic.main.app_launcher_dialog_item.view.*
+import kotlinx.android.synthetic.main.app_launcher_item.view.*
 import kotlinx.android.synthetic.main.edit_launcher.view.*
 import java.util.*
 
