@@ -1,7 +1,13 @@
 Changelog
 ==========
 
-Version 1.2 *(2016-08-21)*
+Version 1.4 *(2016-08-22)*
+----------------------------
+
+ * Add Click effect to buttons
+ * misc bugfixes
+
+Version 1.3 *(2016-08-21)*
 ----------------------------
 
  * Make the buttons in About section easier to click
