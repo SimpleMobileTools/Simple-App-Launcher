@@ -18,7 +18,7 @@ class RecyclerDialogAdapter(val cxt: Context, val launchers: List<AppLauncher>) 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(R.layout.app_launcher_dialog_item, parent, false)
+        val view = LayoutInflater.from(parent?.context).inflate(R.layout.app_launcher_item, parent, false)
         return ViewHolder(view)
     }
 
