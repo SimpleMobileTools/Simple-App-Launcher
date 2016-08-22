@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.databases.DbHelper
@@ -101,7 +102,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         for ((id, name, pkgName) in launchers) {
             dbHelper.addLauncher(name, pkgName)
         }
-        refreshLauncherIcons()
+        refreshLaunchers()
     }
 
     override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
@@ -129,6 +130,9 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     }
 
     override fun refreshLauncherIcons() {
+        for (pos in 0..launchers_holder.childCount - 1) {
+            launchers_holder.getChildAt(pos).findViewById(R.id.launcher_check).visibility = View.INVISIBLE
+        }
         setupLaunchers()
     }
 
