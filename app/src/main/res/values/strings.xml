@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">Simple App Launcher</string>
+    <string name="app_name">App Launcher</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="rename_launcher">Rename launcher</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="enter_launcher_name">Please enter a launcher name</string>
+    <string name="unknown_error">An unknown error occurred</string>
 
     <!-- About -->
     <string name="about">About</string>
@@ -7,9 +14,13 @@
     <string name="email_label">Send your feedback or suggestions to:</string>
     <string name="email" translatable="false">hello@simplemobiletools.com</string>
     <string name="third_party_licences_underlined"><u>Third party licences</u></string>
+    <string name="invite_friends_underlined"><u>Invite friends</u></string>
+    <string name="share_text">Hey, come check out %1$s at %2$s</string>
+    <string name="invite_via">Invite via</string>
     <string name="rate_us_underlined"><u>Rate us in the Play Store</u></string>
     <string name="follow_us">Follow us:</string>
     <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="add_apps">Add application launchers</string>
 
     <!-- Settings -->
     <string name="settings">Settings</string>
@@ -21,4 +32,7 @@
     <string name="kotlin_title"><u>Kotlin (programming language)</u></string>
     <string name="kotlin_text" translatable="false">Copyright 2010 - 2016 JetBrains s.r.o.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS,WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.See the License for the specific language governing permissions and limitations under the License.</string>
     <string name="kotlin_url" translatable="false">https://github.com/JetBrains/kotlin</string>
+    <string name="multiselect_title"><u>RecyclerView MultiSelect (marking launchers)</u></string>
+    <string name="multiselect_text" translatable="false">The MIT License (MIT)\n\nCopyright (c) 2014 Big Nerd Ranch\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: \n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. \n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="multiselect_url" translatable="false">https://github.com/bignerdranch/recyclerview-multiselect</string>
 </resources>
