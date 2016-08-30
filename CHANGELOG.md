@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 1.5 *(2016-08-30)*
+----------------------------
+
+ * Change the launcher name to App Launcher
+ * Update the launcher icon
+
 Version 1.4 *(2016-08-22)*
 ----------------------------
 
