@@ -10,6 +10,7 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import java.util.*
 
 class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", null, 1) {
+    val resources = context.resources
     val TABLE = "launchers"
     val CREATE_DB = "CREATE TABLE $TABLE (" +
             "$ID INTEGER PRIMARY KEY AUTOINCREMENT," +
@@ -18,6 +19,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
             "$ICON_ID INTEGER, " +
             "$POSITION INTEGER " +
             ")"
+
 
     companion object {
         val ID: String = "_id"
@@ -28,15 +30,15 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
     }
 
     fun addInitialLaunchers(db: SQLiteDatabase) {
-        addLauncher("Simple Calculator", "com.simplemobiletools.calculator", R.mipmap.calculator, db)
-        addLauncher("Simple Calendar", "com.simplemobiletools.calendar", R.mipmap.calendar, db)
-        addLauncher("Simple Camera", "com.simplemobiletools.camera", R.mipmap.camera, db)
-        addLauncher("Simple Draw", "com.simplemobiletools.draw", R.mipmap.draw, db)
-        addLauncher("Simple File Manager", "com.simplemobiletools.filemanager", R.mipmap.filemanager, db)
-        addLauncher("Simple Flashlight", "com.simplemobiletools.flashlight", R.mipmap.flashlight, db)
-        addLauncher("Simple Gallery", "com.simplemobiletools.gallery", R.mipmap.gallery, db)
-        addLauncher("Simple Music Player", "com.simplemobiletools.musicplayer", R.mipmap.musicplayer, db)
-        addLauncher("Simple Notes", "com.simplemobiletools.notes", R.mipmap.notes, db)
+        addLauncher(string(R.string.calculator), "com.simplemobiletools.calculator", R.mipmap.calculator, db)
+        addLauncher(string(R.string.calendar), "com.simplemobiletools.calendar", R.mipmap.calendar, db)
+        addLauncher(string(R.string.camera), "com.simplemobiletools.camera", R.mipmap.camera, db)
+        addLauncher(string(R.string.draw), "com.simplemobiletools.draw", R.mipmap.draw, db)
+        addLauncher(string(R.string.file_manager), "com.simplemobiletools.filemanager", R.mipmap.filemanager, db)
+        addLauncher(string(R.string.flashlight), "com.simplemobiletools.flashlight", R.mipmap.flashlight, db)
+        addLauncher(string(R.string.gallery), "com.simplemobiletools.gallery", R.mipmap.gallery, db)
+        addLauncher(string(R.string.music_player), "com.simplemobiletools.musicplayer", R.mipmap.musicplayer, db)
+        addLauncher(string(R.string.notes), "com.simplemobiletools.notes", R.mipmap.notes, db)
     }
 
     fun addLauncher(name: String, pkgName: String, iconId: Int = 0, db: SQLiteDatabase = writableDatabase) {
@@ -84,5 +86,9 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
 
+    }
+
+    private fun string(id: Int): String {
+        return resources.getString(id)
     }
 }
