@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
     <string name="rename_launcher">Rename launcher</string>

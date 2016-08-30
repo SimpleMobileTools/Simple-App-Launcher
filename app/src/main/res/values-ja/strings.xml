@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">シンプル アプリ ランチャー</string>
+    <string name="app_launcher_name">App Launcher</string>
     <string name="delete">削除</string>
     <string name="edit">編集</string>
     <string name="rename_launcher">ランチャーの名前を変更</string>
