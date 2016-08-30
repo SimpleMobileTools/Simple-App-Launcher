@@ -9,6 +9,17 @@
     <string name="enter_launcher_name">ランチャーの名前を入力してください</string>
     <string name="unknown_error">不明なエラーが発生しました</string>
 
+    <!-- Apps -->
+    <string name="calculator">Calculator</string>
+    <string name="calendar">Calendar</string>
+    <string name="camera">Camera</string>
+    <string name="draw">Draw</string>
+    <string name="file_manager">File Manager</string>
+    <string name="flashlight">Flashlight</string>
+    <string name="gallery">Gallery</string>
+    <string name="music_player">Music Player</string>
+    <string name="notes">Notes</string>
+
     <!-- About -->
     <string name="about">アプリについて</string>
     <string name="website">もっとシンプルなアプリとソースコードは:\nhttp://simplemobiletools.com</string>
