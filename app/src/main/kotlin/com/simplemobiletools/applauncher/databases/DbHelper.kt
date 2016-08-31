@@ -20,7 +20,6 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
             "$POSITION INTEGER " +
             ")"
 
-
     companion object {
         val ID: String = "_id"
         val NAME: String = "name"
