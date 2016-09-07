@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="delete">Löschen</string>
+    <string name="edit">Bearbeiten</string>
+    <string name="rename_launcher">Starter umbenennen</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="enter_launcher_name">Bitte gib einen Namen für den Starter ein</string>
+    <string name="unknown_error">Ein unbekannter Fehler ist aufgetreten</string>
+
+    <!-- Apps -->
+    <string name="calculator">Taschenrechner</string>
+    <string name="calendar">Kalender</string>
+    <string name="camera">Kamera</string>
+    <string name="draw">Zeichenblock</string>
+    <string name="file_manager">Dateimanager</string>
+    <string name="flashlight">Taschenlampe</string>
+    <string name="gallery">Galerie</string>
+    <string name="music_player">Musikspieler</string>
+    <string name="notes">Notizblock</string>
+
+    <!-- About -->
+    <string name="about">Über</string>
+    <string name="website">Weitere Apps und Quellcode findest du auf:\nhttp://simplemobiletools.com</string>
+    <string name="email_label">Sende Vorschläge und Feedback an:</string>
+    <string name="third_party_licences_underlined"><u>Drittanbieterlizenzen</u></string>
+    <string name="invite_friends_underlined"><u>Lade Freunde ein</u></string>
+    <string name="share_text">Hey, wirf mal einen Blick auf %1$s bei %2$s</string>
+    <string name="invite_via">Einladen via</string>
+    <string name="rate_us_underlined"><u>Bewerte uns im Play Store</u></string>
+    <string name="follow_us">Folge uns:</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="add_apps">Füge Anwendungsstarter hinzu</string>
+
+    <!-- Settings -->
+    <string name="settings">Einstellungen</string>
+    <string name="dark_theme">Dunkles Thema</string>
+
+    <!-- License -->
+    <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke.</string>
+    <string name="third_party_licences">Drittanbieterlizenzen</string>
+    <string name="kotlin_title"><u>Kotlin (programming language)</u></string>
+    <string name="multiselect_title"><u>RecyclerView MultiSelect (marking launchers)</u></string>
+</resources>
