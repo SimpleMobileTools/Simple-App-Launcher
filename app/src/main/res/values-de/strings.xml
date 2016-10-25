@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Simple App Launcher</string>
+    <string name="app_name">Schlichter App Launcher</string>
     <string name="app_launcher_name">App Launcher</string>
     <string name="delete">Löschen</string>
     <string name="edit">Bearbeiten</string>
@@ -35,11 +35,11 @@
 
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
-    <string name="dark_theme">Dunkles Thema</string>
+    <string name="dark_theme">Dunkles Design</string>
 
     <!-- License -->
     <string name="notice">Diese App nutzt die folgenden Drittanbieterbibliotheken, die mein Leben einfacher machen. Danke.</string>
     <string name="third_party_licences">Drittanbieterlizenzen</string>
-    <string name="kotlin_title"><u>Kotlin (programming language)</u></string>
-    <string name="multiselect_title"><u>RecyclerView MultiSelect (marking launchers)</u></string>
+    <string name="kotlin_title"><u>Kotlin (Programmiersprache)</u></string>
+    <string name="multiselect_title"><u>RecyclerView MultiSelect (Marking Launchers)</u></string>
 </resources>
