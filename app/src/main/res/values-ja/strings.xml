@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">シンプル アプリ ランチャー</string>
-    <string name="app_launcher_name">App Launcher</string>
+    <string name="app_launcher_name">アプリ ランチャー</string>
     <string name="delete">削除</string>
     <string name="edit">編集</string>
     <string name="rename_launcher">ランチャーの名前を変更</string>
@@ -10,15 +10,15 @@
     <string name="unknown_error">不明なエラーが発生しました</string>
 
     <!-- Apps -->
-    <string name="calculator">Calculator</string>
-    <string name="calendar">Calendar</string>
-    <string name="camera">Camera</string>
-    <string name="draw">Draw</string>
-    <string name="file_manager">File Manager</string>
-    <string name="flashlight">Flashlight</string>
-    <string name="gallery">Gallery</string>
-    <string name="music_player">Music Player</string>
-    <string name="notes">Notes</string>
+    <string name="calculator">電卓</string>
+    <string name="calendar">カレンダー</string>
+    <string name="camera">カメラ</string>
+    <string name="draw">ドロー</string>
+    <string name="file_manager">ファイル マネージャー</string>
+    <string name="flashlight">フラッシュライト</string>
+    <string name="gallery">ギャラリー</string>
+    <string name="music_player">ミュージック プレイヤー</string>
+    <string name="notes">メモ</string>
 
     <!-- About -->
     <string name="about">アプリについて</string>
@@ -38,7 +38,7 @@
     <string name="dark_theme">ダークテーマ</string>
 
     <!-- License -->
-    <string name="notice">このアプリは、私の人生を容易にするために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>
+    <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>
     <string name="third_party_licences">サードパーティー ライセンス</string>
     <string name="kotlin_title"><u>Kotlin (プログラミング言語)</u></string>
     <string name="multiselect_title"><u>RecyclerView MultiSelect (マーキング ランチャー)</u></string>
