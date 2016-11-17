@@ -29,19 +29,19 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         var actMode: ActionMode? = null
     }
 
-    val deleteMode = object : ModalMultiSelectorCallback(multiSelector) {
-        override fun onActionItemClicked(mode: ActionMode?, item: MenuItem?): Boolean {
-            when (item?.itemId) {
+    val multiSelectorMode = object : ModalMultiSelectorCallback(multiSelector) {
+        override fun onActionItemClicked(mode: ActionMode?, item: MenuItem): Boolean {
+            return when (item.itemId) {
                 R.id.cab_edit -> {
                     showEditDialog()
-                    return true
+                    true
                 }
                 R.id.cab_delete -> {
                     deleteSelectedItems()
-                    return true
+                    true
                 }
+                else -> false
             }
-            return false
         }
 
         override fun onCreateActionMode(actionMode: ActionMode?, menu: Menu?): Boolean {
@@ -64,7 +64,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(act, deleteMode, multiSelector, launchers[position])
+        holder.bindView(act, multiSelectorMode, multiSelector, launchers[position])
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -81,28 +81,28 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         val editView = act.layoutInflater.inflate(R.layout.edit_launcher, null)
         editView.edit_launcher_edittext.setText(selectedLauncher.name)
 
-        val builder = AlertDialog.Builder(act)
-        builder.setTitle(act.getString(R.string.rename_launcher))
-        builder.setView(editView)
-
-        builder.setPositiveButton(R.string.ok, null)
-        builder.setNegativeButton(R.string.cancel, null)
-
-        val alertDialog = builder.create()
-        alertDialog.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
-        alertDialog.show()
-        alertDialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-            val newName = editView.edit_launcher_edittext.text.toString().trim()
-            if (!newName.isEmpty()) {
-                if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
-                    (act as RecyclerInterface).launcherRenamed()
-                    finishActionMode()
-                    alertDialog.dismiss()
-                } else {
-                    act.toast(R.string.unknown_error)
+        AlertDialog.Builder(act).apply {
+            setTitle(act.getString(R.string.rename_launcher))
+            setView(editView)
+            setPositiveButton(R.string.ok, null)
+            setNegativeButton(R.string.cancel, null)
+            create().apply {
+                window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
+                show()
+                getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                    val newName = editView.edit_launcher_edittext.text.toString().trim()
+                    if (!newName.isEmpty()) {
+                        if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
+                            (act as RecyclerInterface).launcherRenamed()
+                            finishActionMode()
+                            dismiss()
+                        } else {
+                            act.toast(R.string.unknown_error)
+                        }
+                    } else {
+                        act.toast(R.string.enter_launcher_name)
+                    }
                 }
-            } else {
-                act.toast(R.string.enter_launcher_name)
             }
         }
     }
