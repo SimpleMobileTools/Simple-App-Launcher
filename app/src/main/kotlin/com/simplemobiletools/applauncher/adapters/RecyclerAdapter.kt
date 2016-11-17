@@ -140,7 +140,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
     class ViewHolder(view: View, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
         val viewHolder = this
 
-        fun bindView(act: Activity, deleteMode: ModalMultiSelectorCallback, multiSelector: MultiSelector, launcher: AppLauncher) {
+        fun bindView(act: Activity, multiSelectorCallback: ModalMultiSelectorCallback, multiSelector: MultiSelector, launcher: AppLauncher) {
             with(launcher) {
                 itemView.launcher_label.text = launcher.name
                 itemView.setOnClickListener {
@@ -149,7 +149,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
                 itemView.setOnLongClickListener {
                     if (!multiSelector.isSelectable) {
-                        (act as AppCompatActivity).startSupportActionMode(deleteMode)
+                        (act as AppCompatActivity).startSupportActionMode(multiSelectorCallback)
                         multiSelector.setSelected(viewHolder, true)
                         actMode?.title = multiSelector.selectedPositions.size.toString()
                         itemView.launcher_check.show()
