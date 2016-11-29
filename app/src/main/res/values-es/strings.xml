@@ -44,13 +44,13 @@
     <string name="multiselect_title"><u>RecyclerView MultiSelect (Marcador de lanzadores)</u></string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <string name="app_short_description">A simple holder for your favourite app launchers.</string>
+    <string name="app_short_description">Un simple contenedor para sus aplicaciones favoritas.</string>
     <string name="app_long_description">
-        You can easily add any app launcher, so you won\'t ever again have to swipe through useles apps to find the one you need. You can also rename the launchers as you wish. It is not a real launcher replacing your home screen, just a holder for your favourite apps.
+        Usted puede fácilmente añadir cualquier lanzador de aplicación, no necesitará nunca más desplazarse entre aplicaciones poco útiles para encontrar la que realmente necesita. También puede renombrar los lanzadores como usted desee. No es un lanzador que sustituya a su escritorio, simplemente es un contenedor para sus aplicaciones favoritas.
 
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+        No contiene anuncios ni permisos innecesarios. Es completamente OpenSource y además provee un tema oscuro.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        Esta aplicación es tan solo una pequeña parte de una serie de aplicaciones. Puede encontrar el resto en http://www.simplemobiletools.com
     </string>
 </resources>
