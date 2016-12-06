@@ -60,6 +60,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
+                finish()
             } else {
                 startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
             }
