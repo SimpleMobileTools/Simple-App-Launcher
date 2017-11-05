@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Schlichter App Launcher</string>
+    <string name="app_name">Schlichter AppLauncher</string>
     <string name="app_launcher_name">App Launcher</string>
     <string name="delete">Löschen</string>
     <string name="edit">Bearbeiten</string>
