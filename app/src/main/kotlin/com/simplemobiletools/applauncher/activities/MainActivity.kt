@@ -15,6 +15,7 @@ import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisible
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
+import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -53,7 +54,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     }
 
     private fun launchAbout() {
-        startAboutActivity(R.string.app_name, LICENSE_KOTLIN, BuildConfig.VERSION_NAME)
+        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT, BuildConfig.VERSION_NAME)
     }
 
     private fun setupLaunchers() {

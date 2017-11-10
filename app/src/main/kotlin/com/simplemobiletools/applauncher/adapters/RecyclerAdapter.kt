@@ -82,7 +82,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         editView.edit_launcher_edittext.setText(selectedLauncher.name)
 
         AlertDialog.Builder(act).apply {
-            setTitle(act.getString(R.string.rename_launcher))
+            setTitle(act.getString(R.string.rename))
             setView(editView)
             setPositiveButton(R.string.ok, null)
             setNegativeButton(R.string.cancel, null)
@@ -97,7 +97,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                             finishActionMode()
                             dismiss()
                         } else {
-                            act.toast(R.string.unknown_error)
+                            act.toast(R.string.unknown_error_occurred)
                         }
                     } else {
                         act.toast(R.string.enter_launcher_name)

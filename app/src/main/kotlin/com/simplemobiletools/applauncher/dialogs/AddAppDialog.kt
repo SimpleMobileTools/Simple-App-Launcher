@@ -25,7 +25,6 @@ class AddAppDialog() : DialogFragment() {
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
-        builder.setTitle(R.string.add_apps)
 
         val recyclerView = View.inflate(activity, R.layout.launcher_picker, null)
         recyclerView.launchers_holder.adapter = RecyclerDialogAdapter(activity, launchers)
