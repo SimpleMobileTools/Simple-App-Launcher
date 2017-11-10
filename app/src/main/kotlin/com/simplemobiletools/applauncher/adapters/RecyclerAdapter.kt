@@ -29,7 +29,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
         var actMode: ActionMode? = null
     }
 
-    val multiSelectorMode = object : ModalMultiSelectorCallback(multiSelector) {
+    private val multiSelectorMode = object : ModalMultiSelectorCallback(multiSelector) {
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem): Boolean {
             return when (item.itemId) {
                 R.id.cab_edit -> {
