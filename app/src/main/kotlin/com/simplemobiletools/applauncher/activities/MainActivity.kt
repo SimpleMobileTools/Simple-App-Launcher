@@ -10,7 +10,7 @@ import android.widget.ImageView
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
-import com.simplemobiletools.applauncher.databases.DbHelper
+import com.simplemobiletools.applauncher.helpers.DBHelper
 import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisible
@@ -20,14 +20,14 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
-    lateinit var dbHelper: DbHelper
+    lateinit var dbHelper: DBHelper
     lateinit var launchers: ArrayList<AppLauncher>
     lateinit var remainingLaunchers: ArrayList<AppLauncher>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        dbHelper = DbHelper(applicationContext)
+        dbHelper = DBHelper(applicationContext)
         setupLaunchers()
 
         fab.setOnClickListener {

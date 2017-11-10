@@ -1,4 +1,4 @@
-package com.simplemobiletools.applauncher.databases
+package com.simplemobiletools.applauncher.helpers
 
 import android.content.ContentValues
 import android.content.Context
@@ -7,18 +7,14 @@ import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.extensions.getIntValue
+import com.simplemobiletools.commons.extensions.getStringValue
 import java.util.*
 
-class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", null, 1) {
-    val resources = context.resources
-    val TABLE = "launchers"
-    val CREATE_DB = "CREATE TABLE $TABLE (" +
-            "$ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-            "$NAME TEXT," +
-            "$PKG_NAME TEXT UNIQUE," +
-            "$ICON_ID INTEGER, " +
-            "$POSITION INTEGER " +
-            ")"
+class DBHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", null, 1) {
+    private val resources = context.resources
+    private val TABLE = "launchers"
+    private val CREATE_DB = "CREATE TABLE $TABLE ($ID INTEGER PRIMARY KEY AUTOINCREMENT, $NAME TEXT, $PKG_NAME TEXT UNIQUE, $ICON_ID INTEGER, $POSITION INTEGER)"
 
     companion object {
         val ID: String = "_id"
@@ -75,11 +71,12 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         val cursor = readableDatabase.query(TABLE, arrayOf(ID, NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
         cursor.use {
             while (cursor.moveToNext()) {
-                val id = cursor.getInt(cursor.getColumnIndex(DbHelper.ID))
-                val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
-                val pkgName = cursor.getString(cursor.getColumnIndex(DbHelper.PKG_NAME))
-                val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
-                launchers.add(AppLauncher(id, name, pkgName, icon))
+                val id = cursor.getIntValue(ID)
+                val name = cursor.getStringValue(NAME)
+                val pkgName = cursor.getStringValue(PKG_NAME)
+                val icon = cursor.getIntValue(ICON_ID)
+                val launcher = AppLauncher(id, name, pkgName, icon)
+                launchers.add(launcher)
             }
         }
         return launchers

@@ -11,7 +11,7 @@ import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.databases.DbHelper
+import com.simplemobiletools.applauncher.helpers.DBHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.extensions.beVisible
@@ -92,7 +92,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                     val newName = editView.edit_launcher_edittext.text.toString().trim()
                     if (!newName.isEmpty()) {
-                        if (DbHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
+                        if (DBHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
                             (act as RecyclerInterface).launcherRenamed()
                             finishActionMode()
                             dismiss()
@@ -123,7 +123,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             if (launcher.name.isNotEmpty())
                 deletedLaunchers.add(launcher)
         }
-        DbHelper(act).deleteLaunchers(deleteIds)
+        DBHelper(act).deleteLaunchers(deleteIds)
         finishActionMode()
         (act as RecyclerInterface).launchersDeleted(positions, deletedLaunchers)
     }
