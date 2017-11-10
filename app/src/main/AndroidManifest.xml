@@ -15,7 +15,10 @@
         android:label="@string/app_launcher_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.MainActivity">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -23,19 +26,27 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".activities.AboutActivity"
-            android:label="@string/about"
-            android:parentActivityName=".activities.MainActivity"/>
-
-        <activity
-            android:name=".activities.LicenseActivity"
-            android:label="@string/third_party_licences"
-            android:parentActivityName=".activities.AboutActivity"/>
+        <activity android:name=".activities.MainActivity"/>
 
         <activity
             android:name=".activities.SettingsActivity"
             android:label="@string/settings"
             android:parentActivityName=".activities.MainActivity"/>
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.AboutActivity"
+            android:label="@string/about"
+            android:parentActivityName=".activities.MainActivity"/>
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.LicenseActivity"
+            android:label="@string/third_party_licences"
+            android:parentActivityName="com.simplemobiletools.commons.activities.AboutActivity"/>
+
+        <activity
+            android:name="com.simplemobiletools.commons.activities.CustomizationActivity"
+            android:label="@string/customize_colors"
+            android:parentActivityName=".activities.SettingsActivity"/>
+
     </application>
 </manifest>

@@ -2,21 +2,21 @@ package com.simplemobiletools.applauncher.activities
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import android.widget.ImageView
+import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.databases.DbHelper
 import com.simplemobiletools.applauncher.dialogs.AddAppDialog
-import com.simplemobiletools.applauncher.extensions.isFirstRun
-import com.simplemobiletools.applauncher.extensions.preferences
-import com.simplemobiletools.applauncher.extensions.viewIntent
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.extensions.beInvisible
+import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.comparisons.compareBy
 
 class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
     lateinit var dbHelper: DbHelper
@@ -39,18 +39,21 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        when (item?.itemId) {
-            R.id.settings -> {
-                startActivity(Intent(applicationContext, SettingsActivity::class.java))
-                return true
-            }
-            R.id.about -> {
-                startActivity(Intent(applicationContext, AboutActivity::class.java))
-                return true
-            }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.settings -> launchSettings()
+            R.id.about -> launchAbout()
+            else -> return super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
+        return true
+    }
+
+    private fun launchSettings() {
+        startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    }
+
+    private fun launchAbout() {
+        startAboutActivity(R.string.app_name, LICENSE_KOTLIN, BuildConfig.VERSION_NAME)
     }
 
     private fun setupLaunchers() {
@@ -62,7 +65,9 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
                 startActivity(launchIntent)
                 finish()
             } else {
-                startActivity(viewIntent("https://play.google.com/store/apps/details?id=" + it.pkgName))
+                val url = "https://play.google.com/store/apps/details?id=${it.pkgName}"
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                startActivity(intent)
             }
         }
 
@@ -125,19 +130,14 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         refreshLaunchers()
     }
 
-    fun refreshLaunchers() {
+    private fun refreshLaunchers() {
         (launchers_holder.adapter as RecyclerAdapter).finishActionMode()
         setupLaunchers()
     }
 
     override fun refreshLauncherIcons() {
-        for (pos in 0..launchers_holder.childCount - 1) {
-            launchers_holder.getChildAt(pos).findViewById(R.id.launcher_check).visibility = View.INVISIBLE
+        for (pos in 0 until launchers_holder.childCount) {
+            launchers_holder.getChildAt(pos).findViewById<ImageView>(R.id.launcher_check).beInvisible()
         }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        preferences.isFirstRun = false
     }
 }

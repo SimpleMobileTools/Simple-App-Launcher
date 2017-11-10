@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.extensions.hide
-import com.simplemobiletools.applauncher.extensions.show
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.extensions.beInvisibleIf
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
 
 class RecyclerDialogAdapter(val cxt: Context, val launchers: List<AppLauncher>) : RecyclerView.Adapter<RecyclerDialogAdapter.ViewHolder>() {
@@ -22,9 +21,7 @@ class RecyclerDialogAdapter(val cxt: Context, val launchers: List<AppLauncher>) 
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        return launchers.count()
-    }
+    override fun getItemCount() = launchers.count()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         fun bindView(context: Context, launcher: AppLauncher) {
@@ -47,11 +44,7 @@ class RecyclerDialogAdapter(val cxt: Context, val launchers: List<AppLauncher>) 
         }
 
         fun handleCheck(check: View, launcher: AppLauncher) {
-            if (launcher.isChecked) {
-                check.show()
-            } else {
-                check.hide()
-            }
+            check.beInvisibleIf(!launcher.isChecked)
         }
     }
 }

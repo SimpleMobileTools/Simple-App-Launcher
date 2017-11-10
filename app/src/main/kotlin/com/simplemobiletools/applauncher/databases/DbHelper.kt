@@ -28,7 +28,16 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         val POSITION: String = "position"
     }
 
-    fun addInitialLaunchers(db: SQLiteDatabase) {
+
+    override fun onCreate(db: SQLiteDatabase) {
+        db.execSQL(CREATE_DB)
+        addInitialLaunchers(db)
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    }
+
+    private fun addInitialLaunchers(db: SQLiteDatabase) {
         addLauncher(string(R.string.calculator), "com.simplemobiletools.calculator", R.mipmap.calculator, db)
         addLauncher(string(R.string.calendar), "com.simplemobiletools.calendar", R.mipmap.calendar, db)
         addLauncher(string(R.string.camera), "com.simplemobiletools.camera", R.mipmap.camera, db)
@@ -64,7 +73,7 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
     fun getLaunchers(): ArrayList<AppLauncher> {
         val launchers = ArrayList<AppLauncher>()
         val cursor = readableDatabase.query(TABLE, arrayOf(ID, NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
-        try {
+        cursor.use {
             while (cursor.moveToNext()) {
                 val id = cursor.getInt(cursor.getColumnIndex(DbHelper.ID))
                 val name = cursor.getString(cursor.getColumnIndex(DbHelper.NAME))
@@ -72,22 +81,9 @@ class DbHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
                 val icon = cursor.getInt(cursor.getColumnIndex(DbHelper.ICON_ID))
                 launchers.add(AppLauncher(id, name, pkgName, icon))
             }
-        } finally {
-            cursor.close()
         }
         return launchers
     }
 
-    override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL(CREATE_DB)
-        addInitialLaunchers(db)
-    }
-
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-
-    }
-
-    private fun string(id: Int): String {
-        return resources.getString(id)
-    }
+    private fun string(id: Int) = resources.getString(id)
 }
