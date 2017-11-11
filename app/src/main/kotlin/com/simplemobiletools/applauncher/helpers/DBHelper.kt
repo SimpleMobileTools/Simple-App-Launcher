@@ -91,7 +91,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         }
     }
 
-    fun addAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase) {
+    private fun addAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase) {
         insertAppLauncher(appLauncher, db)
     }
 

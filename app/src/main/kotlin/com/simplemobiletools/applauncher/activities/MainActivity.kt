@@ -23,7 +23,7 @@ import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
+class MainActivity : SimpleActivity(), RecyclerAdapter.RecyclerInterface {
     private var launchers = ArrayList<AppLauncher>()
     private var remainingLaunchers = ArrayList<AppLauncher>()
 
@@ -34,7 +34,9 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         checkWhatsNewDialog()
 
         fab.setOnClickListener {
-            AddAppDialog.newInstance(this, remainingLaunchers).show(fragmentManager, "")
+            AddAppDialog(this, getNotDisplayedLaunchers()) {
+
+            }
         }
     }
 
@@ -114,13 +116,6 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
-    override fun addLaunchers(launchers: ArrayList<AppLauncher>) {
-        for ((id, name, pkgName) in launchers) {
-            //dbHelper.addAppLauncher(name, pkgName)
-        }
-        refreshLaunchers()
-    }
-
     override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
         val reversed = indexes.reversed()
         for (index in reversed) {
@@ -133,10 +128,6 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     }
 
     override fun launcherRenamed() {
-        refreshLaunchers()
-    }
-
-    override fun updateLaunchers() {
         refreshLaunchers()
     }
 
