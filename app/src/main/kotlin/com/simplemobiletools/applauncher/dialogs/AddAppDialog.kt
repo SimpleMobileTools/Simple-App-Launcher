@@ -8,10 +8,10 @@ import android.view.View
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerDialogAdapter
 import com.simplemobiletools.applauncher.models.AppLauncher
-import kotlinx.android.synthetic.main.launcher_picker.view.*
+import kotlinx.android.synthetic.main.dialog_pick_launcher.view.*
 import java.util.*
 
-class AddAppDialog() : DialogFragment() {
+class AddAppDialog : DialogFragment() {
     companion object {
         lateinit var launchers: ArrayList<AppLauncher>
         var callback: AddLaunchersInterface? = null
@@ -26,7 +26,7 @@ class AddAppDialog() : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val builder = AlertDialog.Builder(activity)
 
-        val recyclerView = View.inflate(activity, R.layout.launcher_picker, null)
+        val recyclerView = View.inflate(activity, R.layout.dialog_pick_launcher, null)
         recyclerView.launchers_holder.adapter = RecyclerDialogAdapter(activity, launchers)
         builder.setView(recyclerView)
 

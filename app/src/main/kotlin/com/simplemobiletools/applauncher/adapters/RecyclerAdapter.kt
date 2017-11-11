@@ -11,13 +11,13 @@ import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
 import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.helpers.DBHelper
+import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.toast
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
-import kotlinx.android.synthetic.main.edit_launcher.view.*
+import kotlinx.android.synthetic.main.dialog_edit_launcher.view.*
 import java.util.*
 
 class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val itemClick: (AppLauncher) -> Unit) :
@@ -78,7 +78,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
 
     private fun showEditDialog() {
         val selectedLauncher = launchers[multiSelector.selectedPositions[0]]
-        val editView = act.layoutInflater.inflate(R.layout.edit_launcher, null)
+        val editView = act.layoutInflater.inflate(R.layout.dialog_edit_launcher, null)
         editView.edit_launcher_edittext.setText(selectedLauncher.name)
 
         AlertDialog.Builder(act).apply {
@@ -92,7 +92,7 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                 getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                     val newName = editView.edit_launcher_edittext.text.toString().trim()
                     if (!newName.isEmpty()) {
-                        if (DBHelper(act).updateLauncherName(selectedLauncher.id, newName) > 0) {
+                        if (act.dbHelper.updateLauncherName(selectedLauncher.id, newName) > 0) {
                             (act as RecyclerInterface).launcherRenamed()
                             finishActionMode()
                             dismiss()
@@ -123,17 +123,17 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
             if (launcher.name.isNotEmpty())
                 deletedLaunchers.add(launcher)
         }
-        DBHelper(act).deleteLaunchers(deleteIds)
+        act.dbHelper.deleteLaunchers(deleteIds)
         finishActionMode()
         (act as RecyclerInterface).launchersDeleted(positions, deletedLaunchers)
     }
 
     private fun getRealAppName(launcher: AppLauncher): String {
-        try {
+        return try {
             val applicationInfo = act.packageManager.getApplicationInfo(launcher.pkgName, 0)
-            return act.packageManager.getApplicationLabel(applicationInfo).toString()
+            act.packageManager.getApplicationLabel(applicationInfo).toString()
         } catch (e: PackageManager.NameNotFoundException) {
-            return ""
+            ""
         }
     }
 
@@ -157,17 +157,17 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     true
                 }
 
-                if (launcher.iconId != 0) {
+                /*if (launcher.iconId != 0) {
                     val icon = act.resources.getDrawable(launcher.iconId)
                     itemView.launcher_icon.setImageDrawable(icon)
                 } else {
                     val icon = act.packageManager.getApplicationIcon(launcher.pkgName)
                     itemView.launcher_icon.setImageDrawable(icon)
-                }
+                }*/
             }
         }
 
-        fun viewClicked(multiSelector: MultiSelector, appLauncher: AppLauncher) {
+        private fun viewClicked(multiSelector: MultiSelector, appLauncher: AppLauncher) {
             if (multiSelector.isSelectable) {
                 val isSelected = multiSelector.selectedPositions.contains(viewHolder.layoutPosition)
                 multiSelector.setSelected(viewHolder, !isSelected)

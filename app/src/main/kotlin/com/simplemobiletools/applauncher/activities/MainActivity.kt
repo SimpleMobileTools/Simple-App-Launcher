@@ -10,24 +10,23 @@ import android.widget.ImageView
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
-import com.simplemobiletools.applauncher.helpers.DBHelper
 import com.simplemobiletools.applauncher.dialogs.AddAppDialog
+import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisible
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
+import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
-    lateinit var dbHelper: DBHelper
     lateinit var launchers: ArrayList<AppLauncher>
     lateinit var remainingLaunchers: ArrayList<AppLauncher>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        dbHelper = DBHelper(applicationContext)
         setupLaunchers()
 
         fab.setOnClickListener {
@@ -35,8 +34,9 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
+        updateMenuTextSize(resources, menu)
         return true
     }
 
@@ -54,7 +54,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     }
 
     private fun launchAbout() {
-        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT, BuildConfig.VERSION_NAME)
+        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
     }
 
     private fun setupLaunchers() {

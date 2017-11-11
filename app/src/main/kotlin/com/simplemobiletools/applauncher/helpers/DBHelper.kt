@@ -22,8 +22,16 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
         val PKG_NAME: String = "pkgName"
         val ICON_ID: String = "icon"
         val POSITION: String = "position"
-    }
 
+        var dbInstance: DBHelper? = null
+
+        fun newInstance(context: Context): DBHelper {
+            if (dbInstance == null)
+                dbInstance = DBHelper(context)
+
+            return dbInstance!!
+        }
+    }
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(CREATE_DB)
@@ -34,15 +42,15 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
-        addLauncher(string(R.string.calculator), "com.simplemobiletools.calculator", R.mipmap.calculator, db)
-        addLauncher(string(R.string.calendar), "com.simplemobiletools.calendar", R.mipmap.calendar, db)
-        addLauncher(string(R.string.camera), "com.simplemobiletools.camera", R.mipmap.camera, db)
-        addLauncher(string(R.string.draw), "com.simplemobiletools.draw", R.mipmap.draw, db)
-        addLauncher(string(R.string.file_manager), "com.simplemobiletools.filemanager", R.mipmap.filemanager, db)
-        addLauncher(string(R.string.flashlight), "com.simplemobiletools.flashlight", R.mipmap.flashlight, db)
-        addLauncher(string(R.string.gallery), "com.simplemobiletools.gallery", R.mipmap.gallery, db)
-        addLauncher(string(R.string.music_player), "com.simplemobiletools.musicplayer", R.mipmap.musicplayer, db)
-        addLauncher(string(R.string.notes), "com.simplemobiletools.notes", R.mipmap.notes, db)
+        addLauncher(string(R.string.calculator), "com.simplemobiletools.calculator", R.drawable.ic_calculator, db)
+        addLauncher(string(R.string.calendar), "com.simplemobiletools.calendar", R.drawable.ic_calendar, db)
+        addLauncher(string(R.string.camera), "com.simplemobiletools.camera", R.drawable.ic_camera, db)
+        addLauncher(string(R.string.draw), "com.simplemobiletools.draw", R.drawable.ic_draw, db)
+        addLauncher(string(R.string.file_manager), "com.simplemobiletools.filemanager", R.drawable.ic_filemanager, db)
+        addLauncher(string(R.string.flashlight), "com.simplemobiletools.flashlight", R.drawable.ic_flashlight, db)
+        addLauncher(string(R.string.gallery), "com.simplemobiletools.gallery", R.drawable.ic_gallery, db)
+        addLauncher(string(R.string.music_player), "com.simplemobiletools.musicplayer", R.drawable.ic_musicplayer, db)
+        addLauncher(string(R.string.notes), "com.simplemobiletools.notes", R.drawable.ic_notes, db)
     }
 
     fun addLauncher(name: String, pkgName: String, iconId: Int = 0, db: SQLiteDatabase = writableDatabase) {

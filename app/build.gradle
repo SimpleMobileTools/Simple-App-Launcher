@@ -12,6 +12,7 @@ android {
         targetSdkVersion 27
         versionCode 6
         versionName "1.6"
+        multiDexEnabled true
         setProperty("archivesBaseName", "app-launcher")
     }
 
@@ -26,14 +27,22 @@ android {
             signingConfig signingConfigs.release
         }
     }
+
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
     }
 }
 
 dependencies {
     compile 'com.simplemobiletools:commons:2.38.6'
+    compile 'com.android.support:multidex:1.0.2'
     compile 'com.bignerdranch.android:recyclerview-multiselect:0.2'
+    compile 'com.facebook.stetho:stetho:1.5.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
