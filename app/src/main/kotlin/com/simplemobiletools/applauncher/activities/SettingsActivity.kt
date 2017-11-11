@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.extensions.useEnglishToggled
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.util.*
@@ -20,6 +21,7 @@ class SettingsActivity : SimpleActivity() {
 
         setupCustomizeColors()
         setupUseEnglish()
+        updateTextColors(settings_holder)
     }
 
     private fun setupCustomizeColors() {

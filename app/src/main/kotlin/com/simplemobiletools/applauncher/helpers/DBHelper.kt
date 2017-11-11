@@ -5,24 +5,26 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
+import android.util.Log
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
 import java.util.*
 
-class DBHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", null, 1) {
-    private val resources = context.resources
-    private val TABLE = "launchers"
-    private val CREATE_DB = "CREATE TABLE $TABLE ($ID INTEGER PRIMARY KEY AUTOINCREMENT, $NAME TEXT, $PKG_NAME TEXT UNIQUE, $ICON_ID INTEGER, $POSITION INTEGER)"
+class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+    private val MAIN_TABLE_NAME = "launchers"
+    private val COL_ID = "id"
+    private val COL_NAME = "name"
+    private val COL_PKG_NAME = "pkgName"
+    private val COL_ICON_ID = "icon"
+    private val COL_POSITION = "position"
+
+    private val mDb = writableDatabase
 
     companion object {
-        val ID: String = "_id"
-        val NAME: String = "name"
-        val PKG_NAME: String = "pkgName"
-        val ICON_ID: String = "icon"
-        val POSITION: String = "position"
-
+        private val DB_VERSION = 2
+        val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
         fun newInstance(context: Context): DBHelper {
@@ -34,61 +36,106 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, "launchers.db", nul
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL(CREATE_DB)
+        Log.e("DEBUG", "create")
+        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, " +
+                "$COL_ICON_ID INTEGER, $COL_POSITION INTEGER)")
         addInitialLaunchers(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        Log.e("DEBUG", "upgrade")
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
-        addLauncher(string(R.string.calculator), "com.simplemobiletools.calculator", R.drawable.ic_calculator, db)
-        addLauncher(string(R.string.calendar), "com.simplemobiletools.calendar", R.drawable.ic_calendar, db)
-        addLauncher(string(R.string.camera), "com.simplemobiletools.camera", R.drawable.ic_camera, db)
-        addLauncher(string(R.string.draw), "com.simplemobiletools.draw", R.drawable.ic_draw, db)
-        addLauncher(string(R.string.file_manager), "com.simplemobiletools.filemanager", R.drawable.ic_filemanager, db)
-        addLauncher(string(R.string.flashlight), "com.simplemobiletools.flashlight", R.drawable.ic_flashlight, db)
-        addLauncher(string(R.string.gallery), "com.simplemobiletools.gallery", R.drawable.ic_gallery, db)
-        addLauncher(string(R.string.music_player), "com.simplemobiletools.musicplayer", R.drawable.ic_musicplayer, db)
-        addLauncher(string(R.string.notes), "com.simplemobiletools.notes", R.drawable.ic_notes, db)
+        val titles = arrayListOf(
+                R.string.calculator,
+                R.string.calendar,
+                R.string.camera,
+                R.string.draw,
+                R.string.file_manager,
+                R.string.flashlight,
+                R.string.gallery,
+                R.string.music_player,
+                R.string.notes
+        )
+
+        val packages = arrayListOf(
+                "calculator",
+                "calendar",
+                "camera",
+                "draw",
+                "filemanager",
+                "flashlight",
+                "gallery",
+                "musicplayer",
+                "notes"
+        )
+
+        val icons = arrayListOf(
+                R.drawable.ic_calculator,
+                R.drawable.ic_calendar,
+                R.drawable.ic_camera,
+                R.drawable.ic_draw,
+                R.drawable.ic_filemanager,
+                R.drawable.ic_flashlight,
+                R.drawable.ic_gallery,
+                R.drawable.ic_musicplayer,
+                R.drawable.ic_notes
+        )
+
+        val cnt = titles.size
+        val resources = context.resources
+        for (i in 0 until cnt) {
+            val appLauncher = AppLauncher(0, resources.getString(titles[i]), "com.simplemobiletools.${packages[i]}", icons[i])
+            addAppLauncher(appLauncher, db)
+        }
     }
 
-    fun addLauncher(name: String, pkgName: String, iconId: Int = 0, db: SQLiteDatabase = writableDatabase) {
-        val contentValues = ContentValues()
-        contentValues.put(NAME, name)
-        contentValues.put(PKG_NAME, pkgName)
-        contentValues.put(ICON_ID, iconId)
-        db.insert(TABLE, null, contentValues)
+    fun addAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase) {
+        insertAppLauncher(appLauncher, db)
+    }
+
+    private fun insertAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase = mDb): Int {
+        val values = fillAppLauncherValues(appLauncher)
+        return db.insert(MAIN_TABLE_NAME, null, values).toInt()
+    }
+
+    private fun fillAppLauncherValues(appLauncher: AppLauncher): ContentValues {
+        return ContentValues().apply {
+            put(COL_NAME, appLauncher.name)
+            put(COL_PKG_NAME, appLauncher.pkgName)
+            put(COL_ICON_ID, appLauncher.iconId)
+        }
     }
 
     fun deleteLaunchers(ids: ArrayList<String>) {
         val args = TextUtils.join(", ", ids.toArray())
-        writableDatabase.delete(TABLE, "$ID IN ($args)", null)
+        val selection = "$COL_ID IN ($args)"
+        mDb.delete(MAIN_TABLE_NAME, selection, null)
     }
 
     fun updateLauncherName(id: Int, newName: String): Int {
         val values = ContentValues()
-        values.put(NAME, newName)
-        val selection = ID + " = ?"
+        values.put(COL_NAME, newName)
+        val selection = "$COL_ID = ?"
         val selectionArgs = Array(1) { id.toString() }
-        return writableDatabase.update(TABLE, values, selection, selectionArgs)
+        return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs)
     }
 
     fun getLaunchers(): ArrayList<AppLauncher> {
         val launchers = ArrayList<AppLauncher>()
-        val cursor = readableDatabase.query(TABLE, arrayOf(ID, NAME, PKG_NAME, ICON_ID), null, null, null, null, NAME)
+        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME, COL_ICON_ID)
+        val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, COL_NAME)
         cursor.use {
             while (cursor.moveToNext()) {
-                val id = cursor.getIntValue(ID)
-                val name = cursor.getStringValue(NAME)
-                val pkgName = cursor.getStringValue(PKG_NAME)
-                val icon = cursor.getIntValue(ICON_ID)
+                val id = cursor.getIntValue(COL_ID)
+                val name = cursor.getStringValue(COL_NAME)
+                val pkgName = cursor.getStringValue(COL_PKG_NAME)
+                val icon = cursor.getIntValue(COL_ICON_ID)
                 val launcher = AppLauncher(id, name, pkgName, icon)
                 launchers.add(launcher)
             }
         }
         return launchers
     }
-
-    private fun string(id: Int) = resources.getString(id)
 }

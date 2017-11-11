@@ -157,13 +157,13 @@ class RecyclerAdapter(val act: Activity, val launchers: List<AppLauncher>, val i
                     true
                 }
 
-                /*if (launcher.iconId != 0) {
+                if (launcher.iconId != 0) {
                     val icon = act.resources.getDrawable(launcher.iconId)
                     itemView.launcher_icon.setImageDrawable(icon)
                 } else {
                     val icon = act.packageManager.getApplicationIcon(launcher.pkgName)
                     itemView.launcher_icon.setImageDrawable(icon)
-                }*/
+                }
             }
         }
 

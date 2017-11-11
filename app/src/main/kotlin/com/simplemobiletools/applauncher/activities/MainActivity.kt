@@ -14,24 +14,33 @@ import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.beInvisible
+import com.simplemobiletools.commons.extensions.checkWhatsNew
+import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
+import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, RecyclerAdapter.RecyclerInterface {
-    lateinit var launchers: ArrayList<AppLauncher>
-    lateinit var remainingLaunchers: ArrayList<AppLauncher>
+    private var launchers = ArrayList<AppLauncher>()
+    private var remainingLaunchers = ArrayList<AppLauncher>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupLaunchers()
+        checkWhatsNewDialog()
 
         fab.setOnClickListener {
             AddAppDialog.newInstance(this, remainingLaunchers).show(fragmentManager, "")
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateTextColors(coordinator_layout)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -107,7 +116,7 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
 
     override fun addLaunchers(launchers: ArrayList<AppLauncher>) {
         for ((id, name, pkgName) in launchers) {
-            dbHelper.addLauncher(name, pkgName)
+            //dbHelper.addAppLauncher(name, pkgName)
         }
         refreshLaunchers()
     }
@@ -139,6 +148,12 @@ class MainActivity : SimpleActivity(), AddAppDialog.AddLaunchersInterface, Recyc
     override fun refreshLauncherIcons() {
         for (pos in 0 until launchers_holder.childCount) {
             launchers_holder.getChildAt(pos).findViewById<ImageView>(R.id.launcher_check).beInvisible()
+        }
+    }
+
+    private fun checkWhatsNewDialog() {
+        arrayListOf<Release>().apply {
+            checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
 }
