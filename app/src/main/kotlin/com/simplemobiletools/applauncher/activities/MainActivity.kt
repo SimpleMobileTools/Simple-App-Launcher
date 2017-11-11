@@ -6,14 +6,12 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.ImageView
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
-import com.simplemobiletools.commons.extensions.beInvisible
 import com.simplemobiletools.commons.extensions.checkWhatsNew
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
@@ -23,7 +21,7 @@ import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : SimpleActivity(), RecyclerAdapter.RecyclerInterface {
+class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     private var launchers = ArrayList<AppLauncher>()
     private var remainingLaunchers = ArrayList<AppLauncher>()
 
@@ -35,7 +33,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.RecyclerInterface {
 
         fab.setOnClickListener {
             AddAppDialog(this, getNotDisplayedLaunchers()) {
-
+                refreshLaunchers()
             }
         }
     }
@@ -71,7 +69,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.RecyclerInterface {
     private fun setupLaunchers() {
         launchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        launchers_holder.adapter = RecyclerAdapter(this, launchers) {
+        launchers_holder.adapter = RecyclerAdapter(this, launchers, this) {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
@@ -116,30 +114,8 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.RecyclerInterface {
         launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
-    override fun launchersDeleted(indexes: List<Int>, deletedLaunchers: List<AppLauncher>) {
-        val reversed = indexes.reversed()
-        for (index in reversed) {
-            launchers.removeAt(index)
-            launchers_holder.adapter.notifyItemRemoved(index)
-        }
-
-        remainingLaunchers.addAll(deletedLaunchers)
-        remainingLaunchers.sortBy { it.name }
-    }
-
-    override fun launcherRenamed() {
-        refreshLaunchers()
-    }
-
-    private fun refreshLaunchers() {
-        (launchers_holder.adapter as RecyclerAdapter).finishActionMode()
+    override fun refreshLaunchers() {
         setupLaunchers()
-    }
-
-    override fun refreshLauncherIcons() {
-        for (pos in 0 until launchers_holder.childCount) {
-            launchers_holder.getChildAt(pos).findViewById<ImageView>(R.id.launcher_check).beInvisible()
-        }
     }
 
     private fun checkWhatsNewDialog() {
