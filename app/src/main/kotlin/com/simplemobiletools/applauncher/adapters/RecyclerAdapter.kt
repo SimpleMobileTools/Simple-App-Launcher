@@ -17,6 +17,7 @@ import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beGone
 import com.simplemobiletools.commons.extensions.beVisibleIf
@@ -24,7 +25,7 @@ import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
 import java.util.*
 
-class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLauncher>, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> Unit) :
+class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<AppLauncher>, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> Unit) :
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     private val config = activity.config
@@ -75,7 +76,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
         override fun onActionItemClicked(mode: ActionMode?, item: MenuItem): Boolean {
             when (item.itemId) {
                 R.id.cab_edit -> showEditDialog()
-                R.id.cab_delete -> deleteSelectedItems()
+                R.id.cab_delete -> askConfirmDelete()
                 else -> return false
             }
             return true
@@ -121,32 +122,33 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
         }
     }
 
-    private fun deleteSelectedItems() {
-        val positions = multiSelector.selectedPositions
-        val deleteIds = ArrayList<String>(positions.size)
-        val deletedLaunchers = ArrayList<AppLauncher>(positions.size)
-        for (i in positions) {
-            val launcher = launchers[i]
-            deleteIds.add(launcher.id.toString())
-
-            launcher.name = getRealAppName(launcher)
-            if (launcher.name.isNotEmpty()) {
-                deletedLaunchers.add(launcher)
-            }
+    private fun askConfirmDelete() {
+        ConfirmationDialog(activity) {
+            deleteItems()
         }
-
-        activity.dbHelper.deleteLaunchers(deleteIds)
-        actMode?.finish()
-        listener?.refreshLaunchers()
     }
 
-    private fun getRealAppName(launcher: AppLauncher): String {
-        return try {
-            val applicationInfo = activity.packageManager.getApplicationInfo(launcher.packageName, 0)
-            activity.packageManager.getApplicationLabel(applicationInfo).toString()
-        } catch (e: PackageManager.NameNotFoundException) {
-            ""
+    private fun deleteItems() {
+        val deleteIds = ArrayList<String>(selectedPositions.size)
+        val removeLaunchers = ArrayList<AppLauncher>(selectedPositions.size)
+        selectedPositions.sortedDescending().forEach {
+            val launcher = launchers[it]
+            deleteIds.add(launcher.id.toString())
+            removeLaunchers.add(launcher)
+            notifyItemRemoved(it)
+            itemViews.put(it, null)
         }
+
+        launchers.removeAll(removeLaunchers)
+        activity.dbHelper.deleteLaunchers(deleteIds)
+
+        val newItems = SparseArray<View>()
+        (0 until itemViews.size())
+                .filter { itemViews[it] != null }
+                .forEachIndexed { curIndex, i -> newItems.put(curIndex, itemViews[i]) }
+
+        itemViews = newItems
+        actMode?.finish()
     }
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: SimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
