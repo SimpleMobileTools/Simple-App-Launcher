@@ -101,7 +101,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val packageManager = context.packageManager
         val launchers = ArrayList<AppLauncher>()
         val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME)
-        val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, COL_NAME)
+        val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, "$COL_NAME COLLATE NOCASE")
         cursor.use {
             while (cursor.moveToNext()) {
                 val id = cursor.getIntValue(COL_ID)

@@ -1,8 +1,6 @@
 package com.simplemobiletools.applauncher.adapters
 
 import android.app.Activity
-import android.content.pm.PackageManager
-import android.content.res.Resources
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
 import android.view.LayoutInflater
@@ -23,8 +21,6 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
     private var itemViews = SparseArray<View>()
     private val selectedPositions = HashSet<Int>()
     private var textColor = config.textColor
-    private var resources = activity.resources
-    private var packageManager = activity.packageManager
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
@@ -56,7 +52,7 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        itemViews.put(position, holder.bindView(launchers[position], textColor, resources, packageManager))
+        itemViews.put(position, holder.bindView(launchers[position], textColor))
         toggleItemSelection(selectedPositions.contains(position), position)
     }
 
@@ -68,7 +64,7 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
     override fun getItemCount() = launchers.count()
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener) : RecyclerView.ViewHolder(view) {
-        fun bindView(launcher: AppLauncher, textColor: Int, resources: Resources, packageManager: PackageManager): View {
+        fun bindView(launcher: AppLauncher, textColor: Int): View {
             itemView.apply {
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)

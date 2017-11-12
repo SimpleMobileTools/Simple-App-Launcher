@@ -1,7 +1,5 @@
 package com.simplemobiletools.applauncher.adapters
 
-import android.content.pm.PackageManager
-import android.content.res.Resources
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
@@ -34,8 +32,6 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
     private var itemViews = SparseArray<View>()
     private val selectedPositions = HashSet<Int>()
     private var textColor = config.textColor
-    private var resources = activity.resources
-    private var packageManager = activity.packageManager
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
@@ -103,7 +99,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        itemViews.put(position, holder.bindView(launchers[position], textColor, resources, packageManager))
+        itemViews.put(position, holder.bindView(launchers[position], textColor))
         toggleItemSelection(selectedPositions.contains(position), position)
         holder.itemView.tag = holder
     }
@@ -153,7 +149,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: SimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
-        fun bindView(launcher: AppLauncher, textColor: Int, resources: Resources, packageManager: PackageManager): View {
+        fun bindView(launcher: AppLauncher, textColor: Int): View {
             itemView.apply {
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)
