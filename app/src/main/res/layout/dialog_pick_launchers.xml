@@ -4,8 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/pick_launchers_holder"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clipToPadding="false"
-    android:padding="@dimen/medium_margin"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
     app:layoutManager="android.support.v7.widget.GridLayoutManager"
     app:spanCount="@integer/columns"/>

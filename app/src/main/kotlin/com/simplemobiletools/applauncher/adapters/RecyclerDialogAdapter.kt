@@ -10,8 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
-import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
-import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beVisibleIf
@@ -59,6 +57,7 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         itemViews.put(position, holder.bindView(launchers[position], textColor, resources, packageManager))
+        toggleItemSelection(selectedPositions.contains(position), position)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -73,16 +72,10 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
             itemView.apply {
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)
+                launcher_icon.setImageDrawable(launcher.drawable!!)
 
                 setOnClickListener { viewClicked() }
                 setOnLongClickListener { viewClicked(); true }
-
-                val drawable = if (launcher.packageName.isAPredefinedApp()) {
-                    resources.getLauncherDrawable(launcher.packageName)
-                } else {
-                    packageManager.getApplicationIcon(launcher.packageName)
-                }
-                launcher_icon.setImageDrawable(drawable)
             }
             return itemView
         }

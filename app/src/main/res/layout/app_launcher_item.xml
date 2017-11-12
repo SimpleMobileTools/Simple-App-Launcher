@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/launcher_icon"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/icon_size_smaller"
+        android:layout_height="@dimen/launcher_icon_size"
         android:layout_gravity="center"/>
 
     <TextView
@@ -32,7 +32,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_margin="@dimen/small_margin"
         android:background="@drawable/circle_background"
         android:padding="@dimen/tiny_margin"
         android:src="@drawable/ic_check"

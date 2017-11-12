@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
+import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
@@ -15,7 +17,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val MAIN_TABLE_NAME = "launchers"
     private val COL_ID = "id"
     private val COL_NAME = "name"
-    private val COL_PKG_NAME = "pkgName"
+    private val COL_PKG_NAME = "package_name"
     private val COL_POSITION = "position"
 
     private val mDb = writableDatabase
@@ -95,6 +97,8 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     }
 
     fun getLaunchers(): ArrayList<AppLauncher> {
+        val resources = context.resources
+        val packageManager = context.packageManager
         val launchers = ArrayList<AppLauncher>()
         val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME)
         val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, COL_NAME)
@@ -102,8 +106,15 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             while (cursor.moveToNext()) {
                 val id = cursor.getIntValue(COL_ID)
                 val name = cursor.getStringValue(COL_NAME)
-                val pkgName = cursor.getStringValue(COL_PKG_NAME)
-                val launcher = AppLauncher(id, name, pkgName)
+                val packageName = cursor.getStringValue(COL_PKG_NAME)
+
+                val drawable = if (packageName.isAPredefinedApp()) {
+                    resources.getLauncherDrawable(packageName)
+                } else {
+                    packageManager.getApplicationIcon(packageName)
+                }
+
+                val launcher = AppLauncher(id, name, packageName, drawable)
                 launchers.add(launcher)
             }
         }

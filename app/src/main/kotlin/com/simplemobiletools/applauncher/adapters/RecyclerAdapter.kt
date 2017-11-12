@@ -14,8 +14,6 @@ import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.dialogs.EditDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
-import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
-import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
@@ -106,6 +104,8 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         itemViews.put(position, holder.bindView(launchers[position], textColor, resources, packageManager))
+        toggleItemSelection(selectedPositions.contains(position), position)
+        holder.itemView.tag = holder
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -157,16 +157,10 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
             itemView.apply {
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)
+                launcher_icon.setImageDrawable(launcher.drawable!!)
 
                 setOnClickListener { viewClicked(launcher) }
                 setOnLongClickListener { viewLongClicked(); true }
-
-                val drawable = if (launcher.packageName.isAPredefinedApp()) {
-                    resources.getLauncherDrawable(launcher.packageName)
-                } else {
-                    packageManager.getApplicationIcon(launcher.packageName)
-                }
-                launcher_icon.setImageDrawable(drawable)
             }
             return itemView
         }
