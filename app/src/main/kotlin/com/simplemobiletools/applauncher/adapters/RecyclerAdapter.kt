@@ -147,6 +147,16 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
         actMode?.finish()
     }
 
+    fun updateTextColor(textColor: Int) {
+        this.textColor = textColor
+        notifyDataSetChanged()
+    }
+
+    fun updatePrimaryColor(primaryColor: Int) {
+        this.primaryColor = primaryColor
+        notifyDataSetChanged()
+    }
+
     fun selectItem(pos: Int) {
         toggleItemSelection(true, pos)
     }

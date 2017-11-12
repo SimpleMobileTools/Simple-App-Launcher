@@ -9,10 +9,12 @@ import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
+import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.checkWhatsNew
+import com.simplemobiletools.commons.extensions.restartActivity
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
@@ -24,6 +26,9 @@ import java.util.*
 
 class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     private var launchers = ArrayList<AppLauncher>()
+    private var mStoredPrimaryColor = 0
+    private var mStoredTextColor = 0
+    private var mStoredUseEnglish = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +36,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         setupLaunchers()
         checkWhatsNewDialog()
         setupGridLayoutManager()
+        storeStateVariables()
 
         fab.setOnClickListener {
             AddAppLauncherDialog(this, launchers) {
@@ -41,7 +47,25 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
 
     override fun onResume() {
         super.onResume()
+        if (mStoredUseEnglish != config.useEnglish) {
+            restartActivity()
+            return
+        }
+
+        if (mStoredTextColor != config.textColor) {
+            getGridAdapter()?.updateTextColor(config.textColor)
+        }
+
+        if (mStoredPrimaryColor != config.primaryColor) {
+            getGridAdapter()?.updatePrimaryColor(config.primaryColor)
+        }
+
         updateTextColors(coordinator_layout)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        storeStateVariables()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -67,7 +91,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
     }
 
-    private fun getGridAdapter() = (launchers_grid.adapter as RecyclerAdapter)
+    private fun getGridAdapter() = launchers_grid.adapter as? RecyclerAdapter
 
     private fun setupGridLayoutManager() {
         launchers_grid.isDragSelectionEnabled = true
@@ -77,11 +101,11 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
             override fun zoomOut() {}
 
             override fun selectItem(position: Int) {
-                getGridAdapter().selectItem(position)
+                getGridAdapter()?.selectItem(position)
             }
 
             override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                getGridAdapter().selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
+                getGridAdapter()?.selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
             }
         }
     }
@@ -112,6 +136,14 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         }
         dbHelper.deleteLaunchers(invalidIds)
         launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
+    }
+
+    private fun storeStateVariables() {
+        config.apply {
+            mStoredPrimaryColor = primaryColor
+            mStoredTextColor = textColor
+            mStoredUseEnglish = useEnglish
+        }
     }
 
     override fun refreshLaunchers() {
