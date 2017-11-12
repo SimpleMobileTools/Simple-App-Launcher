@@ -23,9 +23,8 @@ class EditDialog(val activity: Activity, val appLauncher: AppLauncher, val callb
                 .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
+            window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
             activity.setupDialogStuff(view, this, R.string.rename)
-            window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
-            show()
             getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener {
                 val newName = view.edit_launcher_edittext.value
                 if (!newName.isEmpty()) {
