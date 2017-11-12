@@ -68,7 +68,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         insertAppLauncher(appLauncher, db)
     }
 
-    private fun insertAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase = mDb): Int {
+    fun insertAppLauncher(appLauncher: AppLauncher, db: SQLiteDatabase = mDb): Int {
         val values = fillAppLauncherValues(appLauncher)
         return db.insert(MAIN_TABLE_NAME, null, values).toInt()
     }

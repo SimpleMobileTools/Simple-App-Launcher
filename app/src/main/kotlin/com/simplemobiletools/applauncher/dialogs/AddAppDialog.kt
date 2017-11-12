@@ -5,6 +5,7 @@ import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerDialogAdapter
+import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_pick_launchers.view.*
@@ -13,6 +14,7 @@ import java.util.*
 class AddAppDialog(val activity: Activity, val availableLaunchers: ArrayList<AppLauncher>, val callback: () -> Unit) {
     var dialog: AlertDialog
     var view = (activity.layoutInflater.inflate(R.layout.dialog_pick_launchers, null) as ViewGroup)
+    lateinit var adapter: RecyclerDialogAdapter
 
     init {
         dialog = AlertDialog.Builder(activity)
@@ -20,12 +22,16 @@ class AddAppDialog(val activity: Activity, val availableLaunchers: ArrayList<App
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             activity.setupDialogStuff(view, this)
-            view.pick_launchers_holder.adapter = RecyclerDialogAdapter(activity, availableLaunchers)
+            adapter = RecyclerDialogAdapter(activity, availableLaunchers)
+            view.pick_launchers_holder.adapter = adapter
         }
     }
 
     private fun confirmSelection() {
-        //val selectedApps = availableLaunchers.filter { it.isChecked } as ArrayList<AppLauncher>
+        adapter.getSelectedLaunchers().forEach {
+            activity.dbHelper.insertAppLauncher(it)
+        }
         callback()
+        dialog.dismiss()
     }
 }

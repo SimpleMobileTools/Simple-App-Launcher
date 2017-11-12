@@ -41,6 +41,14 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
         itemViews[pos]?.launcher_check?.beVisibleIf(select)
     }
 
+    fun getSelectedLaunchers(): ArrayList<AppLauncher> {
+        val selectedLaunchers = ArrayList<AppLauncher>()
+        selectedPositions.forEach {
+            selectedLaunchers.add(launchers[it])
+        }
+        return selectedLaunchers
+    }
+
     private val adapterListener = object : MyAdapterListener {
         override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
             toggleItemSelection(select, position)
