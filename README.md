@@ -1,11 +1,9 @@
 # Simple App Launcher
 <img alt="Logo" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80">
 
-A simple holder for your favourite app launchers.
+You can easily add any app launcher, so you won't ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish. It is not a real launcher replacing your home screen, just a holder for your favourite apps.
 
-You can easily add any app launcher, so you won't ever again have to swipe through useles apps to find the one you need. You can also rename the launchers as you wish. 
-
-Contains no ads or unnecessary permissions. It is fully opensource, provides a Dark theme too.
+Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
 This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
 
