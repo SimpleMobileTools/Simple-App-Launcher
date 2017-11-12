@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Jednoduchý spúšťač aplikácií</string>
+    <string name="app_launcher_name">Spúšťač aplikácií</string>
+    <string name="enter_launcher_name">Prosím zadajte názov pre spúšťač</string>
+    <string name="delete_explanation">Toto iba odstráni spúšťačku z tejto mriežky, neodinštaluje to samotnú apku.</string>
+
+    <!-- Apps -->
+    <string name="calculator">Kalkulačka</string>
+    <string name="calendar">Kalendár</string>
+    <string name="camera">Kamera</string>
+    <string name="draw">Kreslenie</string>
+    <string name="file_manager">Správca súborov</string>
+    <string name="flashlight">Batéria</string>
+    <string name="gallery">Galéria</string>
+    <string name="music_player">Hudobný prehrávač</string>
+    <string name="notes">Poznámky</string>
+    <string name="thank_you">Ďakujem</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Jednoduchý držiak pre spúšťačky vašich obľúbených apiek.</string>
+    <string name="app_long_description">
+        Viete jednoducho pridať akúkoľvek aplikáciu, už nikdy tak nebudete musieť listovať medzi nepotrebnými aplikáciami. Spúšťačky viete aj premenovať. Nie je to skutočný spúšťač pre vašu domovskú obrazovku, iba držiak obľúbených aplikácií.
+
+        Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
+
+        Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
