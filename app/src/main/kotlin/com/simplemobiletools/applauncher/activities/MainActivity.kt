@@ -11,6 +11,7 @@ import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppDialog
 import com.simplemobiletools.applauncher.extensions.dbHelper
+import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.checkWhatsNew
 import com.simplemobiletools.commons.extensions.updateTextColors
@@ -23,7 +24,6 @@ import java.util.*
 
 class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     private var launchers = ArrayList<AppLauncher>()
-    private var remainingLaunchers = ArrayList<AppLauncher>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,18 +70,16 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         launchers = dbHelper.getLaunchers()
         checkInvalidApps()
         launchers_holder.adapter = RecyclerAdapter(this, launchers, this) {
-            val launchIntent = packageManager.getLaunchIntentForPackage(it.pkgName)
+            val launchIntent = packageManager.getLaunchIntentForPackage(it.packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
                 finish()
             } else {
-                val url = "https://play.google.com/store/apps/details?id=${it.pkgName}"
+                val url = "https://play.google.com/store/apps/details?id=${it.packageName}"
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
                 startActivity(intent)
             }
         }
-
-        remainingLaunchers = getNotDisplayedLaunchers()
     }
 
     private fun getNotDisplayedLaunchers(): ArrayList<AppLauncher> {
@@ -92,21 +90,20 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         for (info in list) {
             val componentInfo = info.activityInfo.applicationInfo
             val label = componentInfo.loadLabel(packageManager).toString()
-            val pkgName = componentInfo.packageName
-            allApps.add(AppLauncher(0, label, pkgName, 0))
+            allApps.add(AppLauncher(0, label, componentInfo.packageName))
         }
 
         val sorted = allApps.sortedWith(compareBy { it.name.toLowerCase() })
-        val unique = sorted.distinctBy { it.pkgName }
-        val filtered = unique.filter { !launchers.contains(it) }
+        val unique = sorted.distinctBy { it.packageName }
+        val filtered = unique.filter { !launchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" }
         return filtered as ArrayList<AppLauncher>
     }
 
     private fun checkInvalidApps() {
         val invalidIds = ArrayList<String>()
-        for ((id, name, pkgName) in launchers) {
-            val launchIntent = packageManager.getLaunchIntentForPackage(pkgName)
-            if (launchIntent == null && !pkgName.startsWith("com.simplemobiletools")) {
+        for ((id, name, packageName) in launchers) {
+            val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
+            if (launchIntent == null && !packageName.isAPredefinedApp()) {
                 invalidIds.add(id.toString())
             }
         }

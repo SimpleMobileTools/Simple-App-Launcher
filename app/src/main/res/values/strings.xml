@@ -13,6 +13,7 @@
     <string name="gallery">Gallery</string>
     <string name="music_player">Music Player</string>
     <string name="notes">Notes</string>
+    <string name="thank_you">Thank You</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->

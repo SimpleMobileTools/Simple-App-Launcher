@@ -14,6 +14,8 @@ import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
+import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
+import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beGone
@@ -165,7 +167,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
 
     private fun getRealAppName(launcher: AppLauncher): String {
         return try {
-            val applicationInfo = activity.packageManager.getApplicationInfo(launcher.pkgName, 0)
+            val applicationInfo = activity.packageManager.getApplicationInfo(launcher.packageName, 0)
             activity.packageManager.getApplicationLabel(applicationInfo).toString()
         } catch (e: PackageManager.NameNotFoundException) {
             ""
@@ -182,10 +184,10 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
                 setOnClickListener { viewClicked(launcher) }
                 setOnLongClickListener { viewLongClicked(); true }
 
-                val drawable = if (launcher.iconId != 0) {
-                    resources.getDrawable(launcher.iconId)
+                val drawable = if (launcher.packageName.isAPredefinedApp()) {
+                    resources.getLauncherDrawable(launcher.packageName)
                 } else {
-                    packageManager.getApplicationIcon(launcher.pkgName)
+                    packageManager.getApplicationIcon(launcher.packageName)
                 }
                 launcher_icon.setImageDrawable(drawable)
             }

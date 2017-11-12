@@ -1,7 +1,7 @@
 package com.simplemobiletools.applauncher.models
 
-data class AppLauncher(val id: Int, var name: String, val pkgName: String, val iconId: Int) {
+data class AppLauncher(val id: Int, var name: String, val packageName: String) {
     override fun equals(other: Any?): Boolean {
-        return pkgName.equals((other as AppLauncher).pkgName, true)
+        return packageName.equals((other as AppLauncher).packageName, true)
     }
 }

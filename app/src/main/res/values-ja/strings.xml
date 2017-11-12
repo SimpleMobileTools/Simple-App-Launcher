@@ -13,6 +13,7 @@
     <string name="gallery">ギャラリー</string>
     <string name="music_player">ミュージック プレイヤー</string>
     <string name="notes">メモ</string>
+    <string name="thank_you">Thank You</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->

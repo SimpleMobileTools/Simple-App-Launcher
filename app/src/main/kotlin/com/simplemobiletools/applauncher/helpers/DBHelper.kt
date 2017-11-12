@@ -5,7 +5,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
-import android.util.Log
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
@@ -17,7 +16,6 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val COL_ID = "id"
     private val COL_NAME = "name"
     private val COL_PKG_NAME = "pkgName"
-    private val COL_ICON_ID = "icon"
     private val COL_POSITION = "position"
 
     private val mDb = writableDatabase
@@ -36,14 +34,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        Log.e("DEBUG", "create")
-        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, " +
-                "$COL_ICON_ID INTEGER, $COL_POSITION INTEGER)")
+        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER)")
         addInitialLaunchers(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        Log.e("DEBUG", "upgrade")
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
@@ -56,37 +51,15 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 R.string.flashlight,
                 R.string.gallery,
                 R.string.music_player,
-                R.string.notes
-        )
-
-        val packages = arrayListOf(
-                "calculator",
-                "calendar",
-                "camera",
-                "draw",
-                "filemanager",
-                "flashlight",
-                "gallery",
-                "musicplayer",
-                "notes"
-        )
-
-        val icons = arrayListOf(
-                R.drawable.ic_launcher_calculator,
-                R.drawable.ic_launcher_calendar,
-                R.drawable.ic_launcher_camera,
-                R.drawable.ic_launcher_draw,
-                R.drawable.ic_launcher_filemanager,
-                R.drawable.ic_launcher_flashlight,
-                R.drawable.ic_launcher_gallery,
-                R.drawable.ic_launcher_musicplayer,
-                R.drawable.ic_launcher_notes
+                R.string.notes,
+                R.string.thank_you
         )
 
         val cnt = titles.size
         val resources = context.resources
+        val packages = predefinedPackageNames
         for (i in 0 until cnt) {
-            val appLauncher = AppLauncher(0, resources.getString(titles[i]), "com.simplemobiletools.${packages[i]}", icons[i])
+            val appLauncher = AppLauncher(0, resources.getString(titles[i]), packages[i])
             addAppLauncher(appLauncher, db)
         }
     }
@@ -103,8 +76,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private fun fillAppLauncherValues(appLauncher: AppLauncher): ContentValues {
         return ContentValues().apply {
             put(COL_NAME, appLauncher.name)
-            put(COL_PKG_NAME, appLauncher.pkgName)
-            put(COL_ICON_ID, appLauncher.iconId)
+            put(COL_PKG_NAME, appLauncher.packageName)
         }
     }
 
@@ -124,15 +96,14 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     fun getLaunchers(): ArrayList<AppLauncher> {
         val launchers = ArrayList<AppLauncher>()
-        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME, COL_ICON_ID)
+        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME)
         val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, COL_NAME)
         cursor.use {
             while (cursor.moveToNext()) {
                 val id = cursor.getIntValue(COL_ID)
                 val name = cursor.getStringValue(COL_NAME)
                 val pkgName = cursor.getStringValue(COL_PKG_NAME)
-                val icon = cursor.getIntValue(COL_ICON_ID)
-                val launcher = AppLauncher(id, name, pkgName, icon)
+                val launcher = AppLauncher(id, name, pkgName)
                 launchers.add(launcher)
             }
         }
