@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 2.0.0 *(2017-11-12)*
+----------------------------
+
+ * Added a new option to use english language on non-english devices
+ * Rewrote the app under the hood
+
 Version 1.6 *(2016-09-07)*
 ----------------------------
 
