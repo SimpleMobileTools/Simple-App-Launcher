@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.models.Release
+import com.simplemobiletools.commons.views.MyScalableRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -29,6 +30,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         setContentView(R.layout.activity_main)
         setupLaunchers()
         checkWhatsNewDialog()
+        setupGridLayoutManager()
 
         fab.setOnClickListener {
             AddAppLauncherDialog(this, launchers) {
@@ -65,10 +67,29 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
     }
 
+    private fun getGridAdapter() = (launchers_grid.adapter as RecyclerAdapter)
+
+    private fun setupGridLayoutManager() {
+        launchers_grid.isDragSelectionEnabled = true
+        launchers_grid.listener = object : MyScalableRecyclerView.MyScalableRecyclerViewListener {
+            override fun zoomIn() {}
+
+            override fun zoomOut() {}
+
+            override fun selectItem(position: Int) {
+                getGridAdapter().selectItem(position)
+            }
+
+            override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
+                getGridAdapter().selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
+            }
+        }
+    }
+
     private fun setupLaunchers() {
         launchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        launchers_holder.adapter = RecyclerAdapter(this, launchers, this) {
+        launchers_grid.adapter = RecyclerAdapter(this, launchers, this) {
             val launchIntent = packageManager.getLaunchIntentForPackage(it.packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
@@ -95,6 +116,10 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
 
     override fun refreshLaunchers() {
         setupLaunchers()
+    }
+
+    override fun itemLongClicked(position: Int) {
+        launchers_grid.setDragSelectActive(position)
     }
 
     private fun checkWhatsNewDialog() {

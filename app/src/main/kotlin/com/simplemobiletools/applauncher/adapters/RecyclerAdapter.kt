@@ -147,6 +147,45 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
         actMode?.finish()
     }
 
+    fun selectItem(pos: Int) {
+        toggleItemSelection(true, pos)
+    }
+
+    fun selectRange(from: Int, to: Int, min: Int, max: Int) {
+        if (from == to) {
+            (min..max).filter { it != from }
+                    .forEach { toggleItemSelection(false, it) }
+            return
+        }
+
+        if (to < from) {
+            for (i in to..from)
+                toggleItemSelection(true, i)
+
+            if (min > -1 && min < to) {
+                (min until to).filter { it != from }
+                        .forEach { toggleItemSelection(false, it) }
+            }
+            if (max > -1) {
+                for (i in from + 1..max)
+                    toggleItemSelection(false, i)
+            }
+        } else {
+            for (i in from..to)
+                toggleItemSelection(true, i)
+
+            if (max > -1 && max > to) {
+                (to + 1..max).filter { it != from }
+                        .forEach { toggleItemSelection(false, it) }
+            }
+
+            if (min > -1) {
+                for (i in min until from)
+                    toggleItemSelection(false, i)
+            }
+        }
+    }
+
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: SimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
         fun bindView(launcher: AppLauncher, textColor: Int): View {
@@ -176,11 +215,15 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
                     activity.startSupportActionMode(multiSelectorCallback)
                     adapterListener.toggleItemSelectionAdapter(true, adapterPosition)
                 }
+
+                listener.itemLongClicked(adapterPosition)
             }
         }
     }
 
     interface AppLaunchersListener {
         fun refreshLaunchers()
+
+        fun itemLongClicked(position: Int)
     }
 }
