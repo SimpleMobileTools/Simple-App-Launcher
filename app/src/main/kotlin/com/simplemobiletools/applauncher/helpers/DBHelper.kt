@@ -72,15 +72,15 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         )
 
         val icons = arrayListOf(
-                R.drawable.ic_calculator,
-                R.drawable.ic_calendar,
-                R.drawable.ic_camera,
-                R.drawable.ic_draw,
-                R.drawable.ic_filemanager,
-                R.drawable.ic_flashlight,
-                R.drawable.ic_gallery,
-                R.drawable.ic_musicplayer,
-                R.drawable.ic_notes
+                R.drawable.ic_launcher_calculator,
+                R.drawable.ic_launcher_calendar,
+                R.drawable.ic_launcher_camera,
+                R.drawable.ic_launcher_draw,
+                R.drawable.ic_launcher_filemanager,
+                R.drawable.ic_launcher_flashlight,
+                R.drawable.ic_launcher_gallery,
+                R.drawable.ic_launcher_musicplayer,
+                R.drawable.ic_launcher_notes
         )
 
         val cnt = titles.size

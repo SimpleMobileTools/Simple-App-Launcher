@@ -2,7 +2,7 @@ package com.simplemobiletools.applauncher.adapters
 
 import android.app.AlertDialog
 import android.content.pm.PackageManager
-import android.graphics.PorterDuff
+import android.content.res.Resources
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
 import android.util.SparseArray
@@ -15,9 +15,11 @@ import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beGone
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.extensions.toast
+import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
 import kotlinx.android.synthetic.main.dialog_edit_launcher.view.*
 import java.util.*
@@ -26,18 +28,20 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
         RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     private val config = activity.config
-    var actMode: ActionMode? = null
-    var primaryColor = config.primaryColor
+    private var actMode: ActionMode? = null
+    private var primaryColor = config.primaryColor
 
     private val multiSelector = MultiSelector()
     private var itemViews = SparseArray<View>()
     private val selectedPositions = HashSet<Int>()
     private var textColor = config.textColor
+    private var resources = activity.resources
+    private var packageManager = activity.packageManager
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
         if (select) {
             if (itemViews[pos] != null) {
-                itemViews[pos].launcher_check?.background?.setColorFilter(primaryColor, PorterDuff.Mode.SRC_IN)
+                itemViews[pos].launcher_check?.background?.applyColorFilter(primaryColor)
                 selectedPositions.add(pos)
             }
         } else {
@@ -100,7 +104,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bindView(launchers[position], textColor)
+        itemViews.put(position, holder.bindView(launchers[position], textColor, resources, packageManager))
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
@@ -140,10 +144,6 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
         }
     }
 
-    private fun finishActionMode() {
-        actMode?.finish()
-    }
-
     private fun deleteSelectedItems() {
         val positions = multiSelector.selectedPositions
         val deleteIds = ArrayList<String>(positions.size)
@@ -153,11 +153,13 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
             deleteIds.add(launcher.id.toString())
 
             launcher.name = getRealAppName(launcher)
-            if (launcher.name.isNotEmpty())
+            if (launcher.name.isNotEmpty()) {
                 deletedLaunchers.add(launcher)
+            }
         }
+
         activity.dbHelper.deleteLaunchers(deleteIds)
-        finishActionMode()
+        actMode?.finish()
         listener?.refreshLaunchers()
     }
 
@@ -172,7 +174,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener, val activity: SimpleActivity, val multiSelectorCallback: ModalMultiSelectorCallback,
                      val multiSelector: MultiSelector, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> (Unit)) : SwappingHolder(view, MultiSelector()) {
-        fun bindView(launcher: AppLauncher, textColor: Int): View {
+        fun bindView(launcher: AppLauncher, textColor: Int, resources: Resources, packageManager: PackageManager): View {
             itemView.apply {
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)
@@ -180,13 +182,12 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
                 setOnClickListener { viewClicked(launcher) }
                 setOnLongClickListener { viewLongClicked(); true }
 
-                /*if (launcher.iconId != 0) {
-                    val icon = act.resources.getDrawable(launcher.iconId)
-                    launcher_icon.setImageDrawable(icon)
+                val drawable = if (launcher.iconId != 0) {
+                    resources.getDrawable(launcher.iconId)
                 } else {
-                    val icon = act.packageManager.getApplicationIcon(launcher.pkgName)
-                    launcher_icon.setImageDrawable(icon)
-                }*/
+                    packageManager.getApplicationIcon(launcher.pkgName)
+                }
+                launcher_icon.setImageDrawable(drawable)
             }
             return itemView
         }
@@ -208,12 +209,6 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
                 }
             }
         }
-    }
-
-    interface MyAdapterListener {
-        fun toggleItemSelectionAdapter(select: Boolean, position: Int)
-
-        fun getSelectedPositions(): HashSet<Int>
     }
 
     interface AppLaunchersListener {

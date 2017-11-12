@@ -27,11 +27,15 @@
 
     <ImageView
         android:id="@+id/launcher_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/selection_check_size"
+        android:layout_height="@dimen/selection_check_size"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/ic_check"
-        android:visibility="invisible"/>
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/circle_background"
+        android:padding="@dimen/tiny_margin"
+        android:src="@drawable/ic_check"
+        android:visibility="gone"/>
 
 </RelativeLayout>
