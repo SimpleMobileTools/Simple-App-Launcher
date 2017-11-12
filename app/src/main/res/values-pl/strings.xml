@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Prosty Launcher Aplikacji</string>
+    <string name="app_launcher_name">Launcher Aplikacji</string>
+    <string name="enter_launcher_name">Proszę wpisać nazwę launchera</string>
+
+    <!-- Apps -->
+    <string name="calculator">Kalkulator</string>
+    <string name="calendar">Kalendarz</string>
+    <string name="camera">Aparat</string>
+    <string name="draw">Szkicownik</string>
+    <string name="file_manager">Menedżer Plików</string>
+    <string name="flashlight">Latarka</string>
+    <string name="gallery">Galeria</string>
+    <string name="music_player">Odtwarzacz Muzyki</string>
+    <string name="notes">Notatki</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Prosty przybornik przechowujący Twoje ulubione launchery aplikacji.</string>
+    <string name="app_long_description">
+        Z łatwością możesz dodać launcher dowolnej aplikacji, więc już nigdy nie musisz przewijać przez nieużyteczne aplikacje, aby znaleźć tą potrzebną. Możesz także zmienić ich nazwy według uznania. To nie jest prawdziwy launcher zastępujący Twój ekran główny, po prostu przybornik na ulubione aplikacje.
+
+        Nie zawiera żadnych żadnych reklam, nie potrzebuje masy uprawnień. Jest w pełni otwartoźródłowy. Kolory w aplikacji można dowolnie modyfikować.
+
+        Niniejsza aplikacja jest tylko częścią naszej kolekcji prostych narzędzi. Ta, jak i pozostałe, dostępne są na stronie http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
