@@ -2,6 +2,7 @@
     <string name="app_name">Schlichter AppLauncher</string>
     <string name="app_launcher_name">App Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
+    <string name="delete_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
 
     <!-- Apps -->
     <string name="calculator">Rechner</string>

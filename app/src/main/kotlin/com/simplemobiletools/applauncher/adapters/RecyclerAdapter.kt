@@ -119,7 +119,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
     }
 
     private fun askConfirmDelete() {
-        ConfirmationDialog(activity) {
+        ConfirmationDialog(activity, "", R.string.delete_explanation, R.string.ok, R.string.cancel) {
             deleteItems()
         }
     }

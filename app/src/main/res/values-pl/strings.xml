@@ -2,6 +2,7 @@
     <string name="app_name">Prosty Launcher Aplikacji</string>
     <string name="app_launcher_name">Launcher Aplikacji</string>
     <string name="enter_launcher_name">Proszę wpisać nazwę launchera</string>
+    <string name="delete_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
 
     <!-- Apps -->
     <string name="calculator">Kalkulator</string>
