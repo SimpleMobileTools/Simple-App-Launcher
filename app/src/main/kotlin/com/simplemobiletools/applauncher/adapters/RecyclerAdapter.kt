@@ -1,6 +1,5 @@
 package com.simplemobiletools.applauncher.adapters
 
-import android.app.AlertDialog
 import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.support.v7.view.ActionMode
@@ -12,6 +11,7 @@ import com.bignerdranch.android.multiselector.MultiSelector
 import com.bignerdranch.android.multiselector.SwappingHolder
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
+import com.simplemobiletools.applauncher.dialogs.EditDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
@@ -20,10 +20,8 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beGone
 import com.simplemobiletools.commons.extensions.beVisibleIf
-import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
-import kotlinx.android.synthetic.main.dialog_edit_launcher.view.*
 import java.util.*
 
 class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLauncher>, val listener: AppLaunchersListener?, val itemClick: (AppLauncher) -> Unit) :
@@ -91,7 +89,7 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
         }
 
         override fun onPrepareActionMode(actionMode: ActionMode?, menu: Menu): Boolean {
-            menu.findItem(R.id.cab_edit).isVisible = multiSelector.selectedPositions.size == 1
+            menu.findItem(R.id.cab_edit).isVisible = selectedPositions.size == 1
             return true
         }
 
@@ -117,32 +115,9 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: List<AppLaunc
     override fun getItemCount() = launchers.count()
 
     private fun showEditDialog() {
-        val selectedLauncher = launchers[multiSelector.selectedPositions[0]]
-        val editView = activity.layoutInflater.inflate(R.layout.dialog_edit_launcher, null)
-        editView.edit_launcher_edittext.setText(selectedLauncher.name)
-
-        AlertDialog.Builder(activity).apply {
-            setTitle(activity.getString(R.string.rename))
-            setView(editView)
-            setPositiveButton(R.string.ok, null)
-            setNegativeButton(R.string.cancel, null)
-            create().apply {
-                window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_VISIBLE)
-                show()
-                getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                    val newName = editView.edit_launcher_edittext.text.toString().trim()
-                    if (!newName.isEmpty()) {
-                        if (activity.dbHelper.updateLauncherName(selectedLauncher.id, newName) > 0) {
-                            listener?.refreshLaunchers()
-                            dismiss()
-                        } else {
-                            activity.toast(R.string.unknown_error_occurred)
-                        }
-                    } else {
-                        activity.toast(R.string.enter_launcher_name)
-                    }
-                }
-            }
+        EditDialog(activity, launchers[selectedPositions.first()]) {
+            actMode?.finish()
+            listener?.refreshLaunchers()
         }
     }
 

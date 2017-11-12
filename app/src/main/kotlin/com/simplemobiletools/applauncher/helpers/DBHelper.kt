@@ -86,12 +86,12 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         mDb.delete(MAIN_TABLE_NAME, selection, null)
     }
 
-    fun updateLauncherName(id: Int, newName: String): Int {
+    fun updateLauncherName(id: Int, newName: String): Boolean {
         val values = ContentValues()
         values.put(COL_NAME, newName)
         val selection = "$COL_ID = ?"
         val selectionArgs = Array(1) { id.toString() }
-        return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs)
+        return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs) == 1
     }
 
     fun getLaunchers(): ArrayList<AppLauncher> {
