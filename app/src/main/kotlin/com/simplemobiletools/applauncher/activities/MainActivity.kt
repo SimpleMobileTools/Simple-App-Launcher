@@ -156,6 +156,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
 
     private fun checkWhatsNewDialog() {
         arrayListOf<Release>().apply {
+            add(Release(7, R.string.release_7))
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
