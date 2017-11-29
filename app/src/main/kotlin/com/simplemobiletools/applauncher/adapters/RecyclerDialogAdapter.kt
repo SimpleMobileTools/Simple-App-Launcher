@@ -44,6 +44,9 @@ class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>
     }
 
     private val adapterListener = object : MyAdapterListener {
+        override fun itemLongClicked(position: Int) {
+        }
+
         override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
             toggleItemSelection(select, position)
         }

@@ -20,7 +20,6 @@ import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.models.Release
-import com.simplemobiletools.commons.views.MyScalableRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -70,7 +69,6 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
-        updateMenuTextSize(resources, menu)
         return true
     }
 
@@ -94,7 +92,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     private fun getGridAdapter() = launchers_grid.adapter as? RecyclerAdapter
 
     private fun setupGridLayoutManager() {
-        launchers_grid.isDragSelectionEnabled = true
+        /*launchers_grid.isDragSelectionEnabled = true
         launchers_grid.listener = object : MyScalableRecyclerView.MyScalableRecyclerViewListener {
             override fun zoomIn() {}
 
@@ -107,7 +105,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
             override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
                 getGridAdapter()?.selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
             }
-        }
+        }*/
     }
 
     private fun setupLaunchers() {
@@ -151,7 +149,7 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     }
 
     override fun itemLongClicked(position: Int) {
-        launchers_grid.setDragSelectActive(position)
+        //launchers_grid.setDragSelectActive(position)
     }
 
     private fun checkWhatsNewDialog() {

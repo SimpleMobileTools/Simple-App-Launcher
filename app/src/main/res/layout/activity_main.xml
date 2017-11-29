@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.simplemobiletools.commons.views.MyScalableRecyclerView
+    <com.simplemobiletools.commons.views.MyRecyclerView
         android:id="@+id/launchers_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

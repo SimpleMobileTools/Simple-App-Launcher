@@ -59,6 +59,9 @@ class RecyclerAdapter(val activity: SimpleActivity, val launchers: MutableList<A
     }
 
     private val adapterListener = object : MyAdapterListener {
+        override fun itemLongClicked(position: Int) {
+        }
+
         override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
             toggleItemSelection(select, position)
         }
