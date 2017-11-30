@@ -7,23 +7,25 @@ import android.view.Menu
 import android.view.MenuItem
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.adapters.RecyclerAdapter
+import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.checkWhatsNew
 import com.simplemobiletools.commons.extensions.restartActivity
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
+import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
+class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private var launchers = ArrayList<AppLauncher>()
     private var mStoredPrimaryColor = 0
     private var mStoredTextColor = 0
@@ -32,14 +34,14 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        appLaunched()
         setupLaunchers()
         checkWhatsNewDialog()
-        setupGridLayoutManager()
         storeStateVariables()
 
         fab.setOnClickListener {
             AddAppLauncherDialog(this, launchers) {
-                refreshLaunchers()
+                setupLaunchers()
             }
         }
     }
@@ -89,30 +91,13 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
     }
 
-    private fun getGridAdapter() = launchers_grid.adapter as? RecyclerAdapter
-
-    private fun setupGridLayoutManager() {
-        /*launchers_grid.isDragSelectionEnabled = true
-        launchers_grid.listener = object : MyScalableRecyclerView.MyScalableRecyclerViewListener {
-            override fun zoomIn() {}
-
-            override fun zoomOut() {}
-
-            override fun selectItem(position: Int) {
-                getGridAdapter()?.selectItem(position)
-            }
-
-            override fun selectRange(initialSelection: Int, lastDraggedIndex: Int, minReached: Int, maxReached: Int) {
-                getGridAdapter()?.selectRange(initialSelection, lastDraggedIndex, minReached, maxReached)
-            }
-        }*/
-    }
+    private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
 
     private fun setupLaunchers() {
         launchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        launchers_grid.adapter = RecyclerAdapter(this, launchers, this) {
-            val launchIntent = packageManager.getLaunchIntentForPackage(it.packageName)
+        val adapter = LaunchersAdapter(this, launchers, this, launchers_grid) {
+            val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
                 finish()
@@ -122,6 +107,8 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
                 startActivity(intent)
             }
         }
+        adapter.setupDragListener(true)
+        launchers_grid.adapter = adapter
     }
 
     private fun checkInvalidApps() {
@@ -144,12 +131,8 @@ class MainActivity : SimpleActivity(), RecyclerAdapter.AppLaunchersListener {
         }
     }
 
-    override fun refreshLaunchers() {
+    override fun refreshItems() {
         setupLaunchers()
-    }
-
-    override fun itemLongClicked(position: Int) {
-        //launchers_grid.setDragSelectActive(position)
     }
 
     private fun checkWhatsNewDialog() {
