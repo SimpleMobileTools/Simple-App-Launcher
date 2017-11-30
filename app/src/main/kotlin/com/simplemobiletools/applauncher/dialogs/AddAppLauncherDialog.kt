@@ -6,7 +6,7 @@ import android.content.pm.PackageManager
 import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.adapters.RecyclerDialogAdapter
+import com.simplemobiletools.applauncher.adapters.LaunchersDialogAdapter
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
@@ -18,7 +18,7 @@ import java.util.*
 class AddAppLauncherDialog(val activity: Activity, val displayedLaunchers: ArrayList<AppLauncher>, val callback: () -> Unit) {
     private var dialog: AlertDialog
     private var view = (activity.layoutInflater.inflate(R.layout.dialog_pick_launchers, null) as ViewGroup)
-    private var adapter: RecyclerDialogAdapter? = null
+    private var adapter: LaunchersDialogAdapter? = null
 
     init {
         dialog = AlertDialog.Builder(activity)
@@ -28,7 +28,7 @@ class AddAppLauncherDialog(val activity: Activity, val displayedLaunchers: Array
             activity.setupDialogStuff(view, this)
 
             Thread({
-                adapter = RecyclerDialogAdapter(activity, getNotDisplayedLaunchers())
+                adapter = LaunchersDialogAdapter(activity, getNotDisplayedLaunchers())
                 activity.runOnUiThread {
                     view.pick_launchers_holder.adapter = adapter
                 }

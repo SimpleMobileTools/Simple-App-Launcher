@@ -15,7 +15,7 @@ import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.app_launcher_item.view.*
 import java.util.*
 
-class RecyclerDialogAdapter(activity: Activity, val launchers: List<AppLauncher>) : RecyclerView.Adapter<RecyclerDialogAdapter.ViewHolder>() {
+class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLauncher>) : RecyclerView.Adapter<LaunchersDialogAdapter.ViewHolder>() {
     private val config = activity.config
     private var primaryColor = config.primaryColor
     private var itemViews = SparseArray<View>()
