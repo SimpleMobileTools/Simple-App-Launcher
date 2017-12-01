@@ -25,14 +25,14 @@ class AddAppLauncherDialog(val activity: Activity, val displayedLaunchers: Array
                 .setPositiveButton(R.string.ok, { dialogInterface, i -> confirmSelection() })
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            activity.setupDialogStuff(view, this)
-
-            Thread({
-                adapter = LaunchersDialogAdapter(activity, getNotDisplayedLaunchers())
-                activity.runOnUiThread {
-                    view.pick_launchers_holder.adapter = adapter
-                }
-            }).start()
+            activity.setupDialogStuff(view, this) {
+                Thread {
+                    adapter = LaunchersDialogAdapter(activity, getNotDisplayedLaunchers())
+                    activity.runOnUiThread {
+                        view.pick_launchers_holder.adapter = adapter
+                    }
+                }.start()
+            }
         }
     }
 

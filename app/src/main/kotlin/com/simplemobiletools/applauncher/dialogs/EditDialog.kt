@@ -24,18 +24,19 @@ class EditDialog(val activity: Activity, val appLauncher: AppLauncher, val callb
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
             window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            activity.setupDialogStuff(view, this, R.string.rename)
-            getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                val newName = view.edit_launcher_edittext.value
-                if (!newName.isEmpty()) {
-                    if (activity.dbHelper.updateLauncherName(appLauncher.id, newName)) {
-                        callback()
-                        dismiss()
+            activity.setupDialogStuff(view, this, R.string.rename) {
+                getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                    val newName = view.edit_launcher_edittext.value
+                    if (!newName.isEmpty()) {
+                        if (activity.dbHelper.updateLauncherName(appLauncher.id, newName)) {
+                            callback()
+                            dismiss()
+                        } else {
+                            activity.toast(R.string.unknown_error_occurred)
+                        }
                     } else {
-                        activity.toast(R.string.unknown_error_occurred)
+                        activity.toast(R.string.enter_launcher_name)
                     }
-                } else {
-                    activity.toast(R.string.enter_launcher_name)
                 }
             }
         }
