@@ -2,7 +2,7 @@
     <string name="app_name">Schlichter AppLauncher</string>
     <string name="app_launcher_name">App Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
-    <string name="delete_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
+    <string name="delete_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
 
     <!-- Apps -->
     <string name="calculator">Rechner</string>
@@ -14,7 +14,7 @@
     <string name="gallery">Galerie</string>
     <string name="music_player">Musikplayer</string>
     <string name="notes">Notizblock</string>
-    <string name="thank_you">Thank You</string>
+    <string name="thank_you">Dankeschön</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
