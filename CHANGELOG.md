@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 3.0.1 *(2017-12-07)*
+----------------------------
+
+ * Fixed missing launcher icons on some devices
+ * Made the icons a bit bigger
+
 Version 3.0.0 *(2017-12-04)*
 ----------------------------
 
