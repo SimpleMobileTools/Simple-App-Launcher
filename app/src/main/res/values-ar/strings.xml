@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">درج التطبيقات البسيط</string>
+    <string name="app_launcher_name">مشغل التطبيق</string>
+    <string name="enter_launcher_name">الرجاء ادراج اسم للإختصار</string>
+    <string name="delete_explanation">هذا سيقوم بحذف الايقونة فقط من الواجهة الحالية,ولن يقوم بإلغاء تثبيت حزمة التطبيق.</string>
+
+    <!-- Apps -->
+    <string name="calculator">الحاسبة</string>
+    <string name="calendar">التقويم</string>
+    <string name="camera">الكاميرا</string>
+    <string name="draw">رسم</string>
+    <string name="file_manager">مدير الملفات</string>
+    <string name="flashlight">الكشاف</string>
+    <string name="gallery">الاستوديو</string>
+    <string name="music_player">مشغل الموسيقى</string>
+    <string name="notes">الملاحظات</string>
+    <string name="thank_you">شكرا لك</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">حافظة بسيطة لإختصارات لتطبيقاتك المفضلة</string>
+    <string name="app_long_description">يمكنك و بسهولة إضافة أي اختصار لتشغيل التطبيق، لذلك لن تضطر مرة أخرى إلى السحب خلال تطبيقات عديمة الفائدة للعثور على التطبيق الذي تحتاج إليه. يمكنك أيضا إعادة تسمية الإختصارات كما يحلو لك. انها ليست واجهة كاملة لاستبدال الشاشة الرئيسية الحالية ، وانما هي مجرد درج للتطبيقات المفضلة لديك. لا يحتوي على إعلانات أو أذونات لا حاجة لها. وكذلك مفتوح المصدر ، ويوفر الألوان للتخصيص. هذا التطبيق هو مجرد قطعة واحدة من سلسلة أكبر من التطبيقات. يمكنك العثور على بقيتها هنا\n
+ http://www.simplemobiletools.com</string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
