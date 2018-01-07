@@ -2,7 +2,7 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">App Launcher</string>
     <string name="enter_launcher_name">Veuillez entrer un nom de launcher</string>
-    <string name="delete_explanation">Cette action ne fera que supprimer l'icône du launcher de cette liste et ne désinstallere pas l\'application.</string>
+    <string name="delete_explanation">Cette action ne fera que supprimer l\'icône du launcher de cette liste et ne désinstallere pas l\'application.</string>
 
     <!-- Apps -->
     <string name="calculator">Calculatrice</string>
@@ -20,11 +20,11 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Un moyen simple de lancer vos applications préférées.</string>
     <string name="app_long_description">
-        Vous pouvez facilement ajouter n'importe quel launcher d\'application à la liste, de telle sorte que vous n'aurez plus jamais besoin de la chercher parmi les autres applications inutiles. Vous pouvez également renommer les launchers comme vous le souhaitez. Ce n\'est pas un vrai launcher d\'appli remplaçant votre écran d'accueil, juste un moyen de trouver facilement vos applications préférées.
+        Vous pouvez facilement ajouter n\'importe quel launcher d\'application à la liste, de telle sorte que vous n\'aurez plus jamais besoin de la chercher parmi les autres applications inutiles. Vous pouvez également renommer les launchers comme vous le souhaitez. Ce n\'est pas un vrai launcher d\'appli remplaçant votre écran d'accueil, juste un moyen de trouver facilement vos applications préférées.
 
         Cette appli ne contient aucune publicité ou autorisation inutile. Elle est entièrement opensource, et propose une personnalisation des couleurs de l\'interface.
 
-        Cette application fait partie d\'une plus grande série d'applications. Vous pouvez trouver les autres à l\'adresse http://www.simplemobiletools.com
+        Cette application fait partie d\'une plus grande série d\'applications. Vous pouvez trouver les autres à l\'adresse http://www.simplemobiletools.com
     </string>
 
     <!--
