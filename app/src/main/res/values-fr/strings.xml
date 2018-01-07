@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="enter_launcher_name">Veuillez entrer un nom de launcher</string>
+    <string name="delete_explanation">Cette action ne fera que supprimer l\'icône du launcher de cette liste et ne désinstallere pas l\'application.</string>
+
+    <!-- Apps -->
+    <string name="calculator">Calculatrice</string>
+    <string name="calendar">Calendrier</string>
+    <string name="camera">Caméra</string>
+    <string name="draw">Dessiner</string>
+    <string name="file_manager">Gestionnaire de Fichiers</string>
+    <string name="flashlight">Lampe de Poche</string>
+    <string name="gallery">Galerie</string>
+    <string name="music_player">Lecteur de Musique</string>
+    <string name="notes">Notes</string>
+    <string name="thank_you">Merci</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Un moyen simple de lancer vos applications préférées.</string>
+    <string name="app_long_description">
+        Vous pouvez facilement ajouter n\'importe quel launcher d\'application à la liste, de telle sorte que vous n\'aurez plus jamais besoin de la chercher parmi les autres applications inutiles. Vous pouvez également renommer les launchers comme vous le souhaitez. Ce n\'est pas un vrai launcher d\'appli remplaçant votre écran d'accueil, juste un moyen de trouver facilement vos applications préférées.
+
+        Cette appli ne contient aucune publicité ou autorisation inutile. Elle est entièrement opensource, et propose une personnalisation des couleurs de l\'interface.
+
+        Cette application fait partie d\'une plus grande série d\'applications. Vous pouvez trouver les autres à l\'adresse http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
