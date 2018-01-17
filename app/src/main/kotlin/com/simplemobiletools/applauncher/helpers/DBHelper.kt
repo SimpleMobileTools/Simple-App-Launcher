@@ -2,6 +2,7 @@ package com.simplemobiletools.applauncher.helpers
 
 import android.content.ContentValues
 import android.content.Context
+import android.content.pm.PackageManager
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.text.TextUtils
@@ -107,6 +108,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val launchers = ArrayList<AppLauncher>()
         val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME)
         val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, "$COL_NAME COLLATE NOCASE")
+        val IDsToDelete = ArrayList<String>()
         cursor.use {
             while (cursor.moveToNext()) {
                 val id = cursor.getIntValue(COL_ID)
@@ -116,13 +118,22 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 val drawable = if (packageName.isAPredefinedApp()) {
                     resources.getLauncherDrawable(packageName)
                 } else {
-                    packageManager.getApplicationIcon(packageName)
+                    try {
+                        packageManager.getApplicationIcon(packageName)
+                    } catch (e: PackageManager.NameNotFoundException) {
+                        IDsToDelete.add(id.toString())
+                    }
+                    null
                 }
 
-                val launcher = AppLauncher(id, name, packageName, drawable)
-                launchers.add(launcher)
+                if (drawable != null) {
+                    val launcher = AppLauncher(id, name, packageName, drawable)
+                    launchers.add(launcher)
+                }
             }
         }
+
+        deleteLaunchers(IDsToDelete)
         return launchers
     }
 }
