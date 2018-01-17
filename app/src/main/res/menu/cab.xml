@@ -7,8 +7,8 @@
         android:title="@string/rename"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/cab_delete"
-        android:icon="@drawable/ic_delete"
-        android:title="@string/delete"
+        android:id="@+id/cab_remove"
+        android:icon="@drawable/ic_minus_circle"
+        android:title="@string/remove"
         app:showAsAction="ifRoom"/>
 </menu>

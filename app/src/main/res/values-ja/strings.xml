@@ -2,7 +2,7 @@
     <string name="app_name">シンプル アプリ ランチャー</string>
     <string name="app_launcher_name">アプリ ランチャー</string>
     <string name="enter_launcher_name">ランチャーの名前を入力してください</string>
-    <string name="delete_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
+    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
 
     <!-- Apps -->
     <string name="calculator">電卓</string>

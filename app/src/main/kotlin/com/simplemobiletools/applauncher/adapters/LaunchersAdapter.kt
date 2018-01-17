@@ -51,7 +51,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     override fun actionItemPressed(id: Int) {
         when (id) {
             R.id.cab_edit -> showEditDialog()
-            R.id.cab_delete -> askConfirmDelete()
+            R.id.cab_remove -> askConfirmRemove()
         }
     }
 
@@ -64,23 +64,23 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
         }
     }
 
-    private fun askConfirmDelete() {
-        ConfirmationDialog(activity, "", R.string.delete_explanation, R.string.ok, R.string.cancel) {
-            deleteItems()
+    private fun askConfirmRemove() {
+        ConfirmationDialog(activity, "", R.string.remove_explanation, R.string.ok, R.string.cancel) {
+            removeItems()
         }
     }
 
-    private fun deleteItems() {
-        val deleteIds = ArrayList<String>(selectedPositions.size)
+    private fun removeItems() {
+        val removeIds = ArrayList<String>(selectedPositions.size)
         val removeLaunchers = ArrayList<AppLauncher>(selectedPositions.size)
         selectedPositions.sortedDescending().forEach {
             val launcher = launchers[it]
-            deleteIds.add(launcher.id.toString())
+            removeIds.add(launcher.id.toString())
             removeLaunchers.add(launcher)
         }
 
         launchers.removeAll(removeLaunchers)
-        activity.dbHelper.deleteLaunchers(deleteIds)
+        activity.dbHelper.deleteLaunchers(removeIds)
         removeSelectedItems()
     }
 

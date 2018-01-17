@@ -2,7 +2,7 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Лаунчер</string>
     <string name="enter_launcher_name">Пожалуйста, введите название лаунчера</string>
-    <string name="delete_explanation">Это только удалит иконку лаунчера с сетки, но не удалит само приложение.</string>
+    <string name="remove_explanation">Это только удалит иконку лаунчера с сетки, но не удалит само приложение.</string>
 
     <!-- Apps -->
     <string name="calculator">Калькулятор</string>
