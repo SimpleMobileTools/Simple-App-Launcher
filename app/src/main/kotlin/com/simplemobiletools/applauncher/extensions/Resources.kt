@@ -9,6 +9,7 @@ fun Resources.getLauncherDrawable(packageName: String): Drawable {
         "com.simplemobiletools.calculator" -> R.drawable.ic_launcher_calculator
         "com.simplemobiletools.calendar" -> R.drawable.ic_launcher_calendar
         "com.simplemobiletools.camera" -> R.drawable.ic_launcher_camera
+        "com.simplemobiletools.contacts" -> R.drawable.ic_launcher_contacts
         "com.simplemobiletools.draw" -> R.drawable.ic_launcher_draw
         "com.simplemobiletools.filemanager" -> R.drawable.ic_launcher_filemanager
         "com.simplemobiletools.flashlight" -> R.drawable.ic_launcher_flashlight

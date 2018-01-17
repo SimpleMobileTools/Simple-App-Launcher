@@ -23,7 +23,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val mDb = writableDatabase
 
     companion object {
-        private val DB_VERSION = 2
+        private val DB_VERSION = 3
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
@@ -40,7 +40,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         addInitialLaunchers(db)
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
+        if (oldVersion < 3) {
+            val contacts = AppLauncher(0, context.getString(R.string.contacts), "com.simplemobiletools.contacts")
+            addAppLauncher(contacts, db)
+        }
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
@@ -48,6 +52,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 R.string.calculator,
                 R.string.calendar,
                 R.string.camera,
+                R.string.contacts,
                 R.string.draw,
                 R.string.file_manager,
                 R.string.flashlight,

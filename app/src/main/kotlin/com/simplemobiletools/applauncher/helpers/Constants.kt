@@ -4,6 +4,7 @@ val predefinedPackageNames = arrayListOf(
         "com.simplemobiletools.calculator",
         "com.simplemobiletools.calendar",
         "com.simplemobiletools.camera",
+        "com.simplemobiletools.contacts",
         "com.simplemobiletools.draw",
         "com.simplemobiletools.filemanager",
         "com.simplemobiletools.flashlight",
