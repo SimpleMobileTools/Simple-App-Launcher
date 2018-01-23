@@ -122,8 +122,8 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                         packageManager.getApplicationIcon(packageName)
                     } catch (e: PackageManager.NameNotFoundException) {
                         IDsToDelete.add(id.toString())
+                        null
                     }
-                    null
                 }
 
                 if (drawable != null) {
