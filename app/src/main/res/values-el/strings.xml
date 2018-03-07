@@ -10,10 +10,10 @@
     <string name="camera">Κάμερα</string>
     <string name="contacts">Επαφές</string>
     <string name="draw">Σχέδιο</string>
-    <string name="file_manager">Διαχειριστής Αρχείων</string>
+    <string name="file_manager">Αρχεία</string>
     <string name="flashlight">Φακός</string>
-    <string name="gallery"></string>
-    <string name="music_player">Μουσικός Αναπαραγωγός</string>
+    <string name="gallery">Εικονοθήκη</string>
+    <string name="music_player">Μουσική</string>
     <string name="notes">Σημειώσεις</string>
     <string name="thank_you">Σ' Ευχαριστώ</string>
 
