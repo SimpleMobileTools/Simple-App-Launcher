@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Απλός Εκκινητής Εφαρμογών</string>
+    <string name="app_launcher_name">Εκκινητής Εφαρμογών_αποσφαλμάτωση</string>
+    <string name="enter_launcher_name">Παρακαλώ εισήγαγε ένα όνομα εκκινητή</string>
+    <string name="remove_explanation">Αυτό, απλά, θα αφαιρέσει το εικονίδιο εκκίνησης από αυτό το πλαίσιο. Δεν θα απεγκαταστήσει την ίδια την εφαρμογή.</string>
+
+    <!-- Apps -->
+    <string name="calculator">Αριθμομηχανή</string>
+    <string name="calendar">Ημερολόγιο</string>
+    <string name="camera">Κάμερα</string>
+    <string name="contacts">Επαφές</string>
+    <string name="draw">Σχέδιο</string>
+    <string name="file_manager">Αρχεία</string>
+    <string name="flashlight">Φακός</string>
+    <string name="gallery">Εικονοθήκη</string>
+    <string name="music_player">Μουσική</string>
+    <string name="notes">Σημειώσεις</string>
+    <string name="thank_you">Σ\' Ευχαριστώ</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Μία απλή θήκη για τους εκκινητές των αγαπημένων σου εφαρμογών</string>
+    <string name="app_long_description">
+        Μπορείς εύκολα να προσθέσεις τον εκκινητή οποιασδήποτε εφαρμογής. Έτσι δεν θα αναγκάζεσαι, ξανά, να «θερίζεις» ανάμεσα σε αχρησιμοποίητες εφαρμογές, ώσπου να βρεις αυτή που χρειάζεσαι. Μπορείς επίσης, να μετονομάσεις τους εκκινητές, κατά την προτίμησή σου. Δεν είναι ένας πραγματικός εκκινητής, ο οποίος θα αντικαταστήσει την αρχική σου οθόνη, αλλά απλά μία θήκη για τις αγαπημένες σου εφαρμογές. 
+
+        Δεν περιέχει διαφημίσεις ούτε ζητά περιττά δικαιώματα. Είναι εντελώς ανοιχτού κώδικα. Επιτρέπει προσαρμοσμένα χρώματα. 
+
+        Αυτή η εφαρμογή είναι ένα κομμάτι από μία μεγαλύτερη σειρά εφαρμογών. Μπορείς να βρεις τις υπόλοιπες στο  http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
