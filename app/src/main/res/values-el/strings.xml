@@ -15,7 +15,7 @@
     <string name="gallery">Εικονοθήκη</string>
     <string name="music_player">Μουσική</string>
     <string name="notes">Σημειώσεις</string>
-    <string name="thank_you">Σ' Ευχαριστώ</string>
+    <string name="thank_you">Σ\' Ευχαριστώ</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
