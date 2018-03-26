@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">Pokretač aplikacija</string>
+    <string name="enter_launcher_name">Unesite naziv pokretača</string>
+    <string name="remove_explanation">To će ukloniti ikonu pokretača samo iz mreže, ali ne i deinstalirati aplikaciju.</string>
+
+    <!-- Apps -->
+    <string name="calculator">Kalkulator</string>
+    <string name="calendar">Kalendar</string>
+    <string name="camera">Kamera</string>
+    <string name="contacts">Kontakti</string>
+    <string name="draw">Crtaj</string>
+    <string name="file_manager">Upravitelj datoteka</string>
+    <string name="flashlight">Bljeskalica</string>
+    <string name="gallery">Galerija</string>
+    <string name="music_player">Glazbeni svirač</string>
+    <string name="notes">Bilješke</string>
+    <string name="thank_you">Hvala Vam</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Jednostavan način pokretanja omiljenih aplikacija.</string>
+    <string name="app_long_description">
+        Možete jednostavno dodati bilo koju aplikaciju za pokretanje na popis, pa nikad ne morate prolaziti kroz druge beskorisne aplikacije. Također možete preimenovati pokretače kako god želite. Ovo nije pravi pokretač aplikacije koji zamjenjuje Vaš početni zaslon, nego samo način da lakše pronađete svoje omiljene aplikacije.
+
+        Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+
+        Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na http://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
