@@ -13,7 +13,6 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_pick_launchers.view.*
-import java.util.*
 
 class AddAppLauncherDialog(val activity: Activity, val displayedLaunchers: ArrayList<AppLauncher>, val callback: () -> Unit) {
     private var dialog: AlertDialog
@@ -62,12 +61,11 @@ class AddAppLauncherDialog(val activity: Activity, val displayedLaunchers: Array
                 packageManager.getApplicationIcon(packageName)
             }
 
-            allApps.add(AppLauncher(0, label, componentInfo.packageName, drawable))
+            allApps.add(AppLauncher(0, label, packageName, drawable))
         }
 
         val sorted = allApps.sortedWith(compareBy { it.name.toLowerCase() })
         val unique = sorted.distinctBy { it.packageName }
-        val filtered = unique.filter { !displayedLaunchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" }
-        return filtered as ArrayList<AppLauncher>
+        return unique.filter { !displayedLaunchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
     }
 }
