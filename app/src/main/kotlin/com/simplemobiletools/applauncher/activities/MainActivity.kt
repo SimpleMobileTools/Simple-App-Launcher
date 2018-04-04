@@ -19,6 +19,7 @@ import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
+import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -83,7 +84,11 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchAbout() {
-        startAboutActivity(R.string.app_name, LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
+        val faqItems = arrayListOf(
+                FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons)
+        )
+
+        startAboutActivity(R.string.app_name, LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME, faqItems)
     }
 
     private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
