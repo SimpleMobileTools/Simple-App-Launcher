@@ -11,6 +11,7 @@ import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
+import com.simplemobiletools.applauncher.extensions.getNotDisplayedLaunchers
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.appLaunched
@@ -25,7 +26,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
-    private var launchers = ArrayList<AppLauncher>()
+    private var displayedLaunchers = ArrayList<AppLauncher>()
+    private var notDisplayedLaunchers: ArrayList<AppLauncher>? = null
     private var mStoredPrimaryColor = 0
     private var mStoredTextColor = 0
 
@@ -38,8 +40,10 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         storeStateVariables()
 
         fab.setOnClickListener {
-            AddAppLauncherDialog(this, launchers) {
-                setupLaunchers()
+            if (notDisplayedLaunchers != null) {
+                AddAppLauncherDialog(this, notDisplayedLaunchers!!) {
+                    setupLaunchers()
+                }
             }
         }
     }
@@ -94,9 +98,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
 
     private fun setupLaunchers() {
-        launchers = dbHelper.getLaunchers()
+        displayedLaunchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        val adapter = LaunchersAdapter(this, launchers, this, launchers_grid) {
+        val adapter = LaunchersAdapter(this, displayedLaunchers, this, launchers_grid) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
@@ -108,18 +112,25 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             }
         }
         launchers_grid.adapter = adapter
+        fillNotDisplayedLaunchers()
+    }
+
+    private fun fillNotDisplayedLaunchers() {
+        Thread {
+            notDisplayedLaunchers = getNotDisplayedLaunchers(displayedLaunchers)
+        }.start()
     }
 
     private fun checkInvalidApps() {
         val invalidIds = ArrayList<String>()
-        for ((id, name, packageName) in launchers) {
+        for ((id, name, packageName) in displayedLaunchers) {
             val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
             if (launchIntent == null && !packageName.isAPredefinedApp()) {
                 invalidIds.add(id.toString())
             }
         }
         dbHelper.deleteLaunchers(invalidIds)
-        launchers = launchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
+        displayedLaunchers = displayedLaunchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
     private fun storeStateVariables() {
