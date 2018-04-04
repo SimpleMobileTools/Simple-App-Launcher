@@ -1,5 +1,7 @@
 package com.simplemobiletools.applauncher.helpers
 
+const val WAS_REMOVE_INFO_SHOWN = "was_remove_info_shown"
+
 val predefinedPackageNames = arrayListOf(
         "com.simplemobiletools.calculator",
         "com.simplemobiletools.calendar",

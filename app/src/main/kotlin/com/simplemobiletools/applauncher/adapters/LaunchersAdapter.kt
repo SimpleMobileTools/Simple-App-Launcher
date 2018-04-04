@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.dialogs.EditDialog
+import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
@@ -55,7 +56,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     override fun actionItemPressed(id: Int) {
         when (id) {
             R.id.cab_edit -> showEditDialog()
-            R.id.cab_remove -> askConfirmRemove()
+            R.id.cab_remove -> tryRemoveLauncher()
         }
     }
 
@@ -68,8 +69,17 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
         }
     }
 
+    private fun tryRemoveLauncher() {
+        if (activity.config.wasRemoveInfoShown) {
+            removeItems()
+        } else {
+            askConfirmRemove()
+        }
+    }
+
     private fun askConfirmRemove() {
         ConfirmationDialog(activity, "", R.string.remove_explanation, R.string.ok, R.string.cancel) {
+            activity.config.wasRemoveInfoShown = true
             removeItems()
         }
     }
