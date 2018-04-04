@@ -14,12 +14,14 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
+import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 
 class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
-                       recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
+                       recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
+        MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick) {
 
     init {
         setupDragListener(true)

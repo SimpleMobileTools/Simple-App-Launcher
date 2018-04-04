@@ -62,6 +62,12 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         updateTextColors(coordinator_layout)
+
+        launchers_fastscroller.apply {
+            updatePrimaryColor()
+            updateBubbleColors()
+            allowBubbleDisplay = config.showInfoBubble
+        }
     }
 
     override fun onPause() {
@@ -100,7 +106,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun setupLaunchers() {
         displayedLaunchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        val adapter = LaunchersAdapter(this, displayedLaunchers, this, launchers_grid) {
+        val adapter = LaunchersAdapter(this, displayedLaunchers, this, launchers_grid, launchers_fastscroller) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
@@ -112,6 +118,12 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             }
         }
         launchers_grid.adapter = adapter
+
+        launchers_fastscroller.allowBubbleDisplay = config.showInfoBubble
+        launchers_fastscroller.setViews(launchers_grid) {
+            launchers_fastscroller.updateBubbleText(displayedLaunchers.getOrNull(it)?.getBubbleText() ?: "")
+        }
+
         fillNotDisplayedLaunchers()
     }
 

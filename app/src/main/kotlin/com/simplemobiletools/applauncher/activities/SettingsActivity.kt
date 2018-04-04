@@ -21,6 +21,7 @@ class SettingsActivity : SimpleActivity() {
         setupCustomizeColors()
         setupUseEnglish()
         setupAvoidWhatsNew()
+        setupShowInfoBubble()
         updateTextColors(settings_holder)
     }
 
@@ -45,6 +46,14 @@ class SettingsActivity : SimpleActivity() {
         settings_avoid_whats_new_holder.setOnClickListener {
             settings_avoid_whats_new.toggle()
             config.avoidWhatsNew = settings_avoid_whats_new.isChecked
+        }
+    }
+
+    private fun setupShowInfoBubble() {
+        settings_show_info_bubble.isChecked = config.showInfoBubble
+        settings_show_info_bubble_holder.setOnClickListener {
+            settings_show_info_bubble.toggle()
+            config.showInfoBubble = settings_show_info_bubble.isChecked
         }
     }
 }
