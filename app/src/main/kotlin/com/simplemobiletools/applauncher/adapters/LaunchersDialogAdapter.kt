@@ -12,7 +12,7 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.interfaces.MyAdapterListener
-import kotlinx.android.synthetic.main.app_launcher_item.view.*
+import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 
 class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLauncher>) : RecyclerView.Adapter<LaunchersDialogAdapter.ViewHolder>() {
@@ -60,7 +60,7 @@ class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLau
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.app_launcher_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_app_launcher, parent, false)
         return ViewHolder(view, adapterListener)
     }
 

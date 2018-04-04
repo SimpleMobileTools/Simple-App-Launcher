@@ -14,7 +14,7 @@ import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.app_launcher_item.view.*
+import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 
 class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
@@ -34,7 +34,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
         view?.launcher_check?.beVisibleIf(select)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.app_launcher_item, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_app_launcher, parent)
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val launcher = launchers[position]
@@ -48,7 +48,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
 
     override fun prepareActionMode(menu: Menu) {
         menu.apply {
-            findItem(R.id.cab_edit).isVisible = selectedPositions.size == 1
+            findItem(R.id.cab_edit).isVisible = isOneItemSelected()
         }
     }
 
