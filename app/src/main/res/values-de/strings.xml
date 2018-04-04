@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Schlichter App Launcher</string>
-    <string name="app_launcher_name">App Launcher</string>
+    <string name="app_name">Schlichter App-Launcher</string>
+    <string name="app_launcher_name">App-Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
 
@@ -8,7 +8,7 @@
     <string name="calculator">Rechner</string>
     <string name="calendar">Kalender</string>
     <string name="camera">Kamera</string>
-    <string name="clock">Clock</string>
+    <string name="clock">Uhr</string>
     <string name="contacts">Kontakte</string>
     <string name="draw">Zeichenblock</string>
     <string name="file_manager">Dateimanager</string>
