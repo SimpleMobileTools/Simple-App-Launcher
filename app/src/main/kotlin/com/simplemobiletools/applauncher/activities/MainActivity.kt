@@ -15,9 +15,7 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.checkWhatsNew
-import com.simplemobiletools.commons.extensions.restartActivity
 import com.simplemobiletools.commons.extensions.updateTextColors
-import com.simplemobiletools.commons.helpers.LICENSE_KOTLIN
 import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
@@ -29,7 +27,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private var launchers = ArrayList<AppLauncher>()
     private var mStoredPrimaryColor = 0
     private var mStoredTextColor = 0
-    private var mStoredUseEnglish = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,17 +45,15 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
-        if (mStoredUseEnglish != config.useEnglish) {
-            restartActivity()
-            return
-        }
-
         if (mStoredTextColor != config.textColor) {
             getGridAdapter()?.updateTextColor(config.textColor)
         }
 
         if (mStoredPrimaryColor != config.primaryColor) {
-            getGridAdapter()?.updatePrimaryColor(config.primaryColor)
+            getGridAdapter()?.apply {
+                updatePrimaryColor(config.primaryColor)
+                notifyDataSetChanged()
+            }
         }
 
         updateTextColors(coordinator_layout)
@@ -88,7 +83,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchAbout() {
-        startAboutActivity(R.string.app_name, LICENSE_KOTLIN or LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
+        startAboutActivity(R.string.app_name, LICENSE_MULTISELECT or LICENSE_STETHO, BuildConfig.VERSION_NAME)
     }
 
     private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
@@ -107,7 +102,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
                 startActivity(intent)
             }
         }
-        adapter.setupDragListener(true)
         launchers_grid.adapter = adapter
     }
 
@@ -127,7 +121,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         config.apply {
             mStoredPrimaryColor = primaryColor
             mStoredTextColor = textColor
-            mStoredUseEnglish = useEnglish
         }
     }
 

@@ -3,11 +3,11 @@ package com.simplemobiletools.applauncher.dialogs
 import android.app.Activity
 import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
-import android.view.WindowManager
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.setupDialogStuff
+import com.simplemobiletools.commons.extensions.showKeyboard
 import com.simplemobiletools.commons.extensions.toast
 import com.simplemobiletools.commons.extensions.value
 import kotlinx.android.synthetic.main.dialog_edit_launcher.view.*
@@ -23,22 +23,22 @@ class EditDialog(val activity: Activity, val appLauncher: AppLauncher, val callb
                 .setPositiveButton(R.string.ok, null)
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
-            window!!.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE)
-            activity.setupDialogStuff(view, this, R.string.rename) {
-                getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener {
-                    val newName = view.edit_launcher_edittext.value
-                    if (!newName.isEmpty()) {
-                        if (activity.dbHelper.updateLauncherName(appLauncher.id, newName)) {
-                            callback()
-                            dismiss()
-                        } else {
-                            activity.toast(R.string.unknown_error_occurred)
+                    activity.setupDialogStuff(view, this, R.string.rename) {
+                        showKeyboard(view.edit_launcher_edittext)
+                        getButton(android.app.AlertDialog.BUTTON_POSITIVE).setOnClickListener {
+                            val newName = view.edit_launcher_edittext.value
+                            if (!newName.isEmpty()) {
+                                if (activity.dbHelper.updateLauncherName(appLauncher.id, newName)) {
+                                    callback()
+                                    dismiss()
+                                } else {
+                                    activity.toast(R.string.unknown_error_occurred)
+                                }
+                            } else {
+                                activity.toast(R.string.enter_launcher_name)
+                            }
                         }
-                    } else {
-                        activity.toast(R.string.enter_launcher_name)
                     }
                 }
-            }
-        }
     }
 }

@@ -20,6 +20,10 @@ import java.util.*
 class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
 
+    init {
+        setupDragListener(true)
+    }
+
     override fun getActionMenuId() = R.menu.cab
 
     override fun prepareItemSelection(view: View) {
@@ -30,7 +34,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
         view?.launcher_check?.beVisibleIf(select)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int) = createViewHolder(R.layout.app_launcher_item, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.app_launcher_item, parent)
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val launcher = launchers[position]
@@ -82,11 +86,6 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
         launchers.removeAll(removeLaunchers)
         activity.dbHelper.deleteLaunchers(removeIds)
         removeSelectedItems()
-    }
-
-    fun updatePrimaryColor(primaryColor: Int) {
-        this.primaryColor = primaryColor
-        notifyDataSetChanged()
     }
 
     private fun setupView(view: View, launcher: AppLauncher) {

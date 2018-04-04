@@ -59,8 +59,8 @@ class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLau
         toggleItemSelection(selectedPositions.contains(position), position)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent?.context).inflate(R.layout.app_launcher_item, parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.app_launcher_item, parent, false)
         return ViewHolder(view, adapterListener)
     }
 
