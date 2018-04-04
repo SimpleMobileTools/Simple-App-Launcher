@@ -8,6 +8,7 @@
     <string name="calculator">Calculadora</string>
     <string name="calendar">Calendario</string>
     <string name="camera">Cámara</string>
+    <string name="clock">Clock</string>
     <string name="contacts">Contacts</string>
     <string name="draw">Dibujo</string>
     <string name="file_manager">Administrador de archivos</string>
@@ -25,7 +26,7 @@
 
         No contiene publicidad ni permisos innecesarios. Es totalmente libre, proporciona colores personalizables.
 
-        Esta aplicación es solamente una pieza de una serie más grande de aplicaciones. Puede encontrar el resto en http://www.simplemobiletools.com
+        Esta aplicación es solamente una pieza de una serie más grande de aplicaciones. Puede encontrar el resto en https://www.simplemobiletools.com
     </string>
 
     <!--

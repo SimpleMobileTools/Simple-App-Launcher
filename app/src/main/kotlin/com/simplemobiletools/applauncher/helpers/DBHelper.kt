@@ -24,13 +24,14 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val mDb = writableDatabase
 
     companion object {
-        private val DB_VERSION = 3
+        private val DB_VERSION = 4
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
         fun newInstance(context: Context): DBHelper {
-            if (dbInstance == null)
+            if (dbInstance == null) {
                 dbInstance = DBHelper(context)
+            }
 
             return dbInstance!!
         }
@@ -46,6 +47,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             val contacts = AppLauncher(0, context.getString(R.string.contacts), "com.simplemobiletools.contacts")
             addAppLauncher(contacts, db)
         }
+
+        if (oldVersion < 4) {
+            val clock = AppLauncher(0, context.getString(R.string.clock), "com.simplemobiletools.clock")
+            addAppLauncher(clock, db)
+        }
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
@@ -53,6 +59,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 R.string.calculator,
                 R.string.calendar,
                 R.string.camera,
+                R.string.clock,
                 R.string.contacts,
                 R.string.draw,
                 R.string.file_manager,

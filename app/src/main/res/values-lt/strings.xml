@@ -8,6 +8,7 @@
     <string name="calculator">Skaičiuotuvas</string>
     <string name="calendar">Kalendorius</string>
     <string name="camera">Fotoaparatas</string>
+    <string name="clock">Laikrodis</string>
     <string name="contacts">Kontaktai</string>
     <string name="draw">Piešimas</string>
     <string name="file_manager">Bylų tvarkyklė</string>
@@ -25,7 +26,7 @@
 
         Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
 
-        Ši programėle yra vienintelė iš keletos mūsų programėlių. Likusias Jūs galite rasti čia http://www.simplemobiletools.com
+        Ši programėle yra vienintelė iš keletos mūsų programėlių. Likusias Jūs galite rasti čia https://www.simplemobiletools.com
     </string>
 
     <!--

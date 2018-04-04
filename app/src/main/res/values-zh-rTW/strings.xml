@@ -8,6 +8,7 @@
     <string name="calculator">計算機</string>
     <string name="calendar">行事曆</string>
     <string name="camera">相機</string>
+    <string name="clock">簡易時鐘</string>
     <string name="contacts">通訊錄</string>
     <string name="draw">繪圖</string>
     <string name="file_manager">檔案管理器</string>
@@ -25,7 +26,7 @@
 
         不包含廣告及非必要的權限，而且完全開放原始碼，並提供自訂顏色。
 		
-        這程式只是一系列眾多應用程式的其中一項，你可以在這發現更多 http://www.simplemobiletools.com
+        這程式只是一系列眾多應用程式的其中一項，你可以在這發現更多 https://www.simplemobiletools.com
     </string>
 
     <!--

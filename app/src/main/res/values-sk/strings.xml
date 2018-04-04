@@ -8,6 +8,7 @@
     <string name="calculator">Kalkulačka</string>
     <string name="calendar">Kalendár</string>
     <string name="camera">Kamera</string>
+    <string name="clock">Hodinky</string>
     <string name="contacts">Kontakty</string>
     <string name="draw">Kreslenie</string>
     <string name="file_manager">Správca súborov</string>
@@ -25,7 +26,7 @@
 
         Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 
-        Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na http://www.simplemobiletools.com
+        Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na https://www.simplemobiletools.com
     </string>
 
     <!--

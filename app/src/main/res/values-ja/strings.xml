@@ -8,6 +8,7 @@
     <string name="calculator">電卓</string>
     <string name="calendar">カレンダー</string>
     <string name="camera">カメラ</string>
+    <string name="clock">Clock</string>
     <string name="contacts">Contacts</string>
     <string name="draw">ドロー</string>
     <string name="file_manager">ファイル マネージャー</string>
@@ -25,7 +26,7 @@
 
         広告や不要なアクセス許可は含まれていません。 完全にオープンソースで、ダークテーマも提供しています。
 
-        このアプリは、大きな一連のアプリの一つです。 他のアプリは http://www.simplemobiletools.com で見つけることができます
+        このアプリは、大きな一連のアプリの一つです。 他のアプリは https://www.simplemobiletools.com で見つけることができます
     </string>
 
     <!--

@@ -8,6 +8,7 @@
     <string name="calculator">Калькулятор</string>
     <string name="calendar">Календарь</string>
     <string name="camera">Камера</string>
+    <string name="clock">Clock</string>
     <string name="contacts">Контакты</string>
     <string name="draw">Рисунки</string>
     <string name="file_manager">Файловый менеджер</string>
@@ -25,7 +26,7 @@
 
         Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
-        This app is just one piece of a bigger series of apps. You can find the rest of them at http://www.simplemobiletools.com
+        This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
     </string>
 
     <!--

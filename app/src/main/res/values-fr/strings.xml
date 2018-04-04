@@ -8,6 +8,7 @@
     <string name="calculator">Calculatrice</string>
     <string name="calendar">Calendrier</string>
     <string name="camera">Caméra</string>
+    <string name="clock">Horloge</string>
     <string name="contacts">Contacts</string>
     <string name="draw">Dessiner</string>
     <string name="file_manager">Gestionnaire de Fichiers</string>
@@ -25,7 +26,7 @@
 
         Cette appli ne contient aucune publicité ou autorisation inutile. Elle est entièrement opensource, et propose une personnalisation des couleurs de l\'interface.
 
-        Cette application fait partie d\'une plus grande série d\'applications. Vous pouvez trouver les autres à l\'adresse http://www.simplemobiletools.com
+        Cette application fait partie d\'une plus grande série d\'applications. Vous pouvez trouver les autres à l\'adresse https://www.simplemobiletools.com
     </string>
 
     <!--

@@ -8,6 +8,7 @@
     <string name="calculator">Αριθμομηχανή</string>
     <string name="calendar">Ημερολόγιο</string>
     <string name="camera">Κάμερα</string>
+    <string name="clock">Clock</string>
     <string name="contacts">Επαφές</string>
     <string name="draw">Σχέδιο</string>
     <string name="file_manager">Αρχεία</string>
@@ -25,7 +26,7 @@
 
         Δεν περιέχει διαφημίσεις ούτε ζητά περιττά δικαιώματα. Είναι εντελώς ανοιχτού κώδικα. Επιτρέπει προσαρμοσμένα χρώματα. 
 
-        Αυτή η εφαρμογή είναι ένα κομμάτι από μία μεγαλύτερη σειρά εφαρμογών. Μπορείς να βρεις τις υπόλοιπες στο  http://www.simplemobiletools.com
+        Αυτή η εφαρμογή είναι ένα κομμάτι από μία μεγαλύτερη σειρά εφαρμογών. Μπορείς να βρεις τις υπόλοιπες στο  https://www.simplemobiletools.com
     </string>
 
     <!--

@@ -8,6 +8,7 @@
     <string name="calculator">Kalkulator</string>
     <string name="calendar">Kalendar</string>
     <string name="camera">Kamera</string>
+    <string name="clock">Sat</string>
     <string name="contacts">Kontakti</string>
     <string name="draw">Crtaj</string>
     <string name="file_manager">Upravitelj datoteka</string>
@@ -25,7 +26,7 @@
 
         Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
 
-        Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na http://www.simplemobiletools.com
+        Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na https://www.simplemobiletools.com
     </string>
 
     <!--
