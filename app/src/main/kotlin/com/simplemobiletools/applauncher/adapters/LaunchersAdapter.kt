@@ -12,7 +12,7 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
@@ -32,7 +32,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     }
 
     override fun markItemSelection(select: Boolean, view: View?) {
-        view?.launcher_check?.beVisibleIf(select)
+        view?.launcher_check?.beInvisibleIf(!select)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_app_launcher, parent)

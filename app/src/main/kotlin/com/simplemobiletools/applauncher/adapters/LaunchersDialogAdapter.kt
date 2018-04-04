@@ -10,7 +10,7 @@ import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
@@ -32,7 +32,7 @@ class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLau
             selectedPositions.remove(pos)
         }
 
-        itemViews[pos]?.launcher_check?.beVisibleIf(select)
+        itemViews[pos]?.launcher_check?.beInvisibleIf(!select)
     }
 
     fun getSelectedLaunchers(): ArrayList<AppLauncher> {
