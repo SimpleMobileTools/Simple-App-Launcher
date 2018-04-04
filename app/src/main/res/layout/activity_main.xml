@@ -13,7 +13,7 @@
         android:clipToPadding="false"
         android:paddingBottom="@dimen/activity_margin"
         android:paddingTop="@dimen/activity_margin"
-        app:layoutManager="android.support.v7.widget.GridLayoutManager"
+        app:layoutManager="com.simplemobiletools.commons.views.MyGridLayoutManager"
         app:spanCount="@integer/columns"/>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
