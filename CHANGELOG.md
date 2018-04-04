@@ -1,6 +1,14 @@
 Changelog
 ==========
 
+Version 3.1.2 *(2018-04-04)*
+----------------------------
+
+ * Added Simple Clock
+ * Added a fastscroller in case the user has many app launchers displayed
+ * Make sure available app icons are displayed immediately after pressing Plus
+ * Couple smaller improvements and bugfixes
+
 Version 3.1.1 *(2018-01-23)*
 ----------------------------
 
