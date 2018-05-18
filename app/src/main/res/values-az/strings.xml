@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Sadə Tətbiq Başladıcı</string>
+    <string name="app_launcher_name">Tətbiq Başladıcı</string>
+    <string name="enter_launcher_name">Başladıcı adı daxil edin</string>
+    <string name="remove_explanation">Bu proses yalnız tətbiq ikonunu siyahıdan siləcək, tətbiqin özü silinməyəcək.</string>
+
+    <!-- Apps -->
+    <string name="calculator">Kalkulyator</string>
+    <string name="calendar">Təqvim</string>
+    <string name="camera">Kamera</string>
+    <string name="clock">Saat</string>
+    <string name="contacts">Kontaktlar</string>
+    <string name="draw">Çək</string>
+    <string name="file_manager">Fayl Menecer</string>
+    <string name="flashlight">Fənər</string>
+    <string name="gallery">Qaleriya</string>
+    <string name="music_player">Musiqi Çalar</string>
+    <string name="notes">Qeydlər</string>
+    <string name="thank_you">Təşəkkürlər</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">A simple holder for your favourite app launchers.</string>
+    <string name="app_long_description">
+        You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish. It is not a real launcher replacing your home screen, just a holder for your favourite apps.
+
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+
+        This app is just one piece of a bigger series of apps. You can find the rest of them at https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
