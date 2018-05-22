@@ -42,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.simplemobiletools:commons:3.18.6'
+    implementation 'com.simplemobiletools:commons:4.0.22'
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'com.android.support:multidex:1.0.3'
 }
