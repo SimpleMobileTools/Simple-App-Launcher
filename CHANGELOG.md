@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 4.0.0 *(2018-05-22)*
+----------------------------
+
+ * Allow customizing the app launcher icon color
+ * List properly colored app launcher icons
+
 Version 3.1.2 *(2018-04-04)*
 ----------------------------
 
