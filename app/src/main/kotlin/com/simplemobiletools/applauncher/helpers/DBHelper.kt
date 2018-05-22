@@ -1,10 +1,14 @@
 package com.simplemobiletools.applauncher.helpers
 
+import android.annotation.TargetApi
 import android.content.ContentValues
 import android.content.Context
+import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.graphics.drawable.Drawable
+import android.os.Build
 import android.text.TextUtils
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.getLauncherDrawable
@@ -12,6 +16,7 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
+import com.simplemobiletools.commons.helpers.isLollipopPlus
 import java.util.*
 
 class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
@@ -109,6 +114,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs) == 1
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     fun getLaunchers(): ArrayList<AppLauncher> {
         val resources = context.resources
         val packageManager = context.packageManager
@@ -122,18 +128,31 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 val name = cursor.getStringValue(COL_NAME)
                 val packageName = cursor.getStringValue(COL_PKG_NAME)
 
-                val drawable = if (packageName.isAPredefinedApp()) {
+                var drawable: Drawable? = null
+                if (isLollipopPlus()) {
                     try {
-                        packageManager.getApplicationIcon(packageName)
-                    } catch (e: PackageManager.NameNotFoundException) {
-                        resources.getLauncherDrawable(packageName)
+                        // try getting the properly colored launcher icons
+                        val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
+                        val activityList = launcher.getActivityList(packageName, android.os.Process.myUserHandle())[0]
+                        drawable = activityList.getBadgedIcon(0)
+                    } catch (e: Exception) {
                     }
-                } else {
-                    try {
-                        packageManager.getApplicationIcon(packageName)
-                    } catch (e: PackageManager.NameNotFoundException) {
-                        IDsToDelete.add(id.toString())
-                        null
+                }
+
+                if (drawable == null) {
+                    drawable = if (packageName.isAPredefinedApp()) {
+                        try {
+                            packageManager.getApplicationIcon(packageName)
+                        } catch (e: PackageManager.NameNotFoundException) {
+                            resources.getLauncherDrawable(packageName)
+                        }
+                    } else {
+                        try {
+                            packageManager.getApplicationIcon(packageName)
+                        } catch (e: PackageManager.NameNotFoundException) {
+                            IDsToDelete.add(id.toString())
+                            null
+                        }
                     }
                 }
 
