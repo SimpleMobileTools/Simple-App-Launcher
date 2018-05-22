@@ -123,7 +123,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 val packageName = cursor.getStringValue(COL_PKG_NAME)
 
                 val drawable = if (packageName.isAPredefinedApp()) {
-                    resources.getLauncherDrawable(packageName)
+                    try {
+                        packageManager.getApplicationIcon(packageName)
+                    } catch (e: PackageManager.NameNotFoundException) {
+                        resources.getLauncherDrawable(packageName)
+                    }
                 } else {
                     try {
                         packageManager.getApplicationIcon(packageName)

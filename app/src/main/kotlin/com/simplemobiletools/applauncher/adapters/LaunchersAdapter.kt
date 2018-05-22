@@ -41,7 +41,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val launcher = launchers[position]
-        val view = holder.bindView(launcher) { itemView, layoutPosition ->
+        val view = holder.bindView(launcher) { itemView, adapterPosition ->
             setupView(itemView, launcher)
         }
         bindViewHolder(holder, position, view)
