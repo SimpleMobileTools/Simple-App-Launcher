@@ -3,6 +3,7 @@
     <string name="app_launcher_name">App Launcher</string>
     <string name="enter_launcher_name">Veuillez entrer un nom de launcher</string>
     <string name="remove_explanation">Cette action ne fera que supprimer l\'icône du launcher de cette liste et ne désinstallere pas l\'application.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">Calculatrice</string>

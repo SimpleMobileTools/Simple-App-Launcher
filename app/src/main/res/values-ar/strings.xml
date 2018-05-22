@@ -3,6 +3,7 @@
     <string name="app_launcher_name">مشغل التطبيق</string>
     <string name="enter_launcher_name">الرجاء ادراج اسم للإختصار</string>
     <string name="remove_explanation">هذا سيقوم بحذف الايقونة فقط من الواجهة الحالية,ولن يقوم بإلغاء تثبيت حزمة التطبيق.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">الحاسبة</string>

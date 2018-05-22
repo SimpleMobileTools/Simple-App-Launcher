@@ -3,6 +3,7 @@
     <string name="app_launcher_name">Paleidimo priemonė</string>
     <string name="enter_launcher_name">Prašome įvesti paleidimo priemonės pavadinimą</string>
     <string name="remove_explanation">Tai tik pašalins paleidimo priemonės ikonėlę iš tinklelio, nepašalins pačios programėlės.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">Skaičiuotuvas</string>

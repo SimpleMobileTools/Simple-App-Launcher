@@ -3,6 +3,7 @@
     <string name="app_launcher_name">Spúšťač aplikácií</string>
     <string name="enter_launcher_name">Prosím zadajte názov pre spúšťač</string>
     <string name="remove_explanation">Toto iba odstráni spúšťačku z tejto mriežky, neodinštaluje to samotnú apku.</string>
+    <string name="close_app">Ukončiť túto aplikáciu pri spustení inej</string>
 
     <!-- Apps -->
     <string name="calculator">Kalkulačka</string>

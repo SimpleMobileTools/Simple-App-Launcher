@@ -110,7 +110,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 startActivity(launchIntent)
-                finish()
+                if (config.closeApp) {
+                    finish()
+                }
             } else {
                 val url = "https://play.google.com/store/apps/details?id=${it.packageName}"
                 val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))

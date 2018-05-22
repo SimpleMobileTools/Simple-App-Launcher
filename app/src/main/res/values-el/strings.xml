@@ -3,6 +3,7 @@
     <string name="app_launcher_name">Εκκινητής Εφαρμογών_αποσφαλμάτωση</string>
     <string name="enter_launcher_name">Παρακαλώ εισήγαγε ένα όνομα εκκινητή</string>
     <string name="remove_explanation">Αυτό, απλά, θα αφαιρέσει το εικονίδιο εκκίνησης από αυτό το πλαίσιο. Δεν θα απεγκαταστήσει την ίδια την εφαρμογή.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">Αριθμομηχανή</string>

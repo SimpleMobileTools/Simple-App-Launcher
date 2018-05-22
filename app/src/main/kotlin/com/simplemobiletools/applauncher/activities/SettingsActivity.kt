@@ -22,6 +22,7 @@ class SettingsActivity : SimpleActivity() {
         setupUseEnglish()
         setupAvoidWhatsNew()
         setupShowInfoBubble()
+        setupCloseApp()
         updateTextColors(settings_holder)
     }
 
@@ -54,6 +55,14 @@ class SettingsActivity : SimpleActivity() {
         settings_show_info_bubble_holder.setOnClickListener {
             settings_show_info_bubble.toggle()
             config.showInfoBubble = settings_show_info_bubble.isChecked
+        }
+    }
+
+    private fun setupCloseApp() {
+        settings_close_app.isChecked = config.closeApp
+        settings_close_app_holder.setOnClickListener {
+            settings_close_app.toggle()
+            config.closeApp = settings_close_app.isChecked
         }
     }
 }

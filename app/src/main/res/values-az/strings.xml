@@ -3,6 +3,7 @@
     <string name="app_launcher_name">Tətbiq Başladıcı</string>
     <string name="enter_launcher_name">Başladıcı adı daxil edin</string>
     <string name="remove_explanation">Bu proses yalnız tətbiq ikonunu siyahıdan siləcək, tətbiqin özü silinməyəcək.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">Kalkulyator</string>

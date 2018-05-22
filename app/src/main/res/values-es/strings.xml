@@ -3,6 +3,7 @@
     <string name="app_launcher_name">Lanzador de aplicaciones</string>
     <string name="enter_launcher_name">Por favor, introduzca un nombre para el lanzador</string>
     <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">Calculadora</string>

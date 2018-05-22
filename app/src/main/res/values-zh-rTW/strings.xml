@@ -3,6 +3,7 @@
     <string name="app_launcher_name">簡易應用程式啟動器</string>
     <string name="enter_launcher_name">請輸入啟動器名稱</string>
     <string name="remove_explanation">這只會從畫面移除啟動器圖標，不會解除安裝實際程式。</string>
+    <string name="close_app">Close this app at launching a different one</string>
 
     <!-- Apps -->
     <string name="calculator">計算機</string>
