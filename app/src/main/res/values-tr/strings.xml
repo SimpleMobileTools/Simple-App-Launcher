@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Basit Uygulama Başlatıcı</string>
+    <string name="app_launcher_name">Uygulama Başlatıcı</string>
+    <string name="enter_launcher_name">Lütfen bir başlatıcı adı girin</string>
+    <string name="remove_explanation">Bu, uygulamayı değil sadece bu ekrandan uygulama simgesini kaldırır.</string>
+    <string name="close_app">Farklı bir başlatmada bu uygulamayı kapat</string>
+
+    <!-- Apps -->
+    <string name="calculator">Hesap Makinesi</string>
+    <string name="calendar">Takvim</string>
+    <string name="camera">Kamera</string>
+    <string name="clock">Saat</string>
+    <string name="contacts">Kişiler</string>
+    <string name="draw">Çizim</string>
+    <string name="file_manager">Dosya Yöneticisi</string>
+    <string name="flashlight">Fener</string>
+    <string name="gallery">Galeri</string>
+    <string name="music_player">Müzik Çalar</string>
+    <string name="notes">Notlar</string>
+    <string name="thank_you">Teşekkürler</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Favori uygulamalarınızı başlatmak için basit bir tutucu.</string>
+    <string name="app_long_description">
+        Herhangi bir uygulama başlatıcısını kolayca ekleyebilirsiniz, böylece ihtiyacınız olanı bulmak için hiçbir zaman işe yaramaz uygulamaları kaydırmanız gerekmez. Ayrıca başlatıcıları istediğiniz gibi yeniden adlandırabilirsiniz. Ana ekranınızı değiştiren gerçek bir başlatıcı değil, sadece favori uygulamalarınız için bir tutucudur.
+
+        Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sağlar.
+
+        Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı http://www.simplemobiletools.com adresinde bulabilirsiniz
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
