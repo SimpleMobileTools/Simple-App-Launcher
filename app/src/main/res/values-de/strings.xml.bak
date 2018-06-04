@@ -21,13 +21,13 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Eine einfache Anwendung um all deine Lieblingsanwendungen an einem Platz zu vereinen.</string>
+    <string name="app_short_description">Eine schlichte App um all deine Lieblingsapps an einem Platz zu vereinen.</string>
     <string name="app_long_description">
-        Du kannst ganz einfach jede Anwendung hinzufügen, damit du nie wieder zwischen zahlreichen Anwendungen suchen musst, um eine bestimmte zu finden. Du kannst die Verknüpfungen auch nach deinen Wünschen umbenennen. Diese Anwendung ist kein richtiger Launcher, der deinen Homescreen ersetzt - nur ein Platz für Verknüpfungen deiner Lieblingsanwendungen.
+        Du kannst ganz einfach jede App hinzufügen, damit du nie wieder zwischen zahlreichen Apps suchen musst, um eine bestimmte zu finden. Du kannst die Verknüpfungen auch nach deinen Wünschen umbenennen. Diese App ist kein richtiger Launcher, der deinen Homescreen ersetzt - nur ein Platz für Verknüpfungen deiner Lieblingsapps.
 
         Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
         
-        Diese Anwendung ist nur eine aus einer größeren Serie. Den Rest davon findet sich auf https://www.simplemobiletools.com
+        Diese App ist nur eine aus einer größeren Serie von schlichten Apps. Der Rest davon findet sich auf https://www.simplemobiletools.com
     </string>
 
     <!--
