@@ -3,7 +3,7 @@
     <string name="app_launcher_name">App-Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
 
     <!-- Apps -->
     <string name="calculator">Rechner</string>
