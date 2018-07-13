@@ -2,20 +2,20 @@
     <string name="app_name">シンプル アプリ ランチャー</string>
     <string name="app_launcher_name">アプリ ランチャー</string>
     <string name="enter_launcher_name">ランチャーの名前を入力してください</string>
-    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="remove_explanation">この操作は実際のアプリをアンインストールするのではなく、一覧からアプリのアイコンを削除するだけです。</string>
+    <string name="close_app">別のアプリを起動するときにこのアプリを閉じる</string>
 
     <!-- Apps -->
     <string name="calculator">電卓</string>
     <string name="calendar">カレンダー</string>
     <string name="camera">カメラ</string>
-    <string name="clock">Clock</string>
-    <string name="contacts">Contacts</string>
+    <string name="clock">時計</string>
+    <string name="contacts">連絡先</string>
     <string name="draw">ドロー</string>
-    <string name="file_manager">ファイル マネージャー</string>
+    <string name="file_manager">ファイルマネージャー</string>
     <string name="flashlight">フラッシュライト</string>
     <string name="gallery">ギャラリー</string>
-    <string name="music_player">ミュージック プレイヤー</string>
+    <string name="music_player">ミュージックプレイヤー</string>
     <string name="notes">メモ</string>
     <string name="thank_you">Thank You</string>
 
