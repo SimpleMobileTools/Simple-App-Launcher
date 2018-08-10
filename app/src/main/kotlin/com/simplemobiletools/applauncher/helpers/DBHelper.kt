@@ -125,7 +125,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         cursor.use {
             while (cursor.moveToNext()) {
                 val id = cursor.getIntValue(COL_ID)
-                val name = cursor.getStringValue(COL_NAME)
+                var name = cursor.getStringValue(COL_NAME)
                 val packageName = cursor.getStringValue(COL_PKG_NAME)
 
                 var drawable: Drawable? = null
@@ -135,6 +135,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                         val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
                         val activityList = launcher.getActivityList(packageName, android.os.Process.myUserHandle())[0]
                         drawable = activityList.getBadgedIcon(0)
+                        name = activityList.label.toString()
                     } catch (e: Exception) {
                     }
                 }
