@@ -29,19 +29,19 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
 
     override fun getActionMenuId() = R.menu.cab
 
-    override fun prepareItemSelection(view: View) {
-        view.launcher_check?.background?.applyColorFilter(primaryColor)
+    override fun prepareItemSelection(viewHolder: ViewHolder) {
+        viewHolder.itemView?.launcher_check?.background?.applyColorFilter(primaryColor)
     }
 
-    override fun markItemSelection(select: Boolean, view: View?) {
-        view?.launcher_check?.beInvisibleIf(!select)
+    override fun markViewHolderSelection(select: Boolean, viewHolder: ViewHolder?) {
+        viewHolder?.itemView?.launcher_check?.beInvisibleIf(!select)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_app_launcher, parent)
 
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val launcher = launchers[position]
-        val view = holder.bindView(launcher) { itemView, adapterPosition ->
+        val view = holder.bindView(launcher, true, true) { itemView, adapterPosition ->
             setupView(itemView, launcher)
         }
         bindViewHolder(holder, position, view)
@@ -63,6 +63,8 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     }
 
     override fun getSelectableItemCount() = launchers.size
+
+    override fun getIsItemSelectable(position: Int) = true
 
     private fun showEditDialog() {
         EditDialog(activity, launchers[selectedPositions.first()]) {

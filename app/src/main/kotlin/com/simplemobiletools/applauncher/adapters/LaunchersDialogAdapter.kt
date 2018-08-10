@@ -64,7 +64,7 @@ class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLau
         return ViewHolder(view, adapterListener)
     }
 
-    override fun getItemCount() = launchers.count()
+    override fun getItemCount() = launchers.size
 
     class ViewHolder(view: View, val adapterListener: MyAdapterListener) : RecyclerView.ViewHolder(view) {
         fun bindView(launcher: AppLauncher, textColor: Int): View {

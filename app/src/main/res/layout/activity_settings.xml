@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/settings_scrollview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -46,7 +47,8 @@
                 android:clickable="false"
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingStart="@dimen/medium_margin"
-                android:text="@string/use_english_language"/>
+                android:text="@string/use_english_language"
+                app:switchPadding="@dimen/medium_margin"/>
 
         </RelativeLayout>
 
@@ -69,7 +71,8 @@
                 android:clickable="false"
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingStart="@dimen/medium_margin"
-                android:text="@string/avoid_whats_new"/>
+                android:text="@string/avoid_whats_new"
+                app:switchPadding="@dimen/medium_margin"/>
 
         </RelativeLayout>
 
@@ -92,7 +95,8 @@
                 android:clickable="false"
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingStart="@dimen/medium_margin"
-                android:text="@string/show_info_bubble"/>
+                android:text="@string/show_info_bubble"
+                app:switchPadding="@dimen/medium_margin"/>
 
         </RelativeLayout>
 
@@ -115,7 +119,8 @@
                 android:clickable="false"
                 android:paddingLeft="@dimen/medium_margin"
                 android:paddingStart="@dimen/medium_margin"
-                android:text="@string/close_app"/>
+                android:text="@string/close_app"
+                app:switchPadding="@dimen/medium_margin"/>
 
         </RelativeLayout>
     </LinearLayout>
