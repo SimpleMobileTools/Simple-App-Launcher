@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 4.1.0 *(2018-08-10)*
+----------------------------
+
+ * Use properly localized app launcher labels
+ * Misc smaller improvements
+
 Version 4.0.0 *(2018-05-22)*
 ----------------------------
 
