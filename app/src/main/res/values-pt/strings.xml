@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Lançador de aplicações</string>
     <string name="enter_launcher_name">Por favor digite um nome para o lançador</string>
     <string name="remove_explanation">Esta ação remove o ícone da grelha mas não desinstala a aplicação.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="close_app">Fechar esta aplicação depois de abrir outra</string>
 
     <!-- Apps -->
     <string name="calculator">Calculadora</string>
