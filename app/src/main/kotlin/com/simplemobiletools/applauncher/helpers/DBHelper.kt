@@ -25,11 +25,12 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val COL_NAME = "name"
     private val COL_PKG_NAME = "package_name"
     private val COL_POSITION = "position"
+    private val COL_WAS_RENAMED = "was_renamed"
 
     private val mDb = writableDatabase
 
     companion object {
-        private val DB_VERSION = 4
+        private const val DB_VERSION = 5
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
@@ -43,7 +44,8 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER)")
+        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
+                "$COL_WAS_RENAMED INTEGER)")
         addInitialLaunchers(db)
     }
 
@@ -56,6 +58,10 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         if (oldVersion < 4) {
             val clock = AppLauncher(0, context.getString(R.string.clock), "com.simplemobiletools.clock")
             addAppLauncher(clock, db)
+        }
+
+        if (oldVersion < 5) {
+            db.execSQL("ALTER TABLE $MAIN_TABLE_NAME ADD COLUMN $COL_WAS_RENAMED INTEGER NOT NULL DEFAULT 0")
         }
     }
 
@@ -107,8 +113,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     }
 
     fun updateLauncherName(id: Int, newName: String): Boolean {
-        val values = ContentValues()
-        values.put(COL_NAME, newName)
+        val values = ContentValues().apply {
+            put(COL_NAME, newName)
+            put(COL_WAS_RENAMED, 1)
+        }
+
         val selection = "$COL_ID = ?"
         val selectionArgs = Array(1) { id.toString() }
         return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs) == 1
@@ -119,7 +128,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val resources = context.resources
         val packageManager = context.packageManager
         val launchers = ArrayList<AppLauncher>()
-        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME)
+        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME, COL_WAS_RENAMED)
         val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, "$COL_NAME COLLATE NOCASE")
         val IDsToDelete = ArrayList<String>()
         cursor.use {
@@ -127,6 +136,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 val id = cursor.getIntValue(COL_ID)
                 var name = cursor.getStringValue(COL_NAME)
                 val packageName = cursor.getStringValue(COL_PKG_NAME)
+                val wasRenamed = cursor.getIntValue(COL_WAS_RENAMED) == 1
 
                 var drawable: Drawable? = null
                 if (isLollipopPlus()) {
@@ -135,7 +145,10 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                         val launcher = context.getSystemService(Context.LAUNCHER_APPS_SERVICE) as LauncherApps
                         val activityList = launcher.getActivityList(packageName, android.os.Process.myUserHandle())[0]
                         drawable = activityList.getBadgedIcon(0)
-                        name = activityList.label.toString()
+
+                        if (!wasRenamed) {
+                            name = activityList.label.toString()
+                        }
                     } catch (e: Exception) {
                     }
                 }
