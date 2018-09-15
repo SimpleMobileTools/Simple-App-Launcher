@@ -3,7 +3,7 @@
     <string name="app_launcher_name">Лаунчер</string>
     <string name="enter_launcher_name">Пожалуйста, введите название лаунчера</string>
     <string name="remove_explanation">Это только удалит иконку лаунчера с сетки, но не удалит само приложение.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="close_app">Закрыть это приложение при запуске другого</string>
 
     <!-- Apps -->
     <string name="calculator">Калькулятор</string>
