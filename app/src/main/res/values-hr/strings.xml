@@ -2,8 +2,8 @@
     <string name="app_name">Jednostavan pokretač aplikacija</string>
     <string name="app_launcher_name">Pokretač aplikacija</string>
     <string name="enter_launcher_name">Unesite naziv pokretača</string>
-    <string name="remove_explanation">To će ukloniti ikonu pokretača samo iz mreže, ali ne i deinstalirati aplikaciju.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="remove_explanation">To će ukloniti ikonu pokretača samo iz mreže, ali neće deinstalirati aplikaciju.</string>
+    <string name="close_app">Zatvorite ovu aplikaciju pri pokretanju druge</string>
 
     <!-- Apps -->
     <string name="calculator">Kalkulator</string>
