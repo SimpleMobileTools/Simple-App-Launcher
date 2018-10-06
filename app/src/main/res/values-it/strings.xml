@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">Lanciatore di applicazioni</string>
+    <string name="enter_launcher_name">Inserire il nome di un lanciatore</string>
+    <string name="remove_explanation">Questo rimuoverà solamente l\'icona del lanciatore dalla griglia, non disintallerà l\'applicazione.</string>
+    <string name="close_app">Chiudi l\'applicazione quando se ne avvia un\'altra</string>
+
+    <!-- Apps -->
+    <string name="calculator">Calcolatrice</string>
+    <string name="calendar">Calendario</string>
+    <string name="camera">Fotocamera</string>
+    <string name="clock">Orologio</string>
+    <string name="contacts">Contatti</string>
+    <string name="draw">Draw</string>
+    <string name="file_manager">Gestore dei file</string>
+    <string name="flashlight">Torcia</string>
+    <string name="gallery">Galleria</string>
+    <string name="music_player">Riproduttore musicale</string>
+    <string name="notes">Note</string>
+    <string name="thank_you">Grazie</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Un semplice contenitore per i tuoi lanciatori di applicazioni preferite.</string>
+    <string name="app_long_description">
+        Puoi in maniera semplice aggiungere qualsiasi lanciatore di applicazione, così da non cercare fra applicazioni inutili per trovare quella che ti serve. Puoi inoltre rinominare i lanciatori come vuoi. Non rimpiazza realmente la tua schermata principale, è solamente un contenitore per le tue applicazioni preferite.
+        
+        Non contiene pubblicità o permessi non necessari. È completamente opensource, fornisce colori personalizzabili.
+
+        Questa applicazione è solamente una di una serie più grande. Puoi trovare le altre su https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
