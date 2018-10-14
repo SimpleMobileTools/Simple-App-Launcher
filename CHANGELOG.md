@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.0.0 *(2018-10-14)*
+----------------------------
+
+ * Rewrote item selection under the hood
+ * Increased minimal required Android OS version to 5
+
 Version 4.1.1 *(2018-08-13)*
 ----------------------------
 
