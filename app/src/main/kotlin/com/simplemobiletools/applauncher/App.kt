@@ -1,6 +1,6 @@
 package com.simplemobiletools.applauncher
 
-import android.support.multidex.MultiDexApplication
+import androidx.multidex.MultiDexApplication
 import com.facebook.stetho.Stetho
 import com.simplemobiletools.commons.extensions.checkUseEnglish
 

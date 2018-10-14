@@ -1,8 +1,8 @@
 package com.simplemobiletools.applauncher.dialogs
 
 import android.app.Activity
-import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher

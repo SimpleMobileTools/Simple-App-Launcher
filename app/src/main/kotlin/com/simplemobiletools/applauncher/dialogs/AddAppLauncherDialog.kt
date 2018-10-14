@@ -1,8 +1,8 @@
 package com.simplemobiletools.applauncher.dialogs
 
 import android.app.Activity
-import android.support.v7.app.AlertDialog
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersDialogAdapter
 import com.simplemobiletools.applauncher.extensions.dbHelper
@@ -16,7 +16,7 @@ class AddAppLauncherDialog(val activity: Activity, val notDisplayedLaunchers: Ar
 
     init {
         AlertDialog.Builder(activity)
-                .setPositiveButton(R.string.ok, { dialogInterface, i -> confirmSelection() })
+                .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmSelection() }
                 .setNegativeButton(R.string.cancel, null)
                 .create().apply {
                     activity.setupDialogStuff(view, this) {

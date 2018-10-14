@@ -17,7 +17,6 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.checkWhatsNew
 import com.simplemobiletools.commons.extensions.updateTextColors
-import com.simplemobiletools.commons.helpers.LICENSE_MULTISELECT
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
@@ -94,7 +93,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchAbout() {
-        val licenses = LICENSE_MULTISELECT or LICENSE_STETHO
+        val licenses = LICENSE_STETHO
 
         val faqItems = arrayListOf(
                 FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons)

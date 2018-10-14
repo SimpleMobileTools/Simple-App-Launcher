@@ -1,87 +1,74 @@
 package com.simplemobiletools.applauncher.adapters
 
 import android.app.Activity
-import android.support.v7.widget.RecyclerView
-import android.util.SparseArray
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
-import com.simplemobiletools.commons.interfaces.MyAdapterListener
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 
 class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLauncher>) : RecyclerView.Adapter<LaunchersDialogAdapter.ViewHolder>() {
     private val config = activity.config
     private var primaryColor = config.primaryColor
-    private var itemViews = SparseArray<View>()
-    private val selectedPositions = HashSet<Int>()
     private var textColor = config.textColor
+    private var selectedKeys = HashSet<Int>()
 
     fun toggleItemSelection(select: Boolean, pos: Int) {
+        val itemKey = launchers.getOrNull(pos)?.packageName?.hashCode() ?: return
+
         if (select) {
-            if (itemViews[pos] != null) {
-                itemViews[pos].launcher_check?.background?.applyColorFilter(primaryColor)
-                selectedPositions.add(pos)
-            }
+            selectedKeys.add(itemKey)
         } else {
-            selectedPositions.remove(pos)
+            selectedKeys.remove(itemKey)
         }
 
-        itemViews[pos]?.launcher_check?.beInvisibleIf(!select)
+        notifyItemChanged(pos)
     }
 
-    fun getSelectedLaunchers(): ArrayList<AppLauncher> {
-        val selectedLaunchers = ArrayList<AppLauncher>()
-        selectedPositions.forEach {
-            selectedLaunchers.add(launchers[it])
-        }
-        return selectedLaunchers
-    }
-
-    private val adapterListener = object : MyAdapterListener {
-        override fun itemLongClicked(position: Int) {
-        }
-
-        override fun toggleItemSelectionAdapter(select: Boolean, position: Int) {
-            toggleItemSelection(select, position)
-        }
-
-        override fun getSelectedPositions(): HashSet<Int> = selectedPositions
-    }
+    fun getSelectedLaunchers() = launchers.filter { selectedKeys.contains(it.packageName.hashCode()) } as ArrayList<AppLauncher>
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        itemViews.put(position, holder.bindView(launchers[position], textColor))
-        toggleItemSelection(selectedPositions.contains(position), position)
+        holder.bindView(launchers[position])
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_app_launcher, parent, false)
-        return ViewHolder(view, adapterListener)
+        return ViewHolder(view)
     }
 
     override fun getItemCount() = launchers.size
 
-    class ViewHolder(view: View, val adapterListener: MyAdapterListener) : RecyclerView.ViewHolder(view) {
-        fun bindView(launcher: AppLauncher, textColor: Int): View {
+    private fun isKeySelected(key: Int) = selectedKeys.contains(key)
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        fun bindView(launcher: AppLauncher): View {
+            val isSelected = isKeySelected(launcher.packageName.hashCode())
             itemView.apply {
+                launcher_check?.beInvisibleIf(!isSelected)
                 launcher_label.text = launcher.name
                 launcher_label.setTextColor(textColor)
                 launcher_icon.setImageDrawable(launcher.drawable!!)
 
-                setOnClickListener { viewClicked() }
-                setOnLongClickListener { viewClicked(); true }
+                if (isSelected) {
+                    launcher_check?.background?.applyColorFilter(primaryColor)
+                }
+
+                setOnClickListener { viewClicked(launcher) }
+                setOnLongClickListener { viewClicked(launcher); true }
             }
+
             return itemView
         }
 
-        private fun viewClicked() {
-            val isSelected = adapterListener.getSelectedPositions().contains(adapterPosition)
-            adapterListener.toggleItemSelectionAdapter(!isSelected, adapterPosition)
+        private fun viewClicked(launcher: AppLauncher) {
+            val isSelected = selectedKeys.contains(launcher.packageName.hashCode())
+            toggleItemSelection(!isSelected, adapterPosition)
         }
     }
 }
