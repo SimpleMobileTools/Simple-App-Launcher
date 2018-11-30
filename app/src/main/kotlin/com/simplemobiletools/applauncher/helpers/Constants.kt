@@ -5,15 +5,15 @@ const val CLOSE_APP = "close_app"
 
 val predefinedPackageNames = arrayListOf(
         "com.simplemobiletools.calculator",
-        "com.simplemobiletools.calendar",
+        "com.simplemobiletools.calendar.pro",
         "com.simplemobiletools.camera",
         "com.simplemobiletools.clock",
-        "com.simplemobiletools.contacts",
-        "com.simplemobiletools.draw",
-        "com.simplemobiletools.filemanager",
+        "com.simplemobiletools.contacts.pro",
+        "com.simplemobiletools.draw.pro",
+        "com.simplemobiletools.filemanager.pro",
         "com.simplemobiletools.flashlight",
-        "com.simplemobiletools.gallery",
+        "com.simplemobiletools.gallery.pro",
         "com.simplemobiletools.musicplayer",
-        "com.simplemobiletools.notes",
+        "com.simplemobiletools.notes.pro",
         "com.simplemobiletools.thankyou"
 )
