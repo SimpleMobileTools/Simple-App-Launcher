@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.0.1 *(2018-11-30)*
+----------------------------
+
+ * Added some translation improvements
+ * Update some app urls to the Pro versions
+
 Version 5.0.0 *(2018-10-14)*
 ----------------------------
 
