@@ -50,7 +50,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
         val launcher = launchers[position]
         holder.bindView(launcher, true, true) { itemView, adapterPosition ->
-            setupView(itemView, launcher, isKeySelected(launcher.packageName.hashCode()))
+            setupView(itemView, launcher, selectedKeys.contains(launcher.packageName.hashCode()))
         }
         bindViewHolder(holder)
     }
