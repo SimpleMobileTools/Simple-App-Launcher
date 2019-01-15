@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Eenvoudige App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="enter_launcher_name">Voer een naam voor de snelkoppeling in</string>
+    <string name="remove_explanation">Hiermee wordt alleen het icoon uit dit overzicht verwijderd, de app zelf blijft geïnstalleerd.</string>
+    <string name="close_app">Deze app sluiten bij het starten van een andere app</string>
+
+    <!-- Apps -->
+    <string name="calculator">Rekenmachine</string>
+    <string name="calendar">Agenda</string>
+    <string name="camera">Camera</string>
+    <string name="clock">Klok</string>
+    <string name="contacts">Contacten</string>
+    <string name="draw">Tekenen</string>
+    <string name="file_manager">Bestandsbeheer</string>
+    <string name="flashlight">Zaklamp</string>
+    <string name="gallery">Galerij</string>
+    <string name="music_player">Muziekspeler</string>
+    <string name="notes">Notities</string>
+    <string name="thank_you">Thank You</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Een eenvoudige launcher voor je favoriete apps.</string>
+    <string name="app_long_description">
+        Voeg al je favoriete apps toe aan dit overzicht, zodat ze zonder zoeken direct te starten zijn. De namen van de snelkoppelingen zijn ook aan te passen. Deze app is geen vervanging voor je beginscherm, maar een verzamelplaats voor je favoriete apps.
+
+        Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
+
+        Deze app is onderdeel van een grotere collectie. De andere apps zijn te vinden op https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
