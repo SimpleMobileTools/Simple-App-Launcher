@@ -29,7 +29,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:paddingStart="@dimen/medium_margin"
-                android:paddingLeft="@dimen/medium_margin"
                 android:text="@string/purchase_simple_thank_you"/>
 
         </RelativeLayout>
@@ -48,7 +47,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:paddingStart="@dimen/medium_margin"
-                android:paddingLeft="@dimen/medium_margin"
                 android:text="@string/customize_colors"/>
 
         </RelativeLayout>
@@ -68,7 +66,6 @@
                 android:background="@null"
                 android:clickable="false"
                 android:paddingStart="@dimen/medium_margin"
-                android:paddingLeft="@dimen/medium_margin"
                 android:text="@string/use_english_language"
                 app:switchPadding="@dimen/medium_margin"/>
 
@@ -92,7 +89,6 @@
                 android:background="@null"
                 android:clickable="false"
                 android:paddingStart="@dimen/medium_margin"
-                android:paddingLeft="@dimen/medium_margin"
                 android:text="@string/show_info_bubble"
                 app:switchPadding="@dimen/medium_margin"/>
 
@@ -116,7 +112,6 @@
                 android:background="@null"
                 android:clickable="false"
                 android:paddingStart="@dimen/medium_margin"
-                android:paddingLeft="@dimen/medium_margin"
                 android:text="@string/close_app"
                 app:switchPadding="@dimen/medium_margin"/>
 
