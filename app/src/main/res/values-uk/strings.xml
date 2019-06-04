@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Простий Лаунчер</string>
+    <string name="app_launcher_name">Лаунчер</string>
+    <string name="enter_launcher_name">Будь-ласка, введіть назву лаунчера</string>
+    <string name="remove_explanation">Це лише видалить значок лаунчера з цієї сітки, не деінсталює сам додаток.</string>
+    <string name="close_app">Закрити цей додаток при запуску іншого</string>
+
+    <!-- Apps -->
+    <string name="calculator">Калькулятор</string>
+    <string name="calendar">Календар</string>
+    <string name="camera">Камера</string>
+    <string name="clock">Годинник</string>
+    <string name="contacts">Контакти</string>
+    <string name="draw">Малювання</string>
+    <string name="file_manager">Менеджер Файлів</string>
+    <string name="flashlight">Ліхтарик</string>
+    <string name="gallery">Галерея</string>
+    <string name="music_player">Музичний Програвач</string>
+    <string name="notes">Нотатник</string>
+    <string name="thank_you">Подяка</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Простий додаток, що об'єднує всі твої улюблені додатки в одному місці.</string>
+    <string name="app_long_description">
+        Ти можеш легко додати лаунчер будь-якого додатка, тому тобі більше не доведеться гортати численні сторінки, щоб знайти те, що шукаєш. Ти також можеш перейменувати лаунчери, якщо забажаєш. Це не є типовий лаунчер, що замінює домашній екран, він просто об'єднує твої улюблені додатки.
+
+        Цей додаток не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Додаток має повністю відкритий програмний код, кольори оформлення можна легко налаштувати.
+
+        Простий Лаунчер - це один із ряду додатків від Simple Mobile Tools. Інші додатки можна знайти тут: https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
