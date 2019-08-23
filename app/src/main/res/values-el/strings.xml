@@ -1,29 +1,29 @@
 <resources>
     <string name="app_name">Απλός Εκκινητής Εφαρμογών</string>
-    <string name="app_launcher_name">Εκκινητής Εφαρμογών_αποσφαλμάτωση</string>
-    <string name="enter_launcher_name">Παρακαλώ εισήγαγε ένα όνομα εκκινητή</string>
-    <string name="remove_explanation">Αυτό, απλά, θα αφαιρέσει το εικονίδιο εκκίνησης από αυτό το πλαίσιο. Δεν θα απεγκαταστήσει την ίδια την εφαρμογή.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="app_launcher_name">Εκκινητής Εφαρμογών</string>
+    <string name="enter_launcher_name">Παρακαλώ εισάγετε ένα όνομα εκκινητή</string>
+    <string name="remove_explanation">Αυτό, απλά, θα αφαιρέσει το εικονίδιο Εκκινητή από αυτό το πλαίσιο. Δεν θα απεγκατασταθεί την ίδια την εφαρμογή.</string>
+    <string name="close_app">Κλείστε αυτήν την εφαρμογή ξεκινώντας μια διαφορετική</string>
 
     <!-- Apps -->
     <string name="calculator">Αριθμομηχανή</string>
     <string name="calendar">Ημερολόγιο</string>
     <string name="camera">Κάμερα</string>
-    <string name="clock">Clock</string>
+    <string name="clock">Ρολόι</string>
     <string name="contacts">Επαφές</string>
-    <string name="draw">Σχέδιο</string>
+    <string name="draw">Ζωγραφική</string>
     <string name="file_manager">Αρχεία</string>
     <string name="flashlight">Φακός</string>
-    <string name="gallery">Εικονοθήκη</string>
+    <string name="gallery">Συλλογή</string>
     <string name="music_player">Μουσική</string>
     <string name="notes">Σημειώσεις</string>
-    <string name="thank_you">Σ\' Ευχαριστώ</string>
+    <string name="thank_you">Σας ευχαριστώ</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Μία απλή θήκη για τους εκκινητές των αγαπημένων σου εφαρμογών</string>
+    <string name="app_short_description">Μία απλή θήκη για τους αγαπημένους σου Εκκινητές</string>
     <string name="app_long_description">
-        Μπορείς εύκολα να προσθέσεις τον εκκινητή οποιασδήποτε εφαρμογής. Έτσι δεν θα αναγκάζεσαι, ξανά, να «θερίζεις» ανάμεσα σε αχρησιμοποίητες εφαρμογές, ώσπου να βρεις αυτή που χρειάζεσαι. Μπορείς επίσης, να μετονομάσεις τους εκκινητές, κατά την προτίμησή σου. Δεν είναι ένας πραγματικός εκκινητής, ο οποίος θα αντικαταστήσει την αρχική σου οθόνη, αλλά απλά μία θήκη για τις αγαπημένες σου εφαρμογές. 
+        Μπορείτε εύκολα να προσθέσετε οποιαδήποτε εφαρμογή Εκκίνησης, οπότε δεν θα χρειαστεί ξαναψάξετε μέσα από άσχετες εφαρμογές για να βρείτε αυτήν που χρειάζεστε. Μπορείτε επίσης να μετονομάσετε τους Εκκινητές όπως επιθυμείτε. Δεν είναι ένα πραγματικό πρόγραμμα εκκίνησης που αντικαθιστά την αρχική σας οθόνη, απλά ένα μέρος για τις αγαπημένες σας εφαρμογές. 
 
         Δεν περιέχει διαφημίσεις ούτε ζητά περιττά δικαιώματα. Είναι εντελώς ανοιχτού κώδικα. Επιτρέπει προσαρμοσμένα χρώματα. 
 
