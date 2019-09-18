@@ -8,7 +8,7 @@
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/cab_remove"
-        android:icon="@drawable/ic_minus_circle"
+        android:icon="@drawable/ic_minus_circle_vector"
         android:title="@string/remove"
         app:showAsAction="ifRoom"/>
 </menu>

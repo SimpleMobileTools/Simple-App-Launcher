@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="package_name">com.simplemobiletools.applauncher</string>
 
     <!-- Release notes -->
     <string name="release_7">Added a new option to use english language on non-english devices</string>
