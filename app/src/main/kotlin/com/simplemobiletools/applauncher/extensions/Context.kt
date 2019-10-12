@@ -36,7 +36,11 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
             drawable = if (packageName.isAPredefinedApp()) {
                 resources.getLauncherDrawable(packageName)
             } else {
-                packageManager.getApplicationIcon(packageName)
+                try {
+                    packageManager.getApplicationIcon(packageName)
+                } catch (ignored: Exception) {
+                    continue
+                }
             }
         }
 
