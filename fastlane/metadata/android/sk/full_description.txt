@@ -1,0 +1,5 @@
+Viete jednoducho pridať akúkoľvek aplikáciu, už nikdy tak nebudete musieť listovať medzi nepotrebnými aplikáciami. Spúšťačky viete aj premenovať. Nie je to skutočný spúšťač pre vašu domovskú obrazovku, iba držiak obľúbených aplikácií.
+
+Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
+
+Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na https://www.simplemobiletools.com

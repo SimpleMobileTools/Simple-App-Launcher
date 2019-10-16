@@ -1,0 +1,5 @@
+Herhangi bir uygulama başlatıcısını kolayca ekleyebilirsiniz, böylece ihtiyacınız olanı bulmak için hiçbir zaman işe yaramaz uygulamaları kaydırmanız gerekmez. Ayrıca başlatıcıları istediğiniz gibi yeniden adlandırabilirsiniz. Ana ekranınızı değiştiren gerçek bir başlatıcı değil, sadece favori uygulamalarınız için bir tutucudur.
+
+Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sağlar.
+
+Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz

@@ -1,0 +1,5 @@
+Pode adicionar qualquer lançador, de modo a que não seja necessário procurar por todas as aplicações instaladas no seu sistema. Também pode renomear os lançadores ao seu gosto. Esta aplicação não é um 'launcher', mas sim um local para você guardar as suas aplicações preferidas.
+
+Não contém anúncios nem permissões desnecessárias. Disponibiliza um tema escuro e é totalmente 'open source'.
+
+Esta aplicação é apenas parte de um conjunto mais vasto de aplicações. Saiba mais em https://www.simplemobiletools.com

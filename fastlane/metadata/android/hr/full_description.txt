@@ -1,0 +1,5 @@
+Možete jednostavno dodati bilo koju aplikaciju za pokretanje na popis, pa nikad ne morate prolaziti kroz druge beskorisne aplikacije. Također možete preimenovati pokretače kako god želite. Ovo nije pravi pokretač aplikacije koji zamjenjuje Vaš početni zaslon, nego samo način da lakše pronađete svoje omiljene aplikacije.
+
+Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+
+Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na https://www.simplemobiletools.com

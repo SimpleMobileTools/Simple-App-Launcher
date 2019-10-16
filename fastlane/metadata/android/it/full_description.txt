@@ -1,0 +1,5 @@
+Si può in maniera semplice aggiungere qualsiasi lanciatore di applicazione, così da non cercare fra le varie applicazioni inutili per trovare quella che necessaria. Si possono inoltre rinominare i lanciatori e questa app non rimpiazza realmente la schermata principale, è solamente un contenitore per le applicazioni preferite.
+
+L'applicazione non contiene pubblicità o permessi non necessari; è completamente opensource e la si può personalizzare con i propri colori preferiti.
+
+Questa è solamente una delle tante applicazioni della serie Simple Mobile Tools. Si possono trovare le altre su https://www.simplemobiletools.com

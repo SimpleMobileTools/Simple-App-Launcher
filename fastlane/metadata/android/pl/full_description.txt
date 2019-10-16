@@ -1,0 +1,5 @@
+Z łatwością możesz dodać launcher dowolnej aplikacji, więc już nigdy nie musisz przewijać przez nieużyteczne aplikacje, aby znaleźć tą potrzebną. Możesz także zmienić ich nazwy według uznania. To nie jest prawdziwy launcher zastępujący Twój ekran główny, po prostu przybornik na ulubione aplikacje.
+
+Nie zawiera żadnych żadnych reklam, nie potrzebuje masy uprawnień. Jest w pełni otwartoźródłowy. Kolory w aplikacji można dowolnie modyfikować.
+
+Niniejsza aplikacja jest tylko częścią naszej kolekcji prostych narzędzi. Ta, jak i pozostałe, dostępne są na stronie https://www.simplemobiletools.com

@@ -1,0 +1,5 @@
+Vous pouvez facilement ajouter n'importe quel launcher d'application à la liste, de telle sorte que vous n'aurez plus jamais besoin de la chercher parmi les autres applications inutiles. Vous pouvez également renommer les launchers comme vous le souhaitez. Ce n'est pas un vrai launcher d'appli remplaçant votre écran d'accueil, juste un moyen de trouver facilement vos applications préférées.
+
+Cette appli ne contient aucune publicité ou autorisation inutile. Elle est entièrement opensource, et propose une personnalisation des couleurs de l'interface.
+
+Cette application fait partie d'une plus grande série d'applications. Vous pouvez trouver les autres à l'adresse https://www.simplemobiletools.com

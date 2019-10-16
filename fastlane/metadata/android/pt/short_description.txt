@@ -1,0 +1,1 @@
+Uma pasta para guardar lançadores de aplicações.
