@@ -20,6 +20,8 @@
     <string name="thank_you">Teşekkürler</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Simple App Launcher - Find your apps quickly</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Favori uygulamalarınızı başlatmak için basit bir tutucu.</string>
     <string name="app_long_description">
