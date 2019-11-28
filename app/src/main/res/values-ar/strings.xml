@@ -1,31 +1,36 @@
 <resources>
-    <string name="app_name">درج التطبيقات البسيط</string>
+    <string name="app_name">مشغل التطبيق البسيط</string>
     <string name="app_launcher_name">مشغل التطبيق</string>
-    <string name="enter_launcher_name">الرجاء ادراج اسم للإختصار</string>
-    <string name="remove_explanation">هذا سيقوم بحذف الايقونة فقط من الواجهة الحالية,ولن يقوم بإلغاء تثبيت حزمة التطبيق.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="enter_launcher_name">يرجى إدخال إسم المشغل</string>
+    <string name="remove_explanation">سيؤدي هذا فقط إلى إزالة أيقونة المشغل من هذه الشبكة ، وليس إلغاء تثبيت التطبيق الفعلي.</string>
+    <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
 
     <!-- Apps -->
     <string name="calculator">الحاسبة</string>
     <string name="calendar">التقويم</string>
     <string name="camera">الكاميرا</string>
-    <string name="clock">Clock</string>
-    <string name="contacts">Contacts</string>
-    <string name="draw">رسم</string>
+    <string name="clock">الساعة</string>
+    <string name="contacts">جهات الإتصال</string>
+    <string name="draw">الرسام</string>
     <string name="file_manager">مدير الملفات</string>
-    <string name="flashlight">الكشاف</string>
-    <string name="gallery">الاستوديو</string>
+    <string name="flashlight">المصباح</string>
+    <string name="gallery">الاستديو</string>
     <string name="music_player">مشغل الموسيقى</string>
     <string name="notes">الملاحظات</string>
-    <string name="thank_you">شكرا لك</string>
+    <string name="thank_you">Thank You</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Find your apps quickly</string>
+    <string name="app_title">مشغل التطبيق البسيط - أبحث عن تطبيقاتك بسرعة</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">حافظة بسيطة لإختصارات لتطبيقاتك المفضلة</string>
-    <string name="app_long_description">يمكنك و بسهولة إضافة أي اختصار لتشغيل التطبيق، لذلك لن تضطر مرة أخرى إلى السحب خلال تطبيقات عديمة الفائدة للعثور على التطبيق الذي تحتاج إليه. يمكنك أيضا إعادة تسمية الإختصارات كما يحلو لك. انها ليست واجهة كاملة لاستبدال الشاشة الرئيسية الحالية ، وانما هي مجرد درج للتطبيقات المفضلة لديك. لا يحتوي على إعلانات أو أذونات لا حاجة لها. وكذلك مفتوح المصدر ، ويوفر الألوان للتخصيص. هذا التطبيق هو مجرد قطعة واحدة من سلسلة أكبر من التطبيقات. يمكنك العثور على بقيتها هنا\n
- https://www.simplemobiletools.com</string>
+    <string name="app_short_description">حامل بسيط لتشغيل التطبيقات المفضلة لديك.</string>
+    <string name="app_long_description">
+        يمكنك بسهولة إضافة أي مشغل تطبيق ، بحيث لا تضطر مرة أخرى إلى المرور من خلال تطبيقات عديمة الفائدة للبحث عن التطبيق الذي تحتاجه. يمكنك أيضاً إعادة تسمية المشغلات كما تشاء. إنه ليس مشغلاً حقيقياً يحل محل شاشتك الرئيسية ، بل مجرد حامل لتطبيقاتك المفضلة.
+
+        لا يحتوي على إعلانات أو أذونات غير ضرورية. فهو مفتوح المصدر بالكامل ، ويوفر ألواناً قابلة للتخصيص.
+
+        يعد هذا التطبيق جزءاً واحداً من سلسلة أكبر من التطبيقات يمكنك العثور علي باقي التطبيقات علي الموقع  https://www.simplemobiletools.com
+    </string>
 
     <!--
         Haven't found some strings? There's more at
