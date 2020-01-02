@@ -2,15 +2,15 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Lanzador de aplicaciones</string>
     <string name="enter_launcher_name">Por favor, introduzca un nombre para el lanzador</string>
-    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="remove_explanation">Esto solo eliminará el ícono del launcher de este cajón, nno desinstalará la aplicación.</string>
+    <string name="close_app">Cerrar esta aplicación al iniciar una diferente</string>
 
     <!-- Apps -->
     <string name="calculator">Calculadora</string>
     <string name="calendar">Calendario</string>
     <string name="camera">Cámara</string>
-    <string name="clock">Clock</string>
-    <string name="contacts">Contacts</string>
+    <string name="clock">Reloj</string>
+    <string name="contacts">Contactos</string>
     <string name="draw">Dibujo</string>
     <string name="file_manager">Administrador de archivos</string>
     <string name="flashlight">Linterna</string>
@@ -21,7 +21,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Find your apps quickly</string>
+    <string name="app_title">Simple App Launcher - Encuentra fácil tus apps</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Un simple contenedor para sus aplicaciones favoritas.</string>
     <string name="app_long_description">
