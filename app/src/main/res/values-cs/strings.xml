@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Jednoduchý spouštěč aplikací</string>
+    <string name="app_launcher_name">Spouštěč aplikací</string>
+    <string name="enter_launcher_name">Prosím zadejte název pro spouštěč</string>
+    <string name="remove_explanation">Tímto se pouze odstraní ikona aplikace z této mřížky, samotná aplikace se neodinstaluje.</string>
+    <string name="close_app">Ukončit tuto aplikaci při spuštění jiné</string>
+
+    <!-- Apps -->
+    <string name="calculator">Kalkulačka</string>
+    <string name="calendar">Kalendář</string>
+    <string name="camera">Fotoaparát</string>
+    <string name="clock">Hodiny</string>
+    <string name="contacts">Kontakty</string>
+    <string name="draw">Kreslení</string>
+    <string name="file_manager">Správce souborů</string>
+    <string name="flashlight">Svítilna</string>
+    <string name="gallery">Galerie</string>
+    <string name="music_player">Hudební přehrávač</string>
+    <string name="notes">Poznámky</string>
+    <string name="thank_you">Děkuji</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Jednoduchý spouštěč aplikací</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Jednoduchý držák pro spouštění vašich oblíbených aplikací.</string>
+    <string name="app_long_description">
+        Můžete jednoduše přidat jakoukoliv aplikaci, už nikdy tak nebudete muset listovat mezi nepotřebnými aplikacemi. Zástupce aplikace můžete i přejmenovat. Nejedná se o skutečný spouštěč pro vaši domovskou obrazovku, pouze držák oblíbených aplikací.
+
+        Neobsahuje žádné reklamy ani nepotřebná oprávnění. Má otevřený zdrojový kód a možnost změny barev.
+
+        Tato aplikace je jen jednou ze sady aplikací. Ostatní si můžete prohlédnout na https://www.simplemobiletools.com
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
