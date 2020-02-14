@@ -23,13 +23,12 @@ class SettingsActivity : SimpleActivity() {
         setupPurchaseThankYou()
         setupCustomizeColors()
         setupUseEnglish()
-        setupShowInfoBubble()
         setupCloseApp()
         updateTextColors(settings_holder)
     }
 
     private fun setupPurchaseThankYou() {
-        settings_purchase_thank_you_holder.beVisibleIf(config.appRunCount > 10 && !isThankYouInstalled())
+        settings_purchase_thank_you_holder.beVisibleIf(!isThankYouInstalled())
         settings_purchase_thank_you_holder.setOnClickListener {
             launchPurchaseThankYouIntent()
         }
@@ -48,14 +47,6 @@ class SettingsActivity : SimpleActivity() {
             settings_use_english.toggle()
             config.useEnglish = settings_use_english.isChecked
             System.exit(0)
-        }
-    }
-
-    private fun setupShowInfoBubble() {
-        settings_show_info_bubble.isChecked = config.showInfoBubble
-        settings_show_info_bubble_holder.setOnClickListener {
-            settings_show_info_bubble.toggle()
-            config.showInfoBubble = settings_show_info_bubble.isChecked
         }
     }
 

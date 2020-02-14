@@ -65,7 +65,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         launchers_fastscroller.apply {
             updatePrimaryColor()
             updateBubbleColors()
-            allowBubbleDisplay = config.showInfoBubble
+            allowBubbleDisplay = true
         }
     }
 
@@ -123,7 +123,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
         launchers_grid.adapter = adapter
 
-        launchers_fastscroller.allowBubbleDisplay = config.showInfoBubble
+        launchers_fastscroller.allowBubbleDisplay = true
         launchers_fastscroller.setViews(launchers_grid) {
             launchers_fastscroller.updateBubbleText(displayedLaunchers.getOrNull(it)?.getBubbleText() ?: "")
         }
