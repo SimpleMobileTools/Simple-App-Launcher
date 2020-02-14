@@ -47,7 +47,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_app_launcher, parent)
 
-    override fun onBindViewHolder(holder: MyRecyclerViewAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val launcher = launchers[position]
         holder.bindView(launcher, true, true) { itemView, adapterPosition ->
             setupView(itemView, launcher, selectedKeys.contains(launcher.packageName.hashCode()))
@@ -66,6 +66,10 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
     override fun getItemSelectionKey(position: Int) = launchers.getOrNull(position)?.packageName?.hashCode()
 
     override fun getItemKeyPosition(key: Int) = launchers.indexOfFirst { it.packageName.hashCode() == key }
+
+    override fun onActionModeCreated() {}
+
+    override fun onActionModeDestroyed() {}
 
     private fun showEditDialog() {
         EditDialog(activity, getItemWithKey(selectedKeys.first())!!) {
@@ -113,7 +117,6 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: MutableList<AppL
 
     private fun setupView(view: View, launcher: AppLauncher, isSelected: Boolean) {
         view.apply {
-            // setup check icon
             launcher_check?.beInvisibleIf(!isSelected)
             launcher_label.text = launcher.name
             launcher_label.setTextColor(textColor)
