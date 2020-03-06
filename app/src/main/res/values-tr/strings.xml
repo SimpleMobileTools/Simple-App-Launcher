@@ -21,7 +21,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Find your apps quickly</string>
+    <string name="app_title">Basit Uygulama Başlatıcı-Uygulamaları hemen bulun</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Favori uygulamalarınızı başlatmak için basit bir tutucu.</string>
     <string name="app_long_description">
@@ -29,7 +29,7 @@
 
         Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sağlar.
 
-        Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz
+        Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz.
     </string>
 
     <!--
