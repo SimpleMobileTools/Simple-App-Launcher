@@ -23,11 +23,12 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val COL_PKG_NAME = "package_name"
     private val COL_POSITION = "position"
     private val COL_WAS_RENAMED = "was_renamed"
+    private val COL_APP_ORDER = "app_order"
 
     private val mDb = writableDatabase
 
     companion object {
-        private const val DB_VERSION = 5
+        private const val DB_VERSION = 6
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
@@ -42,7 +43,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
-                "$COL_WAS_RENAMED INTEGER)")
+                "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)")
         addInitialLaunchers(db)
     }
 
@@ -59,6 +60,10 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
         if (oldVersion < 5) {
             db.execSQL("ALTER TABLE $MAIN_TABLE_NAME ADD COLUMN $COL_WAS_RENAMED INTEGER NOT NULL DEFAULT 0")
+        }
+
+        if (oldVersion < 6) {
+            db.execSQL("ALTER TABLE $MAIN_TABLE_NAME ADD COLUMN $COL_APP_ORDER INTEGER NOT NULL DEFAULT 0")
         }
     }
 
