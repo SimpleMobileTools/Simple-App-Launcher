@@ -21,11 +21,17 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">簡易應用程式啟動器 - 快速尋找你的應用程式</string>
+    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">一個用來開啟你最愛的應用程式的簡易平台。</string>
+    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
     <string name="app_long_description">
-        你可以輕鬆加入任何應用程式，所以你將不必再滑過無用程式來找到你要的。也能如你所願地重新命名應用程式在啟動器上的名稱。這不是一個取代主頁螢幕的真正啟動器，只是個平台用來放你最愛的應用程式。
+        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+
+        There is an option to close the app itself at launching a different one for easy navigation.
+
+        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         不包含廣告及非必要的權限，而且完全開放原始碼，並提供自訂顏色。
 		

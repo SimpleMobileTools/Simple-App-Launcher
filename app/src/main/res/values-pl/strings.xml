@@ -21,11 +21,17 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Find your apps quickly</string>
+    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Prosty przybornik przechowujący Twoje ulubione launchery aplikacji.</string>
+    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
     <string name="app_long_description">
-        Z łatwością możesz dodać launcher dowolnej aplikacji, więc już nigdy nie musisz przewijać przez nieużyteczne aplikacje, aby znaleźć tą potrzebną. Możesz także zmienić ich nazwy według uznania. To nie jest prawdziwy launcher zastępujący Twój ekran główny, po prostu przybornik na ulubione aplikacje.
+        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+
+        There is an option to close the app itself at launching a different one for easy navigation.
+
+        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         Nie zawiera żadnych żadnych reklam, nie potrzebuje masy uprawnień. Jest w pełni otwartoźródłowy. Kolory w aplikacji można dowolnie modyfikować.
 

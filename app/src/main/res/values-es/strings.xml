@@ -21,11 +21,17 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Encuentra fácil tus apps</string>
+    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Un simple contenedor para sus aplicaciones favoritas.</string>
+    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
     <string name="app_long_description">
-        Usted puede fácilmente añadir cualquier lanzador de aplicación, no necesitará nunca más desplazarse entre aplicaciones poco útiles para encontrar la que realmente necesita. También puede renombrar los lanzadores como usted desee. No es un lanzador que sustituya a su escritorio, simplemente es un contenedor para sus aplicaciones favoritas.
+        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+
+        There is an option to close the app itself at launching a different one for easy navigation.
+
+        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         No contiene publicidad ni permisos innecesarios. Es totalmente libre, proporciona colores personalizables.
 

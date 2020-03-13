@@ -23,9 +23,15 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Jednoduchý spúšťač aplikácií - Nájdite apky rýchlo</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Jednoduchý držiak pre spúšťačky vašich obľúbených apiek.</string>
+    <string name="app_short_description">Jednoduchý držiak pre spúšťačky vašich obľúbených apiek pre ľahkú správu ikoniek</string>
     <string name="app_long_description">
-        Viete jednoducho pridať akúkoľvek aplikáciu, už nikdy tak nebudete musieť listovať medzi nepotrebnými aplikáciami. Spúšťačky viete aj premenovať. Nie je to skutočný spúšťač pre vašu domovskú obrazovku, iba držiak obľúbených aplikácií.
+        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+
+        There is an option to close the app itself at launching a different one for easy navigation.
+
+        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
         Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 
