@@ -1,5 +1,5 @@
 # Simple App Launcher
-<img alt="Logo" src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="80">
+<img alt="Logo" src="fastlane/metadata/android/en-US/images/icon.png" width="120" />
 
 You can easily add any app launcher, so you won't ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish. It is not a real launcher replacing your home screen, just a holder for your favourite apps.
 
