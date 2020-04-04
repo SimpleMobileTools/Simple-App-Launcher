@@ -17,21 +17,21 @@
     <string name="gallery">Galerij</string>
     <string name="music_player">Muziekspeler</string>
     <string name="notes">Notities</string>
-    <string name="thank_you">Thank You</string>
+    <string name="thank_you">Bedankt!</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Eenvoudige App Launcher - Vind je apps supersnel</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Een eenvoudige launcher voor je favoriete apps.</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Dit is geen volwaardige launcher, maar een overzicht voor je favoriete apps. Je kunt al je belangrijke apps toevoegen aan het overzicht, zodat je nooit meer hoeft te bladeren door de héle lijst in je launcher. Je kunt de apps ook hernoemen naar een duidelijkere naam.
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Na het starten van een app vanuit het overzicht kan deze app zichzelf indien gewenst weer sluiten.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Sommige ongewenste systeemapps kunnen niet worden gedeïnstalleerd, maar ze kunnen wel gemakkelijker worden genegeerd middels het gebruik van deze launcher.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        De app houdt het material design aan met standaard een donker thema. De app vraagt niet om een internetverbinding, dus er zijn sowieso geen privacyzorgen.
 
         Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
 
