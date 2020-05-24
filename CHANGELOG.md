@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.2.0 *(2020-05-24)*
+----------------------------
+
+ * Added Dialer, SMS Messenger and Voice Recorder at the default apps
+ * Refresh all app icons a bit to make them nicer
+
 Version 5.1.2 *(2020-03-22)*
 ----------------------------
 
