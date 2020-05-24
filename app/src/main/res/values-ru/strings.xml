@@ -5,20 +5,6 @@
     <string name="remove_explanation">Это только удалит иконку лаунчера с сетки, но не удалит само приложение.</string>
     <string name="close_app">Закрыть это приложение при запуске другого</string>
 
-    <!-- Apps -->
-    <string name="calculator">Калькулятор</string>
-    <string name="calendar">Календарь</string>
-    <string name="camera">Камера</string>
-    <string name="clock">Clock</string>
-    <string name="contacts">Контакты</string>
-    <string name="draw">Рисунки</string>
-    <string name="file_manager">Файловый менеджер</string>
-    <string name="flashlight">Фонарик</string>
-    <string name="gallery">Галерея</string>
-    <string name="music_player">Проигрыватель музыки</string>
-    <string name="notes">Заметки</string>
-    <string name="thank_you">Спасибо</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

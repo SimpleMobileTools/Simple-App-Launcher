@@ -5,20 +5,6 @@
     <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
     <string name="close_app">Zavřít tuto aplikaci při spuštění jiné</string>
 
-    <!-- Apps -->
-    <string name="calculator">Kalkulačka</string>
-    <string name="calendar">Kalendář</string>
-    <string name="camera">Fotoaparát</string>
-    <string name="clock">Hodiny</string>
-    <string name="contacts">Kontakty</string>
-    <string name="draw">Kreslení</string>
-    <string name="file_manager">Správce souborů</string>
-    <string name="flashlight">Svítilna</string>
-    <string name="gallery">Galerie</string>
-    <string name="music_player">Hudební přehrávač</string>
-    <string name="notes">Poznámky</string>
-    <string name="thank_you">Děkuji</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

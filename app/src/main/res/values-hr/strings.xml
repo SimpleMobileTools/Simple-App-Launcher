@@ -5,20 +5,6 @@
     <string name="remove_explanation">To će ukloniti ikonu pokretača samo iz mreže, ali neće deinstalirati aplikaciju.</string>
     <string name="close_app">Zatvorite ovu aplikaciju pri pokretanju druge</string>
 
-    <!-- Apps -->
-    <string name="calculator">Kalkulator</string>
-    <string name="calendar">Kalendar</string>
-    <string name="camera">Kamera</string>
-    <string name="clock">Sat</string>
-    <string name="contacts">Kontakti</string>
-    <string name="draw">Crtaj</string>
-    <string name="file_manager">Upravitelj datoteka</string>
-    <string name="flashlight">Bljeskalica</string>
-    <string name="gallery">Galerija</string>
-    <string name="music_player">Glazbeni svirač</string>
-    <string name="notes">Bilješke</string>
-    <string name="thank_you">Hvala Vam</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

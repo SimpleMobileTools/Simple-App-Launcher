@@ -5,20 +5,6 @@
     <string name="remove_explanation">この操作は実際のアプリをアンインストールするのではなく、一覧からアプリのアイコンを削除するだけです。</string>
     <string name="close_app">別のアプリを起動するときにこのアプリを閉じる</string>
 
-    <!-- Apps -->
-    <string name="calculator">電卓</string>
-    <string name="calendar">カレンダー</string>
-    <string name="camera">カメラ</string>
-    <string name="clock">時計</string>
-    <string name="contacts">連絡先</string>
-    <string name="draw">ドロー</string>
-    <string name="file_manager">ファイルマネージャー</string>
-    <string name="flashlight">フラッシュライト</string>
-    <string name="gallery">ギャラリー</string>
-    <string name="music_player">ミュージックプレイヤー</string>
-    <string name="notes">メモ</string>
-    <string name="thank_you">Thank You</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

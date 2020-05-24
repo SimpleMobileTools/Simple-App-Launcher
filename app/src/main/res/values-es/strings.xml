@@ -5,20 +5,6 @@
     <string name="remove_explanation">Esto solo eliminará el ícono del launcher de este cajón, nno desinstalará la aplicación.</string>
     <string name="close_app">Cerrar esta aplicación al iniciar una diferente</string>
 
-    <!-- Apps -->
-    <string name="calculator">Calculadora</string>
-    <string name="calendar">Calendario</string>
-    <string name="camera">Cámara</string>
-    <string name="clock">Reloj</string>
-    <string name="contacts">Contactos</string>
-    <string name="draw">Dibujo</string>
-    <string name="file_manager">Administrador de archivos</string>
-    <string name="flashlight">Linterna</string>
-    <string name="gallery">Galería</string>
-    <string name="music_player">Reproductor de música</string>
-    <string name="notes">Notas</string>
-    <string name="thank_you">Thank You</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

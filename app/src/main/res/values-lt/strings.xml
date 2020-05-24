@@ -5,20 +5,6 @@
     <string name="remove_explanation">Tai tik pašalins paleidimo priemonės ikonėlę iš tinklelio, nepašalins pačios programėlės.</string>
     <string name="close_app">Close this app at launching a different one</string>
 
-    <!-- Apps -->
-    <string name="calculator">Skaičiuotuvas</string>
-    <string name="calendar">Kalendorius</string>
-    <string name="camera">Fotoaparatas</string>
-    <string name="clock">Laikrodis</string>
-    <string name="contacts">Kontaktai</string>
-    <string name="draw">Piešimas</string>
-    <string name="file_manager">Bylų tvarkyklė</string>
-    <string name="flashlight">Žibintuvėlis</string>
-    <string name="gallery">Galerija</string>
-    <string name="music_player">Muzikos grotuvas</string>
-    <string name="notes">Užrašai</string>
-    <string name="thank_you">Ačiū</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

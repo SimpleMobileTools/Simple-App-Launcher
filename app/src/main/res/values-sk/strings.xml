@@ -5,20 +5,6 @@
     <string name="remove_explanation">Toto iba odstráni spúšťačku z tejto mriežky, neodinštaluje to samotnú apku.</string>
     <string name="close_app">Ukončiť túto aplikáciu pri spustení inej</string>
 
-    <!-- Apps -->
-    <string name="calculator">Kalkulačka</string>
-    <string name="calendar">Kalendár</string>
-    <string name="camera">Kamera</string>
-    <string name="clock">Hodinky</string>
-    <string name="contacts">Kontakty</string>
-    <string name="draw">Kreslenie</string>
-    <string name="file_manager">Správca súborov</string>
-    <string name="flashlight">Batéria</string>
-    <string name="gallery">Galéria</string>
-    <string name="music_player">Hudobný prehrávač</string>
-    <string name="notes">Poznámky</string>
-    <string name="thank_you">Ďakujem</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Jednoduchý spúšťač aplikácií - Nájdite apky rýchlo</string>

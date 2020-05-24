@@ -5,20 +5,6 @@
     <string name="remove_explanation">Bu, uygulamayı değil sadece bu ekrandan uygulama simgesini kaldırır.</string>
     <string name="close_app">Farklı bir başlatmada bu uygulamayı kapat</string>
 
-    <!-- Apps -->
-    <string name="calculator">Hesap Makinesi</string>
-    <string name="calendar">Takvim</string>
-    <string name="camera">Kamera</string>
-    <string name="clock">Saat</string>
-    <string name="contacts">Kişiler</string>
-    <string name="draw">Çizim</string>
-    <string name="file_manager">Dosya Yöneticisi</string>
-    <string name="flashlight">Fener</string>
-    <string name="gallery">Galeri</string>
-    <string name="music_player">Müzik Çalar</string>
-    <string name="notes">Notlar</string>
-    <string name="thank_you">Teşekkürler</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

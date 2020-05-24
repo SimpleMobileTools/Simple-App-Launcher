@@ -49,12 +49,12 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 3) {
-            val contacts = AppLauncher(0, context.getString(R.string.contacts), "com.simplemobiletools.contacts")
+            val contacts = AppLauncher(0, context.getString(R.string.contacts_short), "com.simplemobiletools.contacts")
             addAppLauncher(contacts, db)
         }
 
         if (oldVersion < 4) {
-            val clock = AppLauncher(0, context.getString(R.string.clock), "com.simplemobiletools.clock")
+            val clock = AppLauncher(0, context.getString(R.string.clock_short), "com.simplemobiletools.clock")
             addAppLauncher(clock, db)
         }
 
@@ -69,18 +69,18 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
         val titles = arrayListOf(
-                R.string.calculator,
-                R.string.calendar,
-                R.string.camera,
-                R.string.clock,
-                R.string.contacts,
-                R.string.draw,
-                R.string.file_manager,
-                R.string.flashlight,
-                R.string.gallery,
-                R.string.music_player,
-                R.string.notes,
-                R.string.thank_you
+                R.string.calculator_short,
+                R.string.calendar_short,
+                R.string.camera_short,
+                R.string.clock_short,
+                R.string.contacts_short,
+                R.string.draw_short,
+                R.string.file_manager_short,
+                R.string.flashlight_short,
+                R.string.gallery_short,
+                R.string.music_player_short,
+                R.string.notes_short,
+                R.string.thank_you_short
         )
 
         val cnt = titles.size

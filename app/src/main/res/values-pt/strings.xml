@@ -5,20 +5,6 @@
     <string name="remove_explanation">Esta ação remove o ícone da grelha mas não desinstala a aplicação.</string>
     <string name="close_app">Fechar esta aplicação depois de abrir outra</string>
 
-    <!-- Apps -->
-    <string name="calculator">Calculadora</string>
-    <string name="calendar">Calendário</string>
-    <string name="camera">Câmara</string>
-    <string name="clock">Relógio</string>
-    <string name="contacts">Contactos</string>
-    <string name="draw">Desenho</string>
-    <string name="file_manager">Gestor de ficheiros</string>
-    <string name="flashlight">Lanterna</string>
-    <string name="gallery">Galeria</string>
-    <string name="music_player">Reprodutor de músicas</string>
-    <string name="notes">Notas</string>
-    <string name="thank_you">Thank You</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

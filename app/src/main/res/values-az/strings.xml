@@ -5,20 +5,6 @@
     <string name="remove_explanation">Bu proses yalnız tətbiq ikonunu siyahıdan siləcək, tətbiqin özü silinməyəcək.</string>
     <string name="close_app">Close this app at launching a different one</string>
 
-    <!-- Apps -->
-    <string name="calculator">Kalkulyator</string>
-    <string name="calendar">Təqvim</string>
-    <string name="camera">Kamera</string>
-    <string name="clock">Saat</string>
-    <string name="contacts">Kontaktlar</string>
-    <string name="draw">Çək</string>
-    <string name="file_manager">Fayl Meneceri</string>
-    <string name="flashlight">Fənər</string>
-    <string name="gallery">Qalereya</string>
-    <string name="music_player">Musiqi Çalar</string>
-    <string name="notes">Qeydlər</string>
-    <string name="thank_you">Təşəkkürlər</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

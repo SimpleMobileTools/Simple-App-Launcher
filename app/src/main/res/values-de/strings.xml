@@ -5,20 +5,6 @@
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
     <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
 
-    <!-- Apps -->
-    <string name="calculator">Rechner</string>
-    <string name="calendar">Kalender</string>
-    <string name="camera">Kamera</string>
-    <string name="clock">Uhr</string>
-    <string name="contacts">Kontakte</string>
-    <string name="draw">Zeichenblock</string>
-    <string name="file_manager">Dateimanager</string>
-    <string name="flashlight">Taschenlampe</string>
-    <string name="gallery">Galerie</string>
-    <string name="music_player">Musik-Player</string>
-    <string name="notes">Notizblock</string>
-    <string name="thank_you">Dankeschön</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

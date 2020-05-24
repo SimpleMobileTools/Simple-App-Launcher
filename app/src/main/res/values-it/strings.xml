@@ -5,20 +5,6 @@
     <string name="remove_explanation">Questo rimuoverà solamente l\'icona del lanciatore dalla griglia, non disintallerà l\'applicazione.</string>
     <string name="close_app">Chiudi l\'applicazione quando se ne avvia un\'altra</string>
 
-    <!-- Apps -->
-    <string name="calculator">Calcolatrice</string>
-    <string name="calendar">Calendario</string>
-    <string name="camera">Fotocamera</string>
-    <string name="clock">Orologio</string>
-    <string name="contacts">Contatti</string>
-    <string name="draw">Disegna</string>
-    <string name="file_manager">Gestore dei file</string>
-    <string name="flashlight">Torcia</string>
-    <string name="gallery">Galleria</string>
-    <string name="music_player">Riproduttore musicale</string>
-    <string name="notes">Note</string>
-    <string name="thank_you">Ringraziamento</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

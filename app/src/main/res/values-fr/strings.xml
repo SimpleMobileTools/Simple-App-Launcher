@@ -5,20 +5,6 @@
     <string name="remove_explanation">Cette action ne fera que supprimer l\'icône du launcher de cette liste et ne désinstallere pas l\'application.</string>
     <string name="close_app">Close this app at launching a different one</string>
 
-    <!-- Apps -->
-    <string name="calculator">Calculatrice</string>
-    <string name="calendar">Calendrier</string>
-    <string name="camera">Caméra</string>
-    <string name="clock">Horloge</string>
-    <string name="contacts">Contacts</string>
-    <string name="draw">Dessiner</string>
-    <string name="file_manager">Gestionnaire de Fichiers</string>
-    <string name="flashlight">Lampe de Poche</string>
-    <string name="gallery">Galerie</string>
-    <string name="music_player">Lecteur de Musique</string>
-    <string name="notes">Notes</string>
-    <string name="thank_you">Merci</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

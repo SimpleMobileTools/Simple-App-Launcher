@@ -5,20 +5,6 @@
     <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
     <string name="close_app">Close this app at launching a different one</string>
 
-    <!-- Apps -->
-    <string name="calculator">Kalkulator</string>
-    <string name="calendar">Kalendarz</string>
-    <string name="camera">Aparat</string>
-    <string name="clock">Clock</string>
-    <string name="contacts">Contacts</string>
-    <string name="draw">Szkicownik</string>
-    <string name="file_manager">Menedżer Plików</string>
-    <string name="flashlight">Latarka</string>
-    <string name="gallery">Galeria</string>
-    <string name="music_player">Odtwarzacz Muzyki</string>
-    <string name="notes">Notatki</string>
-    <string name="thank_you">Thank You</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>

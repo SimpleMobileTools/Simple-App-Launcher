@@ -5,20 +5,6 @@
     <string name="remove_explanation">سيؤدي هذا فقط إلى إزالة أيقونة المشغل من هذه الشبكة ، وليس إلغاء تثبيت التطبيق الفعلي.</string>
     <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
 
-    <!-- Apps -->
-    <string name="calculator">الحاسبة</string>
-    <string name="calendar">التقويم</string>
-    <string name="camera">الكاميرا</string>
-    <string name="clock">الساعة</string>
-    <string name="contacts">جهات الإتصال</string>
-    <string name="draw">الرسام</string>
-    <string name="file_manager">مدير الملفات</string>
-    <string name="flashlight">المصباح</string>
-    <string name="gallery">الاستديو</string>
-    <string name="music_player">مشغل الموسيقى</string>
-    <string name="notes">الملاحظات</string>
-    <string name="thank_you">Thank You</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
