@@ -11,13 +11,13 @@
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Jednoduchý držiak pre spúšťačky vašich obľúbených apiek pre ľahkú správu ikoniek</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Neide o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť.
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Je tu možnosť zatvoriť túto apku v prípade, ak spustíte niektorú inú.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Neviete pomocou tejto aplikácie odinštalovať žiadne systémové apky, iba odstrániť ich ikonky a ignorovať ich.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Táto apka je založená na Material dizajne a má prednastavenú tmavú tému, poskytuje výbornú používateľskú skúsenosť pre ľahké používanie. Chýbajúci prístup k internetu garantuje lepšie súkromie, bezpečnosť a stabilitu ako ostatné apky.
 
         Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 

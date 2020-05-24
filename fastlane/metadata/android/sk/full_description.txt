@@ -1,5 +1,18 @@
-Viete jednoducho pridať akúkoľvek aplikáciu, už nikdy tak nebudete musieť listovať medzi nepotrebnými aplikáciami. Spúšťačky viete aj premenovať. Nie je to skutočný spúšťač pre vašu domovskú obrazovku, iba držiak obľúbených aplikácií.
+Neide o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť.
+
+Je tu možnosť zatvoriť túto apku v prípade, ak spustíte niektorú inú.
+
+Neviete pomocou tejto aplikácie odinštalovať žiadne systémové apky, iba odstrániť ich ikonky a ignorovať ich.
+
+Táto apka je založená na Material dizajne a má prednastavenú tmavú tému, poskytuje výbornú používateľskú skúsenosť pre ľahké používanie. Chýbajúci prístup k internetu garantuje lepšie súkromie, bezpečnosť a stabilitu ako ostatné apky.
 
 Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 
-Táto aplikácia je iba jednou zo skupiny aplikácií. Ostatné viete nájsť na https://www.simplemobiletools.com
+<b>Pozrite si celú sadu aplikácií na:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools
