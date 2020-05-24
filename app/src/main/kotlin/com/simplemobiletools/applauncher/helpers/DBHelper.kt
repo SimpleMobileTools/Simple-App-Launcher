@@ -28,7 +28,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val mDb = writableDatabase
 
     companion object {
-        private const val DB_VERSION = 6
+        private const val DB_VERSION = 7
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
@@ -65,22 +65,34 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         if (oldVersion < 6) {
             db.execSQL("ALTER TABLE $MAIN_TABLE_NAME ADD COLUMN $COL_APP_ORDER INTEGER NOT NULL DEFAULT 0")
         }
+
+        if (oldVersion < 7) {
+            val dialer = AppLauncher(0, context.getString(R.string.dialer_short), "com.simplemobiletools.dialer")
+            val smsMessenger = AppLauncher(0, context.getString(R.string.sms_messenger_short), "com.simplemobiletools.smsmessenger")
+            val voiceRecorder = AppLauncher(0, context.getString(R.string.voice_recorder_short), "com.simplemobiletools.voicerecorder")
+            addAppLauncher(dialer, db)
+            addAppLauncher(smsMessenger, db)
+            addAppLauncher(voiceRecorder, db)
+        }
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
         val titles = arrayListOf(
-                R.string.calculator_short,
-                R.string.calendar_short,
-                R.string.camera_short,
-                R.string.clock_short,
-                R.string.contacts_short,
-                R.string.draw_short,
-                R.string.file_manager_short,
-                R.string.flashlight_short,
-                R.string.gallery_short,
-                R.string.music_player_short,
-                R.string.notes_short,
-                R.string.thank_you_short
+            R.string.calculator_short,
+            R.string.calendar_short,
+            R.string.camera_short,
+            R.string.clock_short,
+            R.string.contacts_short,
+            R.string.dialer_short,
+            R.string.draw_short,
+            R.string.file_manager_short,
+            R.string.flashlight_short,
+            R.string.gallery_short,
+            R.string.music_player_short,
+            R.string.notes_short,
+            R.string.sms_messenger_short,
+            R.string.thank_you_short,
+            R.string.voice_recorder_short
         )
 
         val cnt = titles.size

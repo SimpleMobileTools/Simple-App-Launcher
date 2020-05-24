@@ -11,13 +11,16 @@ fun Resources.getLauncherDrawable(packageName: String): Drawable {
         "com.simplemobiletools.camera" -> R.drawable.ic_launcher_camera
         "com.simplemobiletools.clock" -> R.drawable.ic_launcher_clock
         "com.simplemobiletools.contacts.pro" -> R.drawable.ic_launcher_contacts
+        "com.simplemobiletools.dialer" -> R.drawable.ic_dialer
         "com.simplemobiletools.draw.pro" -> R.drawable.ic_launcher_draw
         "com.simplemobiletools.filemanager.pro" -> R.drawable.ic_launcher_filemanager
         "com.simplemobiletools.flashlight" -> R.drawable.ic_launcher_flashlight
         "com.simplemobiletools.gallery.pro" -> R.drawable.ic_launcher_gallery
         "com.simplemobiletools.musicplayer" -> R.drawable.ic_launcher_musicplayer
         "com.simplemobiletools.notes.pro" -> R.drawable.ic_launcher_notes
+        "com.simplemobiletools.smsmessenger" -> R.drawable.ic_sms_messenger
         "com.simplemobiletools.thankyou" -> R.drawable.ic_launcher_thankyou
+        "com.simplemobiletools.voicerecorder" -> R.drawable.ic_voice_recorder
         else -> throw RuntimeException("Invalid launcher package name $packageName")
     })
 }
