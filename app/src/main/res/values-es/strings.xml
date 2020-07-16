@@ -2,26 +2,26 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Lanzador de aplicaciones</string>
     <string name="enter_launcher_name">Por favor, introduzca un nombre para el lanzador</string>
-    <string name="remove_explanation">Esto solo eliminará el ícono del launcher de este cajón, nno desinstalará la aplicación.</string>
+    <string name="remove_explanation">Esto solo eliminará el ícono de la aplicaicón de este cajón, no la desinstalará.</string>
     <string name="close_app">Cerrar esta aplicación al iniciar una diferente</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Simple App Launcher - Abre apps fácil y rápido</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Un contenedor y lanzador sencillo y rápido de tus aplicaciones favoritas</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Este no es un launcher real, es solo un contenedor para iniciar rápidamente tus aplicaciones favoritas. Puedes añadirlo fácilmente a cualquier lanzador de aplicaciones, así que nunca tendrás que deslizarte entre aplicaciones inútiles para encontrar la que necesitas otra vez. También puedes renombrar los lanzadores como desees.
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Hay una opción para cerrar la misma aplicación cuando se inicie una diferente para facilitar la navegación.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        No podemos desinstalar aplicaciones del sistema indeseadas, puedes solo remover su ícono e ignorarlas.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a inernet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
 
-        No contiene publicidad ni permisos innecesarios. Es totalmente libre, proporciona colores personalizables.
+        No contiene publicidad ni permisos innecesarios. Es totalmente de código abierto, proporciona colores personalizables.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Mira la suite completa de herramientas Simples aquí:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
