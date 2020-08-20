@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.checkWhatsNew
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
@@ -65,7 +66,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         launchers_fastscroller.apply {
             updatePrimaryColor()
             updateBubbleColors()
-            allowBubbleDisplay = true
         }
     }
 
@@ -96,8 +96,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         val licenses = LICENSE_STETHO
 
         val faqItems = arrayListOf(
-                FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
-                FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons)
+            FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons),
+            FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons)
         )
 
         startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, false)
@@ -123,18 +123,13 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
         launchers_grid.adapter = adapter
 
-        launchers_fastscroller.allowBubbleDisplay = true
         launchers_fastscroller.setViews(launchers_grid) {
             launchers_fastscroller.updateBubbleText(displayedLaunchers.getOrNull(it)?.getBubbleText() ?: "")
         }
 
-        fillNotDisplayedLaunchers()
-    }
-
-    private fun fillNotDisplayedLaunchers() {
-        Thread {
+        ensureBackgroundThread {
             notDisplayedLaunchers = getNotDisplayedLaunchers(displayedLaunchers)
-        }.start()
+        }
     }
 
     private fun checkInvalidApps() {
