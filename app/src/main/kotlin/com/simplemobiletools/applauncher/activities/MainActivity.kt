@@ -1,7 +1,6 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -16,6 +15,7 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.appLaunched
 import com.simplemobiletools.commons.extensions.checkWhatsNew
+import com.simplemobiletools.commons.extensions.launchViewIntent
 import com.simplemobiletools.commons.extensions.updateTextColors
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
@@ -116,9 +116,11 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
                     finish()
                 }
             } else {
-                val url = "https://play.google.com/store/apps/details?id=${it.packageName}"
-                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                startActivity(intent)
+                try {
+                    launchViewIntent("market://details?id=${it.packageName}")
+                } catch (ignored: Exception) {
+                    launchViewIntent("https://play.google.com/store/apps/details?id=${it.packageName}")
+                }
             }
         }
         launchers_grid.adapter = adapter
