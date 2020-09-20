@@ -2,7 +2,7 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Lanzador de aplicaciones</string>
     <string name="enter_launcher_name">Por favor, introduzca un nombre para el lanzador</string>
-    <string name="remove_explanation">Esto solo eliminará el ícono de la aplicaicón de este cajón, no la desinstalará.</string>
+    <string name="remove_explanation">Esto solo eliminará el ícono de la aplicación de este cajón, no la desinstalará.</string>
     <string name="close_app">Cerrar esta aplicación al iniciar una diferente</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
@@ -17,7 +17,7 @@
 
         No podemos desinstalar aplicaciones del sistema indeseadas, puedes solo remover su ícono e ignorarlas.
 
-        Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a inernet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
+        Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a internet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
 
         No contiene publicidad ni permisos innecesarios. Es totalmente de código abierto, proporciona colores personalizables.
 
