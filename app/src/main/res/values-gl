@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">Iniciador de aplicativos</string>
+    <string name="enter_launcher_name">Por favor insira un nome para o iniciador</string>
+    <string name="remove_explanation">Esta acción elimina a icona da grella pero non desinstala o aplicativo.</string>
+    <string name="close_app">Pechar este aplicativo despois de abrir outra</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Simple App Launcher - Inicia aplicativos de forma fácil&amp; e rápida</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">Un soporte sinxelo para os aplicativos favoritos para unha xestión rápida&amp; e sinxela das iconas do iniciador de aplicativos</string>
+    <string name="app_long_description">
+        Este non é un iniciador real, só unha contorna para as iconas dos teus aplicativos favoritos para o seu inicio rápido. Podes engadir facilmente calquera iniciador de aplicativos, polo que nunca máis terás que pasar por aplicativos inútiles para atopar a que necesitas. Tamén podes cambiar o nome dos iniciadores como queiras.
+
+        Hai unha opción para pechar o propio aplicativo ao iniciar outro diferente para facilitar a navegación.
+
+        Non podemos desinstalar aplicativos do sistema non desexados, só pode eliminar as súas iconas e ignoralas.
+
+        E, por último, vén cun deseño material e un tema escuro de xeito predeterminado, fornece unha excelente experiencia de usuario cun uso sinxelo. Como non necesita acceso a Internet, tes máis privacidade, seguridade e estabilidade.
+
+        Non contén anuncios nin permisos innecesarios. Dispón dun tema escuro e é totalmente de código aberto.
+        
+        <b>Visita esta páxina a través desta ligazón:</b>
+        https://www.simplemobiletools.com
+
+        <b>Facebook:</b>
+        https://www.facebook.com/simplemobiletools
+
+        <b>Reddit:</b>
+        https://www.reddit.com/r/SimpleMobileTools
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
