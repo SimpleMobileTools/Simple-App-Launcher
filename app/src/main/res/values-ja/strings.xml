@@ -2,7 +2,7 @@
     <string name="app_name">シンプル アプリ ランチャー</string>
     <string name="app_launcher_name">アプリ ランチャー</string>
     <string name="enter_launcher_name">ランチャーの名前を入力してください</string>
-    <string name="remove_explanation">この操作は実際のアプリをアンインストールするのではなく、一覧からアプリのアイコンを削除するだけです。</string>
+    <string name="remove_explanation">この操作により、一覧からアプリのアイコンが削除されます。実際のアプリはアンインストールされません。</string>
     <string name="close_app">別のアプリを起動するときにこのアプリを閉じる</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
