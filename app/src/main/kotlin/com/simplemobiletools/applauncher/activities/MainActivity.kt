@@ -8,6 +8,7 @@ import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
 import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
+import com.simplemobiletools.applauncher.dialogs.ChangeSortingDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getNotDisplayedLaunchers
@@ -85,6 +86,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.sort -> showSortingDialog()
             R.id.increase_column_count -> increaseColumnCount()
             R.id.reduce_column_count -> reduceColumnCount()
             R.id.settings -> launchSettings()
@@ -145,6 +147,12 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
         ensureBackgroundThread {
             notDisplayedLaunchers = getNotDisplayedLaunchers(displayedLaunchers)
+        }
+    }
+
+    private fun showSortingDialog() {
+        ChangeSortingDialog(this) {
+
         }
     }
 
