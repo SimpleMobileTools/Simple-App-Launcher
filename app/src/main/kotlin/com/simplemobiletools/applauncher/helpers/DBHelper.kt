@@ -115,7 +115,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     private fun fillAppLauncherValues(appLauncher: AppLauncher): ContentValues {
         return ContentValues().apply {
-            put(COL_NAME, appLauncher.name)
+            put(COL_NAME, appLauncher.title)
             put(COL_PKG_NAME, appLauncher.packageName)
         }
     }

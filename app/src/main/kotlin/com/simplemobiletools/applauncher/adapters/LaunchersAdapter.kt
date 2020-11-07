@@ -118,7 +118,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
     private fun setupView(view: View, launcher: AppLauncher, isSelected: Boolean) {
         view.apply {
             launcher_check?.beInvisibleIf(!isSelected)
-            launcher_label.text = launcher.name
+            launcher_label.text = launcher.title
             launcher_label.setTextColor(textColor)
             launcher_icon.setImageDrawable(launcher.drawable!!)
 

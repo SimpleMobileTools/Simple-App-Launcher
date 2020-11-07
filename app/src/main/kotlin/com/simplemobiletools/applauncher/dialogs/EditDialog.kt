@@ -17,7 +17,7 @@ class EditDialog(val activity: Activity, val appLauncher: AppLauncher, val callb
     var view = (activity.layoutInflater.inflate(R.layout.dialog_edit_launcher, null) as ViewGroup)
 
     init {
-        view.edit_launcher_edittext.setText(appLauncher.name)
+        view.edit_launcher_edittext.setText(appLauncher.title)
 
         dialog = AlertDialog.Builder(activity)
                 .setPositiveButton(R.string.ok, null)

@@ -51,7 +51,7 @@ class LaunchersDialogAdapter(activity: Activity, val launchers: ArrayList<AppLau
             val isSelected = isKeySelected(launcher.packageName.hashCode())
             itemView.apply {
                 launcher_check?.beInvisibleIf(!isSelected)
-                launcher_label.text = launcher.name
+                launcher_label.text = launcher.title
                 launcher_label.setTextColor(textColor)
                 launcher_icon.setImageDrawable(launcher.drawable!!)
 
