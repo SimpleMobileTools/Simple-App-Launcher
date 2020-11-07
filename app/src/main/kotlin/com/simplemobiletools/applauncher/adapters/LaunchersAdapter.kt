@@ -13,6 +13,7 @@ import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
+import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
@@ -21,6 +22,8 @@ import kotlinx.android.synthetic.main.item_app_launcher.view.*
 class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
         MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick) {
+
+    private var isChangingOrder = false
 
     init {
         setupDragListener(true)
@@ -40,6 +43,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
         }
 
         when (id) {
+            R.id.cab_change_order -> changeOrder()
             R.id.cab_edit -> showEditDialog()
             R.id.cab_remove -> tryRemoveLauncher()
         }
@@ -69,7 +73,15 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
 
     override fun onActionModeCreated() {}
 
-    override fun onActionModeDestroyed() {}
+    override fun onActionModeDestroyed() {
+        isChangingOrder = false
+        notifyDataSetChanged()
+    }
+
+    private fun changeOrder() {
+        isChangingOrder = true
+        notifyDataSetChanged()
+    }
 
     private fun showEditDialog() {
         EditDialog(activity, getItemWithKey(selectedKeys.first())!!) {
@@ -121,6 +133,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
             launcher_label.text = launcher.title
             launcher_label.setTextColor(textColor)
             launcher_icon.setImageDrawable(launcher.drawable!!)
+            launcher_drag_handle.beVisibleIf(isChangingOrder)
 
             if (isSelected) {
                 launcher_check?.background?.applyColorFilter(primaryColor)

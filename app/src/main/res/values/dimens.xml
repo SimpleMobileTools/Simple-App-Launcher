@@ -1,3 +1,4 @@
 <resources>
     <dimen name="launcher_icon_size">55dp</dimen>
+    <dimen name="drag_handle_size">36dp</dimen>
 </resources>
