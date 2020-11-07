@@ -13,10 +13,7 @@ import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getNotDisplayedLaunchers
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
-import com.simplemobiletools.commons.extensions.appLaunched
-import com.simplemobiletools.commons.extensions.checkWhatsNew
-import com.simplemobiletools.commons.extensions.launchViewIntent
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
@@ -111,9 +108,13 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         val adapter = LaunchersAdapter(this, displayedLaunchers, this, launchers_grid, launchers_fastscroller) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
-                startActivity(launchIntent)
-                if (config.closeApp) {
-                    finish()
+                try {
+                    startActivity(launchIntent)
+                    if (config.closeApp) {
+                        finish()
+                    }
+                } catch (e: Exception) {
+                    showErrorToast(e)
                 }
             } else {
                 try {
