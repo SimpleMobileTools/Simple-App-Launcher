@@ -1,8 +1,11 @@
 package com.simplemobiletools.applauncher.adapters
 
 import android.view.Menu
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.dialogs.EditDialog
@@ -14,19 +17,32 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.interfaces.ItemMoveCallback
+import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
+import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 
 class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
-        MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick) {
+        MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick), ItemTouchHelperContract {
 
     private var isChangingOrder = false
+    private var startReorderDragListener: StartReorderDragListener
 
     init {
         setupDragListener(true)
+
+        val touchHelper = ItemTouchHelper(ItemMoveCallback(this))
+        touchHelper.attachToRecyclerView(recyclerView)
+
+        startReorderDragListener = object : StartReorderDragListener {
+            override fun requestDrag(viewHolder: RecyclerView.ViewHolder) {
+                touchHelper.startDrag(viewHolder)
+            }
+        }
     }
 
     override fun getActionMenuId() = R.menu.cab
@@ -54,7 +70,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val launcher = launchers[position]
         holder.bindView(launcher, true, true) { itemView, adapterPosition ->
-            setupView(itemView, launcher, selectedKeys.contains(launcher.packageName.hashCode()))
+            setupView(itemView, launcher, holder)
         }
         bindViewHolder(holder)
     }
@@ -127,17 +143,37 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
         removeSelectedItems(positions)
     }
 
-    private fun setupView(view: View, launcher: AppLauncher, isSelected: Boolean) {
+    private fun setupView(view: View, launcher: AppLauncher, holder: ViewHolder) {
         view.apply {
+            val isSelected = selectedKeys.contains(launcher.packageName.hashCode())
             launcher_check?.beInvisibleIf(!isSelected)
             launcher_label.text = launcher.title
             launcher_label.setTextColor(textColor)
             launcher_icon.setImageDrawable(launcher.drawable!!)
+
             launcher_drag_handle.beVisibleIf(isChangingOrder)
+            if (isChangingOrder) {
+                launcher_drag_handle.applyColorFilter(textColor)
+                launcher_drag_handle.setOnTouchListener { v, event ->
+                    if (event.action == MotionEvent.ACTION_DOWN) {
+                        startReorderDragListener.requestDrag(holder)
+                    }
+                    false
+                }
+            }
 
             if (isSelected) {
                 launcher_check?.background?.applyColorFilter(primaryColor)
             }
         }
+    }
+
+    override fun onRowClear(myViewHolder: ViewHolder?) {
+    }
+
+    override fun onRowMoved(fromPosition: Int, toPosition: Int) {
+    }
+
+    override fun onRowSelected(myViewHolder: ViewHolder?) {
     }
 }
