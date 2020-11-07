@@ -37,7 +37,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
     init {
         setupDragListener(true)
 
-        val touchHelper = ItemTouchHelper(ItemMoveCallback(this))
+        val touchHelper = ItemTouchHelper(ItemMoveCallback(this, true))
         touchHelper.attachToRecyclerView(recyclerView)
 
         startReorderDragListener = object : StartReorderDragListener {
