@@ -49,12 +49,12 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         if (oldVersion < 3) {
-            val contacts = AppLauncher(0, context.getString(R.string.contacts_short), "com.simplemobiletools.contacts")
+            val contacts = AppLauncher(0, context.getString(R.string.contacts_short), "com.simplemobiletools.contacts", 0)
             addAppLauncher(contacts, db)
         }
 
         if (oldVersion < 4) {
-            val clock = AppLauncher(0, context.getString(R.string.clock_short), "com.simplemobiletools.clock")
+            val clock = AppLauncher(0, context.getString(R.string.clock_short), "com.simplemobiletools.clock", 0)
             addAppLauncher(clock, db)
         }
 
@@ -67,9 +67,9 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         }
 
         if (oldVersion < 7) {
-            val dialer = AppLauncher(0, context.getString(R.string.dialer_short), "com.simplemobiletools.dialer")
-            val smsMessenger = AppLauncher(0, context.getString(R.string.sms_messenger_short), "com.simplemobiletools.smsmessenger")
-            val voiceRecorder = AppLauncher(0, context.getString(R.string.voice_recorder_short), "com.simplemobiletools.voicerecorder")
+            val dialer = AppLauncher(0, context.getString(R.string.dialer_short), "com.simplemobiletools.dialer", 0)
+            val smsMessenger = AppLauncher(0, context.getString(R.string.sms_messenger_short), "com.simplemobiletools.smsmessenger", 0)
+            val voiceRecorder = AppLauncher(0, context.getString(R.string.voice_recorder_short), "com.simplemobiletools.voicerecorder", 0)
             addAppLauncher(dialer, db)
             addAppLauncher(smsMessenger, db)
             addAppLauncher(voiceRecorder, db)
@@ -99,7 +99,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val resources = context.resources
         val packages = predefinedPackageNames
         for (i in 0 until cnt) {
-            val appLauncher = AppLauncher(0, resources.getString(titles[i]), packages[i])
+            val appLauncher = AppLauncher(0, resources.getString(titles[i]), packages[i], 0)
             addAppLauncher(appLauncher, db)
         }
     }
@@ -117,6 +117,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         return ContentValues().apply {
             put(COL_NAME, appLauncher.title)
             put(COL_PKG_NAME, appLauncher.packageName)
+            put(COL_APP_ORDER, appLauncher.order)
         }
     }
 
@@ -141,7 +142,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val resources = context.resources
         val packageManager = context.packageManager
         val launchers = ArrayList<AppLauncher>()
-        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME, COL_WAS_RENAMED)
+        val cols = arrayOf(COL_ID, COL_NAME, COL_PKG_NAME, COL_WAS_RENAMED, COL_APP_ORDER)
         val cursor = mDb.query(MAIN_TABLE_NAME, cols, null, null, null, null, "$COL_NAME COLLATE NOCASE")
         val IDsToDelete = ArrayList<String>()
         cursor.use {
@@ -150,6 +151,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 var name = cursor.getStringValue(COL_NAME)
                 val packageName = cursor.getStringValue(COL_PKG_NAME)
                 val wasRenamed = cursor.getIntValue(COL_WAS_RENAMED) == 1
+                val order = cursor.getIntValue(COL_APP_ORDER)
 
                 var drawable: Drawable? = null
                 try {
@@ -182,7 +184,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
                 }
 
                 if (drawable != null) {
-                    val launcher = AppLauncher(id, name, packageName, drawable)
+                    val launcher = AppLauncher(id, name, packageName, order, drawable)
                     launchers.add(launcher)
                 }
             }

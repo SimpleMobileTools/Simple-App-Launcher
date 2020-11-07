@@ -45,7 +45,7 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
             }
         }
 
-        allApps.add(AppLauncher(0, label, packageName, drawable))
+        allApps.add(AppLauncher(0, label, packageName, 0, drawable))
     }
 
     if (config.sorting and SORT_BY_CUSTOM != 0) {

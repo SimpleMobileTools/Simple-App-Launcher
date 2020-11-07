@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable
 import com.simplemobiletools.commons.helpers.SORT_BY_TITLE
 import com.simplemobiletools.commons.helpers.SORT_DESCENDING
 
-data class AppLauncher(val id: Int, var title: String, val packageName: String, val drawable: Drawable? = null) : Comparable<AppLauncher> {
+data class AppLauncher(val id: Int, var title: String, val packageName: String, val order: Int, val drawable: Drawable? = null) : Comparable<AppLauncher> {
     companion object {
         var sorting = 0
     }
