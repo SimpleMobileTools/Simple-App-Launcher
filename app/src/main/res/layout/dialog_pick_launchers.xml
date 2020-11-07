@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.simplemobiletools.commons.views.MyRecyclerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.simplemobiletools.commons.views.MyRecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/pick_launchers_holder"
     android:layout_width="match_parent"
@@ -8,4 +7,4 @@
     android:padding="@dimen/small_margin"
     android:scrollbars="vertical"
     app:layoutManager="com.simplemobiletools.commons.views.MyGridLayoutManager"
-    app:spanCount="@integer/column_count"/>
+    app:spanCount="@integer/column_count" />

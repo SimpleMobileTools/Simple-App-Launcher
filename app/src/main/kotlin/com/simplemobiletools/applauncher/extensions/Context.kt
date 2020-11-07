@@ -47,7 +47,9 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
         allApps.add(AppLauncher(0, label, packageName, drawable))
     }
 
-    val sorted = allApps.sortedWith(compareBy { it.title.toLowerCase() })
-    val unique = sorted.distinctBy { it.packageName }
+    AppLauncher.sorting = config.sorting
+    allApps.sort()
+
+    val unique = allApps.distinctBy { it.packageName }
     return unique.filter { !displayedLaunchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
 }
