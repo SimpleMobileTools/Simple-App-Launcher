@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable
 import com.simplemobiletools.applauncher.helpers.Config
 import com.simplemobiletools.applauncher.helpers.DBHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.helpers.SORT_BY_CUSTOM
 
 val Context.config: Config get() = Config.newInstance(applicationContext)
 
@@ -47,8 +48,12 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
         allApps.add(AppLauncher(0, label, packageName, drawable))
     }
 
-    AppLauncher.sorting = config.sorting
-    allApps.sort()
+    if (config.sorting and SORT_BY_CUSTOM != 0) {
+        allApps.sortBy { it.title.toLowerCase() }
+    } else {
+        AppLauncher.sorting = config.sorting
+        allApps.sort()
+    }
 
     val unique = allApps.distinctBy { it.packageName }
     return unique.filter { !displayedLaunchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
