@@ -24,6 +24,8 @@ import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.FastScroller
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
@@ -168,10 +170,20 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
         }
     }
 
-    override fun onRowClear(myViewHolder: ViewHolder?) {
+    override fun onRowMoved(fromPosition: Int, toPosition: Int) {
+        if (fromPosition < toPosition) {
+            for (i in fromPosition until toPosition) {
+                Collections.swap(launchers, i, i + 1)
+            }
+        } else {
+            for (i in fromPosition downTo toPosition + 1) {
+                Collections.swap(launchers, i, i - 1)
+            }
+        }
+        notifyItemMoved(fromPosition, toPosition)
     }
 
-    override fun onRowMoved(fromPosition: Int, toPosition: Int) {
+    override fun onRowClear(myViewHolder: ViewHolder?) {
     }
 
     override fun onRowSelected(myViewHolder: ViewHolder?) {
