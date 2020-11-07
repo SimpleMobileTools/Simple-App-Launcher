@@ -20,6 +20,7 @@ import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.views.MyGridLayoutManager
+import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -28,6 +29,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private var displayedLaunchers = ArrayList<AppLauncher>()
     private var notDisplayedLaunchers: ArrayList<AppLauncher>? = null
+    private var zoomListener: MyRecyclerView.MyZoomListener? = null
+
     private var mStoredPrimaryColor = 0
     private var mStoredTextColor = 0
 
@@ -111,7 +114,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun setupLaunchers() {
         displayedLaunchers = dbHelper.getLaunchers()
         checkInvalidApps()
-        val adapter = LaunchersAdapter(this, displayedLaunchers, this, launchers_grid, launchers_fastscroller) {
+        initZoomListener()
+
+        LaunchersAdapter(this, displayedLaunchers, this, launchers_grid, launchers_fastscroller) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 try {
@@ -129,8 +134,10 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
                     launchViewIntent("https://play.google.com/store/apps/details?id=${it.packageName}")
                 }
             }
+        }.apply {
+            setupZoomListener(zoomListener)
+            launchers_grid.adapter = this
         }
-        launchers_grid.adapter = adapter
 
         launchers_fastscroller.setViews(launchers_grid) {
             launchers_fastscroller.updateBubbleText(displayedLaunchers.getOrNull(it)?.getBubbleText() ?: "")
@@ -170,6 +177,25 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun setupGridLayoutManager() {
         val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
         layoutManager.spanCount = config.columnCnt
+    }
+
+    private fun initZoomListener() {
+        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
+        zoomListener = object : MyRecyclerView.MyZoomListener {
+            override fun zoomIn() {
+                if (layoutManager.spanCount > 1) {
+                    reduceColumnCount()
+                    getGridAdapter()?.finishActMode()
+                }
+            }
+
+            override fun zoomOut() {
+                if (layoutManager.spanCount < MAX_COLUMN_COUNT) {
+                    increaseColumnCount()
+                    getGridAdapter()?.finishActMode()
+                }
+            }
+        }
     }
 
     private fun checkInvalidApps() {
