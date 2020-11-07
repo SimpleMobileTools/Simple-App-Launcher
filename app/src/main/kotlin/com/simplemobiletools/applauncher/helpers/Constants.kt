@@ -2,6 +2,7 @@ package com.simplemobiletools.applauncher.helpers
 
 const val WAS_REMOVE_INFO_SHOWN = "was_remove_info_shown"
 const val CLOSE_APP = "close_app"
+const val COLUMN_CNT = "column_cnt"
 
 val predefinedPackageNames = arrayListOf(
     "com.simplemobiletools.calculator",

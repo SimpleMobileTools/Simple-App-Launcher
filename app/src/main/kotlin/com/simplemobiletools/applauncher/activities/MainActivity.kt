@@ -19,10 +19,13 @@ import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.Release
+import com.simplemobiletools.commons.views.MyGridLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
+    private val MAX_COLUMN_COUNT = 20
+
     private var displayedLaunchers = ArrayList<AppLauncher>()
     private var notDisplayedLaunchers: ArrayList<AppLauncher>? = null
     private var mStoredPrimaryColor = 0
@@ -35,6 +38,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         setupLaunchers()
         checkWhatsNewDialog()
         storeStateVariables()
+        setupGridLayoutManager()
 
         fab.setOnClickListener {
             if (notDisplayedLaunchers != null) {
@@ -78,6 +82,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
+            R.id.increase_column_count -> increaseColumnCount()
+            R.id.reduce_column_count -> reduceColumnCount()
             R.id.settings -> launchSettings()
             R.id.about -> launchAbout()
             else -> return super.onOptionsItemSelected(item)
@@ -133,6 +139,37 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         ensureBackgroundThread {
             notDisplayedLaunchers = getNotDisplayedLaunchers(displayedLaunchers)
         }
+    }
+
+    private fun increaseColumnCount() {
+        config.columnCnt = ++(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        columnCountChanged()
+    }
+
+    private fun reduceColumnCount() {
+        config.columnCnt = --(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        columnCountChanged()
+    }
+
+    private fun columnCountChanged() {
+        invalidateOptionsMenu()
+        launchers_grid.adapter?.notifyDataSetChanged()
+        getGridAdapter()?.launchers?.apply {
+            calculateContentHeight(this)
+        }
+    }
+
+    private fun calculateContentHeight(directories: List<AppLauncher>) {
+        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
+        val thumbnailHeight = layoutManager.getChildAt(0)?.height ?: 0
+        val fullHeight = ((directories.size - 1) / layoutManager.spanCount + 1) * thumbnailHeight
+        launchers_fastscroller.setContentHeight(fullHeight)
+        launchers_fastscroller.setScrollToY(launchers_grid.computeVerticalScrollOffset())
+    }
+
+    private fun setupGridLayoutManager() {
+        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
+        layoutManager.spanCount = config.columnCnt
     }
 
     private fun checkInvalidApps() {

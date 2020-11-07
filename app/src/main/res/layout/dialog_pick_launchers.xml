@@ -8,4 +8,4 @@
     android:padding="@dimen/small_margin"
     android:scrollbars="vertical"
     app:layoutManager="com.simplemobiletools.commons.views.MyGridLayoutManager"
-    app:spanCount="@integer/columns"/>
+    app:spanCount="@integer/column_count"/>

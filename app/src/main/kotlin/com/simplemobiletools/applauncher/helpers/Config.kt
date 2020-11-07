@@ -1,6 +1,7 @@
 package com.simplemobiletools.applauncher.helpers
 
 import android.content.Context
+import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.commons.helpers.BaseConfig
 
 class Config(context: Context) : BaseConfig(context) {
@@ -15,4 +16,8 @@ class Config(context: Context) : BaseConfig(context) {
     var closeApp: Boolean
         get() = prefs.getBoolean(CLOSE_APP, true)
         set(closeApp) = prefs.edit().putBoolean(CLOSE_APP, closeApp).apply()
+
+    var columnCnt: Int
+        get() = prefs.getInt(COLUMN_CNT, context.resources.getInteger(R.integer.column_count))
+        set(columnCnt) = prefs.edit().putInt(COLUMN_CNT, columnCnt).apply()
 }
