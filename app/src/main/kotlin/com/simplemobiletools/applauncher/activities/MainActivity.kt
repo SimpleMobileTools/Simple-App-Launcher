@@ -117,8 +117,14 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         displayedLaunchers = dbHelper.getLaunchers()
         checkInvalidApps()
         initZoomListener()
+        setupAdapter(displayedLaunchers)
+    }
 
-        LaunchersAdapter(this, displayedLaunchers, this, launchers_grid, launchers_fastscroller) {
+    private fun setupAdapter(launchers: ArrayList<AppLauncher>) {
+        AppLauncher.sorting = config.sorting
+        launchers.sort()
+
+        LaunchersAdapter(this, launchers, this, launchers_grid, launchers_fastscroller) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 try {
@@ -142,17 +148,18 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         launchers_fastscroller.setViews(launchers_grid) {
-            launchers_fastscroller.updateBubbleText(displayedLaunchers.getOrNull(it)?.getBubbleText() ?: "")
+            val item = (launchers_grid.adapter as LaunchersAdapter).launchers.getOrNull(it)
+            launchers_fastscroller.updateBubbleText(item?.getBubbleText() ?: "")
         }
 
         ensureBackgroundThread {
-            notDisplayedLaunchers = getNotDisplayedLaunchers(displayedLaunchers)
+            notDisplayedLaunchers = getNotDisplayedLaunchers(launchers)
         }
     }
 
     private fun showSortingDialog() {
         ChangeSortingDialog(this) {
-
+            setupAdapter(displayedLaunchers)
         }
     }
 
@@ -214,6 +221,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
                 invalidIds.add(id.toString())
             }
         }
+
         dbHelper.deleteLaunchers(invalidIds)
         displayedLaunchers = displayedLaunchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
