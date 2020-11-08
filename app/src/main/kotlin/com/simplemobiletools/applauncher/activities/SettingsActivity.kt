@@ -1,6 +1,7 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.os.Bundle
+import android.view.Menu
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.extensions.beVisibleIf
@@ -25,6 +26,11 @@ class SettingsActivity : SimpleActivity() {
         setupUseEnglish()
         setupCloseApp()
         updateTextColors(settings_holder)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        updateMenuItemColors(menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun setupPurchaseThankYou() {
