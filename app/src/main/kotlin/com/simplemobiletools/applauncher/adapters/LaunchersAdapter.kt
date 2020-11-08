@@ -93,16 +93,18 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
     override fun onActionModeCreated() {}
 
     override fun onActionModeDestroyed() {
+        if (isChangingOrder) {
+            notifyDataSetChanged()
+            launchers.forEachIndexed { index, appLauncher ->
+                appLauncher.order = index + 1
+            }
+
+            launchers.forEach {
+                activity.dbHelper.updateLauncherOrder(it.id, it.order)
+            }
+        }
+
         isChangingOrder = false
-        notifyDataSetChanged()
-
-        launchers.forEachIndexed { index, appLauncher ->
-            appLauncher.order = index + 1
-        }
-
-        launchers.forEach {
-            activity.dbHelper.updateLauncherOrder(it.id, it.order)
-        }
     }
 
     private fun changeOrder() {

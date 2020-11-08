@@ -16,7 +16,17 @@ data class AppLauncher(val id: Int, var title: String, val packageName: String, 
     override fun compareTo(other: AppLauncher): Int {
         var result = when {
             sorting and SORT_BY_TITLE != 0 -> title.toLowerCase().compareTo(other.title.toLowerCase())
-            else -> order.compareTo(other.order)
+            else -> {
+                if (order > 0 && other.order == 0) {
+                    -1
+                } else if (order == 0 && other.order > 0) {
+                    1
+                } else if (order > 0 && other.order > 0) {
+                    order.compareTo(other.order)
+                } else {
+                    title.toLowerCase().compareTo(other.title.toLowerCase())
+                }
+            }
         }
 
         if (sorting and SORT_DESCENDING != 0) {
