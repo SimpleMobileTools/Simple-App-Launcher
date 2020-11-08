@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.helpers.SORT_BY_CUSTOM
+import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.ItemMoveCallback
 import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
@@ -99,8 +100,10 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
                 appLauncher.order = index + 1
             }
 
-            launchers.forEach {
-                activity.dbHelper.updateLauncherOrder(it.id, it.order)
+            ensureBackgroundThread {
+                launchers.forEach {
+                    activity.dbHelper.updateLauncherOrder(it.id, it.order)
+                }
             }
         }
 
