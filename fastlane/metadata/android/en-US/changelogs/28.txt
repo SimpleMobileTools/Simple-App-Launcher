@@ -1,0 +1,2 @@
+ * Allow reordering the icons in custom order
+ * Allow changing the column count

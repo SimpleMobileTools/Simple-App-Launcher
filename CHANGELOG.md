@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.4.0 *(2020-11-08)*
+----------------------------
+
+ * Allow reordering the icons in custom order
+ * Allow changing the column count
+
 Version 5.3.0 *(2020-08-20)*
 ----------------------------
 
