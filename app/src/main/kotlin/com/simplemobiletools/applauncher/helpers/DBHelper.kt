@@ -138,6 +138,16 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         return mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs) == 1
     }
 
+    fun updateLauncherOrder(id: Int, order: Int) {
+        val values = ContentValues().apply {
+            put(COL_APP_ORDER, order)
+        }
+
+        val selection = "$COL_ID = ?"
+        val selectionArgs = Array(1) { id.toString() }
+        mDb.update(MAIN_TABLE_NAME, values, selection, selectionArgs)
+    }
+
     fun getLaunchers(): ArrayList<AppLauncher> {
         val resources = context.resources
         val packageManager = context.packageManager
