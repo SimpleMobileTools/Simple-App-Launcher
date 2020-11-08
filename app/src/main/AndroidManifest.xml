@@ -9,6 +9,14 @@
         android:name="android.permission.USE_FINGERPRINT"
         tools:node="remove"/>
 
+    <uses-feature
+        android:name="android.hardware.faketouch"
+        tools:node="remove" />
+
+    <uses-feature
+        android:name="android.hardware.screen.portrait"
+        tools:node="remove" />
+
     <application
         android:name=".App"
         android:allowBackup="true"
