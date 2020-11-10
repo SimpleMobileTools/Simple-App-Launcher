@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.4.1 *(2020-11-10)*
+----------------------------
+
+ * Make sure the app can list all installed apps on Android 11
+
 Version 5.4.0 *(2020-11-08)*
 ----------------------------
 
