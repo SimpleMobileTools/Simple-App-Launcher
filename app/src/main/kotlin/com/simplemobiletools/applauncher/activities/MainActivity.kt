@@ -81,6 +81,10 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
+        menu.apply {
+            findItem(R.id.increase_column_count).isVisible = config.columnCnt < MAX_COLUMN_COUNT
+            findItem(R.id.reduce_column_count).isVisible = config.columnCnt > 1
+        }
         return true
     }
 
