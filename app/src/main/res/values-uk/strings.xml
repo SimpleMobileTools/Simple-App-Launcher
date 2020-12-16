@@ -7,21 +7,21 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Simple App Launcher - Відкривайте додатки легко &amp; швидко</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Простий додаток для швидкого &amp; простого управління іконками додатків</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Це не справжній лаунчер, а лише обгортка для піктограм ваших улюблених додатків та їх швидкого відкриття. Вы легко можете додати лаунчер для будь-якого додатка, тому вам більше не доведеться шукати потрібний вам додаток. Ви також можете перейменовувати лаунчери як вам заманеться. 
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Додаток має опцію закриття при відкритті іншого, що забеспечую зручність навигації.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Мы не можемо видалити непотрібні системні додатки, вы можете просто видалити піктограми додатків та ігнорувати іх.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        За замовчуванням використовується матеріальний дизайн та темна тема, що забезпечую зручне використання. Відсутність доступу в інтернет забезпечую вам більшу приватність порівняно з іншими додатками. 
 
         Цей додаток не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Додаток має повністю відкритий програмний код, кольори оформлення можна легко налаштувати.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Ознакомьтеся з повним набором інструментів Simple тут:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
