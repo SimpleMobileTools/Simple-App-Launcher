@@ -7,21 +7,22 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Simple App Launcher - Запускайте приложения легко &amp; быстро</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Простое приложение для быстрого &amp; легкого управления иконками запуска приложений</string>
+    <string name="app_long_description"></string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Это не настоящий лаунчер, а просто обертка над значками ваших любимых приложений для быстрого запуска. Вы можете легко добавить для любого приложения, так что вам больше не придется пролистывать бесполезные приложения, чтобы найти то, что вам нужно. Вы также можете переименовать лаунчеры по своему усмотрению. 
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Есть возможность закрыть само приложение при запуске другого для удобства навигации.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Мы не можем удалить ненужные системные приложения, вы можете просто удалить их значки и игнорировать их.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        По умолчанию он имеет материальный дизайн и темную тему, что обеспечивает хороший  пользовательский опыт и простоту использования. Отсутствие доступа в интернет дает вам больше конфиденциальности, безопасности и стабильности, чем другие приложения.
 
-        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+        Это приложение не будет показывать рекламу или запрашивать ненужные разрешения. У него полностью открытый исходный код и есть настраиваемые цвета оформления.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Ознакомьтесь с полным набором инструментов серии Simple здесь:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
