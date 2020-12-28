@@ -84,6 +84,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         menu.apply {
             findItem(R.id.increase_column_count).isVisible = config.columnCnt < MAX_COLUMN_COUNT
             findItem(R.id.reduce_column_count).isVisible = config.columnCnt > 1
+            updateMenuItemColors(menu)
         }
         return true
     }
