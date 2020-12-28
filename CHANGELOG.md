@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.5.0 *(2020-12-28)*
+----------------------------
+
+ * Properly color the top menu icons
+ * Allow customizing app colors only after a Simple Thank You purchase
+
 Version 5.4.1 *(2020-11-10)*
 ----------------------------
 

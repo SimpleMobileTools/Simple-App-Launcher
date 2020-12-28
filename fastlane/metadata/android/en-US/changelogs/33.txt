@@ -1,0 +1,2 @@
+ * Properly color the top menu icons
+ * Allow customizing app colors only after a Simple Thank You purchase
