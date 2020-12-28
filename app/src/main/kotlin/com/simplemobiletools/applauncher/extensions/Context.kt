@@ -31,6 +31,7 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
             val activityList = launcher.getActivityList(packageName, android.os.Process.myUserHandle())[0]
             drawable = activityList.getBadgedIcon(0)
         } catch (e: Exception) {
+        } catch (e: Error) {
         }
 
         if (drawable == null) {
