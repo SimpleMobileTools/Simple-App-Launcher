@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
-import com.simplemobiletools.commons.extensions.beVisibleIf
-import com.simplemobiletools.commons.extensions.isThankYouInstalled
-import com.simplemobiletools.commons.extensions.launchPurchaseThankYouIntent
-import com.simplemobiletools.commons.extensions.updateTextColors
+import com.simplemobiletools.commons.extensions.*
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.util.*
 
@@ -41,8 +38,9 @@ class SettingsActivity : SimpleActivity() {
     }
 
     private fun setupCustomizeColors() {
+        settings_customize_colors_label.text = getCustomizeColorsString()
         settings_customize_colors_holder.setOnClickListener {
-            startCustomizationActivity()
+            handleCustomizeColorsClick()
         }
     }
 
