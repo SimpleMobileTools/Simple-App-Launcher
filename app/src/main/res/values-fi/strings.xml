@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Simple App Launcher</string>
-    <string name="app_launcher_name">Sovellusten käynnistysohjelma</string>
-    <string name="enter_launcher_name">Kirjoita käynnistysohjelman nimi</string>
+    <string name="app_launcher_name">Sovelluskäynnistin</string>
+    <string name="enter_launcher_name">Kirjoita ovelluskäynnistimen nimi</string>
     <string name="remove_explanation">Tämä poistaa vain käynnistyskuvakkeen tästä ruudukosta, ei poista varsinaisen sovelluksen asennusta.</string>
     <string name="close_app">Sulje tämä sovellus käynnistettäessä toinen</string>
 
