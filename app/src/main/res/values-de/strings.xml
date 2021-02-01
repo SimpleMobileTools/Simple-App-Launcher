@@ -9,19 +9,19 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Eine schlichte App, um all deine Lieblingsapps an einem Platz zu vereinen.</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Dies ist kein echter Launcher, nur ein Wrapper um deine Lieblingsapps schnell zu starten. Du kannst einfach jede beliebige Start-App (Launcher) hinzufügen, sodass du nie wieder durch nutzlose Apps blättern musst, um die benötigte zu finden. Du kannst den Launcher zudem nach Belieben umbennen.
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Es gibt die Möglichkeit, diese Anwendung zu schließen, wenn sie eine andere starten, um die Navigation zu erleichtern.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Wir können unerwüschte System-Apps nicht deinstallieren, aber du kannst deren Symbol entfernen und sie ignorieren.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Sie kommt standardmäßig mit material design und Dunkelmodus, was ein großartiges Nutzererlebnis und eine einfache Nutzung ermöglicht. Da die App keine Internetverbindung besitzt, bietet sie mehr Datenschutz, Sicherheit und Stabilität als andere Apps.
 
         Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
         
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Entdecke die gesamte Serie an schlichten Apps hier:</b>
         https://www.simplemobiletools.com
 
         <b>Facebook:</b>
