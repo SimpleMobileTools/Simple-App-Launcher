@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.5.1 *(2021-02-05)*
+----------------------------
+
+ * Adding a White theme with special handling
+ * Animate column count changes
+
 Version 5.5.0 *(2020-12-28)*
 ----------------------------
 
