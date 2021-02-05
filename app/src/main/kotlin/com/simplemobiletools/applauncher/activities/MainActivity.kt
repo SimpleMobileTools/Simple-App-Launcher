@@ -180,9 +180,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun columnCountChanged() {
         invalidateOptionsMenu()
-        launchers_grid.adapter?.notifyDataSetChanged()
-        getGridAdapter()?.launchers?.apply {
-            calculateContentHeight(this)
+        getGridAdapter()?.apply {
+            notifyItemRangeChanged(0, launchers.size)
+            calculateContentHeight(launchers)
         }
     }
 
