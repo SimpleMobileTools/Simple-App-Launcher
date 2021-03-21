@@ -179,7 +179,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
             }
 
             if (isSelected) {
-                launcher_check?.background?.applyColorFilter(primaryColor)
+                launcher_check?.background?.applyColorFilter(adjustedPrimaryColor)
             }
         }
     }
