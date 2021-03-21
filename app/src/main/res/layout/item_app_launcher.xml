@@ -15,7 +15,8 @@
         android:id="@+id/launcher_icon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/launcher_icon_size"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:padding="@dimen/tiny_margin" />
 
     <TextView
         android:id="@+id/launcher_label"
