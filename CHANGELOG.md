@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 5.6.0 *(2021-11-03)*
+----------------------------
+
+ * Adding a new Auto theme for automatic light/dark switching
+ * Adding a project Contributors section
+ * Adding some translation improvements
+
 Version 5.5.2 *(2021-03-21)*
 ----------------------------
 
