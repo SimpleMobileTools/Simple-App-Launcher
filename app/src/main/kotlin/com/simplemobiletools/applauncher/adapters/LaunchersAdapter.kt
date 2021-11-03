@@ -31,7 +31,7 @@ import kotlin.collections.ArrayList
 
 class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, fastScroller: FastScroller, itemClick: (Any) -> Unit) :
-        MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick), ItemTouchHelperContract {
+    MyRecyclerViewAdapter(activity, recyclerView, fastScroller, itemClick), ItemTouchHelperContract {
 
     private var isChangingOrder = false
     private var startReorderDragListener: StartReorderDragListener
@@ -199,9 +199,7 @@ class LaunchersAdapter(activity: SimpleActivity, val launchers: ArrayList<AppLau
         activity.config.sorting = SORT_BY_CUSTOM
     }
 
-    override fun onRowClear(myViewHolder: ViewHolder?) {
-    }
+    override fun onRowClear(myViewHolder: ViewHolder?) {}
 
-    override fun onRowSelected(myViewHolder: ViewHolder?) {
-    }
+    override fun onRowSelected(myViewHolder: ViewHolder?) {}
 }
