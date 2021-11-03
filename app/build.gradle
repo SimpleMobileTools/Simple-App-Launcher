@@ -56,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:6757db41bc'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:1bf231ddc2'
     implementation 'com.facebook.stetho:stetho:1.5.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
