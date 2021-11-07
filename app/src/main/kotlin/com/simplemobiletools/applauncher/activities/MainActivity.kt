@@ -11,7 +11,7 @@ import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
 import com.simplemobiletools.applauncher.dialogs.ChangeSortingDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
-import com.simplemobiletools.applauncher.extensions.getNotDisplayedLaunchers
+import com.simplemobiletools.applauncher.extensions.getAllLaunchers
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.*
@@ -29,7 +29,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val MAX_COLUMN_COUNT = 20
 
     private var displayedLaunchers = ArrayList<AppLauncher>()
-    private var notDisplayedLaunchers: ArrayList<AppLauncher>? = null
+    private var allLaunchers: ArrayList<AppLauncher>? = null
     private var zoomListener: MyRecyclerView.MyZoomListener? = null
 
     private var mStoredPrimaryColor = 0
@@ -45,8 +45,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         setupGridLayoutManager()
 
         fab.setOnClickListener {
-            if (notDisplayedLaunchers != null) {
-                AddAppLauncherDialog(this, notDisplayedLaunchers!!) {
+            if (allLaunchers != null) {
+                val shownLaunchers = (launchers_grid.adapter as LaunchersAdapter).launchers
+                AddAppLauncherDialog(this, allLaunchers!!, shownLaunchers) {
                     setupLaunchers()
                 }
             }
@@ -158,7 +159,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         ensureBackgroundThread {
-            notDisplayedLaunchers = getNotDisplayedLaunchers(launchers)
+            allLaunchers = getAllLaunchers()
         }
     }
 

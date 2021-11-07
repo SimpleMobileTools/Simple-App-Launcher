@@ -14,10 +14,12 @@ val Context.config: Config get() = Config.newInstance(applicationContext)
 
 val Context.dbHelper: DBHelper get() = DBHelper.newInstance(applicationContext)
 
-fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>): ArrayList<AppLauncher> {
+fun Context.getAllLaunchers(): ArrayList<AppLauncher> {
     val allApps = ArrayList<AppLauncher>()
+    val allPackageNames = ArrayList<String>()
     val intent = Intent(Intent.ACTION_MAIN, null)
     intent.addCategory(Intent.CATEGORY_LAUNCHER)
+
     val list = packageManager.queryIntentActivities(intent, PackageManager.PERMISSION_GRANTED)
     for (info in list) {
         val componentInfo = info.activityInfo.applicationInfo
@@ -46,7 +48,14 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
             }
         }
 
+        allPackageNames.add(packageName)
         allApps.add(AppLauncher(0, label, packageName, 0, drawable))
+    }
+
+    dbHelper.getLaunchers().forEach { launcher ->
+        if (!allPackageNames.contains(launcher.packageName)) {
+            allApps.add(launcher)
+        }
     }
 
     if (config.sorting and SORT_BY_CUSTOM != 0) {
@@ -57,5 +66,5 @@ fun Context.getNotDisplayedLaunchers(displayedLaunchers: ArrayList<AppLauncher>)
     }
 
     val unique = allApps.distinctBy { it.packageName }
-    return unique.filter { !displayedLaunchers.contains(it) && it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
+    return unique.filter { it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
 }

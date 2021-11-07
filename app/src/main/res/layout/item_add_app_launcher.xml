@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_launchers_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/normal_margin"
+    android:paddingTop="@dimen/small_margin"
+    android:paddingEnd="@dimen/normal_margin"
+    android:paddingBottom="@dimen/small_margin">
+
+    <ImageView
+        android:id="@+id/launcher_icon"
+        android:layout_width="@dimen/normal_icon_size"
+        android:layout_height="@dimen/normal_icon_size"
+        android:layout_centerVertical="true"
+        android:padding="@dimen/tiny_margin"
+        tools:src="@drawable/ic_person_vector" />
+
+    <com.simplemobiletools.commons.views.MyAppCompatCheckbox
+        android:id="@+id/launcher_checkbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/launcher_icon"
+        android:layout_alignBottom="@+id/launcher_icon"
+        android:layout_toEndOf="@+id/launcher_icon"
+        android:background="@null"
+        android:button="@null"
+        android:clickable="false"
+        android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+        android:drawablePadding="@dimen/normal_margin"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingStart="@dimen/normal_margin"
+        android:textSize="@dimen/bigger_text_size"
+        tools:text="Email" />
+
+</RelativeLayout>

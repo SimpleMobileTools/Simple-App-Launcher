@@ -42,8 +42,10 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     }
 
     override fun onCreate(db: SQLiteDatabase) {
-        db.execSQL("CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
-                "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)")
+        db.execSQL(
+            "CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
+                "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)"
+        )
         addInitialLaunchers(db)
     }
 
@@ -124,6 +126,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     fun deleteLaunchers(ids: ArrayList<String>) {
         val args = TextUtils.join(", ", ids.toArray())
         val selection = "$COL_ID IN ($args)"
+        mDb.delete(MAIN_TABLE_NAME, selection, null)
+    }
+
+    fun deleteLauncher(packageName: String) {
+        val selection = "$COL_PKG_NAME LIKE \"$packageName\""
         mDb.delete(MAIN_TABLE_NAME, selection, null)
     }
 
