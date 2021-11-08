@@ -7,7 +7,7 @@
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily & quickly</string>
+    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">A simple holder for quick access to your favourite apps, easy icon management</string>
     <string name="app_long_description">
@@ -20,7 +20,7 @@
         E, por último, vén cun deseño material e un tema escuro de xeito predeterminado, fornece unha excelente experiencia de usuario cun uso sinxelo. Como non necesita acceso a Internet, tes máis privacidade, seguridade e estabilidade.
 
         Non contén anuncios nin permisos innecesarios. Dispón dun tema escuro e é totalmente de código aberto.
-        
+
         <b>Visita esta páxina a través desta ligazón:</b>
         https://www.simplemobiletools.com
 
