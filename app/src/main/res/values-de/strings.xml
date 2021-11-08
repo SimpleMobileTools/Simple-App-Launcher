@@ -1,15 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Schlichter App-Launcher</string>
     <string name="app_launcher_name">App-Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
     <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Simple App Launcher: Launch apps easily &amp; quickly</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Eine schlichte App, um all deine Lieblingsapps an einem Platz zu vereinen.</string>
+    <string name="app_short_description">Eine schlichte App, um all deine Lieblingsapps an einem Platz zu vereinen</string>
     <string name="app_long_description">
         Dies ist kein echter Launcher, nur ein Wrapper um deine Lieblingsapps schnell zu starten. Du kannst einfach jede beliebige Start-App (Launcher) hinzufügen, sodass du nie wieder durch nutzlose Apps blättern musst, um die benötigte zu finden. Du kannst den Launcher zudem nach Belieben umbennen.
 
@@ -30,7 +30,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
