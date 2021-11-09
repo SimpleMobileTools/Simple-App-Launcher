@@ -1,36 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Basit Uygulama Başlatıcı</string>
     <string name="app_launcher_name">Uygulama Başlatıcı</string>
     <string name="enter_launcher_name">Lütfen bir başlatıcı adı girin</string>
     <string name="remove_explanation">Bu, uygulamayı değil sadece bu ekrandan uygulama simgesini kaldırır.</string>
-    <string name="close_app">Farklı bir başlatmada bu uygulamayı kapat</string>
-
+    <string name="close_app">Farklı bir uygulama başlatıldığında bu uygulamayı kapat</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Basit Uygulama Başlatıcı - Uygulamaları kolay ve hızlı bir şekilde başlatın</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
-    <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
-
-        There is an option to close the app itself at launching a different one for easy navigation.
-
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sağlar.
-
-        <b>Tüm Basit Araçlar paketini buradan inceleyin:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Gözde uygulamalarınızın başlatıcı simgelerini hızlı ve kolay bir şekilde yönetmeniz için bir araç</string>
+    <string name="app_long_description">" Bu gerçek bir başlatıcı değildir, yalnızca hızlı başlatma için en sevdiğiniz uygulama simgeleri için bir ön yüzdür. Herhangi bir uygulama başlatıcıyı kolayca ekleyebilirsiniz, böylece ihtiyacınız olanı bulmak için bir daha gereksiz uygulamalar arasında gezinmek zorunda kalmayacaksınız. Başlatıcıları istediğiniz gibi yeniden adlandırabilirsiniz. Kolay gezinme için farklı bir uygulamayı başlatırken uygulamanın kendisini kapatma seçeneği vardır. İstenmeyen sistem uygulamalarını kaldıramayız, simgelerini kaldırabilir ve onları yok sayabilirsiniz. Öntanımlı olarak material tasarım ve karanlık tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar. Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, özelleştirilebilir renkler sağlar. &lt;b&gt;Basit Araçlar\'ın tam paketine buradan göz atın:&lt;/b&gt; https://www.simplemobiletools.com &lt;b&gt;Facebook:&lt;/b&gt; https://www.facebook.com/simplemobiletools &lt;b&gt;Reddit:[ X900X] https://www.reddit.com/r/SimpleMobileTools "</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
