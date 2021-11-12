@@ -12,12 +12,10 @@
 
         <TextView
             android:id="@+id/settings_color_customization_label"
+            style="@style/SettingsSectionLabelStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:gravity="center_horizontal"
-            android:text="@string/color_customization"
-            android:textSize="@dimen/big_text_size" />
+            android:text="@string/color_customization" />
 
         <LinearLayout
             android:id="@+id/settings_color_customization_holder"
@@ -29,20 +27,16 @@
 
             <RelativeLayout
                 android:id="@+id/settings_customize_colors_holder"
+                style="@style/SettingsHolderTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ripple_all_corners"
-                android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/bigger_margin"
-                android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/bigger_margin">
+                android:background="@drawable/ripple_all_corners">
 
                 <com.simplemobiletools.commons.views.MyTextView
                     android:id="@+id/settings_customize_colors_label"
+                    style="@style/SettingsLeftLabelStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/customize_colors" />
 
             </RelativeLayout>
@@ -50,12 +44,10 @@
 
         <TextView
             android:id="@+id/settings_general_settings_label"
+            style="@style/SettingsSectionLabelStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_margin"
-            android:gravity="center_horizontal"
-            android:text="@string/general_settings"
-            android:textSize="@dimen/big_text_size" />
+            android:text="@string/general_settings" />
 
         <LinearLayout
             android:id="@+id/settings_general_settings_holder"
@@ -67,33 +59,26 @@
 
             <RelativeLayout
                 android:id="@+id/settings_purchase_thank_you_holder"
+                style="@style/SettingsHolderTextViewStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ripple_top_corners"
-                android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/bigger_margin"
-                android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/bigger_margin">
+                android:background="@drawable/ripple_top_corners">
 
                 <com.simplemobiletools.commons.views.MyTextView
                     android:id="@+id/settings_purchase_thank_you"
+                    style="@style/SettingsLeftLabelStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/purchase_simple_thank_you" />
 
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/settings_use_english_holder"
+                style="@style/SettingsHolderCheckboxStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ripple_background"
-                android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/activity_margin"
-                android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/activity_margin">
+                android:background="@drawable/ripple_background">
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_use_english"
@@ -106,13 +91,10 @@
 
             <RelativeLayout
                 android:id="@+id/settings_close_app_holder"
+                style="@style/SettingsHolderCheckboxStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/ripple_bottom_corners"
-                android:paddingLeft="@dimen/normal_margin"
-                android:paddingTop="@dimen/activity_margin"
-                android:paddingRight="@dimen/normal_margin"
-                android:paddingBottom="@dimen/activity_margin">
+                android:background="@drawable/ripple_bottom_corners">
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_close_app"
