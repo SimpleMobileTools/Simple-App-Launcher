@@ -97,14 +97,9 @@
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_use_english"
+                    style="@style/SettingsCheckboxStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:clickable="false"
-                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                    android:drawablePadding="@dimen/activity_margin"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/use_english_language" />
 
             </RelativeLayout>
@@ -121,14 +116,9 @@
 
                 <com.simplemobiletools.commons.views.MyAppCompatCheckbox
                     android:id="@+id/settings_close_app"
+                    style="@style/SettingsCheckboxStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:button="@null"
-                    android:clickable="false"
-                    android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
-                    android:drawablePadding="@dimen/activity_margin"
-                    android:paddingStart="@dimen/medium_margin"
                     android:text="@string/close_app" />
 
             </RelativeLayout>
