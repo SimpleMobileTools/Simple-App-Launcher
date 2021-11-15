@@ -15,7 +15,6 @@ import com.simplemobiletools.applauncher.extensions.getAllLaunchers
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.*
-import com.simplemobiletools.commons.helpers.LICENSE_STETHO
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
@@ -69,10 +68,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
         updateTextColors(coordinator_layout)
 
-        launchers_fastscroller.apply {
-            updatePrimaryColor()
-            updateBubbleColors()
-        }
+        val adjustedPrimaryColor = getAdjustedPrimaryColor()
+        launchers_fastscroller.updateColors(adjustedPrimaryColor, adjustedPrimaryColor.getContrastColor())
     }
 
     override fun onPause() {
@@ -130,7 +127,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         AppLauncher.sorting = config.sorting
         launchers.sort()
 
-        LaunchersAdapter(this, launchers, this, launchers_grid, launchers_fastscroller) {
+        LaunchersAdapter(this, launchers, this, launchers_grid) {
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 try {
@@ -151,11 +148,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }.apply {
             setupZoomListener(zoomListener)
             launchers_grid.adapter = this
-        }
-
-        launchers_fastscroller.setViews(launchers_grid) {
-            val item = (launchers_grid.adapter as LaunchersAdapter).launchers.getOrNull(it)
-            launchers_fastscroller.updateBubbleText(item?.getBubbleText() ?: "")
         }
 
         ensureBackgroundThread {
@@ -183,16 +175,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         invalidateOptionsMenu()
         getGridAdapter()?.apply {
             notifyItemRangeChanged(0, launchers.size)
-            calculateContentHeight(launchers)
         }
-    }
-
-    private fun calculateContentHeight(directories: List<AppLauncher>) {
-        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
-        val thumbnailHeight = layoutManager.getChildAt(0)?.height ?: 0
-        val fullHeight = ((directories.size - 1) / layoutManager.spanCount + 1) * thumbnailHeight
-        launchers_fastscroller.setContentHeight(fullHeight)
-        launchers_fastscroller.setScrollToY(launchers_grid.computeVerticalScrollOffset())
     }
 
     private fun setupGridLayoutManager() {

@@ -10,28 +10,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <com.simplemobiletools.commons.views.MyRecyclerView
-            android:id="@+id/launchers_grid"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingTop="@dimen/activity_margin"
-            android:paddingBottom="@dimen/activity_margin"
-            app:layoutManager="com.simplemobiletools.commons.views.MyGridLayoutManager"
-            app:spanCount="@integer/column_count" />
-
-        <com.simplemobiletools.commons.views.FastScroller
+        <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
             android:id="@+id/launchers_fastscroller"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_alignTop="@+id/launchers_grid"
-            android:layout_alignBottom="@+id/launchers_grid"
-            android:layout_alignParentEnd="true"
-            android:paddingStart="@dimen/normal_margin">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-            <include layout="@layout/fastscroller_handle_vertical" />
+            <com.simplemobiletools.commons.views.MyRecyclerView
+                android:id="@+id/launchers_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                app:layoutManager="com.simplemobiletools.commons.views.MyGridLayoutManager"
+                app:spanCount="@integer/column_count" />
 
-        </com.simplemobiletools.commons.views.FastScroller>
+        </com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller>
     </RelativeLayout>
 
     <com.simplemobiletools.commons.views.MyFloatingActionButton
