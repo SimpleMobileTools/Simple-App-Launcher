@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_title">Enkel programoppstarter – start programmer enkelt og raskt</string>
     <string name="app_name">Enkel programoppstarter</string>
     <string name="app_launcher_name">Programoppstarter</string>
     <string name="enter_launcher_name">Skriv inn et oppstarternavn</string>
     <string name="remove_explanation">Dette vil kun fjerne oppstarteren fra rutenettet, ikke avinstallere det faktiske programmet.</string>
     <string name="close_app">Lukk dette programmet når et nytt startes</string>
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Enkel programoppstarter – start programmer enkelt og raskt</string>
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">En enkel portemonne for favorittprogrammer, og rask og enkel håndtering av programikoner</string>
     <string name="app_long_description"> Dette er ikke en ekte oppstarter, kun en enkel innpakning av ikoner for dine favorittprogrammer for rask tilgang. Du kan enkelt legge til enhver programoppstarter, så du trenger ikke å dra gjennom mange unyttige programmer for å finne det du trenger.
 \nDu kan også gi oppstarterene nye navn. Det finnes et alternativ for å lukke selve programmet når et nytt startes. Uønskede programmer kan ikke avinstalleres, men du kan fjerne ikonene deres og ignorere dem.
 \nMateriell design og mørk drakt som forvalg. At ingenting kobler til Internett betyr bedret personvern og mer stabilitet. Inneholder ingen reklame eller unødvendige tilganger. Fri programvare og tilpassbare farger. <b>Sjekk ut alle de enkle verktøyene her:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
