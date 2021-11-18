@@ -1,36 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Prosty Launcher Aplikacji</string>
-    <string name="app_launcher_name">Launcher Aplikacji</string>
-    <string name="enter_launcher_name">Proszę wpisać nazwę launchera</string>
-    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
-    <string name="close_app">Close this app at launching a different one</string>
-
+    <string name="app_name">Prosty launcher aplikacji</string>
+    <string name="app_launcher_name">Launcher aplikacji</string>
+    <string name="enter_launcher_name">Wprowadź nazwę launchera</string>
+    <string name="remove_explanation">Spowoduje to usunięcie jedynie ikony launchera z tej siatki, a nie odinstalowanie samej aplikacji.</string>
+    <string name="close_app">Zamykaj tę aplikację przy uruchomieniu innej</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Prosty launcher aplikacji - Łatwo uruchamiaj appki</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
-    <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
-
-        There is an option to close the app itself at launching a different one for easy navigation.
-
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Nie zawiera żadnych żadnych reklam, nie potrzebuje masy uprawnień. Jest w pełni otwartoźródłowy. Kolory w aplikacji można dowolnie modyfikować.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">Prosty przybornik na ulubione appki do szybkiego i łatwego zarządzania ikonami</string>
+    <string name="app_long_description"> To nie jest prawdziwy launcher, tylko przybornik na ikony Twoich ulubionych aplikacji do ich szybkiego uruchamiania. Możesz łatwo dodać dowolny launcher aplikacji, więc już nigdy nie będziesz musiał(a) przewijać zbędnych aplikacji w celu odnalezienia tej, której potrzebujesz. Jeśli chcesz, możesz także zmienić nazwy launcherów. Istnieje opcja zamknięcia samej aplikacji przy uruchomieniu innej, aby ułatwić nawigację. Nie możemy odinstalować niechcianych aplikacji systemowych, możesz po prostu usunąć ich ikony i zignorować je. Domyślnie jest wyposażony w Material Design i ciemny motyw, zapewniając doskonałe doświadczenie użytkownika dla łatwego użytkowania. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje. Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni otwartoźródłowy, zapewnia konfigurowalną kolorystykę. <b>Sprawdź pełen zestaw od Simple Tools tutaj:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
