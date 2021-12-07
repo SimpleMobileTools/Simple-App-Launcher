@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple App Launcher</string>
+    <string name="app_name">Simple lanceur d\'applis</string>
     <string name="app_launcher_name">Lanceur d\'applications</string>
     <string name="enter_launcher_name">Veuillez entrer un nom de lanceur</string>
     <string name="remove_explanation">Cette action ne fera que supprimer l\'icône du lanceur de cette liste et ne désinstallera pas l\'application.</string>
