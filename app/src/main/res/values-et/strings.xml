@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_launcher_name">Rakenduste käivitaja</string>
+    <string name="enter_launcher_name">Palun sisesta nimi rakenduste käivitajale</string>
+    <string name="close_app">Mõne teise sarnase rakenduse käivitamisel sulge see rakendus</string>
+    <string name="remove_explanation">Sellega lihtsalt eemaldad rakenduse sellest vaatest ja ei eemalda teda nutiseadmest.</string>
+    <string name="app_title">Lihtne rakenduste käivitaja – kasuta rakendusi lihtsalt ja kiiresti</string>
+    <string name="app_short_description">Lihtne vidin lemmikrakenduste haldamiseks ja kuvamiseks ning ikoonide korrastamiseks</string>
+    <string name="app_name">Lihtne rakenduste käivitaja</string>
+</resources>
