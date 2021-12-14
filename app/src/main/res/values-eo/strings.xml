@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="enter_launcher_name">Please enter a launcher name</string>
+    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
+    <string name="close_app">Close this app at launching a different one</string>
+
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
+    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_long_description">
+        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+
+        There is an option to close the app itself at launching a different one for easy navigation.
+
+        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+
+        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
+
+        <b>Check out the full suite of Simple Tools here:</b>
+        https://www.simplemobiletools.com
+
+        <b>Facebook:</b>
+        https://www.facebook.com/simplemobiletools
+
+        <b>Reddit:</b>
+        https://www.reddit.com/r/SimpleMobileTools
+    </string>
+
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
