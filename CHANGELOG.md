@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.7.1 *(2021-12-15)*
+----------------------------
+
+ * Removed Simple Camera and Simple Clock
+ * Added some translation and UX improvements
+
 Version 5.7.0 *(2021-11-08)*
 ----------------------------
 
