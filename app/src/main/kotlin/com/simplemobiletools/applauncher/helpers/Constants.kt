@@ -7,8 +7,6 @@ const val COLUMN_CNT = "column_cnt"
 val predefinedPackageNames = arrayListOf(
     "com.simplemobiletools.calculator",
     "com.simplemobiletools.calendar.pro",
-    "com.simplemobiletools.camera",
-    "com.simplemobiletools.clock",
     "com.simplemobiletools.contacts.pro",
     "com.simplemobiletools.dialer",
     "com.simplemobiletools.draw.pro",

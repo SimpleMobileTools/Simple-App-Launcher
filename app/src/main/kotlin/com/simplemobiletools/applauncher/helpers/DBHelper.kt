@@ -82,8 +82,6 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val titles = arrayListOf(
             R.string.calculator_short,
             R.string.calendar_short,
-            R.string.camera_short,
-            R.string.clock_short,
             R.string.contacts_short,
             R.string.dialer_short,
             R.string.draw_short,
