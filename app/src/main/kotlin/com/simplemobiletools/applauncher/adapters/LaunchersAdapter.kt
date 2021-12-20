@@ -53,7 +53,7 @@ class LaunchersAdapter(
     override fun getActionMenuId() = R.menu.cab
 
 
-    override fun onContextViewCreated(view: BottomActionMenuView) {
+    override fun onBottomActionMenuCreated(view: BottomActionMenuView) {
         view.toggleItemVisibility(R.id.cab_edit, isOneItemSelected())
     }
 
