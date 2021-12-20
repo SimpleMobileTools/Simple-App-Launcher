@@ -16,42 +16,4 @@
         android:icon="@drawable/ic_minus_circle_vector"
         android:title="@string/remove"
         app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/cab_change_order2"
-        android:icon="@drawable/ic_add_person_vector"
-        android:title="@string/change_order"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/cab_remove_2"
-        android:icon="@drawable/ic_arrow_left_vector"
-        android:title="@string/remove"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/cab_edit_2"
-        android:icon="@drawable/ic_block_vector"
-        android:title="@string/rename"
-        app:showAsAction="ifRoom" />
-
-
-    <item
-        android:id="@+id/cab_change_order3"
-        android:icon="@drawable/ic_usb_vector"
-        android:title="@string/change_order"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/cab_remove_3"
-        android:icon="@drawable/ic_unhide_vector"
-        android:title="@string/remove"
-        app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/cab_edit_3"
-        android:icon="@drawable/ic_star_outline_vector"
-        android:title="@string/rename"
-        app:showAsAction="ifRoom" />
-
 </menu>

@@ -197,9 +197,9 @@ class LaunchersAdapter(
         activity.config.sorting = SORT_BY_CUSTOM
     }
 
-    override fun onRowSelected(myViewHolder: ViewHolder?) {}
-
     override fun onRowClear(myViewHolder: ViewHolder?) {}
+
+    override fun onRowSelected(myViewHolder: ViewHolder?) {}
 
     override fun onChange(position: Int) = launchers.getOrNull(position)?.getBubbleText() ?: ""
 }
