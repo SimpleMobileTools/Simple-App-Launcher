@@ -24,7 +24,7 @@ import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
-import com.simplemobiletools.commons.views.contextview.ContextView
+import com.simplemobiletools.commons.views.bottomactionmenu.BottomActionMenuView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -53,7 +53,7 @@ class LaunchersAdapter(
     override fun getActionMenuId() = R.menu.cab
 
 
-    override fun onContextViewCreated(view: ContextView) {
+    override fun onContextViewCreated(view: BottomActionMenuView) {
         view.toggleItemVisibility(R.id.cab_edit, isOneItemSelected())
     }
 
