@@ -1,0 +1,2 @@
+ * Removed Simple Camera and Simple Clock
+ * Added some translation and UX improvements

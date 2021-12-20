@@ -10,26 +10,7 @@
     <string name="app_title">Simple App Launcher – Anwendungen einfach und schnell starten</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Eine schlichte App, um all deine Lieblingsapps an einem Platz zu vereinen</string>
-    <string name="app_long_description">
-        Dies ist kein echter Launcher, nur ein Wrapper um deine Lieblingsapps schnell zu starten. Du kannst einfach jede beliebige Start-App (Launcher) hinzufügen, sodass du nie wieder durch nutzlose Apps blättern musst, um die benötigte zu finden. Du kannst den Launcher zudem nach Belieben umbennen.
-
-        Es gibt die Möglichkeit, diese Anwendung zu schließen, wenn sie eine andere starten, um die Navigation zu erleichtern.
-
-        Wir können unerwüschte System-Apps nicht deinstallieren, aber du kannst deren Symbol entfernen und sie ignorieren.
-
-        Sie kommt standardmäßig mit material design und Dunkelmodus, was ein großartiges Nutzererlebnis und eine einfache Nutzung ermöglicht. Da die App keine Internetverbindung besitzt, bietet sie mehr Datenschutz, Sicherheit und Stabilität als andere Apps.
-
-        Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett Open Source, alle verwendeten Farben sind anpassbar.
-        
-        <b>Entdecke die gesamte Serie an schlichten Apps hier:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
+    <string name="app_long_description"> Dies ist kein echter Launcher, nur ein Wrapper um deine Lieblingsanwendungen schnell zu starten. Du kannst einfach jede beliebige Start-Anwendung hinzufügen, sodass du nie wieder durch nutzlose Anwendungen blättern musst, um die benötigte zu finden. Du kannst den Launcher zudem nach Belieben umbenennen. Es gibt die Möglichkeit, diese Anwendung zu schließen, wenn sie eine andere starten, um die Navigation zu erleichtern. Wir können unerwünschte Systemanwendungen nicht deinstallieren, aber du kannst deren Symbol entfernen und sie ignorieren. Sie kommt standardmäßig mit Material-Design und Dunkelmodus, was ein großartiges Nutzererlebnis und eine einfache Nutzung ermöglicht. Da die Anwendung keine Internetverbindung besitzt, bietet sie mehr Datenschutz, Sicherheit und Stabilität als andere Anwendungen. Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett quelloffen, alle verwendeten Farben sind anpassbar. <b>Entdecke die gesamte Serie an schlichten Anwendungen hier:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

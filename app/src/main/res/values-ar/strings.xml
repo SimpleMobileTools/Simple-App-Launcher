@@ -1,36 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">مشغل التطبيق البسيط</string>
     <string name="app_launcher_name">مشغل التطبيق</string>
     <string name="enter_launcher_name">يرجى إدخال إسم المشغل</string>
     <string name="remove_explanation">سيؤدي هذا فقط إلى إزالة أيقونة المشغل من هذه الشبكة ، وليس إلغاء تثبيت التطبيق الفعلي.</string>
     <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">مشغل التطبيقات البسيط - قم بتشغيل التطبيقات بسهولة وبسرعة</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
-    <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
-
-        There is an option to close the app itself at launching a different one for easy navigation.
-
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        لا يحتوي على إعلانات أو أذونات غير ضرورية. فهو مفتوح المصدر بالكامل ، ويوفر ألواناً قابلة للتخصيص.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_short_description">حامل بسيط للتطبيقات المفضلة من أجل إدارة سريعة وسهلة لأيقونة مشغل التطبيقات</string>
+    <string name="app_long_description"> . هذا ليس مشغل حقيقي ، مجرد غلاف لأيقونات تطبيقاتك المفضلة لبدء التشغيل السريع. يمكنك بسهولة إضافة أي مشغل تطبيقات ، لذلك لن تضطر مرة أخرى إلى التمرير عبر التطبيقات غير المفيدة للعثور على التطبيق الذي تحتاجه. يمكنك أيضًا إعادة تسمية المشغلات كما يحلو لك. هناك خيار لإغلاق التطبيق نفسه عند تشغيل تطبيق مختلف لسهولة التنقل. لا يمكننا إلغاء تثبيت تطبيقات النظام غير المرغوب فيها ، يمكنك فقط إزالة رموزها وتجاهلها. يأتي بتصميم مادي وسمة داكنة بشكل افتراضي ، مما يوفر تجربة مستخدم رائعة لسهولة الاستخدام. يمنحك نقص الوصول إلى الإنترنت مزيدًا من الخصوصية والأمان والاستقرار مقارنة بالتطبيقات الأخرى. لا يحتوي على إعلانات أو أذونات غير ضرورية. إنه مفتوح المصدر بالكامل ، ويوفر ألوانًا قابلة للتخصيص. <b> تحقق من المجموعة الكاملة من الأدوات البسيطة هنا: </b> https://www.simplemobiletools.com <b> Facebook: </b> https://www.facebook.com/simplemobiletools <b> Reddit:</b>https://www.reddit.com/r/SimpleMobileTools . </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

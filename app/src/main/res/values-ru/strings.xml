@@ -2,14 +2,14 @@
 <resources>
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Лаунчер</string>
-    <string name="enter_launcher_name">Пожалуйста, введите название лаунчера</string>
-    <string name="remove_explanation">Это только удалит иконку лаунчера с сетки, но не удалит само приложение.</string>
-    <string name="close_app">Закрыть это приложение после запуска другого</string>
+    <string name="enter_launcher_name">Введите название лаунчера</string>
+    <string name="remove_explanation">Будет удалён только значок лаунчера рабочего стола, но не само приложение.</string>
+    <string name="close_app">Закрыть это приложение при запуске другого</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Запускайте приложения легко &amp; быстро</string>
+    <string name="app_title">Simple App Launcher - запускайте приложения легко и быстро</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Простое приложение для быстрого &amp; легкого управления иконками запуска приложений</string>
+    <string name="app_short_description">Простое приложение для быстрого и лёгкого управления значками запуска приложений</string>
     <string name="app_long_description">
         Это не настоящий лаунчер, а просто обертка над значками ваших любимых приложений для быстрого запуска. Вы можете легко добавить лаунчер для любого приложения, так что вам больше не придется пролистывать бесполезные приложения, чтобы найти то, что вам нужно. Вы также можете переименовать лаунчеры по своему усмотрению. 
 

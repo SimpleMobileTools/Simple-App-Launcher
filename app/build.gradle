@@ -15,8 +15,8 @@ android {
         applicationId "com.simplemobiletools.applauncher"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 37
-        versionName "5.7.0"
+        versionCode 38
+        versionName "5.7.1"
         multiDexEnabled true
         setProperty("archivesBaseName", "app-launcher")
     }
@@ -56,7 +56,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:3bbf37c7f9'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:ccc1f8b958'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }

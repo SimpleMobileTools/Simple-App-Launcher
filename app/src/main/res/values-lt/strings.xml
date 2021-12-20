@@ -1,33 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Paprasta paleidimo priemonė</string>
-    <string name="app_launcher_name">Paleidimo priemonė</string>
-    <string name="enter_launcher_name">Prašome įvesti paleidimo priemonės pavadinimą</string>
-    <string name="remove_explanation">Tai tik pašalins paleidimo priemonės ikonėlę iš tinklelio, nepašalins pačios programėlės.</string>
-    <string name="close_app">Close this app at launching a different one</string>
+    <string name="app_name">Paprasta programėlių paleidyklė</string>
+    <string name="app_launcher_name">Programėlių paleidyklė</string>
+    <string name="enter_launcher_name">Įveskite paleidyklės pavadinimą</string>
+    <string name="remove_explanation">Tai tik pašalins paleidyklės piktogramą iš šio tinklelio, bet nepašalins pačios programėlės iš telefono.</string>
+    <string name="close_app">Paleidus kitą programėlę, užverti šią</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Paprasta programėlių paleidyklė – patogi ir greita</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">Paprastas mėgstamų programėlių laikiklis, skirtas greitai ir lengvai tvarkyti programelių paleidyklių piktogramas</string>
     <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+        Tai nėra tikroji paleidyklė, o tik lengvai naudojamas aplankas jūsų mėgstamų programėlių piktogramoms. Galite lengvai pridėti bet kurios programėlės paleidyklę, kad daugiau nebereikėtų braukinėti per begalę programėlių ir ieškoti reikiamos programėlės. Be to, galite pervadinti paleidykles taip, kaip jums patinka.
 
-        There is an option to close the app itself at launching a different one for easy navigation.
+        Tam, kad būtų lengviau naršyti, yra parinktis užverti programėlę tada, kai yra paleidžiama kita.
 
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+        Mes negalime pašalinti nepageidaujamų sisteminių programėlių. Jūs galite tik pašalinti jų piktogramas ir nepaisyti pačių programėlių.
 
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
+        Ši programėlė pagal numatymą yra pateikiama su materialiuoju dizainu bei tamsiu apipavidalinimu ir leidžia naudotojui lengvai naudotis jos ypatybėmis. Kadangi šios programėlės veikimui nereikalinga prieiga prie interneto, ji suteikia jums daugiau privatumo, saugumo ir stabilumo, nei kitos programėlės.
 
-        Neturi reklamų ar nereikalingų leidimų. Programėlė visiškai atviro kodo, yra galimybė keisti spalvas.
+        Programėlėje nėra jokių reklamų ir nereikalingų leidimų. Ji yra pilnai atvirojo kodo bei suteikia galimybę tinkinti spalvas.
 
-        <b>Check out the full suite of Simple Tools here:</b>
+        <b>Susipažinkite su mūsų pilnu paprastųjų įrankių rinkiniu:</b>
         https://www.simplemobiletools.com
 
-        <b>Facebook:</b>
+        <b>„Facebook“:</b>
         https://www.facebook.com/simplemobiletools
 
-        <b>Reddit:</b>
+        <b>„Reddit“:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
 
