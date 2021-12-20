@@ -1,6 +1,5 @@
 package com.simplemobiletools.applauncher.adapters
 
-import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -25,6 +24,7 @@ import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
+import com.simplemobiletools.commons.views.contextview.ContextView
 import kotlinx.android.synthetic.main.item_app_launcher.view.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -32,7 +32,7 @@ import kotlin.collections.ArrayList
 class LaunchersAdapter(
     activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
     recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
-) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
+) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private var isChangingOrder = false
     private var startReorderDragListener: StartReorderDragListener
@@ -52,10 +52,9 @@ class LaunchersAdapter(
 
     override fun getActionMenuId() = R.menu.cab
 
-    override fun prepareActionMode(menu: Menu) {
-        menu.apply {
-            findItem(R.id.cab_edit).isVisible = isOneItemSelected()
-        }
+
+    override fun onContextViewCreated(view: ContextView) {
+        view.toggleItemVisibility(R.id.cab_edit, isOneItemSelected())
     }
 
     override fun actionItemPressed(id: Int) {
@@ -91,8 +90,6 @@ class LaunchersAdapter(
     override fun getItemSelectionKey(position: Int) = launchers.getOrNull(position)?.packageName?.hashCode()
 
     override fun getItemKeyPosition(key: Int) = launchers.indexOfFirst { it.packageName.hashCode() == key }
-
-    override fun onActionModeCreated() {}
 
     override fun onActionModeDestroyed() {
         if (isChangingOrder) {
@@ -200,9 +197,9 @@ class LaunchersAdapter(
         activity.config.sorting = SORT_BY_CUSTOM
     }
 
-    override fun onRowClear(myViewHolder: ViewHolder?) {}
-
     override fun onRowSelected(myViewHolder: ViewHolder?) {}
+
+    override fun onRowClear(myViewHolder: ViewHolder?) {}
 
     override fun onChange(position: Int) = launchers.getOrNull(position)?.getBubbleText() ?: ""
 }

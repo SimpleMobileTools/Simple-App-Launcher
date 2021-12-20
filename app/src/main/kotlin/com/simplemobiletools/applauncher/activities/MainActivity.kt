@@ -69,7 +69,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         updateTextColors(coordinator_layout)
 
         val adjustedPrimaryColor = getAdjustedPrimaryColor()
-        launchers_fastscroller.updateColors(adjustedPrimaryColor, adjustedPrimaryColor.getContrastColor())
+        launchers_fastscroller.updateColors(adjustedPrimaryColor)
     }
 
     override fun onPause() {
