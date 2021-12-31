@@ -2,6 +2,7 @@ package com.simplemobiletools.applauncher.dialogs
 
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.beGoneIf
 import com.simplemobiletools.commons.extensions.setupDialogStuff
