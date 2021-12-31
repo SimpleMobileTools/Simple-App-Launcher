@@ -2,7 +2,6 @@ package com.simplemobiletools.applauncher.dialogs
 
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.extensions.beGoneIf
 import com.simplemobiletools.commons.extensions.setupDialogStuff
@@ -61,7 +60,7 @@ class ChangeSortingDialog(val activity: BaseSimpleActivity, private val callback
             else -> SORT_BY_CUSTOM
         }
 
-        if (view.sorting_dialog_radio_order.checkedRadioButtonId == R.id.sorting_dialog_radio_descending) {
+        if (sortingRadio.checkedRadioButtonId != R.id.sorting_dialog_radio_custom && view.sorting_dialog_radio_order.checkedRadioButtonId == R.id.sorting_dialog_radio_descending) {
             sorting = sorting or SORT_DESCENDING
         }
 
