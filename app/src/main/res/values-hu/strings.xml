@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="close_app">E alkalmazás bezárása egy másik indításakor</string>
+    <string name="app_short_description">Egy egyszerű tároló a kedvenc alkalmazásainak, a gyors indítás érdekében</string>
+    <string name="app_title">Egyszerű alkalmazásindító – Gyorsindítás könnyedén</string>
+    <string name="app_name">Egyszerű alkalmazásindító</string>
+    <string name="app_launcher_name">Alkalmazásindító</string>
+    <string name="enter_launcher_name">Adja meg az indító nevét</string>
+    <string name="remove_explanation">Ez csak eltávolítja az indítót erről a rácsról, magát az alkalmazást nem távolítja el.</string>
+</resources>
