@@ -5,12 +5,11 @@
     <string name="enter_launcher_name">Įveskite paleidyklės pavadinimą</string>
     <string name="remove_explanation">Tai tik pašalins paleidyklės piktogramą iš šio tinklelio, bet nepašalins pačios programėlės iš telefono.</string>
     <string name="close_app">Paleidus kitą programėlę, užverti šią</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Paprasta programėlių paleidyklė – patogi ir greita</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Paprastas mėgstamų programėlių laikiklis, skirtas greitai ir lengvai tvarkyti programelių paleidyklių piktogramas</string>
+    <string name="app_short_description">Paprastas mėgstamų programėlių laikiklis, skirtas lengvai tvarkyti paleidykles</string>
     <string name="app_long_description">
         Tai nėra tikroji paleidyklė, o tik lengvai naudojamas aplankas jūsų mėgstamų programėlių piktogramoms. Galite lengvai pridėti bet kurios programėlės paleidyklę, kad daugiau nebereikėtų braukinėti per begalę programėlių ir ieškoti reikiamos programėlės. Be to, galite pervadinti paleidykles taip, kaip jums patinka.
 
@@ -31,7 +30,6 @@
         <b>„Reddit“:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
