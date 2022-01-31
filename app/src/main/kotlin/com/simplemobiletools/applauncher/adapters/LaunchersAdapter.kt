@@ -90,6 +90,8 @@ class LaunchersAdapter(
 
     override fun getItemKeyPosition(key: Int) = launchers.indexOfFirst { it.packageName.hashCode() == key }
 
+    override fun onActionModeCreated() {}
+
     override fun onActionModeDestroyed() {
         if (isChangingOrder) {
             notifyDataSetChanged()
