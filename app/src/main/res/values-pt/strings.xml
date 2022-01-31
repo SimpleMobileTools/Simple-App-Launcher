@@ -1,36 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Lançador de aplicações</string>
-    <string name="enter_launcher_name">Por favor digite um nome para o lançador</string>
-    <string name="remove_explanation">Esta ação remove o ícone da grelha mas não desinstala a aplicação.</string>
-    <string name="close_app">Fechar esta aplicação depois de abrir outra</string>
-
+    <string name="enter_launcher_name">Por favor introduza um nome para o lancher</string>
+    <string name="remove_explanation">Esta acção remove o ícone da grelha mas não desinstala a aplicação.</string>
+    <string name="close_app">Fechar esta aplicação ao abrir outra</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Gestor de aplicações Simple</string>
+    <string name="app_title">Simple App Launcher - Gestor de aplicações</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Um local para guardar as suas aplicações preferidas</string>
-    <string name="app_long_description">
-        Este não é um launcher no seu termo concreto mas sim uma aplicação paar colocar os ícones das suas aplicações preferidas. Aqui pode adicionar qualquer ícone para que não tenha que percorrer os menus na sua plenitude. também permite mudar o nome dos lançadores.
-
-        Existe uma opção para fechar esta aplicação assim que alguma outra seja aberta a partir desta.
-
-        Com esta aplicação não é possível remover aplicações do sistema mas pode ocultar o seu ícone para nunca mais os ver.
-
-        A interface é em material design e tema escuro por definição, mas pode alterar os temas a seu gosto. Não requer o acesso a Internet o que lhe confere mais privacidade, segurança e estabilidade.
-
-        Não contém anúncios nem permissões desnecessárias. Disponibiliza um tema escuro e é totalmente \'open source\'.
-
-        <b>Consulte o conjunto completo das aplicações Simple Tools:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_long_description"> ⋅ Este não é exactamente um launcher, mas mais um local para reunir e lançar as suas aplicações preferidas. Pode mesmo, adicionar um (outro) launcher e até renomeá-lo para encontrar com facilidade o que procura e excusar-se a percorrer sistematicamente a lista aplicações. Configure a aplicação para que se feche automáticamente assim que outra seja aberta a partir desta. Não permite desinstalar as aplicações de sistema indesejadas, mas pode, no entanto, remover o seu ícone e ocultá-las. Em Material Design num tema escuro por definição. Não requer acesso à Internet o que lhe confere mais privacidade, segurança e estabilidade. Não contém anúncios nem permissões desnecessárias. É totalmente open source e permite personalização de cores a gosto. <b>Consulte o conjunto completo das aplicações Simple Tools:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
