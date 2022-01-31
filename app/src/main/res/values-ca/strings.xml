@@ -5,7 +5,14 @@
     <string name="enter_launcher_name">Introduïu un nom de llançador</string>
     <string name="remove_explanation">Això només eliminarà la icona del llançador d\'aquesta quadrícula, no desinstal·larà l\'aplicació real.</string>
     <string name="close_app">Tanqueu aquesta aplicació en llançar-ne una de diferent</string>
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Llançador d\'aplicacions simple: inicieu aplicacions fàcilment i ràpidament</string>
+    <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Un suport senzill per a les aplicacions preferides per a una gestió ràpida i senzilla d\'icones del llançador d\'aplicacions</string>
     <string name="app_long_description"> Aquest no és un llançador real, només un embolcall per a les icones de les vostres aplicacions preferides per a un llançament ràpid. Podeu afegir fàcilment qualsevol llançador d\'aplicacions, de manera que no haureu de passar mai més per aplicacions inútils per trobar la que necessiteu. També podeu canviar el nom dels llançadors com vulgueu. Hi ha una opció per tancar l\'aplicació en si en llançar-ne una de diferent per facilitar la navegació. No es pot desinstal·lar aplicacions del sistema no desitjades, només es pot eliminar les seves icones i ignorar-les. De manera predeterminada, inclou el «material design» i un tema fosc, proporciona una gran experiència d\'usuari per a un ús fàcil. La manca d\'accés a Internet us ofereix més privadesa, seguretat i estabilitat que altres aplicacions. No conté anuncis ni permisos innecessaris. És totalment de codi obert, proporciona colors personalitzables. <b>Consulteu el conjunt complet d\'eines Simples aquí:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
