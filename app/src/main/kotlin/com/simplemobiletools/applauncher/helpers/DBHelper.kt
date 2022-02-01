@@ -28,7 +28,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
     private val mDb = writableDatabase
 
     companion object {
-        private const val DB_VERSION = 7
+        private const val DB_VERSION = 8
         val DB_NAME = "applaunchers.db"
         var dbInstance: DBHelper? = null
 
@@ -76,6 +76,11 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             addAppLauncher(smsMessenger, db)
             addAppLauncher(voiceRecorder, db)
         }
+
+        if (oldVersion < 8) {
+            val keyboard = AppLauncher(0, context.getString(R.string.keyboard_short), "com.simplemobiletools.keyboard", 0)
+            addAppLauncher(keyboard, db)
+        }
     }
 
     private fun addInitialLaunchers(db: SQLiteDatabase) {
@@ -88,6 +93,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             R.string.file_manager_short,
             R.string.flashlight_short,
             R.string.gallery_short,
+            R.string.keyboard_short,
             R.string.music_player_short,
             R.string.notes_short,
             R.string.sms_messenger_short,

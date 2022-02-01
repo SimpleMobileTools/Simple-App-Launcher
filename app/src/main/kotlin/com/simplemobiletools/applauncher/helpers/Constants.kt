@@ -13,6 +13,7 @@ val predefinedPackageNames = arrayListOf(
     "com.simplemobiletools.filemanager.pro",
     "com.simplemobiletools.flashlight",
     "com.simplemobiletools.gallery.pro",
+    "com.simplemobiletools.keyboard",
     "com.simplemobiletools.musicplayer",
     "com.simplemobiletools.notes.pro",
     "com.simplemobiletools.smsmessenger",

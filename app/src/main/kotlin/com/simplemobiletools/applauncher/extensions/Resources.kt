@@ -16,6 +16,7 @@ fun Resources.getLauncherDrawable(packageName: String): Drawable {
         "com.simplemobiletools.filemanager.pro" -> R.mipmap.ic_file_manager
         "com.simplemobiletools.flashlight" -> R.mipmap.ic_flashlight
         "com.simplemobiletools.gallery.pro" -> R.mipmap.ic_gallery
+        "com.simplemobiletools.keyboard" -> R.mipmap.ic_keyboard
         "com.simplemobiletools.musicplayer" -> R.mipmap.ic_music_player
         "com.simplemobiletools.notes.pro" -> R.mipmap.ic_notes
         "com.simplemobiletools.smsmessenger" -> R.mipmap.ic_sms_messenger
