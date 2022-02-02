@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.7.2 *(2022-02-01)*
+----------------------------
+
+ * Added Simple Keyboard
+ * Added some translation improvements
+
 Version 5.7.1 *(2021-12-15)*
 ----------------------------
 

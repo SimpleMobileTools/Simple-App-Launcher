@@ -1,0 +1,2 @@
+ * Added Simple Keyboard
+ * Added some translation improvements
