@@ -98,6 +98,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchSettings() {
+        hideKeyboard()
         startActivity(Intent(applicationContext, SettingsActivity::class.java))
     }
 
@@ -126,6 +127,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         launchers.sort()
 
         LaunchersAdapter(this, launchers, this, launchers_grid) {
+            hideKeyboard()
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
                 try {
