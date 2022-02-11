@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.7.3 *(2022-02-11)*
+----------------------------
+
+ * Reverting to the top action menu buttons
+ * Added some translation improvements
+
 Version 5.7.2 *(2022-02-01)*
 ----------------------------
 

@@ -1,0 +1,2 @@
+ * Reverting to the top action menu buttons
+ * Added some translation improvements
