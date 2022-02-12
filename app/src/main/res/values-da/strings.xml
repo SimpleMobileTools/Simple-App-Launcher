@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Simpel appstarter</string>
+    <string name="app_launcher_name">Appstarter</string>
+    <string name="enter_launcher_name">Indtast venligst et navn på en launcher</string>
+    <string name="remove_explanation">Dette fjerner blot ikonet for startprogrammet fra dette gitter, men afinstallerer ikke selve appen.</string>
+    <string name="close_app">Luk denne app ved at starte en anden app</string>
+    <string name="app_title">Simple App Launcher - Start apps nemt &amp; hurtigt</string>
+    <string name="app_short_description">En simpel holder til yndlingsapps til hurtig og nem administration af appstarterikoner</string>
+</resources>
