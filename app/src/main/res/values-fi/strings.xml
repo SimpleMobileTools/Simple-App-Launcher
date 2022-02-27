@@ -2,12 +2,12 @@
 <resources>
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Sovelluskäynnistin</string>
-    <string name="enter_launcher_name">Kirjoita ovelluskäynnistimen nimi</string>
+    <string name="enter_launcher_name">Kirjoita sovelluskäynnistimen nimi</string>
     <string name="remove_explanation">Tämä poistaa vain käynnistyskuvakkeen tästä ruudukosta, ei poista varsinaisen sovelluksen asennusta.</string>
     <string name="close_app">Sulje tämä sovellus, kun toinen käynnistetään</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Simple App Launcher - Nopea &amp; helppo käynnistin</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
     <string name="app_long_description">
