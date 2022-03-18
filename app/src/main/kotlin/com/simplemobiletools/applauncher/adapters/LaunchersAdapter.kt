@@ -15,10 +15,7 @@ import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
-import com.simplemobiletools.commons.extensions.applyColorFilter
-import com.simplemobiletools.commons.extensions.beInvisibleIf
-import com.simplemobiletools.commons.extensions.beVisibleIf
-import com.simplemobiletools.commons.extensions.realScreenSize
+import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.SORT_BY_CUSTOM
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.ItemMoveCallback
@@ -134,7 +131,13 @@ class LaunchersAdapter(
     }
 
     fun calculateIconWidth() {
-        val iconWidth = activity.realScreenSize.x / activity.config.columnCnt
+        val currentColumnCount = if (activity.portrait) {
+            activity.config.portraitColumnCnt
+        } else {
+            activity.config.landscapeColumnCnt
+        }
+
+        val iconWidth = activity.realScreenSize.x / currentColumnCount
         iconPadding = (iconWidth * 0.1f).toInt()
     }
 

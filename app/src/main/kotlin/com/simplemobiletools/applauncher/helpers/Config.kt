@@ -17,7 +17,11 @@ class Config(context: Context) : BaseConfig(context) {
         get() = prefs.getBoolean(CLOSE_APP, true)
         set(closeApp) = prefs.edit().putBoolean(CLOSE_APP, closeApp).apply()
 
-    var columnCnt: Int
-        get() = prefs.getInt(COLUMN_CNT, context.resources.getInteger(R.integer.column_count))
-        set(columnCnt) = prefs.edit().putInt(COLUMN_CNT, columnCnt).apply()
+    var portraitColumnCnt: Int
+        get() = prefs.getInt(PORTRAIT_COLUMN_COUNT, context.resources.getInteger(R.integer.portrait_column_count))
+        set(portraitColumnCnt) = prefs.edit().putInt(PORTRAIT_COLUMN_COUNT, portraitColumnCnt).apply()
+
+    var landscapeColumnCnt: Int
+        get() = prefs.getInt(LANDSCAPE_COLUMN_COUNT, context.resources.getInteger(R.integer.landscape_column_count))
+        set(landscapeColumnCnt) = prefs.edit().putInt(LANDSCAPE_COLUMN_COUNT, landscapeColumnCnt).apply()
 }

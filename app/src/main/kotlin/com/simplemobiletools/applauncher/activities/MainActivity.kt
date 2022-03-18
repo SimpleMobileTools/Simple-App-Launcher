@@ -77,9 +77,15 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
+        val currentColumnCount = if (portrait) {
+            config.portraitColumnCnt
+        } else {
+            config.landscapeColumnCnt
+        }
+
         menu.apply {
-            findItem(R.id.increase_column_count).isVisible = config.columnCnt < MAX_COLUMN_COUNT
-            findItem(R.id.reduce_column_count).isVisible = config.columnCnt > 1
+            findItem(R.id.increase_column_count).isVisible = currentColumnCount < MAX_COLUMN_COUNT
+            findItem(R.id.reduce_column_count).isVisible = currentColumnCount > 1
             updateMenuItemColors(menu)
         }
         return true
@@ -162,12 +168,22 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun increaseColumnCount() {
-        config.columnCnt = ++(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        val newColumnCount = ++(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        if (portrait) {
+            config.portraitColumnCnt = newColumnCount
+        } else {
+            config.landscapeColumnCnt = newColumnCount
+        }
         columnCountChanged()
     }
 
     private fun reduceColumnCount() {
-        config.columnCnt = --(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        val newColumnCount = --(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        if (portrait) {
+            config.portraitColumnCnt = newColumnCount
+        } else {
+            config.landscapeColumnCnt = newColumnCount
+        }
         columnCountChanged()
     }
 
@@ -181,7 +197,11 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun setupGridLayoutManager() {
         val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
-        layoutManager.spanCount = config.columnCnt
+        if (portrait) {
+            layoutManager.spanCount = config.portraitColumnCnt
+        } else {
+            layoutManager.spanCount = config.landscapeColumnCnt
+        }
     }
 
     private fun initZoomListener() {

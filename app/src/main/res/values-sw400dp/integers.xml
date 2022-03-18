@@ -1,3 +1,4 @@
 <resources>
-    <integer name="column_count">6</integer>
+    <integer name="portrait_column_count">6</integer>
+    <integer name="landscape_column_count">10</integer>
 </resources>

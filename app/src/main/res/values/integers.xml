@@ -1,4 +1,5 @@
 <resources>
     <integer name="default_sorting">2048</integer>
-    <integer name="column_count">5</integer>
+    <integer name="portrait_column_count">5</integer>
+    <integer name="landscape_column_count">8</integer>
 </resources>
