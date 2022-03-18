@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_minus_circle_vector"
         android:title="@string/remove"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/cab_select_all"
+        android:icon="@drawable/ic_select_all_vector"
+        android:title="@string/select_all"
+        app:showAsAction="ifRoom" />
 </menu>

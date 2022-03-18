@@ -65,6 +65,7 @@ class LaunchersAdapter(
             R.id.cab_change_order -> changeOrder()
             R.id.cab_edit -> showEditDialog()
             R.id.cab_remove -> tryRemoveLauncher()
+            R.id.cab_select_all -> selectAll()
         }
     }
 
