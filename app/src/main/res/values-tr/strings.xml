@@ -3,7 +3,7 @@
     <string name="app_name">Basit Uygulama Başlatıcı</string>
     <string name="app_launcher_name">Uygulama Başlatıcı</string>
     <string name="enter_launcher_name">Lütfen bir başlatıcı adı girin</string>
-    <string name="remove_explanation">Bu, uygulamayı değil sadece bu ekrandan uygulama simgesini kaldırır.</string>
+    <string name="remove_explanation">Bu, uygulamanın kendisini değil yalnızca bu ekrandan uygulama simgesini kaldırır.</string>
     <string name="close_app">Farklı bir uygulama başlatırken bu uygulamayı kapat</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->

@@ -9,27 +9,8 @@
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Eenvoudige App Launcher - Vind je apps supersnel</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Een eenvoudige launcher voor je favoriete apps.</string>
-    <string name="app_long_description">
-        Dit is géén volwaardige launcher (met thuisscherm en widgets), maar een overzicht voor je favoriete apps. Je kunt al je belangrijke apps toevoegen aan het overzicht, zodat je nooit meer hoeft te bladeren door de héle appslijst. Je kunt de apps ook een duidelijkere naam geven.
-
-        Na het starten van een app vanuit het overzicht kan deze launcher zichzelf indien gewenst weer sluiten.
-
-        Sommige ongewenste systeemapps kunnen niet worden gedeïnstalleerd, maar ze kunnen wel gemakkelijker worden genegeerd middels het gebruik van deze launcher.
-
-        De app houdt het material design aan met standaard een donker thema. De app vraagt niet om een internetverbinding, dus er zijn sowieso geen privacyzorgen.
-
-        Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
-
-        <b>Probeer ook eens de andere apps van Simple Tools:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
+    <string name="app_short_description">Een eenvoudige launcher voor je favoriete apps</string>
+    <string name="app_long_description"> Dit is geen echte launcher, maar een wrapper voor uw favoriete app-pictogrammen om zijn snel te starten. U kunt eenvoudig een app-opstartprogramma toevoegen, zodat je nooit meer door nutteloze apps hoeft te vegen om degene te vinden die u nodig hebt. U kunt de launchers ook desgewenst hernoemen. Er is een optie om de app zelf te sluiten bij het starten van een andere voor eenvoudige navigatie. We kunnen ongewenste systeem-apps niet verwijderen, u kunt gewoon hun pictogrammen verwijderen en ze negeren. Het wordt standaard geleverd met materiaalontwerp en een donker thema, en biedt een geweldige gebruikerservaring voor eenvoudig gebruik. Het gebrek aan internettoegang geeft u meer privacy, veiligheid en stabiliteit dan andere apps. Het bevat geen advertenties of onnodige machtigingen. Het is volledig openbron en biedt aanpasbare kleuren. <b>Bekijk hier de volledige suite van Simple Tools:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

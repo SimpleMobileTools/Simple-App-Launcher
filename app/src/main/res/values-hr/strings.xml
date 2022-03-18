@@ -10,26 +10,7 @@
     <string name="app_title">Jednostavan pokretač aplikacija – Pokreni aplikacije jednostavno i brzo</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Mjesto za omiljene aplikacije i za upravljanje ikonama pokretača aplikacija</string>
-    <string name="app_long_description">
-        This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
-
-        There is an option to close the app itself at launching a different one for easy navigation.
-
-        We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
-
-        It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
-
-        Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
-
-        <b>Check out the full suite of Simple Tools here:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
+    <string name="app_long_description"> Ovo nije pravi pokretač, samo omot za vaše omiljene ikone aplikacija za brzo pokretanje. Možete jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećete morati prelaziti prstom kroz beskorisne aplikacije kako biste pronašli onu koja vam je potrebna. Također možete preimenovati pokretače po želji. Postoji mogućnost zatvaranja same aplikacije prilikom pokretanja druge za jednostavnu navigaciju. Ne možemo deinstalirati neželjene aplikacije sustava, možete samo ukloniti njihove ikone i zanemariti ih. Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje. <b>Pogledajte cijeli paket Simple Tools ovdje:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
