@@ -5,7 +5,7 @@
     <string name="enter_launcher_name">Wprowadź nazwę launchera</string>
     <string name="remove_explanation">Spowoduje to usunięcie jedynie ikony launchera z tej siatki, a nie odinstalowanie samej aplikacji.</string>
     <string name="close_app">Zamykaj tę aplikację przy uruchomieniu innej</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="toggle_app_name">Pokaż/Ukryj nazwy aplikacji</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Prosty launcher aplikacji - Łatwo uruchamiaj appki</string>
