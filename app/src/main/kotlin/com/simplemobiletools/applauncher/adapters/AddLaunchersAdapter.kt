@@ -12,8 +12,8 @@ import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
 import kotlinx.android.synthetic.main.item_add_app_launcher.view.*
 import java.util.*
 
-class LaunchersDialogAdapter(activity: Activity, val allLaunchers: ArrayList<AppLauncher>, val shownLaunchers: ArrayList<AppLauncher>) :
-    RecyclerView.Adapter<LaunchersDialogAdapter.ViewHolder>() {
+class AddLaunchersAdapter(activity: Activity, val allLaunchers: ArrayList<AppLauncher>, val shownLaunchers: ArrayList<AppLauncher>) :
+    RecyclerView.Adapter<AddLaunchersAdapter.ViewHolder>() {
     private val config = activity.config
     private var textColor = config.textColor
     private var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()

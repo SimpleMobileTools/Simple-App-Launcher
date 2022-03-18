@@ -4,7 +4,7 @@ import android.app.Activity
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.adapters.LaunchersDialogAdapter
+import com.simplemobiletools.applauncher.adapters.AddLaunchersAdapter
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.areSystemAnimationsEnabled
@@ -18,7 +18,7 @@ class AddAppLauncherDialog(
     val callback: () -> Unit
 ) {
     private var view = (activity.layoutInflater.inflate(R.layout.dialog_pick_launchers, null) as ViewGroup)
-    private var adapter: LaunchersDialogAdapter? = null
+    private var adapter: AddLaunchersAdapter? = null
 
     init {
         AlertDialog.Builder(activity)
@@ -26,7 +26,7 @@ class AddAppLauncherDialog(
             .setNegativeButton(R.string.cancel, null)
             .create().apply {
                 activity.setupDialogStuff(view, this) {
-                    adapter = LaunchersDialogAdapter(activity, allLaunchers, shownLaunchers)
+                    adapter = AddLaunchersAdapter(activity, allLaunchers, shownLaunchers)
                     view.pick_launchers_holder.adapter = adapter
 
                     if (activity.areSystemAnimationsEnabled) {
