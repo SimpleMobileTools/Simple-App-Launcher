@@ -4,6 +4,7 @@
     <string name="enter_launcher_name">Prosím zadajte názov pre spúšťač</string>
     <string name="remove_explanation">Toto iba odstráni spúšťačku z tejto mriežky, neodinštaluje to samotnú apku.</string>
     <string name="close_app">Ukončiť túto aplikáciu pri spustení inej</string>
+    <string name="toggle_app_name">Prepnúť viditeľnosť názvov apiek</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->

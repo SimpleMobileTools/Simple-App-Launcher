@@ -5,6 +5,7 @@
     <string name="enter_launcher_name">Будь-ласка, введіть назву запускача</string>
     <string name="remove_explanation">Це лише видалить значок запускача з цієї сітки, не деінсталює сам додаток.</string>
     <string name="close_app">Закрити цей додаток при запуску іншого</string>
+    <string name="toggle_app_name">Toggle app name visibility</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Відкривайте додатки легко &amp; швидко</string>

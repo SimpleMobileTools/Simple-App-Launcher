@@ -5,6 +5,7 @@
     <string name="enter_launcher_name">Palun sisesta nimi rakenduste käivitajale</string>
     <string name="remove_explanation">Sellega lihtsalt eemaldad rakenduse sellest vaatest ja ei eemalda teda nutiseadmest.</string>
     <string name="close_app">Mõne teise sarnase rakenduse käivitamisel sulge see rakendus</string>
+    <string name="toggle_app_name">Toggle app name visibility</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Lihtne rakenduste käivitaja – kasuta rakendusi lihtsalt ja kiiresti</string>

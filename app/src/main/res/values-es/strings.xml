@@ -4,6 +4,7 @@
     <string name="enter_launcher_name">Por favor, introduzca un nombre para el lanzador</string>
     <string name="remove_explanation">Esto solo eliminará el ícono de la aplicación de este cajón, no la desinstalará.</string>
     <string name="close_app">Cerrar esta aplicación al iniciar una diferente</string>
+    <string name="toggle_app_name">Toggle app name visibility</string>
 
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->

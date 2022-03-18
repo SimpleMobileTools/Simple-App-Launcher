@@ -5,6 +5,7 @@
     <string name="enter_launcher_name">Voer een naam voor de snelkoppeling in</string>
     <string name="remove_explanation">Hiermee wordt alleen het icoon uit dit overzicht verwijderd, de app zelf blijft geïnstalleerd.</string>
     <string name="close_app">Deze app sluiten bij het starten van een andere app</string>
+    <string name="toggle_app_name">Toggle app name visibility</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Eenvoudige App Launcher - Vind je apps supersnel</string>
