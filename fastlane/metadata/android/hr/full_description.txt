@@ -1,5 +1,14 @@
-Možete jednostavno dodati bilo koju aplikaciju za pokretanje na popis, pa nikad ne morate prolaziti kroz druge beskorisne aplikacije. Također možete preimenovati pokretače kako god želite. Ovo nije pravi pokretač aplikacije koji zamjenjuje Vaš početni zaslon, nego samo način da lakše pronađete svoje omiljene aplikacije.
+Ovo nije pravi pokretač, samo omot za vaše omiljene ikone aplikacija za brzo pokretanje. Možete jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećete morati prelaziti prstom kroz beskorisne aplikacije kako biste pronašli onu koja vam je potrebna.
 
-Ne sadrži oglase ili nepotrebne dozvole. Aplikacije je otvorenog koda, pruža prilagodljive boje.
+Također možete preimenovati pokretače po želji. Postoji mogućnost zatvaranja same aplikacije prilikom pokretanja druge za jednostavnu navigaciju. Ne možemo deinstalirati neželjene aplikacije sustava, možete samo ukloniti njihove ikone i zanemariti ih.
 
-Ova je aplikacija samo dio većeg broja aplikacija. Možete pronaći ostatak na https://www.simplemobiletools.com
+Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje.
+
+<b>Pogledajte cijeli paket Simple Tools ovdje:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools
