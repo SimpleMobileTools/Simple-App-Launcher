@@ -18,6 +18,7 @@ import com.simplemobiletools.commons.dialogs.ConfirmationDialog
 import com.simplemobiletools.commons.extensions.applyColorFilter
 import com.simplemobiletools.commons.extensions.beInvisibleIf
 import com.simplemobiletools.commons.extensions.beVisibleIf
+import com.simplemobiletools.commons.extensions.realScreenSize
 import com.simplemobiletools.commons.helpers.SORT_BY_CUSTOM
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.ItemMoveCallback
@@ -35,10 +36,12 @@ class LaunchersAdapter(
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private var isChangingOrder = false
+    private var iconPadding = 0
     private var startReorderDragListener: StartReorderDragListener
 
     init {
         setupDragListener(true)
+        calculateIconWidth()
 
         val touchHelper = ItemTouchHelper(ItemMoveCallback(this, true))
         touchHelper.attachToRecyclerView(recyclerView)
@@ -130,6 +133,11 @@ class LaunchersAdapter(
         }
     }
 
+    fun calculateIconWidth() {
+        val iconWidth = activity.realScreenSize.x / activity.config.columnCnt
+        iconPadding = (iconWidth * 0.1f).toInt()
+    }
+
     private fun askConfirmRemove() {
         ConfirmationDialog(activity, "", R.string.remove_explanation, R.string.ok, R.string.cancel) {
             activity.config.wasRemoveInfoShown = true
@@ -166,6 +174,7 @@ class LaunchersAdapter(
             launcher_label.text = launcher.title
             launcher_label.setTextColor(textColor)
             launcher_icon.setImageDrawable(launcher.drawable!!)
+            launcher_icon.setPadding(iconPadding, iconPadding, iconPadding, 0)
 
             launcher_drag_handle.beVisibleIf(isChangingOrder)
             if (isChangingOrder) {

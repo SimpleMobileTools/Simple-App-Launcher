@@ -6,25 +6,25 @@
     android:background="?attr/selectableItemBackground"
     android:clickable="true"
     android:focusable="true"
-    android:paddingLeft="@dimen/small_margin"
+    android:paddingStart="@dimen/small_margin"
     android:paddingTop="@dimen/medium_margin"
-    android:paddingRight="@dimen/small_margin"
+    android:paddingEnd="@dimen/small_margin"
     android:paddingBottom="@dimen/small_margin">
 
-    <ImageView
+    <com.simplemobiletools.commons.views.MySquareImageView
         android:id="@+id/launcher_icon"
         android:layout_width="match_parent"
         android:layout_height="@dimen/launcher_icon_size"
-        android:layout_gravity="center"
-        android:padding="@dimen/tiny_margin" />
+        android:layout_gravity="center_horizontal|bottom" />
 
     <TextView
         android:id="@+id/launcher_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/launcher_icon"
-        android:layout_marginTop="@dimen/tiny_margin"
+        android:ellipsize="end"
         android:gravity="center_horizontal|top"
+        android:maxLines="2"
         android:textSize="@dimen/smaller_text_size" />
 
     <ImageView

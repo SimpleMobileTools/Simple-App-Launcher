@@ -1,4 +1,4 @@
 <resources>
     <integer name="default_sorting">2048</integer>
-    <integer name="column_count">4</integer>
+    <integer name="column_count">5</integer>
 </resources>

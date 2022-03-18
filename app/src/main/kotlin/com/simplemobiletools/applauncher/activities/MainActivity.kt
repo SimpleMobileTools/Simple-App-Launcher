@@ -174,6 +174,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun columnCountChanged() {
         invalidateOptionsMenu()
         getGridAdapter()?.apply {
+            calculateIconWidth()
             notifyItemRangeChanged(0, launchers.size)
         }
     }
