@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 5.8.0 *(2022-03-18)*
+----------------------------
+
+ * Scale icons dynamically depending on the column count
+ * Store portrait and landscape column counts separately
+ * Added some translation and UX improvements
+
 Version 5.7.3 *(2022-02-11)*
 ----------------------------
 

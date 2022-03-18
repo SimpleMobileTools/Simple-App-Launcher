@@ -1,0 +1,3 @@
+ * Scale icons dynamically depending on the column count
+ * Store portrait and landscape column counts separately
+ * Added some translation and UX improvements
