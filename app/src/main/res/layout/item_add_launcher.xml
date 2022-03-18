@@ -15,6 +15,7 @@
         android:layout_width="@dimen/normal_icon_size"
         android:layout_height="@dimen/normal_icon_size"
         android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/normal_margin"
         android:padding="@dimen/tiny_margin"
         tools:src="@drawable/ic_person_vector" />
 
@@ -26,14 +27,13 @@
         android:layout_alignBottom="@+id/launcher_icon"
         android:layout_toEndOf="@+id/launcher_icon"
         android:background="@null"
-        android:button="@null"
         android:clickable="false"
-        android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
         android:drawablePadding="@dimen/normal_margin"
         android:ellipsize="end"
+        android:layoutDirection="rtl"
         android:lines="1"
         android:paddingStart="@dimen/normal_margin"
         android:textSize="@dimen/bigger_text_size"
-        tools:text="Email" />
+        tools:text="Gallery" />
 
 </RelativeLayout>
