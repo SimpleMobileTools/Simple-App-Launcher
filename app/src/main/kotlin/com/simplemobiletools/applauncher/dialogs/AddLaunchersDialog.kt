@@ -9,15 +9,15 @@ import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.areSystemAnimationsEnabled
 import com.simplemobiletools.commons.extensions.setupDialogStuff
-import kotlinx.android.synthetic.main.dialog_pick_launchers.view.*
+import kotlinx.android.synthetic.main.dialog_add_launchers.view.*
 
-class AddAppLauncherDialog(
+class AddLaunchersDialog(
     val activity: Activity,
     val allLaunchers: ArrayList<AppLauncher>,
     val shownLaunchers: ArrayList<AppLauncher>,
     val callback: () -> Unit
 ) {
-    private var view = (activity.layoutInflater.inflate(R.layout.dialog_pick_launchers, null) as ViewGroup)
+    private var view = (activity.layoutInflater.inflate(R.layout.dialog_add_launchers, null) as ViewGroup)
     private var adapter: AddLaunchersAdapter? = null
 
     init {
@@ -27,10 +27,10 @@ class AddAppLauncherDialog(
             .create().apply {
                 activity.setupDialogStuff(view, this) {
                     adapter = AddLaunchersAdapter(activity, allLaunchers, shownLaunchers)
-                    view.pick_launchers_holder.adapter = adapter
+                    view.add_launchers_holder.adapter = adapter
 
                     if (activity.areSystemAnimationsEnabled) {
-                        view.pick_launchers_holder.scheduleLayoutAnimation()
+                        view.add_launchers_holder.scheduleLayoutAnimation()
                     }
                 }
             }

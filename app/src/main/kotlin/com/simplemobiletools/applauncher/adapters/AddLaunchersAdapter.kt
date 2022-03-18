@@ -9,7 +9,7 @@ import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
-import kotlinx.android.synthetic.main.item_add_app_launcher.view.*
+import kotlinx.android.synthetic.main.item_add_launcher.view.*
 import java.util.*
 
 class AddLaunchersAdapter(activity: Activity, val allLaunchers: ArrayList<AppLauncher>, val shownLaunchers: ArrayList<AppLauncher>) :
@@ -44,7 +44,7 @@ class AddLaunchersAdapter(activity: Activity, val allLaunchers: ArrayList<AppLau
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_add_app_launcher, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_add_launcher, parent, false)
         return ViewHolder(view)
     }
 

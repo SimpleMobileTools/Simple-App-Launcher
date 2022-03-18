@@ -7,7 +7,7 @@ import android.view.MenuItem
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
-import com.simplemobiletools.applauncher.dialogs.AddAppLauncherDialog
+import com.simplemobiletools.applauncher.dialogs.AddLaunchersDialog
 import com.simplemobiletools.applauncher.dialogs.ChangeSortingDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
@@ -46,7 +46,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         fab.setOnClickListener {
             if (allLaunchers != null) {
                 val shownLaunchers = (launchers_grid.adapter as LaunchersAdapter).launchers
-                AddAppLauncherDialog(this, allLaunchers!!, shownLaunchers) {
+                AddLaunchersDialog(this, allLaunchers!!, shownLaunchers) {
                     setupLaunchers()
                 }
             }

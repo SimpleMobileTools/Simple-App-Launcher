@@ -23,7 +23,7 @@ import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.item_app_launcher.view.*
+import kotlinx.android.synthetic.main.item_launcher.view.*
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -69,7 +69,7 @@ class LaunchersAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_app_launcher, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_launcher, parent)
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val launcher = launchers[position]
