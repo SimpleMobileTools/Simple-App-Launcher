@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">Lansator de aplicații</string>
+    <string name="enter_launcher_name">Vă rugăm să introduceți un nume de lansator</string>
+    <string name="remove_explanation">Acest lucru va elimina doar pictograma lansatorului din această grilă, nu va dezinstala aplicația propriu-zisă.</string>
+    <string name="close_app">Închideți această aplicație la lansarea unei alte aplicații</string>
+    <string name="toggle_app_name">Comutați vizibilitatea numelui aplicației</string>
+    <string name="app_title">Simple App Launcher - Lansați aplicațiile repede</string>
+    <string name="app_short_description">"O metodă simplă pentru  o gestionare rapidă și ușoară a aplicațiilor favorite"</string>
+</resources>
