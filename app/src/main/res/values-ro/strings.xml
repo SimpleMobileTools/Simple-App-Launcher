@@ -7,5 +7,5 @@
     <string name="close_app">Închideți această aplicație la lansarea unei alte aplicații</string>
     <string name="toggle_app_name">Comutați vizibilitatea numelui aplicației</string>
     <string name="app_title">Simple App Launcher - Lansați aplicațiile repede</string>
-    <string name="app_short_description">"O metodă simplă pentru  o gestionare rapidă și ușoară a aplicațiilor favorite"</string>
+    <string name="app_short_description">O metodă simplă pentru o gestionare rapidă și ușoară a aplicațiilor favorite</string>
 </resources>
