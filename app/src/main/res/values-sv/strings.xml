@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="enter_launcher_name">Vänligen sätt in en startens namn</string>
-    <string name="remove_explanation">Detta kommer bara att ta bort startikonen från rutnätet, inte avinstallera själva appen.</string>
+    <string name="remove_explanation">Detta kommer bara att ta bort start-ikonen från rutnätet, inte avinstallera själva appen.</string>
     <string name="toggle_app_name">Växla appnamnets synlighet</string>
     <string name="app_name">Simpel appstarter</string>
     <string name="app_launcher_name">Appstarter</string>
