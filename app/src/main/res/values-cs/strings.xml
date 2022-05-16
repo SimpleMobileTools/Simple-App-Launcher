@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Jednoduchý spouštěč aplikací</string>
     <string name="app_launcher_name">Spouštěč aplikací</string>
@@ -5,10 +6,9 @@
     <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
     <string name="close_app">Zavřít tuto aplikaci při spuštění jiné</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
+    <string name="app_title">Jednoduchý spouštěč aplikací - Spusťte aplikace jednoduše &amp; rychle</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
     <string name="app_long_description">
@@ -31,7 +31,6 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
-
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
