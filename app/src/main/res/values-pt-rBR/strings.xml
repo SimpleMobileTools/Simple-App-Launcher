@@ -5,7 +5,7 @@
     <string name="enter_launcher_name">Por favor, digite um nome para o lançador</string>
     <string name="remove_explanation">Isso removerá apenas o ícone do lançador desta grade, não desinstalará o aplicativo.</string>
     <string name="close_app">Fechar este aplicativo ao abrir outro</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="toggle_app_name">Alternar a visibilidade do nome do aplicativo</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Lançador de Apps Simples - Inicie apps rapidamente</string>

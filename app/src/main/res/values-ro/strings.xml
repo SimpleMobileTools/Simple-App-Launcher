@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Jednoduchý spouštěč aplikací</string>
-    <string name="app_launcher_name">Spouštěč aplikací</string>
-    <string name="enter_launcher_name">Prosím, zadejte název spouštěče</string>
-    <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
-    <string name="close_app">Zavřít tuto aplikaci při spuštění jiné</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="app_name">Simple App Launcher</string>
+    <string name="app_launcher_name">Lansator de aplicații</string>
+    <string name="enter_launcher_name">Vă rugăm să introduceți un nume de lansator</string>
+    <string name="remove_explanation">Acest lucru va elimina doar pictograma lansatorului din această grilă, nu va dezinstala aplicația propriu-zisă.</string>
+    <string name="close_app">Închideți această aplicație la lansarea unei alte aplicații</string>
+    <string name="toggle_app_name">Comutați vizibilitatea numelui aplicației</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Jednoduchý spouštěč aplikací - Spusťte aplikace jednoduše &amp; rychle</string>
+    <string name="app_title">Simple App Launcher - Lansați aplicațiile repede</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">A simple holder for favourite apps for quick &amp; easy app launcher icon management</string>
+    <string name="app_short_description">O metodă simplă pentru o gestionare rapidă și ușoară a aplicațiilor favorite</string>
     <string name="app_long_description">
         This is not a real launcher, just a wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won\'t ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
 
@@ -20,7 +20,7 @@
 
         It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps.
 
-        Neobsahuje žádné reklamy, ani nepotřebná oprávnění. Má plně otevřený zdrojový kód a možnost změny barev.
+        Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
 
         <b>Check out the full suite of Simple Tools here:</b>
         https://www.simplemobiletools.com
@@ -31,6 +31,7 @@
         <b>Reddit:</b>
         https://www.reddit.com/r/SimpleMobileTools
     </string>
+
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
