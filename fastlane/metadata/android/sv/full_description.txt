@@ -1,0 +1,16 @@
+Det här är ingen riktig starter, utan bara en omslagsform för dina favoritappikoner för snabbstart. Du kan enkelt lägga till vilken appstart som helst, så att du aldrig mer behöver svepa genom värdelösa appar för att hitta den du behöver. Du kan också byta namn på starten som du vill.
+
+Det finns ett alternativ för att stänga själva appen när du startar en annan app för enkel navigering. Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner och ignorera dem. Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning.
+
+Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar.
+
+Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger.
+
+<b>Kolla in hela sviten av Simple Tools här:</b>
+https://www.simplemobiletools.com
+
+<b>Facebook:</b>
+https://www.facebook.com/simplemobiletools
+
+<b>Reddit:</b>
+https://www.reddit.com/r/SimpleMobileTools
