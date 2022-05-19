@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="enter_launcher_name">Vänligen sätt in en startens namn</string>
-    <string name="remove_explanation">Detta kommer bara att ta bort start-ikonen från rutnätet, inte avinstallera själva appen.</string>
-    <string name="toggle_app_name">Växla appnamnets synlighet</string>
     <string name="app_name">Simpel appstarter</string>
     <string name="app_launcher_name">Appstarter</string>
+    <string name="enter_launcher_name">Vänligen sätt in en startens namn</string>
+    <string name="remove_explanation">Detta kommer bara att ta bort start-ikonen från rutnätet, inte avinstallera själva appen.</string>
     <string name="close_app">Stäng denna appen när en annan startas</string>
+    <string name="toggle_app_name">Växla appnamnets synlighet</string>
+    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
+    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simpel appstarter - starta appar enkelt och snabbt</string>
-    <string name="app_short_description">En enkel hållare för favoritappar för snabb och enkel hantering av ikonerna i appstartaren</string>
-    <string name="app_long_description"> Det här är ingen riktig starter, utan bara en omslagsform för dina favoritappikoner för snabbstart. Du kan enkelt lägga till vilken appstart som helst, så att du aldrig mer behöver svepa genom värdelösa appar för att hitta den du behöver. Du kan också byta namn på starten som du vill. Det finns ett alternativ för att stänga själva appen när du startar en annan app för enkel navigering. Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner och ignorera dem. Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar. Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger. <b>Kolla in hela sviten av Simple Tools här:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
+    <!-- Short description has to have less than 80 chars -->
+    <string name="app_short_description">En enkel hållare för favoritappar för snabb hantering av ikonerna i appstartaren</string>
+    <string name="app_long_description">
+        Det här är ingen riktig starter, utan bara en omslagsform för dina favoritappikoner för snabbstart. Du kan enkelt lägga till vilken appstart som helst, så att du aldrig mer behöver svepa genom värdelösa appar för att hitta den du behöver. Du kan också byta namn på starten som du vill. Det finns ett alternativ för att stänga själva appen när du startar en annan app för enkel navigering. Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner och ignorera dem. Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar. Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger. <b>Kolla in hela sviten av Simple Tools här:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools
+    </string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
