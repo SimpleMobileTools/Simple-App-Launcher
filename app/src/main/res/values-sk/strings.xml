@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Jednoduchý spúšťač aplikácií</string>
     <string name="app_launcher_name">Spúšťač aplikácií</string>
@@ -5,33 +6,12 @@
     <string name="remove_explanation">Toto iba odstráni spúšťačku z tejto mriežky, neodinštaluje to samotnú apku.</string>
     <string name="close_app">Ukončiť túto aplikáciu pri spustení inej</string>
     <string name="toggle_app_name">Prepnúť viditeľnosť názvov apiek</string>
-
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Jednoduchý spúšťač aplikácií - Nájdite apky rýchlo</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Jednoduchý držiak pre spúšťačky vašich obľúbených apiek pre ľahkú správu ikoniek</string>
-    <string name="app_long_description">
-        Neide o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť.
-
-        Je tu možnosť zatvoriť túto apku v prípade, ak spustíte niektorú inú.
-
-        Neviete pomocou tejto aplikácie odinštalovať žiadne systémové apky, iba odstrániť ich ikonky a ignorovať ich.
-
-        Táto apka je založená na Material dizajne a má prednastavenú tmavú tému, poskytuje výbornú používateľskú skúsenosť pre ľahké používanie. Chýbajúci prístup k internetu garantuje lepšie súkromie, bezpečnosť a stabilitu ako ostatné apky.
-
-        Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
-
-        <b>Pozrite si celú sadu aplikácií na:</b>
-        https://www.simplemobiletools.com
-
-        <b>Facebook:</b>
-        https://www.facebook.com/simplemobiletools
-
-        <b>Reddit:</b>
-        https://www.reddit.com/r/SimpleMobileTools
-    </string>
-
+    <string name="app_long_description"> Neide o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť. Je tu možnosť zatvoriť túto apku v prípade, ak spustíte niektorú inú. Neviete pomocou tejto aplikácie odinštalovať žiadne systémové apky, iba odstrániť ich ikonky a ignorovať ich. Táto apka je založená na Material dizajne a má prednastavenú tmavú tému, poskytuje výbornú používateľskú skúsenosť pre ľahké používanie. Chýbajúci prístup k internetu garantuje lepšie súkromie, bezpečnosť a stabilitu ako ostatné apky. Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb. <b>Pozrite si celú sadu aplikácií na:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
