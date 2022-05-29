@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Lançador de Aplicativos Simples</string>
-    <string name="app_launcher_name">Lançador de aplicativos</string>
-    <string name="enter_launcher_name">Por favor, digite um nome para o lançador</string>
-    <string name="remove_explanation">Isso removerá apenas o ícone do lançador desta grade, não desinstalará o aplicativo.</string>
+    <string name="app_name">Inicializador de Aplicativos Simples</string>
+    <string name="app_launcher_name">Inicializador de aplicativos</string>
+    <string name="enter_launcher_name">Por favor, digite um nome para o inicializador</string>
+    <string name="remove_explanation">Isso removerá apenas o ícone do inicializador desta grade, não desinstalará o aplicativo.</string>
     <string name="close_app">Fechar este aplicativo ao abrir outro</string>
     <string name="toggle_app_name">Alternar a visibilidade do nome do aplicativo</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Lançador de Apps Simples - Inicie apps rapidamente</string>
+    <string name="app_title">Inicializador de Apps Simples - Inicie Apps Rápido</string>
     <!-- Short description has to have less than 80 chars -->
     <string name="app_short_description">Um suporte simples para seus apps favoritos para fácil gestão de ícones de apps</string>
-    <string name="app_long_description"> Este não é um lançador de verdade, apenas um aplicativo para seus ícones de aplicativos favoritos para um lançamento rápido. Você pode adicionar facilmente qualquer lançador de aplicativo, para que nunca mais tenha que percorrer aplicativos inúteis para encontrar o que você precisa. Você também pode renomear os lançadores como desejar. Existe uma opção para fechar o próprio aplicativo ao iniciar um diferente para facilitar a navegação. Não podemos desinstalar aplicativos de sistema indesejados, você pode simplesmente remover seus ícones e ignorá-los. Ele vem com Material Design e tema escuro por padrão, oferece ótima experiência do usuário para fácil utilização. A falta de acesso à Internet dá mais privacidade, segurança e estabilidade do que outros aplicativos. Não contém anúncios nem permissões desnecessárias. É totalmente de código aberto, oferece cores personalizáveis. <b>Veja a suíte completa de ferramentas simples aqui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b>https://www.reddit.com/r/SimpleMobileTools </string>
+    <string name="app_long_description"> Este não é um inicializador de verdade, apenas um aplicativo para seus ícones de aplicativos favoritos para um lançamento rápido. Você pode adicionar facilmente qualquer inicializador de aplicativo, para que nunca mais tenha que percorrer aplicativos inúteis para encontrar o que você precisa. Você também pode renomear os inicializadores como desejar. Existe uma opção para fechar o próprio aplicativo ao iniciar um diferente para facilitar a navegação. Não podemos desinstalar aplicativos de sistema indesejados, você pode simplesmente remover seus ícones e ignorá-los. Ele vem com Material Design e tema escuro por padrão, oferece ótima experiência do usuário para fácil utilização. A falta de acesso à Internet dá mais privacidade, segurança e estabilidade do que outros aplicativos. Não contém anúncios nem permissões desnecessárias. É totalmente de código aberto, oferece cores personalizáveis. <b>Veja a suíte completa de ferramentas simples aqui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b>https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
