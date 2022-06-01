@@ -1,4 +1,4 @@
-Neide o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť.
+Nejde o skutočný launcher, iba o jednoduchý držiak pre ikonky vašich obľúbených apiek pre ich rýchlejšie spustenie. Viete sem jednoducho pridať aj nové ikonky, čiže už ich nikdy nebudete musieť hľadať medzi všetkými tými zbytočnými apkami. Popisky viete aj upraviť.
 
 Je tu možnosť zatvoriť túto apku v prípade, ak spustíte niektorú inú.
 
