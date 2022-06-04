@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Semplice lanciatore di applicazioni</string>
-    <string name="app_launcher_name">Lanciatore di applicazioni</string>
-    <string name="enter_launcher_name">Inserire il nome di un lanciatore</string>
-    <string name="remove_explanation">Questo rimuoverà solamente l\'icona del lanciatore dalla griglia, non disintallerà l\'applicazione.</string>
+    <string name="app_name">Semplice launcher di applicazioni</string>
+    <string name="app_launcher_name">Launcher di applicazioni</string>
+    <string name="enter_launcher_name">Inserire il nome di un launcher</string>
+    <string name="remove_explanation">Questo rimuoverà solamente l\'icona del launcher dalla griglia, non disintallerà l\'applicazione.</string>
     <string name="close_app">Chiudi l\'applicazione quando se ne avvia un\'altra</string>
     <string name="toggle_app_name">Cambia la visibilità del nome dell\'app</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher — Lancia le app facilmente e rapidamente</string>
     <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Un semplice supporto per le applicazioni preferite per una gestione rapida e facile delle icone del lanciatore</string>
+    <string name="app_short_description">Un semplice supporto per le applicazioni preferite per una gestione rapida e facile delle icone del launcher</string>
     <string name="app_long_description"> Questo non è un vero e proprio launcher, solo un involucro per le icone delle tue app preferite per un lancio rapido. È possibile aggiungere facilmente qualsiasi app launcher, in modo da non dover mai più scorrere tra le app inutili per trovare quella che ti serve. È anche possibile rinominare i launcher come si desidera. C\'è un\'opzione per chiudere l\'app stessa al lancio di un\'altra per una facile navigazione. Non è possibile disinstallare le app di sistema indesiderate, si può solo rimuovere le loro icone e ignorarle. Viene fornito con material design e tema scuro per impostazione predefinita, fornisce una grande esperienza utente per un facile utilizzo. La mancanza di accesso a internet ti dà più privacy, sicurezza e stabilità rispetto ad altre app. Non contiene annunci o permessi inutili. È completamente opensource, fornisce colori personalizzabili. <b>Guarda la suite completa di Simple Tools qui:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
