@@ -22,7 +22,6 @@ import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.views.MyGridLayoutManager
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val MAX_COLUMN_COUNT = 20
@@ -94,6 +93,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.sort -> showSortingDialog()
+            R.id.toggle_app_name -> toggleAppName()
             R.id.increase_column_count -> increaseColumnCount()
             R.id.reduce_column_count -> reduceColumnCount()
             R.id.settings -> launchSettings()
@@ -165,6 +165,11 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         ChangeSortingDialog(this) {
             setupAdapter(displayedLaunchers)
         }
+    }
+
+    private fun toggleAppName() {
+        config.showAppName = !config.showAppName
+        launchers_grid.adapter?.notifyDataSetChanged()
     }
 
     private fun increaseColumnCount() {
