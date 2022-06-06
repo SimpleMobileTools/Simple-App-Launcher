@@ -4,6 +4,7 @@ const val WAS_REMOVE_INFO_SHOWN = "was_remove_info_shown"
 const val CLOSE_APP = "close_app"
 const val PORTRAIT_COLUMN_COUNT = "portrait_column_count"
 const val LANDSCAPE_COLUMN_COUNT = "landscape_column_count"
+const val SHOW_APP_NAME = "show_app_name"
 
 val predefinedPackageNames = arrayListOf(
     "com.simplemobiletools.calculator",

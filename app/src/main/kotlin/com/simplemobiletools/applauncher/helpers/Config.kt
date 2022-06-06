@@ -24,4 +24,8 @@ class Config(context: Context) : BaseConfig(context) {
     var landscapeColumnCnt: Int
         get() = prefs.getInt(LANDSCAPE_COLUMN_COUNT, context.resources.getInteger(R.integer.landscape_column_count))
         set(landscapeColumnCnt) = prefs.edit().putInt(LANDSCAPE_COLUMN_COUNT, landscapeColumnCnt).apply()
+
+    var showAppName: Boolean
+        get() = prefs.getBoolean(SHOW_APP_NAME, true)
+        set(showAppLabel) = prefs.edit().putBoolean(SHOW_APP_NAME, showAppLabel).apply()
 }

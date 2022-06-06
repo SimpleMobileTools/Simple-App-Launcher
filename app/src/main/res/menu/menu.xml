@@ -7,6 +7,11 @@
         android:title="@string/sort_by"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/toggle_app_name"
+        android:icon="@drawable/ic_label_vector"
+        android:title="@string/toggle_app_name"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/increase_column_count"
         android:title="@string/increase_column_count"
         app:showAsAction="never" />

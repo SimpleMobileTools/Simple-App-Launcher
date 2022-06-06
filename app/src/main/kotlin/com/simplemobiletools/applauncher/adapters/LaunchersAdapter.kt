@@ -4,6 +4,7 @@ import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
@@ -25,7 +26,6 @@ import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_launcher.view.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 class LaunchersAdapter(
     activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
@@ -193,6 +193,8 @@ class LaunchersAdapter(
             if (isSelected) {
                 launcher_check?.background?.applyColorFilter(adjustedPrimaryColor)
             }
+
+            launcher_label.isVisible = activity.config.showAppName
         }
     }
 
