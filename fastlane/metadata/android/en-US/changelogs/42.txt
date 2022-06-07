@@ -1,0 +1,3 @@
+ * Added Material You theme on Android 12+
+ * Allow toggling app label visibility
+ * Added some translation and UX improvements

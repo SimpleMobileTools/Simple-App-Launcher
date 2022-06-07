@@ -1,6 +1,13 @@
 Changelog
 ==========
 
+Version 5.9.0 *(2022-06-07)*
+----------------------------
+
+ * Added Material You theme on Android 12+
+ * Allow toggling app label visibility
+ * Added some translation and UX improvements
+
 Version 5.8.0 *(2022-03-18)*
 ----------------------------
 
