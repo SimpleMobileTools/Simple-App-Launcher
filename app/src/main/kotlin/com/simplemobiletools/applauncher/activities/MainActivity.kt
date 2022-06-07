@@ -169,7 +169,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun toggleAppName() {
         config.showAppName = !config.showAppName
-        launchers_grid.adapter?.notifyDataSetChanged()
+        setupAdapter(displayedLaunchers)
     }
 
     private fun increaseColumnCount() {

@@ -4,7 +4,6 @@ import android.view.Menu
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
@@ -24,7 +23,7 @@ import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.item_launcher.view.*
+import kotlinx.android.synthetic.main.item_launcher_label.view.*
 import java.util.*
 
 class LaunchersAdapter(
@@ -69,7 +68,15 @@ class LaunchersAdapter(
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = createViewHolder(R.layout.item_launcher, parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val layoutId = if (activity.config.showAppName) {
+            R.layout.item_launcher_label
+        } else {
+            R.layout.item_launcher_no_label
+        }
+
+        return createViewHolder(layoutId, parent)
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val launcher = launchers[position]
@@ -174,11 +181,18 @@ class LaunchersAdapter(
         view.apply {
             val isSelected = selectedKeys.contains(launcher.packageName.hashCode())
             launcher_check?.beInvisibleIf(!isSelected)
-            launcher_label.text = launcher.title
-            launcher_label.setTextColor(textColor)
+            launcher_label?.text = launcher.title
+            launcher_label?.setTextColor(textColor)
+            launcher_label?.beVisibleIf(activity.config.showAppName)
             launcher_icon.setImageDrawable(launcher.drawable!!)
-            launcher_icon.setPadding(iconPadding, iconPadding, iconPadding, 0)
 
+            val bottomPadding = if (activity.config.showAppName) {
+                0
+            } else {
+                iconPadding
+            }
+
+            launcher_icon.setPadding(iconPadding, iconPadding, iconPadding, bottomPadding)
             launcher_drag_handle.beVisibleIf(isChangingOrder)
             if (isChangingOrder) {
                 launcher_drag_handle.applyColorFilter(textColor)
@@ -193,8 +207,6 @@ class LaunchersAdapter(
             if (isSelected) {
                 launcher_check?.background?.applyColorFilter(properPrimaryColor)
             }
-
-            launcher_label.isVisible = activity.config.showAppName
         }
     }
 
