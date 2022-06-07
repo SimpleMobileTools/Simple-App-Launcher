@@ -191,7 +191,7 @@ class LaunchersAdapter(
             }
 
             if (isSelected) {
-                launcher_check?.background?.applyColorFilter(adjustedPrimaryColor)
+                launcher_check?.background?.applyColorFilter(properPrimaryColor)
             }
 
             launcher_label.isVisible = activity.config.showAppName

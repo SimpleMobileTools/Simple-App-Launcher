@@ -6,17 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.simplemobiletools.applauncher.R
-import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.models.AppLauncher
-import com.simplemobiletools.commons.extensions.getAdjustedPrimaryColor
+import com.simplemobiletools.commons.extensions.getProperPrimaryColor
+import com.simplemobiletools.commons.extensions.getProperTextColor
 import kotlinx.android.synthetic.main.item_add_launcher.view.*
-import java.util.*
 
 class AddLaunchersAdapter(activity: Activity, val allLaunchers: ArrayList<AppLauncher>, val shownLaunchers: ArrayList<AppLauncher>) :
     RecyclerView.Adapter<AddLaunchersAdapter.ViewHolder>() {
-    private val config = activity.config
-    private var textColor = config.textColor
-    private var adjustedPrimaryColor = activity.getAdjustedPrimaryColor()
+    private var textColor = activity.getProperTextColor()
+    private var adjustedPrimaryColor = activity.getProperPrimaryColor()
     private var selectedKeys = HashSet<Int>()
 
     init {

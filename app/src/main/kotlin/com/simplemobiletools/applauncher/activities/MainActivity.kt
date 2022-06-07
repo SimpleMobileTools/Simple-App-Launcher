@@ -54,19 +54,19 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
-        if (mStoredTextColor != config.textColor) {
-            getGridAdapter()?.updateTextColor(config.textColor)
+        if (mStoredTextColor != getProperTextColor()) {
+            getGridAdapter()?.updateTextColor(getProperTextColor())
         }
 
-        if (mStoredPrimaryColor != config.primaryColor) {
+        if (mStoredPrimaryColor != getProperPrimaryColor()) {
             getGridAdapter()?.apply {
-                updatePrimaryColor(config.primaryColor)
+                updatePrimaryColor()
                 notifyDataSetChanged()
             }
         }
 
         updateTextColors(coordinator_layout)
-        launchers_fastscroller.updateColors(getAdjustedPrimaryColor())
+        launchers_fastscroller.updateColors(getProperPrimaryColor())
     }
 
     override fun onPause() {
@@ -242,10 +242,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun storeStateVariables() {
-        config.apply {
-            mStoredPrimaryColor = primaryColor
-            mStoredTextColor = textColor
-        }
+        mStoredPrimaryColor = getProperPrimaryColor()
+        mStoredTextColor = getProperTextColor()
     }
 
     override fun refreshItems() {
