@@ -6,6 +6,7 @@
     <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
     <string name="close_app">Zavřít tuto aplikaci při spuštění jiné</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Jednoduchý spouštěč aplikací - Spusťte aplikace jednoduše &amp; rychle</string>

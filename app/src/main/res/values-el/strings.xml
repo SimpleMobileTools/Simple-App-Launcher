@@ -6,6 +6,7 @@
     <string name="remove_explanation">Αυτό, απλά, θα αφαιρέσει το εικονίδιο Εκκινητή από αυτό το πλαίσιο. Δεν θα απεγκατασταθεί την ίδια την εφαρμογή.</string>
     <string name="close_app">Κλείστε αυτήν την εφαρμογή ξεκινώντας μια διαφορετική</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Απλός Εκκινητής - Γρήγορο άνοιγμα εφαρμογών</string>

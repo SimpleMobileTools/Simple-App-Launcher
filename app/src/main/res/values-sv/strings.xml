@@ -6,6 +6,7 @@
     <string name="remove_explanation">Detta kommer bara att ta bort start-ikonen från rutnätet, inte avinstallera själva appen.</string>
     <string name="close_app">Stäng denna appen när en annan startas</string>
     <string name="toggle_app_name">Växla appnamnets synlighet</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simpel appstarter - starta appar enkelt och snabbt</string>

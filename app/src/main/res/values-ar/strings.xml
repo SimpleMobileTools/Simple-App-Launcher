@@ -6,6 +6,7 @@
     <string name="remove_explanation">سيؤدي هذا فقط إلى إزالة أيقونة المشغل من هذه الشبكة، وليس إلغاء تثبيت التطبيق الفعلي.</string>
     <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">مشغل التطبيقات البسيط - قم بتشغيل التطبيقات بسهولة وبسرعة</string>

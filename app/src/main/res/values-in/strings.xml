@@ -6,6 +6,7 @@
     <string name="remove_explanation">Ini hanya akan menghapus ikon peluncur dari kisi ini, bukan menghapus instalan aplikasi yang sebenarnya.</string>
     <string name="close_app">Tutup aplikasi ini saat meluncurkan yang lain</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Luncur aplikasi secara cepat</string>

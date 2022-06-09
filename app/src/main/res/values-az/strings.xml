@@ -6,6 +6,7 @@
     <string name="remove_explanation">Bu proses yalnız tətbiq ikonunu siyahıdan siləcək, tətbiqin özü silinməyəcək.</string>
     <string name="close_app">Close this app at launching a different one</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher - Launch apps easily &amp; quickly</string>
