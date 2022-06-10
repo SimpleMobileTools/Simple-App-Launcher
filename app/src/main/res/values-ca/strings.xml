@@ -6,7 +6,7 @@
     <string name="remove_explanation">Això només eliminarà la icona del llançador d\'aquesta quadrícula, no desinstal·larà l\'aplicació real.</string>
     <string name="close_app">Tanqueu aquesta aplicació en llançar-ne una de diferent</string>
     <string name="toggle_app_name">Commuta la visibilitat del nom de les aplicacions</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="manage_visible_app_icons">Gestiona les icones de les aplicacions visibles</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Llançador d\'aplicacions simple: inicieu aplicacions fàcilment i ràpidament</string>
