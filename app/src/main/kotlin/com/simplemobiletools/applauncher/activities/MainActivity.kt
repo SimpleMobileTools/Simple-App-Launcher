@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
@@ -33,12 +34,13 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private var mStoredPrimaryColor = 0
     private var mStoredTextColor = 0
 
-    private val emptyViews by lazy { arrayOf(add_icons_placeholder, no_items_placeholder) }
+    private var emptyViews: ArrayList<View>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+        setupEmptyView()
         setupLaunchers()
         checkWhatsNewDialog()
         storeStateVariables()
@@ -47,7 +49,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         fab.setOnClickListener {
             fabClicked()
         }
-        setupEmptyView()
     }
 
     override fun onResume() {
@@ -274,6 +275,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun setupEmptyView() {
+        emptyViews = arrayListOf(add_icons_placeholder, no_items_placeholder)
         val properPrimaryColor = getProperPrimaryColor()
         add_icons_placeholder.underlineText()
         add_icons_placeholder.setTextColor(properPrimaryColor)
@@ -289,9 +291,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun maybeShowEmptyView(displayedLaunchers: ArrayList<AppLauncher> = dbHelper.getLaunchers()) {
         if (displayedLaunchers.isEmpty()) {
             launchers_fastscroller.fadeOut()
-            emptyViews.forEach { it.fadeIn() }
+            emptyViews?.forEach { it.fadeIn() }
         } else {
-            emptyViews.forEach { it.fadeOut() }
+            emptyViews?.forEach { it.fadeOut() }
             launchers_fastscroller.fadeIn()
         }
     }
