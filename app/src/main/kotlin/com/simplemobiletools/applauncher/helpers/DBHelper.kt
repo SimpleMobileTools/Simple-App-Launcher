@@ -14,7 +14,6 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
-import java.util.*
 
 class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     private val MAIN_TABLE_NAME = "launchers"
@@ -46,7 +45,9 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             "CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
                 "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)"
         )
-        addInitialLaunchers(db)
+        if (context.resources.getBoolean(R.bool.add_default_apps)) {
+            addInitialLaunchers(db)
+        }
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
