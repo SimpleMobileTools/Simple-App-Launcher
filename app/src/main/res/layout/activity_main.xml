@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/no_items_placeholder"
             android:layout_centerHorizontal="true"
-            android:background="?attr/selectableItemBackground"
+            android:background="@drawable/ripple_all_corners"
             android:gravity="center"
             android:padding="@dimen/activity_margin"
             android:text="@string/manage_visible_app_icons"
