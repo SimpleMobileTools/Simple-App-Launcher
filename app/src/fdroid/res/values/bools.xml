@@ -3,4 +3,5 @@
     <bool name="show_donate_in_about">true</bool>
     <bool name="hide_google_relations">true</bool>
     <bool name="pretend_thank_you_installed">true</bool>
+    <bool name="add_default_apps">true</bool>
 </resources>
