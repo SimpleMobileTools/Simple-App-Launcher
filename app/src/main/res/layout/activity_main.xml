@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinator_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,6 +10,36 @@
         android:id="@+id/launchers_holder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/no_items_placeholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:alpha="0.8"
+            android:gravity="center"
+            android:paddingStart="@dimen/activity_margin"
+            android:paddingTop="@dimen/activity_margin"
+            android:paddingEnd="@dimen/activity_margin"
+            android:text="@string/no_items_found"
+            android:textSize="@dimen/bigger_text_size"
+            android:textStyle="italic"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <com.simplemobiletools.commons.views.MyTextView
+            android:id="@+id/add_icons_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/no_items_placeholder"
+            android:layout_centerHorizontal="true"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:padding="@dimen/activity_margin"
+            android:text="@string/manage_visible_app_icons"
+            android:textSize="@dimen/bigger_text_size"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
         <com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
             android:id="@+id/launchers_fastscroller"

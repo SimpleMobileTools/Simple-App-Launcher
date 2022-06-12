@@ -27,8 +27,12 @@ import kotlinx.android.synthetic.main.item_launcher_label.view.*
 import java.util.*
 
 class LaunchersAdapter(
-    activity: SimpleActivity, val launchers: ArrayList<AppLauncher>, val listener: RefreshRecyclerViewListener?,
-    recyclerView: MyRecyclerView, itemClick: (Any) -> Unit
+    activity: SimpleActivity,
+    val launchers: ArrayList<AppLauncher>,
+    val listener: RefreshRecyclerViewListener?,
+    recyclerView: MyRecyclerView,
+    var onItemsRemoved: (() -> Unit)? = null,
+    itemClick: (Any) -> Unit
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
 
     private var isChangingOrder = false
@@ -171,10 +175,11 @@ class LaunchersAdapter(
             }
         }
 
-        launchers.removeAll(removeLaunchers)
+        launchers.removeAll(removeLaunchers.toSet())
         activity.dbHelper.deleteLaunchers(removeIds)
         positions.sortDescending()
         removeSelectedItems(positions)
+        onItemsRemoved?.invoke()
     }
 
     private fun setupView(view: View, launcher: AppLauncher, holder: ViewHolder) {
