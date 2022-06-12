@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.pm.LauncherApps
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
-import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.helpers.Config
 import com.simplemobiletools.applauncher.helpers.DBHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
@@ -68,8 +67,4 @@ fun Context.getAllLaunchers(): ArrayList<AppLauncher> {
 
     val unique = allApps.distinctBy { it.packageName }
     return unique.filter { it.packageName != "com.simplemobiletools.applauncher" } as ArrayList<AppLauncher>
-}
-
-fun Context.addDefaultApps(): Boolean {
-    return resources.getBoolean(R.bool.add_default_apps)
 }
