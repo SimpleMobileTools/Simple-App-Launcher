@@ -31,7 +31,6 @@ class LaunchersAdapter(
     val launchers: ArrayList<AppLauncher>,
     val listener: RefreshRecyclerViewListener?,
     recyclerView: MyRecyclerView,
-    var onItemsRemoved: (() -> Unit)? = null,
     itemClick: (Any) -> Unit
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
 
@@ -179,7 +178,9 @@ class LaunchersAdapter(
         activity.dbHelper.deleteLaunchers(removeIds)
         positions.sortDescending()
         removeSelectedItems(positions)
-        onItemsRemoved?.invoke()
+        if (launchers.isEmpty()) {
+            listener?.refreshItems()
+        }
     }
 
     private fun setupView(view: View, launcher: AppLauncher, holder: ViewHolder) {

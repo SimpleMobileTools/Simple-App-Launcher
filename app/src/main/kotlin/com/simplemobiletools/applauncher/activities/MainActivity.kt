@@ -124,7 +124,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         checkInvalidApps()
         initZoomListener()
         setupAdapter(displayedLaunchers)
-        maybeShowEmptyView(displayedLaunchers)
+        maybeShowEmptyView()
     }
 
     private fun setupAdapter(launchers: ArrayList<AppLauncher>) {
@@ -136,7 +136,6 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             launchers = launchers,
             listener = this,
             recyclerView = launchers_grid,
-            onItemsRemoved = ::onItemsRemoved,
         ) {
             hideKeyboard()
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
@@ -280,11 +279,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
     }
 
-    private fun onItemsRemoved() {
-        maybeShowEmptyView()
-    }
-
-    private fun maybeShowEmptyView(displayedLaunchers: ArrayList<AppLauncher> = dbHelper.getLaunchers()) {
+    private fun maybeShowEmptyView() {
         val emptyViews = arrayOf(add_icons_placeholder, no_items_placeholder)
         if (displayedLaunchers.isEmpty()) {
             launchers_fastscroller.fadeOut()
