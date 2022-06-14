@@ -6,7 +6,7 @@
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
     <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
     <string name="toggle_app_name">Sichtbarkeit des Anwendungsnamens umschalten</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="manage_visible_app_icons">Verwalten Sie sichtbare App-Symbole</string>
     <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
     <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
     <string name="app_title">Simple App Launcher – Anwendungen einfach und schnell starten</string>
