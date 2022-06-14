@@ -29,7 +29,7 @@ import java.util.*
 class LaunchersAdapter(
     activity: SimpleActivity,
     val launchers: ArrayList<AppLauncher>,
-    val listener: RefreshRecyclerViewListener?,
+    val listener: RefreshRecyclerViewListener,
     recyclerView: MyRecyclerView,
     itemClick: (Any) -> Unit
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
@@ -128,7 +128,7 @@ class LaunchersAdapter(
     private fun showEditDialog() {
         EditDialog(activity, getItemWithKey(selectedKeys.first())!!) {
             finishActMode()
-            listener?.refreshItems()
+            listener.refreshItems()
         }
     }
 
