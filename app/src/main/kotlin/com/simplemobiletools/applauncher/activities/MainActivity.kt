@@ -37,18 +37,14 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
+        setupEmptyView()
         setupLaunchers()
         checkWhatsNewDialog()
         storeStateVariables()
         setupGridLayoutManager()
 
         fab.setOnClickListener {
-            if (allLaunchers != null) {
-                val shownLaunchers = (launchers_grid.adapter as LaunchersAdapter).launchers
-                AddLaunchersDialog(this, allLaunchers!!, shownLaunchers) {
-                    setupLaunchers()
-                }
-            }
+            fabClicked()
         }
     }
 
@@ -58,7 +54,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             getGridAdapter()?.updateTextColor(getProperTextColor())
         }
 
-        if (mStoredPrimaryColor != getProperPrimaryColor()) {
+        val properPrimaryColor = getProperPrimaryColor()
+        if (mStoredPrimaryColor != properPrimaryColor) {
             getGridAdapter()?.apply {
                 updatePrimaryColor()
                 notifyDataSetChanged()
@@ -66,7 +63,8 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         updateTextColors(coordinator_layout)
-        launchers_fastscroller.updateColors(getProperPrimaryColor())
+        add_icons_placeholder.setTextColor(properPrimaryColor)
+        launchers_fastscroller.updateColors(properPrimaryColor)
     }
 
     override fun onPause() {
@@ -126,13 +124,19 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         checkInvalidApps()
         initZoomListener()
         setupAdapter(displayedLaunchers)
+        maybeShowEmptyView()
     }
 
     private fun setupAdapter(launchers: ArrayList<AppLauncher>) {
         AppLauncher.sorting = config.sorting
         launchers.sort()
 
-        LaunchersAdapter(this, launchers, this, launchers_grid) {
+        LaunchersAdapter(
+            activity = this,
+            launchers = launchers,
+            listener = this,
+            recyclerView = launchers_grid,
+        ) {
             hideKeyboard()
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
             if (launchIntent != null) {
@@ -254,6 +258,35 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         arrayListOf<Release>().apply {
             add(Release(7, R.string.release_7))
             checkWhatsNew(this, BuildConfig.VERSION_CODE)
+        }
+    }
+
+    private fun fabClicked() {
+        if (allLaunchers != null) {
+            val shownLaunchers = (launchers_grid.adapter as LaunchersAdapter).launchers
+            AddLaunchersDialog(this, allLaunchers!!, shownLaunchers) {
+                setupLaunchers()
+            }
+        }
+    }
+
+    private fun setupEmptyView() {
+        val properPrimaryColor = getProperPrimaryColor()
+        add_icons_placeholder.underlineText()
+        add_icons_placeholder.setTextColor(properPrimaryColor)
+        add_icons_placeholder.setOnClickListener {
+            fabClicked()
+        }
+    }
+
+    private fun maybeShowEmptyView() {
+        val emptyViews = arrayOf(add_icons_placeholder, no_items_placeholder)
+        if (displayedLaunchers.isEmpty()) {
+            launchers_fastscroller.fadeOut()
+            emptyViews.forEach { it.fadeIn() }
+        } else {
+            emptyViews.forEach { it.fadeOut() }
+            launchers_fastscroller.fadeIn()
         }
     }
 }
