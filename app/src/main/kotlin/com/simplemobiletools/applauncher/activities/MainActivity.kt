@@ -22,6 +22,7 @@ import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.views.MyGridLayoutManager
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
+import com.simplemobiletools.commons.helpers.LICENSE_AUTOFITTEXTVIEW
 
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val MAX_COLUMN_COUNT = 20
@@ -107,7 +108,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchAbout() {
-        val licenses = 0
+        val licenses = LICENSE_AUTOFITTEXTVIEW
 
         val faqItems = ArrayList<FAQItem>()
 
