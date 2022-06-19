@@ -107,7 +107,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun launchAbout() {
-        val licenses = 0
+        val licenses = 0L
 
         val faqItems = ArrayList<FAQItem>()
 
