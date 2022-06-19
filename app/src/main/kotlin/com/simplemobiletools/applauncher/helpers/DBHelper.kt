@@ -14,6 +14,7 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
+import com.simplemobiletools.commons.helpers.isRPlus
 
 class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     private val MAIN_TABLE_NAME = "launchers"
@@ -102,9 +103,13 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             R.string.voice_recorder_short
         )
 
+        if (isRPlus()) {
+            titles.add(2, R.string.clock_short)
+        }
+
         val cnt = titles.size
         val resources = context.resources
-        val packages = predefinedPackageNames
+        val packages = getPredefinedPackageNames()
         for (i in 0 until cnt) {
             val appLauncher = AppLauncher(0, resources.getString(titles[i]), packages[i], 0)
             addAppLauncher(appLauncher, db)
