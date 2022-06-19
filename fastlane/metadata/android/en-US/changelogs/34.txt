@@ -1,2 +1,0 @@
- * Adding a White theme with special handling
- * Animate column count changes

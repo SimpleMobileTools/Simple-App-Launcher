@@ -1,1 +1,0 @@
- * Make sure the app can list all installed apps on Android 11

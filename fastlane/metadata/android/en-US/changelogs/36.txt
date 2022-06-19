@@ -1,3 +1,0 @@
- * Adding a new Auto theme for automatic light/dark switching
- * Adding a project Contributors section
- * Adding some translation improvements
