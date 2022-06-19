@@ -1,1 +1,1 @@
-Un semplice contenitore per i propri lanciatori preferiti.
+Un semplice contenitore per un rapido accesso alle tue app preferite
