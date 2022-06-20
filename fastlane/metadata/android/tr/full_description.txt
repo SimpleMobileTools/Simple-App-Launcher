@@ -1,5 +1,33 @@
-Herhangi bir uygulama başlatıcısını kolayca ekleyebilirsiniz, böylece ihtiyacınız olanı bulmak için hiçbir zaman işe yaramaz uygulamaları kaydırmanız gerekmez. Ayrıca başlatıcıları istediğiniz gibi yeniden adlandırabilirsiniz. Ana ekranınızı değiştiren gerçek bir başlatıcı değil, sadece favori uygulamalarınız için bir tutucudur.
+Bu gerçek bir başlatıcı değildir, yalnızca hızlı başlatma ve ana ekranınızı daha havalı ve eğlenceli görünecek şekilde değiştirmek için favori uygulama simgeleriniz için bir ön yüzdür. Herhangi bir uygulama başlatıcısını ana ekranınıza kolayca ekleyebilirsiniz, böylece ihtiyacınız olanı bulmak için bir daha asla işe yaramaz uygulamalar arasında gezinmek zorunda kalmazsınız. Ayrıca başlatıcıları dilediğiniz gibi yeniden adlandırabilirsiniz.
 
-Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır, özelleştirilebilir renkler sağlar.
+Bu başlatıcıyı kullanarak ana ekranınızı farklı şekillerde özelleştirebilirsiniz. Bu başlatıcı ayrıca aygıtınızı kullanırken size daha pürüzsüz bir his vermek için koyu tema ile birlikte gelmektedir.
 
-Bu uygulama, daha büyük bir uygulama serisinden sadece bir parça. Geri kalanı https://www.simplemobiletools.com adresinde bulabilirsiniz
+Kolay gezinme için farklı bir uygulamayı başlatırken uygulamanın kendisini kapatma seçeneği vardır. Bu şekilde, bir başlatıcıyı kapatıp yenisini açma zahmetine girmeden ana ekranı ve uygulama kilit ekranını istediğiniz zaman değiştirebileceksiniz.
+
+İstenmeyen sistem uygulamalarını kaldıramayız, yalnızca simgelerini kaldırabilir ve onları yok sayabilirsiniz.
+
+Ana ekranda ve aygıtınızın tüm panellerinde öntanımlı olarak material tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar. Bu başlatıcı ile aygıtınızı herhangi bir ağa bağlamanız gerekmez. Yalnızca kurun ve ana ekranınızı gereksinimlerinize göre değiştirin.
+
+Koyu tema ile yanıp sönen ışıklarla gözlerinizi korurken aygıtınızın ve ana ekranınızın yeni görünümünün keyfini çıkarabilirsiniz. Koyu tema ortaya çıktığından beri gözde olmuştur, bu nedenle bu başlatıcı yeni harika tasarımları göz önünde bulundurmaktadır. Bu başlatıcıyı uygulama kilit ekranınızı çeşitli şekillerde ayarlamak için de kullanabilirsiniz.
+
+Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, ana ekranınızın daha çarpıcı görünmesini sağlamak için özelleştirilebilir renkler ve koyu tema sağlar. Bu başlatıcı ile, başka hiçbir uygulama başlatıcıda bulunmayan farklı yeni ve iyileştirilmiş simgelerin ve tasarımların keyfini çıkarabilirsiniz.
+
+Özellikler:
+
+- Özelleştirilebilir ana ekran simgeleri ve düğmeleri.
+- Aygıtınıza daha yumuşak bir his vermek için koyu tema.
+- Kendiniz için en iyisini seçebilmeniz için başlatıcıda kolay gezinin.
+- Uygulamalarınızı bölümlere göre düzenleyin.
+- Enfes renk temaları.
+- Can sıkıcı reklamlar yok.
+- Farklı başlatıcıları kolaylıkla arayın.
+- Keyfini çıkarın!
+
+<b>Basit Araçlar paketinin tamamını buradan inceleyin:</b>
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools

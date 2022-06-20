@@ -1,5 +1,33 @@
-Si può in maniera semplice aggiungere qualsiasi lanciatore di applicazione, così da non cercare fra le varie applicazioni inutili per trovare quella che necessaria. Si possono inoltre rinominare i lanciatori e questa app non rimpiazza realmente la schermata principale, è solamente un contenitore per le applicazioni preferite.
+Questo non è un vero e proprio launcher, solo un involucro per le icone delle app preferite per il lancio rapido e il cambio di schermata iniziale per un aspetto più fresco e divertente. Si può facilmente aggiungere qualsiasi launcher app sulla schermata iniziale, così non sarà mai più necessario scorrere attraverso applicazioni inutili per trovare quella che ti serve. È inoltre possibile rinominare i launcher come si desidera.
 
-L'applicazione non contiene pubblicità o permessi non necessari; è completamente opensource e la si può personalizzare con i propri colori preferiti.
+Utilizzando questo launcher, è possibile personalizzare la schermata iniziale in diversi stili. Questo launcher viene fornito anche con tema scuro per darvi una sensazione più fluida durante l'utilizzo del dispositivo.
 
-Questa è solamente una delle tante applicazioni della serie Simple Mobile Tools. Si possono trovare le altre su https://www.simplemobiletools.com
+C'è un'opzione per chiudere l'applicazione stessa al lancio di una diversa per una facile navigazione. In questo modo, si sarà in grado di cambiare la schermata iniziale e schermata di blocco app in qualsiasi momento si desidera, senza il fastidio di chiudere un launcher e aprirne uno nuovo.
+
+Non possiamo disinstallare le app di sistema indesiderate, puoi semplicemente rimuovere le loro icone e ignorarle.
+
+Viene fornito con il material design e il tema scuro per impostazione predefinita sulla schermata iniziale e su tutti i pannelli del dispositivo, che fornisce una grande esperienza utente per un facile utilizzo. La mancanza di accesso a Internet ti dà più privacy, sicurezza e stabilità rispetto ad altre applicazioni. Con questo launcher, non c'è bisogno di collegare il dispositivo a qualsiasi rete. Basta installarlo e modificare la schermata iniziale in base alle proprie esigenze. 
+
+Con il tema scuro, puoi goderti il nuovo look del tuo dispositivo e della schermata iniziale proteggendo gli occhi da luci lampeggianti. Il tema scuro è stato popolare dal suo arrivo così questo launcher ha tenuto a mente mantenendo le tendenze con nuovi disegni. È inoltre possibile utilizzare questo launcher per impostare la schermata di blocco app con vari stili.
+
+Non contiene annunci o autorizzazioni non necessarie. È completamente opensource, fornisce colori personalizzabili e tema scuro per rendere la schermata iniziale più sorprendente. Con questo launcher, si può godere di diverse nuove e migliorate icone e disegni che non sono disponibili in qualsiasi altro launcher app. 
+
+Funzionalità:
+
+- Icone e pulsanti personalizzabili della schermata iniziale.
+- Tema scuro per dare una sensazione più fluida al tuo dispositivo.
+- Facile navigazione attraverso il launcher in modo da poter scegliere il migliore per te.
+- Organizza le tue app in sezioni.
+- Temi di colore squisiti.
+- Nessuna pubblicità fastidiosa.
+- Cercare con facilità i diversi launcher.
+- Divertiti!
+
+<b>Scopri la suite completa di Simple Tools qui:</b>
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
