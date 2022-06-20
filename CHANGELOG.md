@@ -9,11 +9,6 @@ Version 5.9.1 *(2022-06-19)*
 Version 5.9.0 *(2022-06-07)*
 ----------------------------
 
- * Adding some translation improvements
-
-Version 5.9.0 *(2022-06-07)*
-----------------------------
-
  * Added Material You theme on Android 12+
  * Allow toggling app label visibility
  * Added some translation and UX improvements
