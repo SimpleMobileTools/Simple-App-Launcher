@@ -1,29 +1,29 @@
-This is not a real launcher, just a wrapper for your favorite app icons for quick launching and changing your home screen to look more cool and fun. You can easily add any app launcher on your home screen, so you won't ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+Aquest no és un llançador real, només un embolcall per a les icones de l'aplicació preferides per llançar i canviar ràpidament la pantalla d'inici per semblar més fresca i divertida. Podeu afegir fàcilment qualsevol llançador d'aplicacions a la pantalla d'inici, de manera que mai més no haureu de passar per aplicacions inútils per trobar la que necessiteu. També podeu canviar el nom dels llançadors com vulgueu.
 
-By using this launcher, you can customize your home screen in different styles. This launcher also comes with dark theme to give you a more smooth feel while using your device.
+Mitjançant l'ús d'aquest llançador, podeu personalitzar la pantalla d'inici en diferents estils. Aquest llançador també inclou un tema fosc per donar-vos una sensació més suau mentre utilitzeu el dispositiu.
 
-There is an option to close the app itself at launching a different one for easy navigation. This way, you will be able to change the home screen and app lock screen anytime you want without the hassle of closing one launcher and opening a new one.
+Hi ha l'opció de tancar l'aplicació en el llançament d'una altra per a facilitar la navegació. D'aquesta manera, podreu canviar la pantalla d'inici i la pantalla de bloqueig de l'aplicació quan vulgueu sense la molèstia de tancar un llançador i obrir-ne un de nou.
 
-We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+No pot desinstal·lar aplicacions del sistema no desitjades, només podeu eliminar les seves icones i ignorar-les.
 
-It comes with material design and dark theme by default on home screen and on all panels of your device, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. With this launcher, you don't have to connect your device with any network. Simply install it and change your home screen according to your requirements. 
+Inclou el Material Design i un tema fosc predeterminat a la pantalla d'inici i en tots els panells del dispositiu, proporcionant una gran experiència d'usuari per facilitar-ne l'ús. La manca d'accés a Internet li dóna més privacitat, seguretat i estabilitat que altres aplicacions. Amb aquest llançador, no cal que connecteu el dispositiu amb cap xarxa. Simplement instal·leu-lo i canvieu la pantalla d'inici segons les vostres necessitats. 
 
-With dark theme, you can enjoy the new look of your device and home screen while protecting your eyes with flashing lights. Dark theme has been popular since its arrival so this launcher has kept in mind keeping the trends with new cool designs. You can also use this launcher to set your app lock screen with various styles.
+Amb el tema fosc, podeu gaudir de l'aspecte nou del dispositiu i de la pantalla d'inici mentre protegiu els ulls del llums intermitents. El tema fosc ha estat popular des del seu llançament, de manera que aquest llançador ha tingut en compte mantenir les tendències amb dissenys nous frescos. També podeu utilitzar aquest llançador per definir la pantalla de bloqueig de l'aplicació amb diversos estils.
 
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors and dark theme to make your home screen look more stunning. With this launcher, you can enjoy different new and improved icons and designs that are not available in any other app launcher. 
+No conté anuncis ni permisos innecessaris. És totalment de codi obert, proporciona colors personalitzables i un tema fosc per fer que la pantalla d'inici sembli més impressionant. Amb aquest llançador, podreu gaudir de diferents icones i dissenys nous i millorats que no estan disponibles en cap altre llançador d'aplicacions. 
 
-Features:
+Característiques:
 
-- Customizable home screen icons and buttons.
-- Dark theme to give you a more smoother feel of your device.
-- Easy navigation through the launcher so you can choose the best one for yourself.
-- Organize your apps to sections.
-- Exquisite color themes.
-- No annoying advertisements.
-- Search different launchers with ease.
-- Enjoy!
+- Icones i botons de pantalla d'inici personalitzables.
+- Tema fosc per donar-vos un comportament més suau del vostre dispositiu.
+- Navegació fàcil a través del llançador perquè pugueu triar el millor per a vós mateix.
+- Organitzeu les vostres aplicacions en seccions.
+- Temes de color exquisits.
+- No hi ha anuncis molestos.
+- Busca diferents llançadors amb facilitat.
+- Gaudiu-ne!
 
-<b>Check out the full suite of Simple Tools here:</b>
+<b> Consulteu el conjunt complet d'eines simples aquí:</b>
 https://www.simplemobiletools.com
 
 Facebook:
