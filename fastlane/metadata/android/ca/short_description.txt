@@ -1,0 +1,1 @@
+Un contenidor senzill per a un accés ràpid a les vostres aplicacions preferides, gestió fàcil de les icones
