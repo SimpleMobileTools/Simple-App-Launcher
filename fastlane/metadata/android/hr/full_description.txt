@@ -1,14 +1,25 @@
-Ovo nije pravi pokretač, samo omot za vaše omiljene ikone aplikacija za brzo pokretanje. Možete jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećete morati prelaziti prstom kroz beskorisne aplikacije kako biste pronašli onu koja vam je potrebna.
+Ovo nije pravi pokretač, već je samo mjesto za ikone tvojih omiljenih aplikacija za brzo pokretanje. Možeš jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećeš morati listati kroz beskorisne aplikacije za pronalaženje aplikacije koju želiš.
 
-Također možete preimenovati pokretače po želji. Postoji mogućnost zatvaranja same aplikacije prilikom pokretanja druge za jednostavnu navigaciju. Ne možemo deinstalirati neželjene aplikacije sustava, možete samo ukloniti njihove ikone i zanemariti ih.
+Također možeš preimenovati pokretače po želji. Postoji mogućnost zatvaranja same aplikacije prilikom pokretanja druge što omogućuje jednostavnu navigaciju. Ne možemo deinstalirati neželjene aplikacije sustava, možeš samo ukloniti njihove ikone i zanemariti ih.
 
-Dolazi s materijalnim dizajnom i tamnom temom prema zadanim postavkama, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od drugih aplikacija. Ne sadrži oglase niti nepotrebna dopuštenja. Potpuno je otvorenog koda, pruža prilagodljive boje.
+Aplikacija je izrađena u material-dizajnu i standardno koristi tamnu temu, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu pruža bolju privatnost, sigurnost i stabilnost od drugih aplikacija. Ne sadrži oglase niti nepotrebne dozvole. Potpuno je otvorenog koda, pruža prilagodljive boje.
 
-<b>Pogledajte cijeli paket Simple Tools ovdje:</b>
+Značajke:
+
+- Prilagodljive ikone i gumbi početnog ekrana.
+- Tamna tema koja bolji ugođaj.
+- Jednostavna navigacija kroz pokretač tako da možeš odabrati najbolju za sebe.
+- Organiziraj aplikacije u odjeljke.
+- Izvrsne teme boja.
+- Bez dosadnih oglasa.
+- Pretraži različite pokretače s lakoćom.
+- Uživaj!
+
+<b>Pogledaj cijeli paket „Jednostavni alati” ovdje:</b>
 https://www.simplemobiletools.com
 
-<b>Facebook:</b>
+Facebook:
 https://www.facebook.com/simplemobiletools
 
-<b>Reddit:</b>
+Reddit:
 https://www.reddit.com/r/SimpleMobileTools
