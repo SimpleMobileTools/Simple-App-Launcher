@@ -23,7 +23,7 @@ Cechy:
 - Z łatwością przeszukuj różne aplikacje.
 - Ciesz się!
 
-<b>Sprawdź pełen zestaw od Simple Tools tutaj:</b>
+Sprawdź pełen zestaw od Simple Tools tutaj:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -31,3 +31,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
