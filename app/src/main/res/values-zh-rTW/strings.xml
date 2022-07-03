@@ -7,12 +7,6 @@
     <string name="close_app">當啟動不同程式時，關閉此應用程式</string>
     <string name="toggle_app_name">開關 app 名顯示</string>
     <string name="manage_visible_app_icons">Manage visible app icons</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - 輕鬆快速地啟動應用程式</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">用於收藏應用程式的簡易框架，可輕鬆快速地管理應用程式圖示</string>
-    <string name="app_long_description"> 這不是真的啟動器，只是您最愛的應用程式圖示的包裝程式，用來快速啟動應用程式。您可以輕鬆地新增任何應用程式啟動器，如此您就不再需要透過無用的應用程式來尋找您需要的應用程式。您還可以根據需求重新命名啟動器。有一個選項可以在啟動另一個應用程式時關閉應用程式本身，以方便使用。我們無法解除安裝您不想要的系統應用程式，您只能移除它們的圖示並忽略它們。其預設使用了質感設計與深色主題，提供了出色的使用者體驗且易於使用。不需要網際網路存取權限給您比其他應用程式更多的隱私、安全與穩定。其不包含廣告或不需要的權限。其完全開放原始碼，提供可自訂的色彩。<b>來這裡看看全套的簡易工具系列吧：</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

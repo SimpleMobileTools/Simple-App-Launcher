@@ -7,12 +7,6 @@
     <string name="close_app">Закрити цей додаток при запуску іншого</string>
     <string name="toggle_app_name">Перемкнути видимість імені програми</string>
     <string name="manage_visible_app_icons">Керувати видимими піктограмами програм</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Простий Лаунчер - Відкрити додатки легко &amp; швидко</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Простий додаток для швидкого &amp; простого управління іконками додатків</string>
-    <string name="app_long_description"> Це не справжній лаунчер, а лише обгортка над піктограмами ваших улюблених додатків для їх швидкого відкриття. Ви легко можете додати лаунчер для будь-якого додатка, тому вам більше не доведеться шукати потрібний вам додаток. Ви також можете перейменовувати лаунчери як вам заманеться. Додаток має опцію закриття при відкритті іншого, що забезпечую зручність навігації. Ми не можемо видалити непотрібні системні додатки, ви можете просто видалити піктограми додатків та ігнорувати їх. За промовчанням додаток поставляється з матеріальним дизайном і темною темою, забезпечує чудовий користувацький досвід для простого використання. Відсутність доступу до Інтернету надає більше приватності, безпеки та стабільності, порівняно з іншими додатками. Не буде показувати рекламу; потрібні лише найнеобхідніші дозволи. Програмний код повністю відкритий, забезпечує настроювальні кольори оформлення. <b>Ознайомтеся з повним набором додатків Simple Tools тут:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

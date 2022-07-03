@@ -7,12 +7,6 @@
     <string name="close_app">Paleidus kitą programėlę, užverti šią</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
     <string name="manage_visible_app_icons">Manage visible app icons</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Paprasta programėlių paleidyklė – patogi ir greita</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Paprastas mėgstamų programėlių laikiklis, skirtas lengvai tvarkyti paleidykles</string>
-    <string name="app_long_description"> Tai nėra tikroji paleidyklė, o tik lengvai naudojamas aplankas jūsų mėgstamų programėlių piktogramoms. Galite lengvai pridėti bet kurios programėlės paleidyklę, kad daugiau nebereikėtų braukinėti per begalę programėlių ir ieškoti reikiamos programėlės. Be to, galite pervadinti paleidykles taip, kaip jums patinka. Tam, kad būtų lengviau naršyti, yra parinktis užverti programėlę tada, kai yra paleidžiama kita. Mes negalime pašalinti nepageidaujamų sisteminių programėlių. Jūs galite tik pašalinti jų piktogramas ir nepaisyti pačių programėlių. Ši programėlė pagal numatymą yra pateikiama su materialiuoju dizainu bei tamsiu apipavidalinimu ir leidžia naudotojui lengvai naudotis jos ypatybėmis. Kadangi šios programėlės veikimui nereikalinga prieiga prie interneto, ji suteikia jums daugiau privatumo, saugumo ir stabilumo, nei kitos programėlės. Programėlėje nėra jokių reklamų ir nereikalingų leidimų. Ji yra pilnai atvirojo kodo bei suteikia galimybę tinkinti spalvas. <b>Susipažinkite su mūsų pilnu paprastųjų įrankių rinkiniu:</b> https://www.simplemobiletools.com <b>„Facebook“:</b> https://www.facebook.com/simplemobiletools <b>„Reddit“:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

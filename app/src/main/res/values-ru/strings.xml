@@ -7,12 +7,6 @@
     <string name="close_app">Закрыть это приложение при запуске другого</string>
     <string name="toggle_app_name">Переключить показ названия приложения</string>
     <string name="manage_visible_app_icons">Управление отображаемыми значками приложений</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Легкий запуск приложений</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Простое приложение для быстрого и лёгкого управления иконками запуска приложений</string>
-    <string name="app_long_description"> Это не совсем лаунчер, а лишь оболочка с иконками ваших любимых приложений для быстрого запуска. Вы сможете с лёгкостью добавлять лаунчер для любого приложения, так что вам не придется пролистывать бесполезные приложения вчто поисках того, что вам нужно. Вы также можете переименовать лаунчеры по своему усмотрению. Есть возможность закрыть само приложение при запуске другого для удобства навигации. Мы не сможем удалить ненужные системные приложения, но сможем просто скрыть их значки и игнорировать их. Выполнено в стиле Material Design и поддерживает тёмную тему по умолчанию, что обеспечивает удобство в использовании. Отсутствие доступа в интернет дает вам больше конфиденциальности, безопасности и стабильности, чем другие приложения. Это приложение не будет показывать рекламу или запрашивать ненужные разрешения. У него полностью открытый исходный код и есть настраиваемые цвета оформления. <b>Ознакомьтесь с полным набором инструментов серии Simple здесь:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

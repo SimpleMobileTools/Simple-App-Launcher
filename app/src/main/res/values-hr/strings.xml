@@ -7,12 +7,6 @@
     <string name="close_app">Zatvori ovu aplikaciju pri pokretanju druge</string>
     <string name="toggle_app_name">Uključi/Isključi vidljivost imena aplikacija</string>
     <string name="manage_visible_app_icons">Upravljaj vidljivim ikonama aplikacija</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Jednostavan pokretač aplikacija – jednostavno/brzo</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Mjesto za omiljene aplikacije i za upravljanje ikonama pokretača aplikacija</string>
-    <string name="app_long_description"> Ovo nije pravi pokretač, već je samo mjesto za ikone tvojih omiljenih aplikacija za brzo pokretanje. Možeš jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećeš morati listati kroz beskorisne aplikacije za pronalaženje aplikacije koju želiš. Također možeš preimenovati pokretače po želji. Postoji mogućnost zatvaranja same aplikacije prilikom pokretanja druge što omogućuje jednostavnu navigaciju. Ne možemo deinstalirati neželjene aplikacije sustava, možeš samo ukloniti njihove ikone i zanemariti ih. Aplikacija je izrađena u material-dizajnu i standardno koristi tamnu temu, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu pruža bolju privatnost, sigurnost i stabilnost od drugih aplikacija. Ne sadrži oglase niti nepotrebne dozvole. Potpuno je otvorenog koda, pruža prilagodljive boje. <b>Pogledaj cijeli paket „Jednostavni alati” ovdje:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -7,18 +7,6 @@
     <string name="close_app">Tutup aplikasi ini saat meluncurkan yang lain</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
     <string name="manage_visible_app_icons">Manage visible app icons</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Luncur aplikasi secara cepat</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Sebuah penampung sederhana untuk aplikasi favorit untuk pengelola ikon peluncur aplikasi cepat &amp; mudah</string>
-    <string name="app_long_description"> Ini bukan peluncur nyata, hanya pembungkus untuk ikon aplikasi favorit Anda untuk peluncuran cepat. Anda dapat dengan mudah menambahkan peluncur aplikasi apa pun, sehingga Anda tidak perlu lagi menggesek aplikasi yang tidak berguna untuk menemukan yang Anda butuhkan. Anda juga dapat mengganti nama peluncur sesuai keinginan. Ada opsi untuk menutup aplikasi itu sendiri saat meluncurkan yang berbeda untuk navigasi yang mudah. Kami tidak dapat menghapus aplikasi sistem yang tidak diinginkan, Anda cukup menghapus ikonnya dan mengabaikannya.
-\n
-\nMuncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya sumber-terbuka, menyediakan warna yang dapat disesuaikan.
-\n
-\n<b>Lihat rangkaian lengkap Simple Tools di sini:</b> https://www.simplemobiletools.com
-\n<b>Facebook:</b> https://www.facebook.com/simplemobiletools
-\n<b>Reddit :</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

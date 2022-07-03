@@ -7,12 +7,6 @@
     <string name="close_app">Luk denne app ved at starte en anden app</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
     <string name="manage_visible_app_icons">Manage visible app icons</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher - Start apps nemt &amp; hurtigt</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">En simpel holder til yndlingsapps til hurtig administration af appstarterikoner</string>
-    <string name="app_long_description"> Dette er ikke en rigtig launcher, bare en wrapper til dine yndlings app ikoner til hurtig lancering. Du kan nemt tilføje enhver appstarter, så du aldrig igen behøver at stryge gennem ubrugelige apps for at finde den, du har brug for. Du kan også omdøbe løfterake, som du ønsker. Der er mulighed for at lukke selve appen ved at starte en anden for nem navigation. Vi kan ikke afinstallere uønskede systemapps, du kan bare fjerne deres ikoner og ignorere dem. Det leveres med materialedesign og mørkt tema som standard giver stor brugeroplevelse for nem brug. Manglen på internetadgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps. Indeholder ingen annoncer eller unødvendige tilladelser. Det er fuldt opensource, giver tilpassede farver. <b> Se hele pakken med Simple Tools her:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

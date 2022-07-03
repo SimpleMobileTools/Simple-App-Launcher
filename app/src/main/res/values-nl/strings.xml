@@ -7,12 +7,6 @@
     <string name="close_app">Deze app sluiten bij het starten van een andere app</string>
     <string name="toggle_app_name">Namen van apps tonen/verbergen</string>
     <string name="manage_visible_app_icons">Zichtbare iconen beheren</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Eenvoudige App Launcher - Vind je apps supersnel</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Een eenvoudige launcher voor je favoriete apps</string>
-    <string name="app_long_description"> Dit is géén volwaardige launcher (met thuisscherm en widgets), maar een overzicht voor je favoriete apps. Je kunt al je belangrijke apps toevoegen aan het overzicht, zodat je nooit meer hoeft te bladeren door de héle appslijst. Je kunt de apps ook een duidelijkere naam geven. Na het starten van een app vanuit het overzicht kan deze launcher zichzelf indien gewenst weer sluiten. Sommige ongewenste systeemapps kunnen niet worden gedeïnstalleerd, maar ze kunnen wel gemakkelijker worden genegeerd middels het gebruik van deze launcher. De app houdt het material design aan met standaard een donker thema. De app vraagt niet om een internetverbinding, dus er zijn sowieso geen privacyzorgen. Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast. <b>Probeer ook eens de andere apps van Simple Tools:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

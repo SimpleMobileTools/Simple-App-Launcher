@@ -7,12 +7,6 @@
     <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
     <string name="toggle_app_name">Sichtbarkeit des Anwendungsnamens umschalten</string>
     <string name="manage_visible_app_icons">Verwalten Sie sichtbare App-Symbole</string>
-    <!-- Strings displayed only on Google Playstore. Optional, but good to have -->
-    <!-- App title has to have less than 50 characters. If you cannot squeeze it, just remove a part of it -->
-    <string name="app_title">Simple App Launcher – Anwendungen einfach und schnell starten</string>
-    <!-- Short description has to have less than 80 chars -->
-    <string name="app_short_description">Eine schlichte App, um all deine Lieblingsapps an einem Platz zu vereinen</string>
-    <string name="app_long_description"> Dies ist kein echter Launcher, nur ein Wrapper um deine Lieblingsanwendungen schnell zu starten. Du kannst einfach jede beliebige Start-Anwendung hinzufügen, sodass du nie wieder durch nutzlose Anwendungen blättern musst, um die benötigte zu finden. Du kannst den Launcher zudem nach Belieben umbenennen. Es gibt die Möglichkeit, diese Anwendung zu schließen, wenn sie eine andere starten, um die Navigation zu erleichtern. Wir können unerwünschte Systemanwendungen nicht deinstallieren, aber du kannst deren Symbol entfernen und sie ignorieren. Sie kommt standardmäßig mit Material-Design und Dunkelmodus, was ein großartiges Nutzererlebnis und eine einfache Nutzung ermöglicht. Da die Anwendung keine Internetverbindung besitzt, bietet sie mehr Datenschutz, Sicherheit und Stabilität als andere Anwendungen. Beinhaltet keine Werbung oder unnötige Berechtigungen. Sie ist komplett quelloffen, alle verwendeten Farben sind anpassbar. <b>Entdecke die gesamte Serie an schlichten Anwendungen hier:</b> https://www.simplemobiletools.com <b>Facebook:</b> https://www.facebook.com/simplemobiletools <b>Reddit:</b> https://www.reddit.com/r/SimpleMobileTools </string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
