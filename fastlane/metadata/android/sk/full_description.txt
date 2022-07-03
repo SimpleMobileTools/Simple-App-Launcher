@@ -8,7 +8,7 @@ Táto apka je založená na Material dizajne a má prednastavenú tmavú tému, 
 
 Neobsahuje žiadne reklamy a nepotrebné oprávnenia. Je opensource, poskytuje možnosť zmeny farieb.
 
-<b>Pozrite si celú sadu aplikácií na:</b>
+Pozrite si celú sadu aplikácií na:
 https://www.simplemobiletools.com
 
 Facebook:
