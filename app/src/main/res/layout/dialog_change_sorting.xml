@@ -23,16 +23,12 @@
                 android:id="@+id/sorting_dialog_radio_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin"
                 android:text="@string/title" />
 
             <com.simplemobiletools.commons.views.MyCompatRadioButton
                 android:id="@+id/sorting_dialog_radio_custom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin"
                 android:text="@string/custom" />
 
         </RadioGroup>
@@ -52,17 +48,14 @@
                 android:id="@+id/sorting_dialog_radio_ascending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin"
                 android:text="@string/ascending" />
 
             <com.simplemobiletools.commons.views.MyCompatRadioButton
                 android:id="@+id/sorting_dialog_radio_descending"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/medium_margin"
-                android:paddingBottom="@dimen/medium_margin"
                 android:text="@string/descending" />
+
         </RadioGroup>
     </LinearLayout>
 </ScrollView>
