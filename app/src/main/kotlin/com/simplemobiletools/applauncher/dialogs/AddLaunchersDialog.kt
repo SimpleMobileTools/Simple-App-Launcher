@@ -2,12 +2,12 @@ package com.simplemobiletools.applauncher.dialogs
 
 import android.app.Activity
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.AddLaunchersAdapter
 import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.areSystemAnimationsEnabled
+import com.simplemobiletools.commons.extensions.getAlertDialogBuilder
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import kotlinx.android.synthetic.main.dialog_add_launchers.view.*
 
@@ -21,10 +21,10 @@ class AddLaunchersDialog(
     private var adapter: AddLaunchersAdapter? = null
 
     init {
-        AlertDialog.Builder(activity)
+        activity.getAlertDialogBuilder()
             .setPositiveButton(R.string.ok) { dialogInterface, i -> confirmSelection() }
             .setNegativeButton(R.string.cancel, null)
-            .create().apply {
+            .apply {
                 activity.setupDialogStuff(view, this) {
                     adapter = AddLaunchersAdapter(activity, allLaunchers, shownLaunchers)
                     view.add_launchers_holder.adapter = adapter
