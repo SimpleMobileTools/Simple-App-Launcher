@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Simple App Launcher</string>
-    <string name="app_launcher_name">Працоўны стол</string>
-    <string name="enter_launcher_name">Увядзіце назву працоўнага стала</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="enter_launcher_name">Please enter a launcher name</string>
     <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
     <string name="close_app">Close this app at launching a different one</string>
     <string name="toggle_app_name">Toggle app name visibility</string>
