@@ -1,10 +1,10 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.os.Bundle
-import android.view.Menu
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.extensions.*
+import com.simplemobiletools.commons.helpers.NavigationIcon
 import kotlinx.android.synthetic.main.activity_settings.*
 import java.util.*
 
@@ -17,6 +17,7 @@ class SettingsActivity : SimpleActivity() {
 
     override fun onResume() {
         super.onResume()
+        setupToolbar(settings_toolbar, NavigationIcon.Arrow)
 
         setupPurchaseThankYou()
         setupCustomizeColors()
@@ -31,11 +32,6 @@ class SettingsActivity : SimpleActivity() {
         arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
             it.background.applyColorFilter(getProperBackgroundColor().getContrastColor())
         }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        updateMenuItemColors(menu)
-        return super.onCreateOptionsMenu(menu)
     }
 
     private fun setupPurchaseThankYou() {

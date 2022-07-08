@@ -2,8 +2,6 @@ package com.simplemobiletools.applauncher.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
@@ -36,6 +34,9 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setupOptionsMenu()
+        refreshMenuItems()
+
         appLaunched(BuildConfig.APPLICATION_ID)
         setupEmptyView()
         setupLaunchers()
@@ -50,6 +51,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
+        setupToolbar(main_toolbar)
         if (mStoredTextColor != getProperTextColor()) {
             getGridAdapter()?.updateTextColor(getProperTextColor())
         }
@@ -72,33 +74,49 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         storeStateVariables()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
+    private fun refreshMenuItems() {
         val currentColumnCount = if (portrait) {
             config.portraitColumnCnt
         } else {
             config.landscapeColumnCnt
         }
 
-        menu.apply {
+        main_toolbar.menu.apply {
             findItem(R.id.increase_column_count).isVisible = currentColumnCount < MAX_COLUMN_COUNT
             findItem(R.id.reduce_column_count).isVisible = currentColumnCount > 1
-            updateMenuItemColors(menu)
         }
-        return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.sort -> showSortingDialog()
-            R.id.toggle_app_name -> toggleAppName()
-            R.id.increase_column_count -> increaseColumnCount()
-            R.id.reduce_column_count -> reduceColumnCount()
-            R.id.settings -> launchSettings()
-            R.id.about -> launchAbout()
-            else -> return super.onOptionsItemSelected(item)
+    private fun setupOptionsMenu() {
+        main_toolbar.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.sort -> {
+                    showSortingDialog()
+                    true
+                }
+                R.id.toggle_app_name -> {
+                    toggleAppName()
+                    true
+                }
+                R.id.increase_column_count -> {
+                    increaseColumnCount()
+                    true
+                }
+                R.id.reduce_column_count -> {
+                    reduceColumnCount()
+                    true
+                }
+                R.id.settings -> {
+                    launchSettings()
+                    true
+                }
+                R.id.about -> {
+                    launchAbout()
+                    true
+                }
+                else -> false
+            }
         }
-        return true
     }
 
     private fun launchSettings() {
@@ -199,7 +217,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun columnCountChanged() {
-        invalidateOptionsMenu()
+        refreshMenuItems()
         getGridAdapter()?.apply {
             calculateIconWidth()
             notifyItemRangeChanged(0, launchers.size)
