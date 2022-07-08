@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">مشغل التطبيق البسيط</string>
+    <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">مشغل التطبيق</string>
     <string name="enter_launcher_name">يرجى إدخال اسم المشغل</string>
     <string name="remove_explanation">سيؤدي هذا فقط إلى إزالة أيقونة المشغل من هذه الشبكة، وليس إلغاء تثبيت التطبيق الفعلي.</string>
     <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="toggle_app_name">تبديل رؤية اسم التطبيق</string>
+    <string name="manage_visible_app_icons">إدارة أيقونات التطبيقات المرئية</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
