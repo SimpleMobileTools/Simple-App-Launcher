@@ -23,7 +23,7 @@ Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, ana ekranı
 - Farklı başlatıcıları kolaylıkla arayın.
 - Keyfini çıkarın!
 
-<b>Basit Araçlar paketinin tamamını buradan inceleyin:</b>
+Basit Araçlar paketinin tamamını buradan inceleyin:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -31,3 +31,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

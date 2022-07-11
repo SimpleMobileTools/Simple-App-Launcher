@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Обикновен начален екран</string>
+    <string name="app_name">Обикновен Начален Екран</string>
     <string name="app_launcher_name">Начален екран</string>
     <string name="enter_launcher_name">Въведете име на лаунчера</string>
     <string name="remove_explanation">Ще бъде премахната само иконата на лаунчера, няма да се деинсталира самата програма.</string>
