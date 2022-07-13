@@ -17,7 +17,7 @@ Značajke:
 - Pretraži različite pokretače s lakoćom.
 - Uživaj!
 
-<b>Pogledaj cijeli paket „Jednostavni alati” ovdje:</b>
+Pogledajte cijeli paket Simple Tools ovdje:
 https://www.simplemobiletools.com
 
 Facebook:
@@ -25,3 +25,6 @@ https://www.facebook.com/simplemobiletools
 
 Reddit:
 https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

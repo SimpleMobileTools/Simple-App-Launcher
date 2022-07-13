@@ -1,0 +1,21 @@
+Este no es un launcher real, es solo un contenedor para iniciar rápidamente tus aplicaciones favoritas. Puedes añadirlo fácilmente a cualquier lanzador de aplicaciones, así que nunca tendrás que deslizarte entre aplicaciones inútiles para encontrar la que necesitas otra vez. También puedes renombrar los lanzadores como desees.
+
+Hay una opción para cerrar la misma aplicación cuando se inicie una diferente para facilitar la navegación.
+
+No podemos desinstalar aplicaciones del sistema indeseadas, puedes solo remover su ícono e ignorarlas.
+
+Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a internet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
+
+No contiene publicidad ni permisos innecesarios. Es totalmente de código abierto, proporciona colores personalizables.
+
+Mira la suite completa de herramientas Simples aquí:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

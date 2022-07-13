@@ -1,0 +1,36 @@
+To nie jest prawdziwy program uruchamiający, tylko opakowanie na ulubione ikony aplikacji do szybkiego uruchamiania i zmiany ekranu głównego, aby wyglądał fajniej i przyjemniej. Możesz łatwo dodać dowolny program uruchamiający aplikację na ekranie głównym, dzięki czemu już nigdy nie będziesz musiał przeglądać bezużytecznych aplikacji, aby znaleźć tę, której potrzebujesz. Możesz także zmienić nazwy programów uruchamiających, jak chcesz.
+
+Korzystając z tego programu uruchamiającego, możesz dostosować ekran główny w różnych stylach. Ten program uruchamiający ma również ciemny motyw, aby zapewnić bardziej płynne działanie podczas korzystania z urządzenia.
+
+Istnieje możliwość zamknięcia samej aplikacji podczas uruchamiania innej, co ułatwia nawigację. W ten sposób będziesz mógł zmienić ekran główny i ekran blokady aplikacji w dowolnym momencie bez konieczności zamykania jednego programu uruchamiającego i otwierania nowego.
+
+Nie możemy odinstalować niechcianych aplikacji systemowych, wystarczy usunąć ich ikony i zignorować.
+
+Jest wyposażony w materiałowy wygląd i ciemny motyw domyślnie na ekranie głównym i na wszystkich panelach urządzenia, zapewnia doskonałą obsługę i łatwe użytkowanie. Brak dostępu do Internetu zapewnia większą prywatność, bezpieczeństwo i stabilność niż inne aplikacje. Dzięki temu programowi uruchamiającemu nie musisz łączyć swojego urządzenia z żadną siecią. Wystarczy go zainstalować i zmienić ekran główny zgodnie z własnymi wymaganiami.
+
+Dzięki ciemnemu motywowi możesz cieszyć się nowym wyglądem swojego urządzenia i ekranu głównego, jednocześnie chroniąc oczy migającymi światłami. Ciemny motyw jest popularny od samego początku, więc ten program uruchamiający pamięta o utrzymaniu trendów dzięki nowym, fajnym projektom. Możesz także użyć tego programu uruchamiającego, aby ustawić ekran blokady aplikacji w różnych stylach.
+
+Nie zawiera reklam ani niepotrzebnych uprawnień. Jest w pełni open source, zapewnia konfigurowalne kolory i ciemny motyw, dzięki czemu ekran główny wygląda bardziej oszałamiająco. Dzięki temu programowi uruchamiającemu możesz cieszyć się różnymi nowymi i ulepszonymi ikonami i projektami, które nie są dostępne w żadnym innym programie uruchamiającym aplikacje.
+
+Funkcje:
+
+- Konfigurowalne ikony i przyciski na ekranie głównym.
+- Ciemny motyw zapewniający płynniejsze działanie urządzenia.
+- Łatwa nawigacja w programie uruchamiającym, dzięki czemu możesz wybrać najlepszy dla siebie.
+- Uporządkuj swoje aplikacje do sekcji.
+- Znakomite motywy kolorystyczne.
+- Brak irytujących reklam.
+- Z łatwością przeszukuj różne wyrzutnie.
+- Cieszyć się!
+
+Zobacz pełny zestaw prostych narzędzi tutaj:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

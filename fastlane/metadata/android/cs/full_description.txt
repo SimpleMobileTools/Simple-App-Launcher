@@ -1,5 +1,0 @@
-Jednoduše přidejte jakoukoliv z vašich aplikací a už nikdy nebudete muset listovat mezi ostatními aplikacemi aby jste našli tu pravou. Zástupce aplikací lze přejmenovávat dle libosti. Tento spouštěč aplikací nenahrazuje vaši domovskou obrazovku, je pouze místem pro vaše oblíbené aplikace.
-
-Neobsahuje žádné reklamy, ani nepotřebná oprávnění. Má plně otevřený zdrojový kód a možnost změny barev.
-
-Tato aplikace je jen jednou z většího celku aplikací. Ostatní z nich naleznete na https://www.simplemobiletools.com

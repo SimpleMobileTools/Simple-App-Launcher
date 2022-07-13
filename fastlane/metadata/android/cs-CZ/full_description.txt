@@ -1,0 +1,15 @@
+Jednoduše přidejte jakoukoliv z vašich aplikací a už nikdy nebudete muset listovat mezi ostatními aplikacemi aby jste našli tu pravou. Zástupce aplikací lze přejmenovávat dle libosti. Tento spouštěč aplikací nenahrazuje vaši domovskou obrazovku, je pouze místem pro vaše oblíbené aplikace.
+
+Neobsahuje žádné reklamy, ani nepotřebná oprávnění. Má plně otevřený zdrojový kód a možnost změny barev.
+
+Check out the full suite of Simple Tools here:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

@@ -1,0 +1,21 @@
+Dit is géén volwaardige launcher (met thuisscherm en widgets), maar een overzicht voor je favoriete apps. Je kunt al je belangrijke apps toevoegen aan het overzicht, zodat je nooit meer hoeft te bladeren door de héle appslijst. Je kunt de apps ook een duidelijkere naam geven.
+
+Na het starten van een app vanuit het overzicht kan deze launcher zichzelf indien gewenst weer sluiten.
+
+Sommige ongewenste systeemapps kunnen niet worden gedeïnstalleerd, maar ze kunnen wel gemakkelijker worden genegeerd middels het gebruik van deze launcher.
+
+De app houdt het material design aan met standaard een donker thema. De app vraagt niet om een internetverbinding, dus er zijn sowieso geen privacyzorgen.
+
+Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
+
+Probeer ook eens de andere apps van Simple Tools:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

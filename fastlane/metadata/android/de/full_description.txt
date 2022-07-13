@@ -1,5 +1,0 @@
-Du kannst ganz einfach jede App hinzufügen, so dass du nie wieder durch nutzlose Apps blättern musst, um diejenige zu finden, die du gerade benötigst. Du kannst die App Symbole auch nach Belieben umbenennen. Dies ist kein echter Launcher, der deinen Startbildschirm ersetzt, sondern nur ein Halter für deine Lieblings-Apps.
-
-Enthält keine Werbung oder unnötige Berechtigungen. Ist vollständig Opensource, bietet anpassbare Farben.
-
-Diese App ist nur ein Teil einer größeren Serie von Apps. Den Rest findest du unter https://www.simplemobiletools.com

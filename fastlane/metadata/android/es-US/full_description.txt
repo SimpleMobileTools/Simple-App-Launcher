@@ -1,0 +1,36 @@
+Este no es un launcher real, es solo un contenedor para iniciar rápidamente tus aplicaciones favoritas. Puedes añadirlo fácilmente a cualquier lanzador de aplicaciones, así que nunca tendrás que deslizarte entre aplicaciones inútiles para encontrar la que necesitas otra vez. También puedes renombrar los lanzadores como desees.
+
+Al usar este lanzador, puede personalizar su pantalla de inicio en diferentes estilos. Este lanzador también viene con un tema oscuro para brindarle una sensación más suave mientras usa su dispositivo.
+
+Existe una opción para cerrar la aplicación al iniciar una diferente para facilitar la navegación. De esta manera, podrá cambiar la pantalla de inicio y la pantalla de bloqueo de la aplicación en cualquier momento que desee sin la molestia de cerrar un lanzador y abrir uno nuevo.
+
+No podemos desinstalar aplicaciones del sistema no deseadas, simplemente puede eliminar sus iconos e ignorarlos.
+
+Viene con diseño de material y tema oscuro de forma predeterminada en la pantalla de inicio y en todos los paneles de su dispositivo, brinda una excelente experiencia de usuario para un uso fácil. La falta de acceso a Internet le brinda más privacidad, seguridad y estabilidad que otras aplicaciones. Con este lanzador, no tiene que conectar su dispositivo a ninguna red. Simplemente instálelo y cambie su pantalla de inicio según sus requisitos.
+
+Con el tema oscuro, puede disfrutar del nuevo aspecto de su dispositivo y pantalla de inicio mientras protege sus ojos con luces intermitentes. El tema oscuro ha sido popular desde su llegada, por lo que este lanzador ha tenido en cuenta mantener las tendencias con nuevos diseños geniales. También puede utilizar este lanzador para configurar la pantalla de bloqueo de su aplicación con varios estilos.
+
+No contiene anuncios ni permisos innecesarios. Es completamente de código abierto, proporciona colores personalizables y un tema oscuro para que su pantalla de inicio se vea más impresionante. Con este lanzador, puede disfrutar de diferentes iconos y diseños nuevos y mejorados que no están disponibles en ningún otro lanzador de aplicaciones.
+
+caracteristicas:
+
+- Iconos y botones personalizables de la pantalla de inicio.
+- Tema oscuro para darle una sensación más suave de su dispositivo.
+- Fácil navegación a través del lanzador para que pueda elegir el mejor para usted.
+- Organiza tus aplicaciones en secciones.
+- Temas de colores exquisitos.
+- Sin anuncios molestos.
+- Busque diferentes lanzadores con facilidad.
+- ¡Disfruta!
+
+Consulte el conjunto completo de herramientas simples aquí:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

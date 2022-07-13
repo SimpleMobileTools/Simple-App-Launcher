@@ -1,0 +1,1 @@
+Simple holder for quick access to favourite apps, easy icon management
