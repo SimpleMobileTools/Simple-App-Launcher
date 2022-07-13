@@ -16,7 +16,6 @@ Cechy:
 
 - Konfigurowalne ikony i przyciski na ekranie głównym.
 - Ciemny motyw, aby zapewnić płynniejsze działanie urządzenia.
-- Łatwa nawigacja w launcherze, dzięki czemu możesz wybrać najlepszy dla siebie.
 - Uporządkuj swoje aplikacje w sekcje.
 - Wykwintne motywy kolorystyczne.
 - Brak irytujących reklam.
