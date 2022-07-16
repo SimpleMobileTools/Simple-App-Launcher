@@ -1,1 +1,1 @@
-Prosty uruchamiający aplikacje
+Prosty launcher aplikacji
