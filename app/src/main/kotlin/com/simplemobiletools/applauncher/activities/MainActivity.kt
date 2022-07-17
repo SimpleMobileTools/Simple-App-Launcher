@@ -34,10 +34,10 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
 
-        appLaunched(BuildConfig.APPLICATION_ID)
         setupEmptyView()
         setupLaunchers()
         checkWhatsNewDialog()
@@ -90,32 +90,15 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun setupOptionsMenu() {
         main_toolbar.setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
-                R.id.sort -> {
-                    showSortingDialog()
-                    true
-                }
-                R.id.toggle_app_name -> {
-                    toggleAppName()
-                    true
-                }
-                R.id.increase_column_count -> {
-                    increaseColumnCount()
-                    true
-                }
-                R.id.reduce_column_count -> {
-                    reduceColumnCount()
-                    true
-                }
-                R.id.settings -> {
-                    launchSettings()
-                    true
-                }
-                R.id.about -> {
-                    launchAbout()
-                    true
-                }
-                else -> false
+                R.id.sort -> showSortingDialog()
+                R.id.toggle_app_name -> toggleAppName()
+                R.id.increase_column_count -> increaseColumnCount()
+                R.id.reduce_column_count -> reduceColumnCount()
+                R.id.settings -> launchSettings()
+                R.id.about -> launchAbout()
+                else -> return@setOnMenuItemClickListener false
             }
+            return@setOnMenuItemClickListener true
         }
     }
 
