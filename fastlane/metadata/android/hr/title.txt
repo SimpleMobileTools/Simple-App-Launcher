@@ -1,1 +1,1 @@
-Jednostavan pokretač apieka
+Jednostavan pokretač aplikacija
