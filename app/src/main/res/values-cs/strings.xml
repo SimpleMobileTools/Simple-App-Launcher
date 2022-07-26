@@ -3,10 +3,10 @@
     <string name="app_name">Jednoduchý spouštěč aplikací</string>
     <string name="app_launcher_name">Spouštěč aplikací</string>
     <string name="enter_launcher_name">Prosím, zadejte název spouštěče</string>
-    <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
+    <string name="remove_explanation">Tímto pouze odeberete ikonu aplikace z mřížky, aplikace samotná zůstane nainstalována.</string>
     <string name="close_app">Zavřít tuto aplikaci při spuštění jiné</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="toggle_app_name">Přepnout viditelnost jména aplikace</string>
+    <string name="manage_visible_app_icons">Spravovat viditelné ikony aplikací</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
