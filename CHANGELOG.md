@@ -1,6 +1,12 @@
 Changelog
 ==========
 
+Version 5.9.4 *(2022-08-02)*
+----------------------------
+
+ * Hide FAB at scrolling the icons
+ * Added some translation and UX improvements
+
 Version 5.9.3 *(2022-07-17)*
 ----------------------------
 
