@@ -1,14 +1,25 @@
-Este no es un launcher real, es solo un contenedor para iniciar rápidamente tus aplicaciones favoritas. Puedes añadirlo fácilmente a cualquier lanzador de aplicaciones, así que nunca tendrás que deslizarte entre aplicaciones inútiles para encontrar la que necesitas otra vez. También puedes renombrar los lanzadores como desees.
+Un bonito envoltorio para los iconos de tus aplicaciones favoritas para un lanzamiento rápido. Puedes añadir fácilmente cualquier lanzador de aplicaciones, así que no tendrás que volver a pasar por aplicaciones inútiles para encontrar la que necesitas. También puedes renombrar los lanzadores como quieras.
 
-Hay una opción para cerrar la misma aplicación cuando se inicie una diferente para facilitar la navegación.
+Puedes personalizar los colores en diferentes estilos. Este lanzador también viene con un tema oscuro para darte una sensación más suave mientras usas tu dispositivo.
 
-No podemos desinstalar aplicaciones del sistema indeseadas, puedes solo remover su ícono e ignorarlas.
+Hay una opción para cerrar la propia aplicación al lanzar otra diferente para facilitar la navegación.
 
-Incluye diseño material y tema obscuro por defecto, provee una gran experiencia de usuario para facilitar el uso. La falta del permiso de acceso a internet te da más privacidad, seguridad y estabilidad que otras aplicaciones.
+No podemos desinstalar las aplicaciones del sistema no deseadas, sólo puedes eliminar sus iconos e ignorarlas.
 
-No contiene publicidad ni permisos innecesarios. Es totalmente de código abierto, proporciona colores personalizables.
+Viene con material design y tema oscuro por defecto, proporciona una gran experiencia de usuario para facilitar el uso. La falta de acceso a Internet le da más privacidad, seguridad y estabilidad que otras aplicaciones. Con este lanzador, no tienes que conectar tu dispositivo con ninguna red. Simplemente instálalo y úsalo.
 
-Mira la suite completa de herramientas Simples aquí:
+No contiene anuncios ni permisos innecesarios. Es totalmente opensource, ofrece colores personalizables y un tema oscuro para que tu pantalla de inicio tenga un aspecto más impresionante. Con este lanzador, puedes disfrutar de diferentes iconos y diseños nuevos y mejorados que no están disponibles en ningún otro lanzador de aplicaciones. 
+
+Características:
+
+- Tema oscuro para darle una sensación más suave a su dispositivo.
+- Fácil navegación por el lanzador para que puedas elegir la mejor para ti.
+- Organiza tus aplicaciones por secciones.
+- Exquisitos temas de color.
+- Sin molestos anuncios.
+- Disfruta.
+
+Echa un vistazo a la suite completa de Simple Tools aquí:
 https://www.simplemobiletools.com
 
 Facebook:
