@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Eenvoudige App Launcher</string>
-    <string name="app_launcher_name">App Launcher</string>
-    <string name="enter_launcher_name">Voer een naam voor de snelkoppeling in</string>
+    <string name="app_name">Eenvoudige app-startprogramma</string>
+    <string name="app_launcher_name">App-startprogramma</string>
+    <string name="enter_launcher_name">Voer een naam van het opstartprogramma in</string>
     <string name="remove_explanation">Hiermee wordt alleen het icoon uit dit overzicht verwijderd, de app zelf blijft geïnstalleerd.</string>
     <string name="close_app">Deze app sluiten bij het starten van een andere app</string>
     <string name="toggle_app_name">Namen van apps tonen/verbergen</string>
-    <string name="manage_visible_app_icons">Zichtbare iconen beheren</string>
+    <string name="manage_visible_app_icons">Zichtbare app-pictogrammen beheren</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
