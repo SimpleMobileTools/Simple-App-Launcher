@@ -1,25 +1,25 @@
-A nice wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won't ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+En fin wrapper for favorittappikonene dine for rask lansering. Du kan enkelt legge til hvilken som helst startprogrammet for apper, slik at du aldri mer trenger å sveipe gjennom ubrukelige apper for å finne den du trenger. Du kan også gi nytt navn til bæreraketter som du ønsker.
 
-You can customize the colors in different styles. This launcher also comes with dark theme to give you a more smooth feel while using your device.
+Du kan tilpasse fargene i forskjellige stiler. Denne lanseringen kommer også med mørkt tema for å gi deg en mer jevn følelse mens du bruker enheten.
 
-There is an option to close the app itself at launching a different one for easy navigation.
+Det er et alternativ å lukke selve appen ved å starte en annen for enkel navigering.
 
-We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+Vi kan ikke avinstallere uønskede systemapper, du kan bare fjerne ikonene deres og ignorere dem.
 
-It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. With this launcher, you don't have to connect your device with any network. Simply install it and use it.
+Den kommer med materialdesign og mørkt tema som standard, gir god brukeropplevelse for enkel bruk. Mangelen på internett-tilgang gir deg mer personvern, sikkerhet og stabilitet enn andre apper. Med denne startprogrammet trenger du ikke å koble enheten din til noe nettverk. Bare installer den og bruk den.
 
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors and dark theme to make your home screen look more stunning. With this launcher, you can enjoy different new and improved icons and designs that are not available in any other app launcher. 
+Inneholder ingen annonser eller unødvendige tillatelser. Den er helt åpen kildekode og gir tilpassbare farger og et mørkt tema for å få startskjermen til å se mer fantastisk ut. Med denne startprogrammet kan du glede deg over forskjellige nye og forbedrede ikoner og design som ikke er tilgjengelige i noen annen startprogrammet for apper. 
 
-Features:
+Funksjoner:
 
-- Dark theme to give you a more smoother feel of your device.
-- Easy navigation through the launcher so you can choose the best one for yourself.
-- Organize your apps to sections.
-- Exquisite color themes.
-- No annoying advertisements.
-- Enjoy!
+- Mørkt tema for å gi deg en jevnere følelse av enheten din.
+- Enkel navigering gjennom startprogrammet slik at du kan velge den beste for deg selv.
+- Organiser appene dine i seksjoner.
+- Utsøkte fargetemaer.
+- Ingen irriterende reklame.
+- God fornøyelse!
 
-Check out the full suite of Simple Tools here:
+Sjekk ut hele pakken med enkle verktøy her:
 https://www.simplemobiletools.com
 
 Facebook:

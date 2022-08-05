@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vienkāršs lietotņu palaidējs</string>
+    <string name="app_launcher_name">Lietotņu palaidējs</string>
+    <string name="enter_launcher_name">Lūdzu, ievadiet palaišanas programmas nosaukumu</string>
+    <string name="remove_explanation">Tas tikai noņems palaišanas ikonu no šī režģa, nevis atinstalēs lietotni.</string>
+    <string name="close_app">Aizveriet šo lietotni, palaižot citu</string>
+    <string name="toggle_app_name">Pārslēgt lietotnes nosaukuma redzamību</string>
+    <string name="manage_visible_app_icons">Pārvaldiet redzamās lietotņu ikonas</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>

@@ -1,10 +1,23 @@
-Det här är ingen riktig starter, utan bara en omslagsform för dina favoritappikoner för snabbstart. Du kan enkelt lägga till vilken appstart som helst, så att du aldrig mer behöver svepa genom värdelösa appar för att hitta den du behöver. Du kan också byta namn på starten som du vill.
+En snygg omslagsform för dina favoritappikoner så att du snabbt kan starta dem. Du kan enkelt lägga till vilken appstartare som helst, så att du aldrig mer behöver svepa genom onödiga appar för att hitta den du behöver. Du kan också byta namn på lanseringarna som du vill.
 
-Det finns ett alternativ för att stänga själva appen när du startar en annan app för enkel navigering. Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner och ignorera dem. Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning.
+Du kan anpassa färgerna i olika stilar. Den här lanseringen har även ett mörkt tema för att ge dig en smidigare känsla när du använder din enhet.
 
-Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar.
+Det finns ett alternativ för att stänga själva appen när du startar en annan app för enkel navigering.
 
-Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger.
+Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner och ignorera dem.
+
+Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar. Med den här lanseringen behöver du inte ansluta din enhet till något nätverk. Det är bara att installera den och använda den.
+
+Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger och mörkt tema för att få din startskärm att se mer fantastisk ut. Med den här lanseringen kan du njuta av olika nya och förbättrade ikoner och mönster som inte finns i någon annan appstartare. 
+
+Funktioner:
+
+- Mörkt tema för att ge dig en mjukare känsla av din enhet.
+- Enkel navigering genom lanseringen så att du kan välja den bästa för dig själv.
+- Organisera dina appar i sektioner.
+- Utsökta färgteman.
+- Inga irriterande annonser.
+- Njut!
 
 Kolla in hela sviten av Simple Tools här:
 https://www.simplemobiletools.com
