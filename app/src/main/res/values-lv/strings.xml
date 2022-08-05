@@ -7,4 +7,8 @@
     <string name="close_app">Aizveriet šo lietotni, palaižot citu</string>
     <string name="toggle_app_name">Pārslēgt lietotnes nosaukuma redzamību</string>
     <string name="manage_visible_app_icons">Pārvaldiet redzamās lietotņu ikonas</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
