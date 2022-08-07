@@ -1,14 +1,23 @@
-Dit is géén volwaardige launcher (met thuisscherm en widgets), maar een overzicht voor je favoriete apps. Je kunt al je belangrijke apps toevoegen aan het overzicht, zodat je nooit meer hoeft te bladeren door de héle appslijst. Je kunt de apps ook een duidelijkere naam geven.
+Een mooi omhulsel voor uw favoriete app-pictogrammen om snel te kunnen starten. U kunt gemakkelijk een willekeurige launcher toevoegen, zodat u nooit meer door nutteloze apps hoeft te bladeren om de app te vinden die u nodig hebt. U kunt ook de naam van de draagraketten wijzigen zoals u wilt.
 
-Na het starten van een app vanuit het overzicht kan deze launcher zichzelf indien gewenst weer sluiten.
+U kunt de kleuren in verschillende stijlen aanpassen. Deze launcher wordt ook geleverd met een donker thema om u een gladder gevoel te geven tijdens het gebruik van uw toestel.
 
-Sommige ongewenste systeemapps kunnen niet worden gedeïnstalleerd, maar ze kunnen wel gemakkelijker worden genegeerd middels het gebruik van deze launcher.
+Er is een optie om de app zelf te sluiten bij het starten van een andere app voor eenvoudige navigatie.
 
-De app houdt het material design aan met standaard een donker thema. De app vraagt niet om een internetverbinding, dus er zijn sowieso geen privacyzorgen.
+We kunnen ongewenste systeemapps niet verwijderen, je kunt alleen hun pictogrammen verwijderen en ze negeren.
 
-Bevat geen advertenties of onnodige machtigingen. Volledig open-source. Kleuren van de app kunnen worden aangepast.
+Het wordt standaard geleverd met materiaalontwerp en een donker thema, dat een geweldige gebruikerservaring biedt voor eenvoudig gebruik. Het ontbreken van internettoegang geeft je meer privacy, veiligheid en stabiliteit dan andere apps. Met deze launcher hoeft u uw apparaat niet te verbinden met een netwerk. Installeer het gewoon en gebruik het.
 
-Probeer ook eens de andere apps van Simple Tools:
+Functies:
+
+- Donker thema om je een meer vloeiend gevoel van je toestel te geven.
+- Eenvoudige navigatie door de launcher, zodat u de beste voor uzelf kunt kiezen.
+- Organiseer uw apps in secties.
+- Prachtige kleurenthema's.
+- Geen vervelende advertenties.
+- Veel plezier
+
+Bekijk de volledige suite van Simple Tools hier:
 https://www.simplemobiletools.com
 
 Facebook:
