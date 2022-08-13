@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Простой запуск приложений</string>
-    <string name="app_launcher_name">Средство запуска приложений</string>
-    <string name="enter_launcher_name">Пожалуйста, введите имя пусковой установки</string>
-    <string name="remove_explanation">Это просто удалит значок программы запуска из этой сетки, а не удалит само приложение.</string>
+    <string name="app_launcher_name">Лаунчер</string>
+    <string name="enter_launcher_name">Введите название лаунчера</string>
+    <string name="remove_explanation">Будет удалена только иконка лаунчера, но не само приложение.</string>
     <string name="close_app">Закрыть это приложение при запуске другого</string>
     <string name="toggle_app_name">Переключить показ названия приложения</string>
     <string name="manage_visible_app_icons">Управление отображаемыми значками приложений</string>
