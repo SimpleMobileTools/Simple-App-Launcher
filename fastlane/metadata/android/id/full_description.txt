@@ -1,26 +1,21 @@
-Ini bukan peluncur sungguhan, hanya pembungkus ikon aplikasi favorit Anda untuk peluncuran cepat dan mengubah layar beranda agar terlihat lebih keren dan menyenangkan. Anda dapat dengan mudah menambahkan peluncur aplikasi apa pun di layar beranda, sehingga Anda tidak perlu lagi menggesek aplikasi yang tidak berguna untuk menemukan yang Anda butuhkan. Anda juga dapat mengganti nama peluncur sesuai keinginan.
+Pembungkus yang bagus untuk ikon aplikasi favorit Anda untuk peluncuran cepat. Anda dapat dengan mudah menambahkan peluncur aplikasi apa pun, sehingga Anda tidak perlu lagi menggesek aplikasi yang tidak berguna untuk menemukan yang Anda butuhkan. Anda juga dapat mengganti nama peluncur sesuai keinginan.
 
-Dengan menggunakan peluncur ini, Anda dapat menyesuaikan layar beranda dengan gaya yang berbeda. Peluncur ini juga hadir dengan tema gelap untuk memberi Anda perasaan yang lebih halus saat menggunakan perangkat Anda.
+Anda dapat menyesuaikan warna dalam gaya yang berbeda. Peluncur ini juga dilengkapi dengan tema gelap untuk memberi Anda nuansa yang lebih halus saat menggunakan perangkat Anda.
 
-Ada opsi untuk menutup aplikasi itu sendiri saat meluncurkan yang berbeda untuk navigasi yang mudah. Dengan cara ini, Anda dapat mengubah layar beranda dan layar kunci aplikasi kapan pun Anda mau tanpa perlu menutup satu peluncur dan membuka yang baru.
+Ada opsi untuk menutup aplikasi itu sendiri saat meluncurkan yang berbeda untuk navigasi yang mudah.
 
-Kami tidak dapat menghapus aplikasi sistem yang tidak diinginkan, Anda dapat menghapus ikonnya dan mengabaikannya.
+Kami tidak dapat menghapus aplikasi sistem yang tidak diinginkan, Anda cukup menghapus ikonnya dan mengabaikannya.
 
-Muncul dengan desain material dan tema gelap secara default di layar beranda dan di semua panel perangkat Anda, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Dengan peluncur ini, Anda tidak perlu menghubungkan perangkat Anda dengan jaringan apa pun. Cukup instal dan ubah layar beranda Anda sesuai dengan kebutuhan Anda.
-
-Dengan tema gelap, Anda dapat menikmati tampilan baru perangkat dan layar beranda Anda sekaligus melindungi mata Anda dengan lampu berkedip. Tema gelap telah populer sejak kedatangannya sehingga peluncur ini selalu mempertimbangkan tren dengan desain baru yang keren. Anda juga dapat menggunakan peluncur ini untuk mengatur layar kunci aplikasi Anda dengan berbagai gaya.
+Muncul dengan desain material dan tema gelap secara default, memberikan pengalaman pengguna yang luar biasa untuk penggunaan yang mudah. Kurangnya akses internet memberi Anda lebih banyak privasi, keamanan, dan stabilitas daripada aplikasi lain. Dengan peluncur ini, Anda tidak perlu menghubungkan perangkat Anda ke jaringan apa pun. Cukup instal dan gunakan.
 
 Tidak mengandung iklan atau izin yang tidak perlu. Ini sepenuhnya open source, memberikan warna yang dapat disesuaikan dan tema gelap untuk membuat layar beranda Anda terlihat lebih menakjubkan. Dengan peluncur ini, Anda dapat menikmati berbagai ikon dan desain baru dan lebih baik yang tidak tersedia di peluncur aplikasi lain.
 
 Fitur:
-
 - Ikon dan tombol layar beranda yang dapat disesuaikan.
-- Tema gelap untuk memberi Anda nuansa perangkat yang lebih mulus.
 - Navigasi yang mudah melalui peluncur sehingga Anda dapat memilih yang terbaik untuk diri Anda sendiri.
 - Atur aplikasi Anda menjadi beberapa bagian.
 - Tema warna yang indah.
 - Tidak ada iklan yang mengganggu.
-- Cari peluncur yang berbeda dengan mudah.
 - Nikmati!
 
 Lihat rangkaian lengkap Alat Sederhana di sini:
