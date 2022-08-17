@@ -1,11 +1,25 @@
-Dette er ikke en rigtig launcher, bare en wrapper til dine yndlings app ikoner til hurtig lancering. Du kan nemt tilføje enhver appstarter, så du aldrig igen behøver at stryge gennem ubrugelige apps for at finde den, du har brug for. 
+En flot indpakning til dine yndlingsapp-ikoner, så du hurtigt kan starte dem. Du kan nemt tilføje en hvilken som helst app-lancer, så du aldrig mere behøver at stryge gennem ubrugelige apps for at finde den app, du har brug for. Du kan også omdøbe lancering programmerne efter eget ønske.
 
-Du kan også omdøbe løfterake, som du ønsker. Der er mulighed for at lukke selve appen ved at starte en anden for nem navigation. Vi kan ikke afinstallere uønskede systemapps, du kan bare fjerne deres ikoner og ignorere dem. Det leveres med materialedesign og mørkt tema som standard giver stor brugeroplevelse for nem brug. 
+Du kan tilpasse farverne i forskellige stilarter. Denne launcher leveres også med et mørkt tema for at give dig en mere jævn fornemmelse, når du bruger din enhed.
 
-Manglen på internetadgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps. Indeholder ingen annoncer eller unødvendige tilladelser. Det er fuldt opensource, giver tilpassede farver. 
+Der er mulighed for at lukke selve appen ved at starte en anden for at lette navigationen.
 
-Se hele pakken med Simple Tools her:
-https://www.simplemobiletools.com 
+Vi kan ikke afinstallere uønskede systemapps, du kan bare fjerne deres ikoner og ignorere dem.
+
+Den leveres med material design og et mørkt tema som standard, hvilket giver en god brugeroplevelse til nem brug. Den manglende internet adgang giver dig mere privatliv, sikkerhed og stabilitet end andre apps. Med denne launcher behøver du ikke at tilslutte din enhed til noget netværk. Du skal blot installere den og bruge den.
+
+Indeholder ingen reklamer eller unødvendige tilladelser. Den er fuldt ud open source og giver mulighed for at tilpasse farver og et mørkt tema, så din startskærm ser mere fantastisk ud. Med denne launcher kan du nyde forskellige nye og forbedrede ikoner og designs, som ikke er tilgængelige i andre app-lancere. 
+
+Funktioner:
+- Mørkt tema for at give dig en glattere fornemmelse af din enhed.
+- Nem navigation gennem launcheren, så du kan vælge den bedste for dig selv.
+- Organiser dine apps i sektioner.
+- Udsøgte farvetemaer.
+- Ingen irriterende reklamer.
+- God fornøjelse!
+
+Se hele pakken af Simple Tools her:
+https://www.simplemobiletools.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools
