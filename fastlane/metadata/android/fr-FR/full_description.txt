@@ -8,7 +8,7 @@ Nous ne pouvons pas désinstaller les applications système indésirables, vous 
 
 Il est livré avec la conception du matériel et un thème sombre par défaut, offrant une grande expérience utilisateur pour une utilisation facile. Le manque d’accès à Internet vous donne plus de confidentialité, de sécurité et de stabilité que d’autres applications. Avec ce lanceur, vous n’avez pas besoin de connecter votre appareil à un réseau. Installez-le simplement et utilisez-le.
 
-Ne contient pas d’annonces ou d’autorisations inutiles. Il est entièrement open-source et fournit des couleurs personnalisables et un thème sombre pour rendre votre écran d’accueil plus magnifique. Avec ce lanceur, vous pouvez profiter de différentes icônes et conceptions nouvelles et améliorées qui ne sont pas disponibles dans tout autre lanceur d’application. 
+Ne contient pas d’annonces ou d’autorisations inutiles. Il est entièrement open-source et fournit des couleurs personnalisables et un thème sombre pour rendre votre écran d’accueil plus magnifique. Avec ce lanceur, vous pouvez profiter de différentes icônes et conceptions nouvelles et améliorées qui ne sont pas disponibles dans tout autre lanceur d’application.
 
 Caractéristiques:
 - Thème sombre pour vous donner une sensation plus douce de votre appareil.
