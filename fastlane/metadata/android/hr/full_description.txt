@@ -10,7 +10,7 @@ Prema zadanim postavkama dolazi s dizajnom materijala i tamnom temom, pruža izv
 
 Ne sadrži oglase ili nepotrebna dopuštenja. U potpunosti je otvoren, pruža prilagodljive boje i tamnu temu kako bi vaš početni zaslon izgledao zapanjujuće. Pomoću ovog pokretača možete uživati u različitim novim i poboljšanim ikonama i dizajnima koji nisu dostupni ni u jednom drugom pokretaču aplikacija. 
 
-Značajkama:
+Značajke:
 
 - Tamna tema koja će vam pružiti lakši osjećaj vašeg uređaja.
 - Jednostavna navigacija kroz lanser tako da možete odabrati najbolji za sebe.
