@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple App Launcher</string>
-    <string name="app_launcher_name">App Launcher</string>
-    <string name="enter_launcher_name">Please enter a launcher name</string>
-    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
-    <string name="close_app">Close this app at launching a different one</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="app_name">Једноставни покрениер апликација</string>
+    <string name="app_launcher_name">Покретање апликације</string>
+    <string name="enter_launcher_name">Унесите име лансера</string>
+    <string name="remove_explanation">Ово ће само уклонити икону лансера из ове координатне мреже, а не деинсталирати стварну апликацију.</string>
+    <string name="close_app">Затвори ову апликацију при покретању друге апликације</string>
+    <string name="toggle_app_name">Искључи видљивост имена апликације</string>
+    <string name="manage_visible_app_icons">Управљање видљивим иконама апликација</string>
 </resources>
