@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">सरल अनुप्रयोग लांचर</string>
+    <string name="app_launcher_name">एप्लिकेशन लॉन्चर</string>
+    <string name="enter_launcher_name">कृपया कोई लॉन्चर नाम दर्ज करें</string>
+    <string name="remove_explanation">यह सिर्फ इस ग्रिड से लॉन्चर आइकन को हटा देगा, वास्तविक ऐप की स्थापना रद्द नहीं करेगा।</string>
+    <string name="close_app">एक अलग लॉन्च करने पर इस एप्लिकेशन को बंद करें</string>
+    <string name="toggle_app_name">ऐप्लिकेशन नाम दृश्यता टॉगल करें</string>
+    <string name="manage_visible_app_icons">दृश्यमान ऐप्लिकेशन चिह्न प्रबंधित करें</string>
+</resources>

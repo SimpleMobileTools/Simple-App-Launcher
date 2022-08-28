@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">간단한 앱 실행기</string>
+    <string name="app_launcher_name">앱 실행기</string>
+    <string name="enter_launcher_name">런처 이름을 입력하십시오.</string>
+    <string name="remove_explanation">이렇게하면 실제 앱이 제거되지 않고이 그리드에서 런처 아이콘이 제거됩니다.</string>
+    <string name="close_app">다른 앱을 시작할 때이 앱을 닫습니다.</string>
+    <string name="toggle_app_name">앱 이름 표시 여부 전환</string>
+    <string name="manage_visible_app_icons">표시되는 앱 아이콘 관리</string>
+</resources>

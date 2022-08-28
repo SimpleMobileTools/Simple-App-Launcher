@@ -1,0 +1,34 @@
+Isang maayos na wrapper para sa mga paborito mong app icon para sa mabilisang pag-launch. Madali kang makakapagdagdag ng kahit anong app launcher, kaya naman hindi mo na kailangan pang mag-swipe sa samu't saring mga app para makita ang hinahanap mo. Pwede mo ring baguhin ang pangalan ng mga launcher kung gusto mo.
+
+Mako-customize mo ang mga kulay sa iba't-ibang estilo. Meron ding madilim na tema ang launcher na ito para bigyan ka ng isang mas preskong pakiramdam habang ginagamit mo ang device mo.
+
+Meron ding option para isara ang app mismo kapag nag-launch ka ng iba para sa mabilisang navigation.
+
+Hindi naman kayang magbura ng mga di mo gustong system app, pero matatanggal mo naman ang mga icon nila at balewalain sila.
+
+Meron itong material design at madilim na tema by default, na nagbibigay ng isang mahusay na karanasan para sa mas madaling paggamit. Wala itong internet access, kaya naman makakasiguro sa pagkapribado mo, seguridad, at stability kumpara sa ibang mga app. Gamit ang launcher na ito, hindi mo na kailangan pang kumonekta sa kahit anong network. I-install mo lang ito at gamitin. Ganong kasimple.
+
+Wala itong ad o hindi kailangang permiso. Open source ito, nagbibigay ng kakayahan na ma-customize ang mga kulay, gayundin ang isang madilim na tema para gawing mas elegante pa ang home screen mo. Gamit ang launcher na ito, mag-eenjoy ka sa iba't-ibang bago at pinahusay na icon at disenyo na hindi available sa ibang app launcher.
+
+Itinatampok:
+
+- Madilim na tema na magbibigay sa'yo ng kaginhawaan sa device mo.
+- Madaling navigation sa launcher para mapili mo ang pinakabagay para sa'yo.
+- Igrupo ang mga app mo.
+- Natatanging mga tema ng kulay.
+- Walang nakakairitang ad.
+- Mag-enjoy!
+
+
+Tingnan ang kabuuan ng mga Simpleng Tools:
+https://www.simplemobiletools.com
+
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools

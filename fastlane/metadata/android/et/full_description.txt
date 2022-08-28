@@ -1,25 +1,25 @@
-A nice wrapper for your favorite app icons for quick launching. You can easily add any app launcher, so you won't ever again have to swipe through useless apps to find the one you need. You can also rename the launchers as you wish.
+Kena ümbris teie lemmikrakenduste ikoonidele kiireks käivitamiseks. Saate hõlpsasti lisada ükskõik millise rakenduse käivitaja, nii et te ei pea enam kunagi kasutute rakenduste vahel libistama, et leida vajalikku rakendust. Samuti saate käivitajad soovi korral ümber nimetada.
 
-You can customize the colors in different styles. This launcher also comes with dark theme to give you a more smooth feel while using your device.
+Saate kohandada värve erinevates stiilides. See käivitaja on varustatud ka tumeda teemaga, et anda teile seadme kasutamisel sujuvam tunne.
 
-There is an option to close the app itself at launching a different one for easy navigation.
+On võimalus sulgeda rakendus ise käivitamisel teise rakenduse lihtsaks navigeerimiseks.
 
-We can not uninstall unwanted system apps, you can just remove their icons and ignore them.
+Me ei saa eemaldada soovimatuid süsteemirakendusi, saate lihtsalt eemaldada nende ikoonid ja ignoreerida neid.
 
-It comes with material design and dark theme by default, provides great user experience for easy usage. The lack of internet access gives you more privacy, security and stability than other apps. With this launcher, you don't have to connect your device with any network. Simply install it and use it.
+See on vaikimisi varustatud materiaalse disaini ja tumeda teemaga, mis pakub suurepärast kasutajakogemust lihtsaks kasutamiseks. Interneti-ühenduse puudumine annab teile rohkem privaatsust, turvalisust ja stabiilsust kui teised rakendused. Selle käivitaja abil ei pea te oma seadet ühegi võrguga ühendama. Lihtsalt installige see ja kasutage seda.
 
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors and dark theme to make your home screen look more stunning. With this launcher, you can enjoy different new and improved icons and designs that are not available in any other app launcher. 
+Ei sisalda reklaame ega ebavajalikke lubasid. See on täielikult avatud lähtekoodiga ja pakub kohandatavaid värve ja tumedat teemat, et muuta teie koduekraan uimastavamaks. Selle käivitaja abil saate nautida erinevaid uusi ja täiustatud ikoone ja kujundusi, mis ei ole saadaval üheski teises rakenduste käivitaja rakenduses. 
 
-Features:
+Omadused:
 
-- Dark theme to give you a more smoother feel of your device.
-- Easy navigation through the launcher so you can choose the best one for yourself.
-- Organize your apps to sections.
-- Exquisite color themes.
-- No annoying advertisements.
-- Enjoy!
+- Tume teema, et anda teile sujuvam tunne oma seadme.
+- Lihtne navigeerimine läbi launcheri, et saaksite valida endale sobivaima.
+- Korraldage oma rakendused jaotustesse.
+- Peenike värviteemad.
+- Ei mingeid tüütuid reklaame.
+- Naudi!
 
-Check out the full suite of Simple Tools here:
+Tutvu kogu Simple Tools'i paketiga siin:
 https://www.simplemobiletools.com
 
 Facebook:

@@ -1,4 +1,4 @@
-Ovo nije pravi pokretač, već je samo mjesto za ikone tvojih omiljenih aplikacija za brzo pokretanje. Možeš jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećeš morati listati kroz beskorisne aplikacije za pronalaženje aplikacije koju želiš. Također možeš preimenovati pokretače po želji.
+Lijep omot za vaše omiljene ikone aplikacija za brzo pokretanje. Možete jednostavno dodati bilo koji pokretač aplikacija, tako da više nikada nećete morati prelaziti prstom kroz beskorisne aplikacije da biste pronašli onu koja vam je potrebna. Lansere možete preimenovati i po želji.
 
 Boje možete prilagoditi u različitim stilovima. Ovaj bacač također dolazi s mračnom temom kako bi vam pružio glatkiji osjećaj tijekom korištenja vašeg uređaja.
 
@@ -6,20 +6,18 @@ Postoji mogućnost da se aplikacija zatvori pri pokretanju drugačije za jednost
 
 Ne možemo deinstalirati neželjene aplikacije sustava, možeš samo ukloniti njihove ikone i zanemariti ih.
 
-Aplikacija je izrađena u material-dizajnu i standardno koristi tamnu temu, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu pruža bolju privatnost, sigurnost i stabilnost od drugih aplikacija. Ne sadrži oglase niti nepotrebne dozvole. Potpuno je otvorenog koda, pruža prilagodljive boje.
+Prema zadanim postavkama dolazi s dizajnom materijala i tamnom temom, pruža izvrsno korisničko iskustvo za jednostavnu upotrebu. Nedostatak pristupa internetu daje vam više privatnosti, sigurnosti i stabilnosti od ostalih aplikacija. Pomoću ovog pokretača ne morate povezivati uređaj ni s jednom mrežom. Jednostavno ga instalirajte i upotrijebite.
 
-Ne sadrži oglase ili nepotrebne dozvole. Potpuno je open-source i pruža prilagođene boje i tamnu temu kako bi vaš početni ekran izgledao zapanjujuće. Pomoću ovog bacača možete uživati u različitim novim i poboljšanim ikonama i dizajnom koji nisu dostupni ni u jednom drugom bacaču aplikacija. 
+Ne sadrži oglase ili nepotrebna dopuštenja. U potpunosti je otvoren, pruža prilagodljive boje i tamnu temu kako bi vaš početni zaslon izgledao zapanjujuće. Pomoću ovog pokretača možete uživati u različitim novim i poboljšanim ikonama i dizajnima koji nisu dostupni ni u jednom drugom pokretaču aplikacija. 
 
 Značajke:
 
-- Prilagodljive ikone i gumbi početnog ekrana.
-- Tamna tema koja bolji ugođaj.
-- Jednostavna navigacija kroz pokretač tako da možeš odabrati najbolju za sebe.
-- Organiziraj aplikacije u odjeljke.
+- Tamna tema koja će vam pružiti lakši osjećaj vašeg uređaja.
+- Jednostavna navigacija kroz lanser tako da možete odabrati najbolji za sebe.
+- Organizirajte aplikacije na odjeljke.
 - Izvrsne teme boja.
-- Bez dosadnih oglasa.
-- Pretraži različite pokretače s lakoćom.
-- Uživaj!
+- Nema dosadnih reklama.
+- Uživajte!
 
 Pogledajte cijeli paket Simple Tools ovdje:
 https://www.simplemobiletools.com

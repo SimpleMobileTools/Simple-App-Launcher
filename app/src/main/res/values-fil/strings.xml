@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Simpleng App Launcher</string>
+    <string name="app_launcher_name">App Launcher</string>
+    <string name="enter_launcher_name">Ilagay ang pangalan ng launcher</string>
+    <string name="remove_explanation">Tatanggalin lang nito ang launcher icon mula sa grid, hindi buburahin.</string>
+    <string name="close_app">Isara ang app na ito kapag nag-launch ng iba</string>
+    <string name="toggle_app_name">I-toggle ang visibility ng pangalan ng app</string>
+    <string name="manage_visible_app_icons">Pamahalaan ang mga nakikitang app icon</string>
+</resources>
