@@ -1,0 +1,32 @@
+Mukava kääre suosikkisovellus kuvakkeillesi nopeaa käynnistystä varten. Voit helposti lisätä minkä tahansa sovelluksen käynnistimen, joten sinun ei enää koskaan tarvitse selata turhia sovelluksia löytääkseen tarvitsemasi sovelluksen. Voit myös nimetä käynnistimet uudelleen haluamallasi tavalla.
+
+Voit mukauttaa värejä eri tyyleillä. Tässä launcherissa on myös tumma teema, joka antaa sinulle tasaisemman tunnelman, kun käytät laitettasi.
+
+On mahdollisuus sulkea itse sovellus käynnistettäessä toinen sovellus navigoinnin helpottamiseksi.
+
+Emme voi poistaa ei-toivottuja järjestelmäsovelluksia, voit vain poistaa niiden kuvakkeet ja jättää ne huomiotta.
+
+Mukana on oletusarvoisesti materiaalinen muotoilu ja tumma teema, joka tarjoaa loistavan käyttökokemuksen helppokäyttöisyyttä varten. Internet-yhteyden puuttuminen antaa sinulle enemmän yksityisyyttä, turvallisuutta ja vakautta kuin muut sovellukset. Tämän launcherin avulla sinun ei tarvitse yhdistää laitettasi mihinkään verkkoon. Asenna se vain ja käytä sitä.
+
+Ei sisällä mainoksia tai tarpeettomia käyttöoikeuksia. Se on täysin avointa lähdekoodia ja tarjoaa muokattavia värejä ja tumman teeman, jotta kotinäyttösi näyttää upeammalta. Tämän launcherin avulla voit nauttia erilaisista uusista ja parannetuista kuvakkeista ja malleista, joita ei ole saatavilla missään muussa sovelluksen launcherissa. 
+
+Ominaisuudet:
+
+- Tumma teema, joka antaa laitteellesi pehmeämmän tunnelman.
+- Helppo navigointi kantoraketin läpi, jotta voit valita itsellesi parhaiten sopivan.
+- Järjestä sovelluksesi osioihin.
+- Hienoja väriteemoja.
+- Ei ärsyttäviä mainoksia.
+- Nauti!
+
+Tutustu koko Simple Tools -pakettiin täällä:
+https://www.simplemobiletools.com
+
+Facebook:
+https://www.facebook.com/simplemobiletools
+
+Reddit:
+https://www.reddit.com/r/SimpleMobileTools
+
+Telegram:
+https://t.me/SimpleMobileTools
