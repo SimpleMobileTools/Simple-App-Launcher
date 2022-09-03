@@ -1,1 +1,1 @@
-Soporte simple para apps para la administración rápida y fácil de íconos
+Un soporte simple para un rápido acceso a sus aplicaciones favoritas y administración sencilla de íconos
