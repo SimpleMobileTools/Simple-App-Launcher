@@ -8,7 +8,7 @@ No podemos desinstalar las aplicaciones del sistema no deseadas, sólo puedes el
 
 Viene con material design y tema oscuro por defecto, proporciona una gran experiencia de usuario para facilitar el uso. La falta de acceso a internet te da más privacidad, seguridad y estabilidad que otras apps. Con este lanzador, no tienes que conectar tu dispositivo con ninguna red. Simplemente instálalo y úsalo.
 
-No contiene anuncios ni permisos innecesarios. Es totalmente opensource, proporciona colores personalizables y un tema oscuro para que tu pantalla de inicio tenga un aspecto más impresionante. Con este lanzador, puedes disfrutar de diferentes iconos y diseños nuevos y mejorados que no están disponibles en ningún otro lanzador de aplicaciones. 
+No contiene anuncios ni permisos innecesarios. Es totalmente opensource, proporciona colores personalizables y un tema oscuro para que tu pantalla de inicio tenga un aspecto más impresionante. Con este lanzador, puedes disfrutar de diferentes iconos y diseños nuevos y mejorados que no están disponibles en ningún otro lanzador de aplicaciones.
 
 Características:
 
