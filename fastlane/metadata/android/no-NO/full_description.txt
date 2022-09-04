@@ -1,4 +1,4 @@
-En fin wrapper for favorittappikonene dine for rask lansering. Du kan enkelt legge til hvilken som helst startprogrammet for apper, slik at du aldri mer trenger å sveipe gjennom ubrukelige apper for å finne den du trenger. Du kan også gi nytt navn til bæreraketter som du ønsker.
+En fin wrapper for favoritt appikonene dine for rask lansering. Du kan enkelt legge til hvilken som helst startprogrammet for apper, slik at du aldri mer trenger å sveipe gjennom ubrukelige apper for å finne den du trenger. Du kan også gi nytt navn til bæreraketter som du ønsker.
 
 Du kan tilpasse fargene i forskjellige stiler. Denne lanseringen kommer også med mørkt tema for å gi deg en mer jevn følelse mens du bruker enheten.
 
