@@ -8,7 +8,7 @@ Kolay gezinme için farklı bir uygulamayı başlatırken uygulamanın kendisini
 
 Varsayılan olarak materyal tasarım ve koyu tema ile birlikte gelir, kolay kullanım için harika bir kullanıcı deneyimi sağlar. İnternet erişiminin olmaması size diğer uygulamalardan daha fazla gizlilik, güvenlik ve kararlılık sağlar. Bu başlatıcı ile cihazınızı herhangi bir ağa bağlamanız gerekmez. Sadece kurun ve kullanın.
 
-Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, ana ekranınızın daha çarpıcı görünmesini sağlamak için özelleştirilebilir renkler ve koyu tema sağlar. Bu başlatıcı ile, başka hiçbir uygulama başlatıcıda bulunmayan farklı yeni ve geliştirilmiş simgelerin ve tasarımların keyfini çıkarabilirsiniz. 
+Reklam veya gereksiz izinler içermez. Tamamen açık kaynaklıdır, ana ekranınızın daha çarpıcı görünmesini sağlamak için özelleştirilebilir renkler ve koyu tema sağlar. Bu başlatıcı ile, başka hiçbir uygulama başlatıcıda bulunmayan farklı yeni ve geliştirilmiş simgelerin ve tasarımların keyfini çıkarabilirsiniz.
 
 Özellikler:
 
