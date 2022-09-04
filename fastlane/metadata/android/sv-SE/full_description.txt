@@ -8,7 +8,7 @@ Vi kan inte avinstallera oönskade systemappar, du kan bara ta bort deras ikoner
 
 Den levereras med materialdesign och mörkt tema som standard, ger bra användarupplevelse för enkel användning. Avsaknaden av internetåtkomst ger dig mer integritet, säkerhet och stabilitet än andra appar. Med den här lanseringen behöver du inte ansluta din enhet till något nätverk. Det är bara att installera den och använda den.
 
-Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger och mörkt tema för att få din startskärm att se mer fantastisk ut. Med den här lanseringen kan du njuta av olika nya och förbättrade ikoner och mönster som inte finns i någon annan appstartare. 
+Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger och mörkt tema för att få din startskärm att se mer fantastisk ut. Med den här lanseringen kan du njuta av olika nya och förbättrade ikoner och mönster som inte finns i någon annan appstartare.
 
 Funktioner:
 
