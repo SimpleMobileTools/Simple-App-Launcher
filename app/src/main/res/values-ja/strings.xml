@@ -5,8 +5,8 @@
     <string name="enter_launcher_name">ランチャーの名前を入力してください</string>
     <string name="remove_explanation">この操作は実際のアプリをアンインストールするのではなく、一覧からアプリのアイコンを削除するだけです。</string>
     <string name="close_app">別のアプリを起動するときにこのアプリを閉じる</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="toggle_app_name">アプリ名の表示/非表示</string>
+    <string name="manage_visible_app_icons">表示するアプリアイコンの管理</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
