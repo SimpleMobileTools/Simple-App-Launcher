@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Inicializador de Aplicativos Simples</string>
-    <string name="app_launcher_name">Inicializador de aplicativos</string>
-    <string name="enter_launcher_name">Por favor, digite um nome para o inicializador</string>
-    <string name="remove_explanation">Isso removerá apenas o ícone do inicializador desta grade, não desinstalará o aplicativo.</string>
+    <string name="app_name">Iniciador de Aplicativos Simples</string>
+    <string name="app_launcher_name">Iniciador de Aplicativos</string>
+    <string name="enter_launcher_name">Por favor, digite um nome para o iniciador</string>
+    <string name="remove_explanation">Isto só removerá o ícone do iniciador desta grade, não desinstalará o aplicativo.</string>
     <string name="close_app">Fechar este aplicativo ao abrir outro</string>
     <string name="toggle_app_name">Alternar a visibilidade do nome do aplicativo</string>
     <string name="manage_visible_app_icons">Gerenciar ícones de aplicativos visíveis</string>
