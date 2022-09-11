@@ -6,7 +6,7 @@
     <string name="remove_explanation">Acest lucru va elimina doar pictograma lansatorului din această grilă, nu va dezinstala aplicația propriu-zisă.</string>
     <string name="close_app">Închideți această aplicație la lansarea unei alte aplicații</string>
     <string name="toggle_app_name">Comutați vizibilitatea numelui aplicației</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="manage_visible_app_icons">Gestionați pictogramele vizibile ale aplicațiilor</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
