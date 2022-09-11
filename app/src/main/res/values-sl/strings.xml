@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">Enostaven zaganjalnik aplikaci</string>
+    <string name="app_launcher_name">Zaganjalnik aplikacij</string>
     <string name="enter_launcher_name">Vnesite ime zaganjalnika</string>
     <string name="remove_explanation">S tem boste samo odstranili ikono zaganjalnika iz te mreže, ne boste pa odstranili dejanske aplikacije.</string>
     <string name="close_app">Zapri to aplikacijo ob zagonu druge</string>
     <string name="toggle_app_name">Preklapljanje vidnosti imena aplikacije</string>
     <string name="manage_visible_app_icons">Upravljanje vidnih ikon aplikacij</string>
-    <string name="app_name">Enostaven zaganjalnik aplikacij</string>
-    <string name="app_launcher_name">Zaganjalnik aplikacij</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
 </resources>
