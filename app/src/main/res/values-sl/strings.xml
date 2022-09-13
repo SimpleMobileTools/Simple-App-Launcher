@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Enostaven zaganjalnik aplikaci</string>
+    <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Zaganjalnik aplikacij</string>
     <string name="enter_launcher_name">Vnesite ime zaganjalnika</string>
     <string name="remove_explanation">S tem boste samo odstranili ikono zaganjalnika iz te mreže, ne boste pa odstranili dejanske aplikacije.</string>
