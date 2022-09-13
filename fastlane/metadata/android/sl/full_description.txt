@@ -1,23 +1,23 @@
-Lep ovitek za ikone vaših najljubših aplikacij za hiter zagon. Enostavno lahko dodate katerikoli zaganjalnik aplikacij, tako da vam ne bo treba več drseti skozi neuporabne aplikacije, da bi našli tisto, ki jo potrebujete. Zaganjalnike lahko po želji tudi preimenujete.
+Lep program za organizacijo ikon vaših najljubših aplikacij za hiter zagon. Enostavno lahko dodate katerikoli zaganjalnik aplikacij, tako da vam ne bo treba več drseti skozi neuporabne aplikacije, da bi našli tisto, ki jo potrebujete. Zaganjalnike lahko po želji tudi preimenujete.
 
-Barve lahko prilagodite v različnih slogih. Ta zaganjalnik je opremljen tudi s temno temo, ki vam med uporabo naprave zagotavlja bolj gladek občutek.
+Barve lahko prilagodite v različnih slogih. Ta zaganjalnik je opremljen tudi s temno temo, ki vam med uporabo naprave zagotavlja bolj uglajen videz.
 
 Za lažjo navigacijo je na voljo možnost zapiranja same aplikacije ob zagonu druge.
 
 Nezaželenih sistemskih aplikacij ne moremo odstraniti, lahko le odstranite njihove ikone in jih ignorirate.
 
-Privzeto ima materialno oblikovanje in temno temo, kar zagotavlja odlično uporabniško izkušnjo za enostavno uporabo. Pomanjkanje dostopa do interneta vam zagotavlja več zasebnosti, varnosti in stabilnosti kot druge aplikacije. S tem zaganjalnikom vam naprave ni treba povezati z nobenim omrežjem. Preprosto ga namestite in ga uporabljajte.
+Privzeto ima materialno oblikovanje in temno temo, kar zagotavlja odlično uporabniško izkušnjo za enostavno uporabo. Pomanjkanje dostopa do interneta vam zagotavlja več zasebnosti, varnosti in stabilnosti kot druge aplikacije. S tem zaganjalnikom vam naprave ni treba povezati z nobenim omrežjem. Preprosto namestite ga in uporabljajte.
 
 Ne vsebuje oglasov ali nepotrebnih dovoljenj. Je popolnoma odprtokoden in zagotavlja prilagodljive barve in temno temo, da bo vaš domači zaslon videti bolj osupljivo. S tem zaganjalnikom lahko uživate v različnih novih in izboljšanih ikonah in vzorcih, ki niso na voljo v nobenem drugem zaganjalniku aplikacij.
 
 Značilnosti:
 
-- Temna tema, ki vam omogoča bolj gladek občutek vaše naprave.
-- Enostavna navigacija po zaganjalniku, da lahko izberete najboljšega zase.
-- Organizirajte svoje aplikacije v razdelke.
-- Izvrstne barvne teme.
-- Brez nadležnih oglasov.
-- Uživajte!
+- temna tema, ki vam omogoča bolj uglajen videz vaše naprave,
+- enostavna navigacija po zaganjalniku po vaši meri,
+- organizirajte svoje aplikacije v razdelke,
+- izvrstne barvne teme,
+- brez nadležnih oglasov,
+- uživajte!
 
 Celoten nabor enostavnih orodij si oglejte tukaj:
 https://www.simplemobiletools.com
