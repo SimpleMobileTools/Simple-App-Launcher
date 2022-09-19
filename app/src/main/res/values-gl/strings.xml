@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple App Launcher</string>
+    <string name="app_name">Lanzador de aplicacións sinxelo</string>
     <string name="app_launcher_name">Iniciador de aplicativos</string>
     <string name="enter_launcher_name">Por favor insira un nome para o iniciador</string>
     <string name="remove_explanation">Esta acción elimina a icona da grella pero non desinstala o aplicativo.</string>
