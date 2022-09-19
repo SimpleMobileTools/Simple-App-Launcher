@@ -23,7 +23,7 @@ fun Context.getAllLaunchers(): ArrayList<AppLauncher> {
     val list = packageManager.queryIntentActivities(intent, PackageManager.PERMISSION_GRANTED)
     for (info in list) {
         val componentInfo = info.activityInfo.applicationInfo
-        val label = componentInfo.loadLabel(packageManager).toString()
+        val label = info.loadLabel(packageManager).toString()
         val packageName = componentInfo.packageName
 
         var drawable: Drawable? = null
