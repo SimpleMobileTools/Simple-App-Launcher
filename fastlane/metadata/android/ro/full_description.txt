@@ -1,25 +1,25 @@
 Un înveliș frumos pentru pictogramele aplicațiilor tale preferate pentru o lansare rapidă. Puteți adăuga cu ușurință orice lansator de aplicații, astfel încât să nu mai trebuiască să treceți prin aplicații inutile pentru a o găsi pe cea de care aveți nevoie. De asemenea, puteți redenumi lansatoarele după cum doriți.
 
-Puteți personaliza culorile în diferite stiluri. Acest lansator vine, de asemenea, cu o temă întunecată pentru a vă oferi o senzație mai lină în timp ce vă utilizați dispozitivul.
+Puteți personaliza culorile în diferite stiluri. Acest lansator vine, de asemenea, cu o temă întunecată pentru a vă oferi o senzație mai plăcută în timp ce vă utilizați dispozitivul.
 
 Există o opțiune de a închide aplicația în sine la lansarea unei alte aplicații pentru o navigare ușoară.
 
 Nu putem dezinstala aplicațiile de sistem nedorite, puteți doar să le eliminați pictogramele și să le ignorați.
 
-Acesta vine cu un design material și o temă întunecată în mod implicit, oferind o experiență de utilizare excelentă pentru o utilizare ușoară. Lipsa accesului la internet vă oferă mai multă intimitate, securitate și stabilitate decât alte aplicații. Cu acest launcher, nu trebuie să vă conectați dispozitivul la nicio rețea. Pur și simplu instalați-l și utilizați-l.
+Acesta vine cu un design material și cu o temă întunecată în mod implicit, oferind o experiență de utilizare excelentă pentru o utilizare ușoară. Lipsa accesului la internet vă oferă mai multă intimitate, securitate și stabilitate decât alte aplicații. Cu acest lansator de aplicații nu trebuie să vă conectați dispozitivul la nicio rețea. Pur și simplu instalați-l și utilizați-l.
 
 Nu conține reclame sau permisiuni inutile. Este complet open-source și oferă culori personalizabile și o temă întunecată pentru a face ca ecranul de pornire să arate mai uimitor. Cu acest lansator, vă puteți bucura de diferite pictograme și modele noi și îmbunătățite, care nu sunt disponibile în niciun alt lansator de aplicații.
 
 Caracteristici:
 
 - Temă întunecată pentru a vă oferi o senzație mai plăcută a dispozitivului dvs.
-- Navigare ușoară prin lansator, astfel încât să puteți alege cea mai bună pentru dvs.
-- Organizați-vă aplicațiile în secțiuni.
+- Navigare ușoară prin intermediul lansatorului, astfel încât să puteți alege cea mai bună pentru dvs.
+- Organizați-vă aplicațiile pe secțiuni.
 - Teme de culori rafinate.
 - Fără reclame enervante.
 - Bucurați-vă!
 
-Descoperiți întreaga suită de instrumente Simple Tools aici:
+Descoperiți întreaga gamă de instrumente Simple Tools aici:
 https://www.simplemobiletools.com
 
 Facebook:
