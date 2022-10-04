@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">简单的应用程序启动器</string>
+    <string name="app_name">简单应用程序启动器</string>
     <string name="app_launcher_name">应用启动器</string>
     <string name="enter_launcher_name">请输入启动器名称</string>
     <string name="remove_explanation">这只会从此网格中删除启动器图标，而不是卸载实际的应用程序。</string>
