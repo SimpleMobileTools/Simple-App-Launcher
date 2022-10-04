@@ -1,1 +1,1 @@
-Un contenidor senzill per a un accés ràpid a les vostres aplicacions preferides
+Un suport personalitzable de les aplicacions preferides, reordeneu les icones com vulgueu.
