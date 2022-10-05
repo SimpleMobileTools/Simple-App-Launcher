@@ -1,1 +1,1 @@
-Egyszerű App Launcher
+Egyszerű alkalmazásindító

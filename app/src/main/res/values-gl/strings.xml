@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Lanzador de aplicacións sinxelo</string>
-    <string name="app_launcher_name">Iniciador de aplicativos</string>
-    <string name="enter_launcher_name">Por favor insira un nome para o iniciador</string>
-    <string name="remove_explanation">Esta acción elimina a icona da grella pero non desinstala o aplicativo.</string>
-    <string name="close_app">Pechar esta app ao abrir unha diferente</string>
+    <string name="app_launcher_name">Lanzador de aplicacións</string>
+    <string name="enter_launcher_name">Por favor introduza un nome do lanzador</string>
+    <string name="remove_explanation">Isto só eliminará a icona do lanzador desta grade, non desinstalará a aplicación real.</string>
+    <string name="close_app">Pecha esta aplicación ao iniciar outra diferente</string>
     <string name="toggle_app_name">Alternar a visibilidade do nome da aplicación</string>
     <string name="manage_visible_app_icons">Xestiona as iconas visibles das aplicacións</string>
     <!--
