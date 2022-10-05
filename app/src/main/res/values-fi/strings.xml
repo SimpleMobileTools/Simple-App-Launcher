@@ -7,6 +7,9 @@
     <string name="close_app">Sulje tämä sovellus, kun toinen käynnistetään</string>
     <string name="toggle_app_name">Sovelluksen nimen näkyvyyden vaihtaminen</string>
     <string name="manage_visible_app_icons">Hallitse näkyviä sovelluskuvakkeita</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Can I make this app the default launcher?</string>
+    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

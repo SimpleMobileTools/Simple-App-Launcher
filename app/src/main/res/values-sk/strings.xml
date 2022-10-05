@@ -7,6 +7,9 @@
     <string name="close_app">Ukončiť túto aplikáciu pri spustení inej</string>
     <string name="toggle_app_name">Prepnúť viditeľnosť názvov apiek</string>
     <string name="manage_visible_app_icons">Spravovať ikonky viditeľných apiek</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Viem nastaviť túto apku predvoleným spúšťačom?</string>
+    <string name="faq_1_text">Nie, táto apka je iba jednoduchým držiakom pre ikonky apiek. Pre skutočný spúśťač si stiahnite našu druhú apku &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Jednoduchý spúšťač&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

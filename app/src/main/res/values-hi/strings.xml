@@ -7,4 +7,7 @@
     <string name="close_app">एक अलग लॉन्च करने पर इस एप्लिकेशन को बंद करें</string>
     <string name="toggle_app_name">ऐप्लिकेशन नाम दृश्यता टॉगल करें</string>
     <string name="manage_visible_app_icons">दृश्यमान ऐप्लिकेशन चिह्न प्रबंधित करें</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Can I make this app the default launcher?</string>
+    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
 </resources>

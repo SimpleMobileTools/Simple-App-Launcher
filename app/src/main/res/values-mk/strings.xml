@@ -7,4 +7,7 @@
     <string name="close_app">Затворете ја оваа апликација на лансирање на друга</string>
     <string name="toggle_app_name">Преклопување на видливоста на името на апликацијата</string>
     <string name="manage_visible_app_icons">Управување со видливите икони на апликации</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Can I make this app the default launcher?</string>
+    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
 </resources>
