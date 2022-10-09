@@ -8,8 +8,8 @@
     <string name="toggle_app_name">アプリ名の表示/非表示</string>
     <string name="manage_visible_app_icons">表示するアプリアイコンの管理</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">このアプリをデフォルトのランチャーにすることはできますか？</string>
+    <string name="faq_1_text">いいえ、これは単なる基本的なアプリアイコンホルダーなので、できません。本当のホーム画面ランチャーは、私たちの他のアプリ&lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;を利用してください。</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
