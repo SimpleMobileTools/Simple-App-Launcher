@@ -43,7 +43,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
 
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL(
-            "CREATE TABLE $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
+            "CREATE TABLE IF NOT EXISTS $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
                 "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)"
         )
         if (context.resources.getBoolean(R.bool.add_default_apps)) {
@@ -89,6 +89,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         val titles = arrayListOf(
             R.string.calculator_short,
             R.string.calendar_short,
+            R.string.camera_short,
             R.string.contacts_short,
             R.string.dialer_short,
             R.string.draw_short,
@@ -96,6 +97,7 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             R.string.flashlight_short,
             R.string.gallery_short,
             R.string.keyboard_short,
+            R.string.launcher_short,
             R.string.music_player_short,
             R.string.notes_short,
             R.string.sms_messenger_short,

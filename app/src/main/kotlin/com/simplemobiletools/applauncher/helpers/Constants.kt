@@ -12,6 +12,7 @@ fun getPredefinedPackageNames(): ArrayList<String> {
     val packages = arrayListOf(
         "com.simplemobiletools.calculator",
         "com.simplemobiletools.calendar.pro",
+        "com.simplemobiletools.camera",
         "com.simplemobiletools.contacts.pro",
         "com.simplemobiletools.dialer",
         "com.simplemobiletools.draw.pro",
@@ -19,6 +20,7 @@ fun getPredefinedPackageNames(): ArrayList<String> {
         "com.simplemobiletools.flashlight",
         "com.simplemobiletools.gallery.pro",
         "com.simplemobiletools.keyboard",
+        "com.simplemobiletools.launcher",
         "com.simplemobiletools.musicplayer",
         "com.simplemobiletools.notes.pro",
         "com.simplemobiletools.smsmessenger",
