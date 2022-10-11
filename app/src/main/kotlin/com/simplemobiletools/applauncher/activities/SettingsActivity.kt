@@ -73,7 +73,7 @@ class SettingsActivity : SimpleActivity() {
         settings_language_holder.beVisibleIf(isTiramisuPlus())
 
         if (settings_use_english_holder.isGone() && settings_language_holder.isGone() && settings_purchase_thank_you_holder.isGone()) {
-            settings_close_app_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
+            settings_close_app_holder.background = resources.getDrawable(R.drawable.ripple_all_corners, theme)
         }
 
         settings_language_holder.setOnClickListener {
