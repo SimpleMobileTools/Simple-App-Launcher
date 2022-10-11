@@ -8,8 +8,8 @@
     <string name="toggle_app_name">Pokaż/Ukryj nazwy aplikacji</string>
     <string name="manage_visible_app_icons">Zarządzaj ikonami widocznych aplikacji</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Czy mogę ustawić tę aplikację jako domyślny launcher\?</string>
+    <string name="faq_1_text">Nie, nie możesz, ponieważ jest to jedynie podstawowy przybornik na ikony aplikacji. Aby mieć prawdziwy launcher, pobierz naszą inną aplikację &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Prosty launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

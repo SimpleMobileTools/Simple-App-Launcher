@@ -8,6 +8,6 @@
     <string name="toggle_app_name">切换应用名称可见性</string>
     <string name="manage_visible_app_icons">管理可见的应用程序图标</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">我可以将此应用设置为默认启动器吗？</string>
+    <string name="faq_1_text">不，你不能这样做，因为这只是一个基本的应用程序图标支架。要想获得一个真正的主屏幕启动器，可以使用我们的另一个应用程序&lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;。</string>
 </resources>
