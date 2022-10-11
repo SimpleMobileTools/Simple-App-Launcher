@@ -8,8 +8,8 @@
     <string name="toggle_app_name">Commuta la visibilitat del nom de les aplicacions</string>
     <string name="manage_visible_app_icons">Gestiona les icones de les aplicacions visibles</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Puc fer que aquesta aplicació sigui el llançador predeterminat\?</string>
+    <string name="faq_1_text">No, no podeu, ja que només és un contenidor bàsic d\'icones d\'aplicació. Per obtenir un llançador de pantalla d\'inici real, aconseguiu la nostra altra aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -8,8 +8,8 @@
     <string name="toggle_app_name">Přepnout viditelnost jména aplikace</string>
     <string name="manage_visible_app_icons">Spravovat viditelné ikony aplikací</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Mohu tuto aplikaci učinit výchozím spouštěčem\?</string>
+    <string name="faq_1_text">Ne, nemůžete, protože se jedná pouze o jednoduchý pořadač pro ikony aplikací. Pro skutečný spouštěč určený pro domovskou obrazovku si nainstalujte naši další aplikaci &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Jednoduchý spouštěč&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -1,35 +1,32 @@
-Un bo envoltorio para as iconas das túas aplicacións favoritas pra un lanzamento rápido. Podes engadir facilmente calquera iniciador de aplicacións, polo que non terás que pasar de novo por aplicacións inútiles para atopar a que necesitas. Tamén podes renomealos lanzadores como queiras. 
- 
-Podes personalizar as cores en diferentes estilos. Este lanzador tamén inclúe un tema escuro para darche unha sensación máis suave mentres usas o teu dispositivo. 
- 
-Atopas unha opción para pechar a propia aplicación ao iniciar outra diferente pra facilitar a navegación. 
- 
-Non podemos desinstalar aplicacións do sistema que non desexadas, só podes eliminar as súas iconas e ignoralas. 
- 
-Vén con deseño de material e tema escuro por defecto, ofrece unha excelente experiencia de usuario para facilitar o seu uso. A falta de acceso a Internet ofrécelle máis privacidade, seguridade e estabilidade que outras aplicacións. Con este iniciador, non tes que conectar o teu dispositivo a ningunha rede. Simplemente instálao e utilízao. 
- 
-Non contén anuncios nin permisos innecesarios. É totalmente de código aberto, ofrece cores personalizables e un tema escuro para facer que a pantalla de inicio pareza máis impresionante. Con este lanzador, podes gozar de diferentes iconas e deseños novos e mellorados que non están dispoñibles en ningún outro lanzador de aplicacións. 
- 
-Característica: 
- 
-- Tema escuro para darlle unha sensación máis suave ao teu dispositivo. 
-- Fácil navegación no lanzador pra que poidas escoller o mellor para ti. 
-- Organiza as túas aplicacións por seccións. 
-- Temas de cores exquisitos. 
-- Sen anuncios molestos. 
-- Goce. 
- 
+Un bo envoltorio para as iconas das túas aplicacións favoritas para un lanzamento rápido. Podes engadir facilmente calquera iniciador de aplicacións, polo que non terás que pasar de novo por aplicacións inútiles para atopar a que necesitas. Tamén podes renomear os lanzadores como queiras.
+
+Podes personalizalas cores en diferentes estilos. Este lanzador tamén inclúe un tema escuro para darche unha sensación máis suave mentres usas o teu dispositivo.
+
+Unha opción para pechar a propia aplicación ao iniciar outra diferente para facilitar a navegación.
+
+Non podemos desinstalar aplicacións do sistema non desexadas, só podes eliminar as súas iconas e ignoralas.
+
+Vén cun deseño de material e tema escuro por defecto, ofrece unha excelente experiencia o usuario para facilitalo seu uso. A falta de acceso a Internet ofrécelle máis privacidade, seguridade e estabilidade que outras aplicacións. Con este iniciador, non tes que conectar o teu dispositivo a ningunha rede. Simplemente instálao e utilízao.
+
+Non contén anuncios nin permisos innecesarios. É totalmente de código aberto, ofrece cores personalizables e un tema escuro para facer que a túa pantalla de inicio pareza máis impresionante. Con este lanzador, podes gozar de diferentes iconas e deseños novos e mellorados que non están dispoñibles en ningún outro lanzador de aplicacións.
+
+Característica:
+
+- Tema escuro para darlle unha sensación máis suave ao teu dispositivo.
+- Fácil navegación no lanzador para que poidas escollelo mellor para ti.
+- Organiza as túas aplicacións por seccións.
+- Temas de cores exquisitos.
+- Sen anuncios molestos.
+- Goza.
+
 Consulte o conxunto completo de ferramentas simples aquí:
-https://www.simplemobiletools.com 
- 
- 
+https://www.simplemobiletools.com
+
 Facebook:
-https://www.facebook.com/simplemobiletools 
- 
- 
+https://www.facebook.com/simplemobiletools
+
 Reddit:
-https://www.reddit.com/r/SimpleMobileTools 
- 
- 
+https://www.reddit.com/r/SimpleMobileTools
+
 Telegram:
 https://t.me/SimpleMobileTools
