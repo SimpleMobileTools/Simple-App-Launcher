@@ -8,8 +8,8 @@
     <string name="toggle_app_name">تبديل رؤية اسم التطبيق</string>
     <string name="manage_visible_app_icons">إدارة أيقونات التطبيقات المرئية</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">هل يمكنني جعل هذا التطبيق المشغل الافتراضي؟</string>
+    <string name="faq_1_text">كلا ، لا يمكنك ذلك لأن هذا مجرد حامل رمز تطبيق أساسي. للحصول على مشغل شاشة رئيسية حقيقي ، احصل على تطبيقنا الآخر &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher.&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

@@ -8,8 +8,8 @@
     <string name="toggle_app_name">Sichtbarkeit des Anwendungsnamens umschalten</string>
     <string name="manage_visible_app_icons">Verwalten Sie sichtbare App-Symbole</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Kann ich diese Anwendung zum Standard-Startprogramm machen\?</string>
+    <string name="faq_1_text">Nein, das kannst du nicht, da dies nur ein einfacher Anwendungssymbolhalter ist. Für ein echtes Startbildschirm-Startprogramm hole dir unsere andere Anwendung &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
