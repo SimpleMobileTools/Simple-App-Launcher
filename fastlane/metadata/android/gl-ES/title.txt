@@ -1,1 +1,1 @@
-Lanzador de Aplicacións Sinxelo
+Lanzador aplicaciones simple
