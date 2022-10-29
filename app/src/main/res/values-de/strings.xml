@@ -5,8 +5,8 @@
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
     <string name="close_app">Diese Anwendung beim Öffnen einer anderen schließen</string>
-    <string name="toggle_app_name">Sichtbarkeit des Anwendungsnamens umschalten</string>
-    <string name="manage_visible_app_icons">Verwalten Sie sichtbare App-Symbole</string>
+    <string name="toggle_app_name">Sichtbarkeit des App-Namens umschalten</string>
+    <string name="manage_visible_app_icons">Sichtbare App-Symbole verwalten</string>
     <!-- FAQ -->
     <string name="faq_1_title">Kann ich diese Anwendung zum Standard-Startprogramm machen\?</string>
     <string name="faq_1_text">Nein, das kannst du nicht, da dies nur ein einfacher Anwendungssymbolhalter ist. Für ein echtes Startbildschirm-Startprogramm hole dir unsere andere Anwendung &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
