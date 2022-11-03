@@ -5,7 +5,7 @@
     <string name="enter_launcher_name">Indtast venligst et navn på en launcher</string>
     <string name="remove_explanation">Dette fjerner blot ikonet for startprogrammet fra dette gitter, men afinstallerer ikke selve appen.</string>
     <string name="close_app">Luk denne app ved at starte en anden app</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="toggle_app_name">App navn synlighed til/fra</string>
     <string name="manage_visible_app_icons">Manage visible app icons</string>
     <!-- FAQ -->
     <string name="faq_1_title">Can I make this app the default launcher?</string>
