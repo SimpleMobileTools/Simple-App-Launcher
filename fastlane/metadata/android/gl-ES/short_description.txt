@@ -1,1 +1,1 @@
-Un sencillo soporte para acceder rápidamente, fácil gestión de los iconos
+Soporte persoalizable para as aplicacións favoritas, ponas o teu gusto.

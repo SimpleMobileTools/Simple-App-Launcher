@@ -8,8 +8,8 @@
     <string name="toggle_app_name">Uključi/Isključi vidljivost imena aplikacija</string>
     <string name="manage_visible_app_icons">Upravljaj vidljivim ikonama aplikacija</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Mogu li aplikaciju postaviti kao zadani pokretač\?</string>
+    <string name="faq_1_text">Ne možete jer je ovo samo osnovni držač ikone aplikacije. Za pokretač početnog zaslona nabavite našu drugu aplikaciju &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
