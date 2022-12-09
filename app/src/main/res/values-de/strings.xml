@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Schlichter App-Launcher</string>
+    <string name="app_name">Einfacher App-Launcher</string>
     <string name="app_launcher_name">App-Launcher</string>
     <string name="enter_launcher_name">Bitte gib einen Namen für die Verknüpfung ein</string>
     <string name="remove_explanation">Diese Aktion wird das App-Icon nur aus dem Raster löschen, nicht die eigentliche App deinstallieren.</string>
