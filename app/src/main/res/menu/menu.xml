@@ -24,10 +24,15 @@
         android:title="@string/reduce_column_count"
         app:showAsAction="never" />
     <item
+        android:id="@+id/more_apps_from_us"
+        android:icon="@drawable/ic_google_play_vector"
+        android:title="@string/more_apps_from_us"
+        app:showAsAction="always" />
+    <item
         android:id="@+id/settings"
         android:icon="@drawable/ic_settings_cog_vector"
         android:title="@string/settings"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/about"
         android:icon="@drawable/ic_info_vector"

@@ -84,6 +84,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         main_toolbar.menu.apply {
             findItem(R.id.increase_column_count).isVisible = currentColumnCount < MAX_COLUMN_COUNT
             findItem(R.id.reduce_column_count).isVisible = currentColumnCount > 1
+            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
 
@@ -94,6 +95,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
                 R.id.toggle_app_name -> toggleAppName()
                 R.id.increase_column_count -> increaseColumnCount()
                 R.id.reduce_column_count -> reduceColumnCount()
+                R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.settings -> launchSettings()
                 R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
