@@ -13,8 +13,12 @@ import kotlin.system.exitProcess
 class SettingsActivity : SimpleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
+
+        updateMaterialActivityViews(settings_coordinator, settings_holder)
+        setupMaterialScrollListener(settings_nested_scrollview, settings_toolbar)
     }
 
     override fun onResume() {
@@ -28,32 +32,21 @@ class SettingsActivity : SimpleActivity() {
         setupCloseApp()
         updateTextColors(settings_holder)
 
-        arrayOf(settings_color_customization_label, settings_general_settings_label).forEach {
+        arrayOf(settings_color_customization_section_label, settings_general_settings_label).forEach {
             it.setTextColor(getProperPrimaryColor())
-        }
-
-        arrayOf(settings_color_customization_holder, settings_general_settings_holder).forEach {
-            it.background.applyColorFilter(getProperBackgroundColor().getContrastColor())
         }
     }
 
     private fun setupPurchaseThankYou() {
         settings_purchase_thank_you_holder.beGoneIf(isOrWasThankYouInstalled())
-
-        // make sure the corners at ripple fit the stroke rounded corners
-        if (settings_purchase_thank_you_holder.isGone()) {
-            settings_use_english_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
-            settings_language_holder.background = resources.getDrawable(R.drawable.ripple_top_corners, theme)
-        }
-
         settings_purchase_thank_you_holder.setOnClickListener {
             launchPurchaseThankYouIntent()
         }
     }
 
     private fun setupCustomizeColors() {
-        settings_customize_colors_label.text = getCustomizeColorsString()
-        settings_customize_colors_holder.setOnClickListener {
+        settings_color_customization_label.text = getCustomizeColorsString()
+        settings_color_customization_holder.setOnClickListener {
             handleCustomizeColorsClick()
         }
     }
@@ -71,11 +64,6 @@ class SettingsActivity : SimpleActivity() {
     private fun setupLanguage() {
         settings_language.text = Locale.getDefault().displayLanguage
         settings_language_holder.beVisibleIf(isTiramisuPlus())
-
-        if (settings_use_english_holder.isGone() && settings_language_holder.isGone() && settings_purchase_thank_you_holder.isGone()) {
-            settings_close_app_holder.background = resources.getDrawable(R.drawable.ripple_all_corners, theme)
-        }
-
         settings_language_holder.setOnClickListener {
             launchChangeAppLanguageIntent()
         }
