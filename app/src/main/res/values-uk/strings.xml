@@ -3,8 +3,8 @@
     <string name="app_name">Простий Лаунчер</string>
     <string name="app_launcher_name">Лаунчер</string>
     <string name="enter_launcher_name">Будь-ласка, введіть назву запускача</string>
-    <string name="remove_explanation">Це лише видалить значок запускача з цієї сітки, не деінсталює сам додаток.</string>
-    <string name="close_app">Закрити цей додаток при запуску іншого</string>
+    <string name="remove_explanation">Це лише видалить значок запускача з цієї сітки, не деінсталює сам застосунок.</string>
+    <string name="close_app">Закрити цей застосунок при запуску іншого</string>
     <string name="toggle_app_name">Перемкнути видимість імені програми</string>
     <string name="manage_visible_app_icons">Керувати видимими піктограмами програм</string>
     <!-- FAQ -->
