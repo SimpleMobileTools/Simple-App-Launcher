@@ -2,6 +2,7 @@ package com.simplemobiletools.applauncher.activities
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
@@ -12,17 +13,19 @@ import com.simplemobiletools.applauncher.extensions.dbHelper
 import com.simplemobiletools.applauncher.extensions.getAllLaunchers
 import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
+import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
+import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.views.MyGridLayoutManager
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
-    private val MAX_COLUMN_COUNT = 20
+    private val MAX_COLUMN_COUNT = 15
 
     private var displayedLaunchers = ArrayList<AppLauncher>()
     private var allLaunchers: ArrayList<AppLauncher>? = null
@@ -32,11 +35,15 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private var mStoredTextColor = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        isMaterialActivity = true
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
+
+        updateMaterialActivityViews(main_coordinator, launchers_grid)
+        setupMaterialScrollListener(launchers_grid, main_toolbar)
 
         setupEmptyView()
         setupLaunchers()
@@ -67,6 +74,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         updateTextColors(coordinator_layout)
         add_icons_placeholder.setTextColor(properPrimaryColor)
         launchers_fastscroller.updateColors(properPrimaryColor)
+        (fab.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = navigationBarHeight + resources.getDimension(R.dimen.activity_margin).toInt()
     }
 
     override fun onPause() {
@@ -75,15 +83,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun refreshMenuItems() {
-        val currentColumnCount = if (portrait) {
-            config.portraitColumnCnt
-        } else {
-            config.landscapeColumnCnt
-        }
-
         main_toolbar.menu.apply {
-            findItem(R.id.increase_column_count).isVisible = currentColumnCount < MAX_COLUMN_COUNT
-            findItem(R.id.reduce_column_count).isVisible = currentColumnCount > 1
             findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
@@ -93,8 +93,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.toggle_app_name -> toggleAppName()
-                R.id.increase_column_count -> increaseColumnCount()
-                R.id.reduce_column_count -> reduceColumnCount()
+                R.id.column_count -> changeColumnCount()
                 R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.settings -> launchSettings()
                 R.id.about -> launchAbout()
@@ -181,6 +180,27 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private fun toggleAppName() {
         config.showAppName = !config.showAppName
         setupAdapter(displayedLaunchers)
+    }
+
+    private fun changeColumnCount() {
+        val items = ArrayList<RadioItem>()
+        for (i in 1..MAX_COLUMN_COUNT) {
+            items.add(RadioItem(i, resources.getQuantityString(R.plurals.column_counts, i, i)))
+        }
+
+        val currentColumnCount = (launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        RadioGroupDialog(this, items, currentColumnCount) {
+            val newColumnCount = it as Int
+            if (currentColumnCount != newColumnCount) {
+                (launchers_grid.layoutManager as MyGridLayoutManager).spanCount = newColumnCount
+                if (portrait) {
+                    config.portraitColumnCnt = newColumnCount
+                } else {
+                    config.landscapeColumnCnt = newColumnCount
+                }
+                columnCountChanged()
+            }
+        }
     }
 
     private fun increaseColumnCount() {

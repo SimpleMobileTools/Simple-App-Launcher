@@ -63,7 +63,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:1169d9c222'
+    implementation 'com.github.SimpleMobileTools:Simple-Commons:f282a1f5ab'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
 }
