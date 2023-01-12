@@ -5,11 +5,11 @@
     <string name="enter_launcher_name">Adja meg az indító nevét</string>
     <string name="remove_explanation">Ez csak eltávolítja az indítót erről a rácsról, magát az alkalmazást nem távolítja el.</string>
     <string name="close_app">E alkalmazás bezárása egy másik indításakor</string>
-    <string name="toggle_app_name">Alkalmazásnév láthatóságának váltása</string>
-    <string name="manage_visible_app_icons">Látható alkalmazás ikonok kezelése</string>
+    <string name="toggle_app_name">Alkalmazásnév láthatósága be/ki</string>
+    <string name="manage_visible_app_icons">Látható alkalmazásikonok kezelése</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Alapértelmezetté tehetem ezt az alkalmazást\?</string>
+    <string name="faq_1_text">Nem, mivel ez csak egy egyszerű ikontartó. Egy valódi kezdőképernyős alkalmazásindítóhoz nézze meg az &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Egyszerű indító&lt;/a&gt; alkalmazást.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
