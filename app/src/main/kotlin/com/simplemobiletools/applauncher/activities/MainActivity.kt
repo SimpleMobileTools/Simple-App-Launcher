@@ -27,7 +27,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     private val MAX_COLUMN_COUNT = 15
 
-    private var displayedLaunchers = ArrayList<AppLauncher>()
+    private var launchersIgnoringSearch = ArrayList<AppLauncher>()
     private var allLaunchers: ArrayList<AppLauncher>? = null
     private var zoomListener: MyRecyclerView.MyZoomListener? = null
 
@@ -42,8 +42,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(main_coordinator, launchers_grid, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(launchers_grid, main_toolbar)
+        updateMaterialActivityViews(main_coordinator, launchers_grid, useTransparentNavigation = true, useTopSearchMenu = true)
 
         setupEmptyView()
         setupLaunchers()
@@ -58,7 +57,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(main_toolbar)
+        updateMenuColors()
         if (mStoredTextColor != getProperTextColor()) {
             getGridAdapter()?.updateTextColor(getProperTextColor())
         }
@@ -72,7 +71,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         updateTextColors(coordinator_layout)
-        add_icons_placeholder.setTextColor(properPrimaryColor)
+        no_items_placeholder_2.setTextColor(properPrimaryColor)
         launchers_fastscroller.updateColors(properPrimaryColor)
         (fab.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = navigationBarHeight + resources.getDimension(R.dimen.activity_margin).toInt()
     }
@@ -83,13 +82,21 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     private fun refreshMenuItems() {
-        main_toolbar.menu.apply {
+        main_menu.getToolbar().menu.apply {
             findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
 
     private fun setupOptionsMenu() {
-        main_toolbar.setOnMenuItemClickListener { menuItem ->
+        main_menu.getToolbar().inflateMenu(R.menu.menu)
+        main_menu.toggleHideOnScroll(false)
+        main_menu.setupMenu()
+
+        main_menu.onSearchTextChangedListener = { text ->
+            searchTextChanged(text)
+        }
+
+        main_menu.getToolbar().setOnMenuItemClickListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.sort -> showSortingDialog()
                 R.id.toggle_app_name -> toggleAppName()
@@ -103,34 +110,23 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
     }
 
-    private fun launchSettings() {
-        hideKeyboard()
-        startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    private fun searchTextChanged(text: String) {
+        val launchers = launchersIgnoringSearch.filter { it.title.contains(text, true) }.toMutableList() as ArrayList<AppLauncher>
+        setupAdapter(launchers)
     }
 
-    private fun launchAbout() {
-        val licenses = 0L
-
-        val faqItems = arrayListOf(
-            FAQItem(R.string.faq_1_title, R.string.faq_1_text),
-        )
-
-        if (!resources.getBoolean(R.bool.hide_google_relations)) {
-            faqItems.add(FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons))
-            faqItems.add(FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons))
-        }
-
-        startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, false)
+    private fun updateMenuColors() {
+        updateStatusbarColor(getProperBackgroundColor())
+        main_menu.updateColors()
     }
 
     private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
 
     private fun setupLaunchers() {
-        displayedLaunchers = dbHelper.getLaunchers()
+        launchersIgnoringSearch = dbHelper.getLaunchers()
         checkInvalidApps()
         initZoomListener()
-        setupAdapter(displayedLaunchers)
-        maybeShowEmptyView()
+        setupAdapter(launchersIgnoringSearch)
     }
 
     private fun setupAdapter(launchers: ArrayList<AppLauncher>) {
@@ -166,6 +162,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
             launchers_grid.adapter = this
         }
 
+        maybeShowEmptyView()
         ensureBackgroundThread {
             allLaunchers = getAllLaunchers()
         }
@@ -173,13 +170,13 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun showSortingDialog() {
         ChangeSortingDialog(this) {
-            setupAdapter(displayedLaunchers)
+            setupAdapter(launchersIgnoringSearch)
         }
     }
 
     private fun toggleAppName() {
         config.showAppName = !config.showAppName
-        setupAdapter(displayedLaunchers)
+        setupAdapter(launchersIgnoringSearch)
     }
 
     private fun changeColumnCount() {
@@ -261,7 +258,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun checkInvalidApps() {
         val invalidIds = ArrayList<String>()
-        for ((id, name, packageName) in displayedLaunchers) {
+        for ((id, name, packageName) in launchersIgnoringSearch) {
             val launchIntent = packageManager.getLaunchIntentForPackage(packageName)
             if (launchIntent == null && !packageName.isAPredefinedApp()) {
                 invalidIds.add(id.toString())
@@ -269,7 +266,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         }
 
         dbHelper.deleteLaunchers(invalidIds)
-        displayedLaunchers = displayedLaunchers.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
+        launchersIgnoringSearch = launchersIgnoringSearch.filter { !invalidIds.contains(it.id.toString()) } as ArrayList<AppLauncher>
     }
 
     private fun storeStateVariables() {
@@ -290,7 +287,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun fabClicked() {
         if (allLaunchers != null) {
-            val shownLaunchers = (launchers_grid.adapter as LaunchersAdapter).launchers
+            val shownLaunchers = launchersIgnoringSearch
             AddLaunchersDialog(this, allLaunchers!!, shownLaunchers) {
                 setupLaunchers()
             }
@@ -299,21 +296,42 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
 
     private fun setupEmptyView() {
         val properPrimaryColor = getProperPrimaryColor()
-        add_icons_placeholder.underlineText()
-        add_icons_placeholder.setTextColor(properPrimaryColor)
-        add_icons_placeholder.setOnClickListener {
+        no_items_placeholder_2.underlineText()
+        no_items_placeholder_2.setTextColor(properPrimaryColor)
+        no_items_placeholder_2.setOnClickListener {
             fabClicked()
         }
     }
 
     private fun maybeShowEmptyView() {
-        val emptyViews = arrayOf(add_icons_placeholder, no_items_placeholder)
-        if (displayedLaunchers.isEmpty()) {
-            launchers_fastscroller.fadeOut()
-            emptyViews.forEach { it.fadeIn() }
+        if (getGridAdapter()?.launchers?.isEmpty() == true) {
+            launchers_fastscroller.beGone()
+            no_items_placeholder_2.beVisibleIf(main_menu.getCurrentQuery().isEmpty())
+            no_items_placeholder.beVisible()
         } else {
-            emptyViews.forEach { it.fadeOut() }
-            launchers_fastscroller.fadeIn()
+            no_items_placeholder_2.beGone()
+            no_items_placeholder.beGone()
+            launchers_fastscroller.beVisible()
         }
+    }
+
+    private fun launchSettings() {
+        hideKeyboard()
+        startActivity(Intent(applicationContext, SettingsActivity::class.java))
+    }
+
+    private fun launchAbout() {
+        val licenses = 0L
+
+        val faqItems = arrayListOf(
+            FAQItem(R.string.faq_1_title, R.string.faq_1_text),
+        )
+
+        if (!resources.getBoolean(R.bool.hide_google_relations)) {
+            faqItems.add(FAQItem(R.string.faq_2_title_commons, R.string.faq_2_text_commons))
+            faqItems.add(FAQItem(R.string.faq_6_title_commons, R.string.faq_6_text_commons))
+        }
+
+        startAboutActivity(R.string.app_name, licenses, BuildConfig.VERSION_NAME, faqItems, false)
     }
 }
