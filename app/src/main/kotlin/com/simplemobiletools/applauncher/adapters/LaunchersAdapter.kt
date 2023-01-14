@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
+import com.simplemobiletools.applauncher.LauncherAdapterUpdateListener
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
 import com.simplemobiletools.applauncher.dialogs.EditDialog
@@ -20,7 +21,6 @@ import com.simplemobiletools.commons.helpers.SORT_BY_CUSTOM
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
 import com.simplemobiletools.commons.interfaces.ItemMoveCallback
 import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
-import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.item_launcher_label.view.*
@@ -29,7 +29,7 @@ import java.util.*
 class LaunchersAdapter(
     activity: SimpleActivity,
     val launchers: ArrayList<AppLauncher>,
-    val listener: RefreshRecyclerViewListener,
+    val listener: LauncherAdapterUpdateListener,
     recyclerView: MyRecyclerView,
     itemClick: (Any) -> Unit
 ) : MyRecyclerViewAdapter(activity, recyclerView, itemClick), ItemTouchHelperContract, RecyclerViewFastScroller.OnPopupTextUpdate {
@@ -180,6 +180,8 @@ class LaunchersAdapter(
         removeSelectedItems(positions)
         if (launchers.isEmpty()) {
             listener.refreshItems()
+        } else {
+            listener.refetchItems()
         }
     }
 

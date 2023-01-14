@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.simplemobiletools.applauncher.BuildConfig
+import com.simplemobiletools.applauncher.LauncherAdapterUpdateListener
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
 import com.simplemobiletools.applauncher.dialogs.AddLaunchersDialog
@@ -16,7 +17,6 @@ import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.dialogs.RadioGroupDialog
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.ensureBackgroundThread
-import com.simplemobiletools.commons.interfaces.RefreshRecyclerViewListener
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
@@ -24,7 +24,7 @@ import com.simplemobiletools.commons.views.MyGridLayoutManager
 import com.simplemobiletools.commons.views.MyRecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
+class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     private val MAX_COLUMN_COUNT = 15
 
     private var launchersIgnoringSearch = ArrayList<AppLauncher>()
@@ -275,7 +275,12 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
     }
 
     override fun refreshItems() {
+        main_menu.closeSearch()
         setupLaunchers()
+    }
+
+    override fun refetchItems() {
+        launchersIgnoringSearch = dbHelper.getLaunchers()
     }
 
     private fun checkWhatsNewDialog() {
