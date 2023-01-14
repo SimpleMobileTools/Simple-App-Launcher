@@ -179,7 +179,7 @@ class LaunchersAdapter(
         positions.sortDescending()
         removeSelectedItems(positions)
         if (launchers.isEmpty()) {
-            listener?.refreshItems()
+            listener.refreshItems()
         }
     }
 

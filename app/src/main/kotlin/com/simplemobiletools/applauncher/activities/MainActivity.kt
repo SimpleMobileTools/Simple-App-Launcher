@@ -42,7 +42,7 @@ class MainActivity : SimpleActivity(), RefreshRecyclerViewListener {
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(main_coordinator, launchers_grid)
+        updateMaterialActivityViews(main_coordinator, launchers_grid, useTransparentNavigation = true, useTopSearchMenu = false)
         setupMaterialScrollListener(launchers_grid, main_toolbar)
 
         setupEmptyView()
