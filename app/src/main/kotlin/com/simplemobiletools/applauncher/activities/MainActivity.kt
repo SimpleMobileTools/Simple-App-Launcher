@@ -81,6 +81,14 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
         storeStateVariables()
     }
 
+    override fun onBackPressed() {
+        if (main_menu.isSearchOpen) {
+            main_menu.closeSearch()
+        } else {
+            super.onBackPressed()
+        }
+    }
+
     private fun refreshMenuItems() {
         main_menu.getToolbar().menu.apply {
             findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
