@@ -3,13 +3,13 @@
     <string name="app_name">Simple App Launcher</string>
     <string name="app_launcher_name">Lançador de aplicações</string>
     <string name="enter_launcher_name">Por favor introduza um nome para o launcher</string>
-    <string name="remove_explanation">Esta acção remove o ícone da grelha mas não desinstala a aplicação.</string>
+    <string name="remove_explanation">Esta ação remove o ícone da grelha mas não desinstala a aplicação.</string>
     <string name="close_app">Fechar esta aplicação ao abrir outra</string>
     <string name="toggle_app_name">Alternar a visibilidade do nome do aplicativo</string>
-    <string name="manage_visible_app_icons">Gerenciar ícones de aplicativos visíveis</string>
+    <string name="manage_visible_app_icons">Gerir visibilidade dos ícones</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Posso tornar este o launcher padrão\?\?</string>
+    <string name="faq_1_text">Não. Esta aplicação será apenas para guardar ícones de outras aplicações, como uma pasta. Se quiser um launcher, pode obter um na Google Play &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
