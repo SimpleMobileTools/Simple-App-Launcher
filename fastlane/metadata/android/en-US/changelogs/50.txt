@@ -1,0 +1,2 @@
+ * Added Search
+ * Added some UI and translation improvements
