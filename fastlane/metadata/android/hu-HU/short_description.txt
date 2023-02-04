@@ -1,1 +1,1 @@
-Egyszerű tartó a kedvenc alkalmazások gyors eléréséhez, egyszerű ikonkezeléshez
+Egyszerű tartó a kedvenc alkalmazások gyors eléréséhez, átrendezhető ikonokkal.
