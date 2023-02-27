@@ -1,1 +1,1 @@
-Yksinkertainen App Launcher
+Yksinkertainen sovelluskäynnistin
