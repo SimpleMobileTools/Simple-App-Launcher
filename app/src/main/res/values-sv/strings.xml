@@ -6,10 +6,10 @@
     <string name="remove_explanation">Detta kommer bara att ta bort start-ikonen från rutnätet, inte avinstallera själva appen.</string>
     <string name="close_app">Stäng denna appen när en annan startas</string>
     <string name="toggle_app_name">Växla appnamnets synlighet</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="manage_visible_app_icons">Hantera synliga appikoner</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Kan jag göra denna app min standard hemskärmsapp\?</string>
+    <string name="faq_1_text">Nej, det kan du inte eftersom detta bara är en enkel appikonapp. För en riktig hemskärmsapp, hämta vår andra app&lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

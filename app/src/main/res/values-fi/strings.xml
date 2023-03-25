@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Yksinkertainen Sovelluskäynnistin</string>
+    <string name="app_name">Yksinkertainen sovelluskäynnistin</string>
     <string name="app_launcher_name">Sovelluskäynnistin</string>
-    <string name="enter_launcher_name">Kirjoita sovelluskäynnistimen nimi</string>
-    <string name="remove_explanation">Tämä poistaa vain käynnistyskuvakkeen tästä ruudukosta, ei poista varsinaisen sovelluksen asennusta.</string>
+    <string name="enter_launcher_name">Syötä käynnistimen nimi</string>
+    <string name="remove_explanation">Tämä poistaa vain käynnistyskuvakkeen tästä ruudukosta, eikä varsinaisen sovelluksen asennusta.</string>
     <string name="close_app">Sulje tämä sovellus, kun toinen käynnistetään</string>
-    <string name="toggle_app_name">Sovelluksen nimen näkyvyyden vaihtaminen</string>
-    <string name="manage_visible_app_icons">Hallitse näkyviä sovelluskuvakkeita</string>
+    <string name="toggle_app_name">Kytke sovelluksen nimen näkyvyys</string>
+    <string name="manage_visible_app_icons">Hallitse näytettäviä sovelluskuvakkeita</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Voinko tehdä tästä sovelluksesta oletuskäynnistimen\?</string>
+    <string name="faq_1_text">Et voi, koska tämä on vain yksinkertainen sovelluskuvakkeiden näyttösovellus. Täysverinen kotinäyttö/käynnistinsovelluksemme on &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
