@@ -8,6 +8,6 @@
     <string name="toggle_app_name">I-toggle ang visibility ng pangalan ng app</string>
     <string name="manage_visible_app_icons">Pamahalaan ang mga nakikitang app icon</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">Pwede ko bang gawing default launcher ang app na ito\?</string>
+    <string name="faq_1_text">Hindi, isa lamang itong simpleng lalagyan ng mga app icon. Para sa isang totoong home screen launcher, kunin ang isa pa naming app, &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simpleng Launcher&lt;/a&gt;.</string>
 </resources>
