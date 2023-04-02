@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">مشغل التطبيق البسيط</string>
-    <string name="app_launcher_name">مشغل التطبيق</string>
+    <string name="app_name">مشغل التطبيقات البسيط</string>
+    <string name="app_launcher_name">مشغل التطبيقات</string>
     <string name="enter_launcher_name">يرجى إدخال اسم المشغل</string>
     <string name="remove_explanation">سيؤدي هذا إلى إزالة أيقونة المشغل من هذه الشبكة فقط، وليس إلغاء تثبيت التطبيق الفعلي.</string>
     <string name="close_app">إغلاق هذا التطبيق عند تشغيل تطبيق آخر</string>
