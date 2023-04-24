@@ -1,0 +1,1 @@
+ * Show an empty app at first launch, do not prefill it with our apps

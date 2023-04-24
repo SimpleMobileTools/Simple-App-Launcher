@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.11.2 *(2023-04-24)*
+----------------------------
+
+ * Show an empty app at first launch, do not prefill it with our apps
+
 Version 5.11.1 *(2023-01-14)*
 ----------------------------
 
