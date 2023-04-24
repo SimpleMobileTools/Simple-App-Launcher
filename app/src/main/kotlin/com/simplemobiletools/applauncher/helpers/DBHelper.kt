@@ -14,7 +14,6 @@ import com.simplemobiletools.applauncher.extensions.isAPredefinedApp
 import com.simplemobiletools.applauncher.models.AppLauncher
 import com.simplemobiletools.commons.extensions.getIntValue
 import com.simplemobiletools.commons.extensions.getStringValue
-import com.simplemobiletools.commons.helpers.isRPlus
 
 class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
     private val MAIN_TABLE_NAME = "launchers"
@@ -46,9 +45,6 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
             "CREATE TABLE IF NOT EXISTS $MAIN_TABLE_NAME ($COL_ID INTEGER PRIMARY KEY AUTOINCREMENT, $COL_NAME TEXT, $COL_PKG_NAME TEXT UNIQUE, $COL_POSITION INTEGER," +
                 "$COL_WAS_RENAMED INTEGER, $COL_APP_ORDER INTEGER)"
         )
-        if (context.resources.getBoolean(R.bool.add_default_apps)) {
-            addInitialLaunchers(db)
-        }
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
@@ -82,39 +78,6 @@ class DBHelper private constructor(val context: Context) : SQLiteOpenHelper(cont
         if (oldVersion < 8) {
             val keyboard = AppLauncher(0, context.getString(R.string.keyboard_short), "com.simplemobiletools.keyboard", 0)
             addAppLauncher(keyboard, db)
-        }
-    }
-
-    private fun addInitialLaunchers(db: SQLiteDatabase) {
-        val titles = arrayListOf(
-            R.string.calculator_short,
-            R.string.calendar_short,
-            R.string.camera_short,
-            R.string.contacts_short,
-            R.string.dialer_short,
-            R.string.draw_short,
-            R.string.file_manager_short,
-            R.string.flashlight_short,
-            R.string.gallery_short,
-            R.string.keyboard_short,
-            R.string.launcher_short,
-            R.string.music_player_short,
-            R.string.notes_short,
-            R.string.sms_messenger_short,
-            R.string.thank_you_short,
-            R.string.voice_recorder_short
-        )
-
-        if (isRPlus()) {
-            titles.add(2, R.string.clock_short)
-        }
-
-        val cnt = titles.size
-        val resources = context.resources
-        val packages = getPredefinedPackageNames()
-        for (i in 0 until cnt) {
-            val appLauncher = AppLauncher(0, resources.getString(titles[i]), packages[i], 0)
-            addAppLauncher(appLauncher, db)
         }
     }
 

@@ -4,5 +4,4 @@
     <bool name="hide_google_relations">true</bool>
     <bool name="hide_all_external_links">true</bool>
     <bool name="pretend_thank_you_installed">true</bool>
-    <bool name="add_default_apps">false</bool>
 </resources>
