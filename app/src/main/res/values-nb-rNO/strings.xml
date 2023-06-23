@@ -5,7 +5,7 @@
     <string name="enter_launcher_name">Skriv inn et oppstarternavn</string>
     <string name="remove_explanation">Dette vil kun fjerne oppstarteren fra rutenettet, ikke avinstallere det faktiske programmet.</string>
     <string name="close_app">Lukk denne appen ved å starte en annen</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
+    <string name="toggle_app_name">Vis/skjul appnavn</string>
     <string name="manage_visible_app_icons">Behandle synlige appikoner</string>
     <!-- FAQ -->
     <string name="faq_1_title">Can I make this app the default launcher?</string>
