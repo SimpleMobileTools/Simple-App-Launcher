@@ -1,15 +1,18 @@
 package com.simplemobiletools.applauncher.adapters
 
-import android.view.Menu
-import android.view.MotionEvent
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import android.widget.FrameLayout
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBinding
 import com.qtalk.recyclerviewfastscroller.RecyclerViewFastScroller
 import com.simplemobiletools.applauncher.LauncherAdapterUpdateListener
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.activities.SimpleActivity
+import com.simplemobiletools.applauncher.databinding.ItemLauncherLabelBinding
+import com.simplemobiletools.applauncher.databinding.ItemLauncherNoLabelBinding
 import com.simplemobiletools.applauncher.dialogs.EditDialog
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.applauncher.extensions.dbHelper
@@ -23,7 +26,6 @@ import com.simplemobiletools.commons.interfaces.ItemMoveCallback
 import com.simplemobiletools.commons.interfaces.ItemTouchHelperContract
 import com.simplemobiletools.commons.interfaces.StartReorderDragListener
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.item_launcher_label.view.*
 import java.util.*
 
 class LaunchersAdapter(
@@ -72,19 +74,15 @@ class LaunchersAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val layoutId = if (activity.config.showAppName) {
-            R.layout.item_launcher_label
-        } else {
-            R.layout.item_launcher_no_label
-        }
+        val binding = Binding.getByAppConfig(activity.config.showAppName).inflate(layoutInflater, parent, false)
 
-        return createViewHolder(layoutId, parent)
+        return createViewHolder(binding.root)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val launcher = launchers[position]
         holder.bindView(launcher, true, true) { itemView, adapterPosition ->
-            setupView(itemView, launcher, holder)
+            setupView(Binding.getByAppConfig(activity.config.showAppName).bind(itemView), launcher, holder)
         }
         bindViewHolder(holder)
     }
@@ -185,14 +183,14 @@ class LaunchersAdapter(
         }
     }
 
-    private fun setupView(view: View, launcher: AppLauncher, holder: ViewHolder) {
-        view.apply {
+    private fun setupView(binding: ItemViewBinding, launcher: AppLauncher, holder: ViewHolder) {
+        binding.apply {
             val isSelected = selectedKeys.contains(launcher.packageName.hashCode())
-            launcher_check?.beInvisibleIf(!isSelected)
-            launcher_label?.text = launcher.title
-            launcher_label?.setTextColor(textColor)
-            launcher_label?.beVisibleIf(activity.config.showAppName)
-            launcher_icon.setImageDrawable(launcher.drawable!!)
+            launcherCheck?.beInvisibleIf(!isSelected)
+            launcherLabel?.text = launcher.title
+            launcherLabel?.setTextColor(textColor)
+            launcherLabel?.beVisibleIf(activity.config.showAppName)
+            launcherIcon.setImageDrawable(launcher.drawable!!)
 
             val bottomPadding = if (activity.config.showAppName) {
                 0
@@ -200,11 +198,11 @@ class LaunchersAdapter(
                 iconPadding
             }
 
-            launcher_icon.setPadding(iconPadding, iconPadding, iconPadding, bottomPadding)
-            launcher_drag_handle.beVisibleIf(isChangingOrder)
+            launcherIcon.setPadding(iconPadding, iconPadding, iconPadding, bottomPadding)
+            launcherDragHandle.beVisibleIf(isChangingOrder)
             if (isChangingOrder) {
-                launcher_drag_handle.applyColorFilter(textColor)
-                launcher_drag_handle.setOnTouchListener { v, event ->
+                launcherDragHandle.applyColorFilter(textColor)
+                launcherDragHandle.setOnTouchListener { v, event ->
                     if (event.action == MotionEvent.ACTION_DOWN) {
                         startReorderDragListener.requestDrag(holder)
                     }
@@ -213,7 +211,7 @@ class LaunchersAdapter(
             }
 
             if (isSelected) {
-                launcher_check?.background?.applyColorFilter(properPrimaryColor)
+                launcherCheck?.background?.applyColorFilter(properPrimaryColor)
             }
         }
     }
@@ -238,4 +236,64 @@ class LaunchersAdapter(
     override fun onRowSelected(myViewHolder: ViewHolder?) {}
 
     override fun onChange(position: Int) = launchers.getOrNull(position)?.getBubbleText() ?: ""
+
+    private sealed interface Binding {
+        companion object {
+            fun getByAppConfig(showAppName: Boolean): Binding {
+                return if (showAppName) {
+                    ItemLauncherLabel
+                } else {
+                    ItemLauncherNoLabel
+                }
+            }
+        }
+
+        fun inflate(layoutInflater: LayoutInflater, viewGroup: ViewGroup, attachToRoot: Boolean): ItemViewBinding
+        fun bind(view: View): ItemViewBinding
+
+        data object ItemLauncherLabel : Binding {
+            override fun inflate(layoutInflater: LayoutInflater, viewGroup: ViewGroup, attachToRoot: Boolean): ItemViewBinding {
+                return ItemLauncherLabelBindingAdapter(ItemLauncherLabelBinding.inflate(layoutInflater, viewGroup, attachToRoot))
+            }
+
+            override fun bind(view: View): ItemViewBinding {
+                return ItemLauncherLabelBindingAdapter(ItemLauncherLabelBinding.bind(view))
+            }
+        }
+
+        data object ItemLauncherNoLabel : Binding {
+            override fun inflate(layoutInflater: LayoutInflater, viewGroup: ViewGroup, attachToRoot: Boolean): ItemViewBinding {
+                return ItemLauncherNoLabelBindingAdapter(ItemLauncherNoLabelBinding.inflate(layoutInflater, viewGroup, attachToRoot))
+            }
+
+            override fun bind(view: View): ItemViewBinding {
+                return ItemLauncherNoLabelBindingAdapter(ItemLauncherNoLabelBinding.bind(view))
+            }
+        }
+    }
+
+    private interface ItemViewBinding : ViewBinding {
+        val launcherCheck: ImageView
+        val launcherIcon: ImageView
+        val launcherDragHandle: ImageView
+        val launcherLabel: TextView?
+    }
+
+    private class ItemLauncherLabelBindingAdapter(val binding: ItemLauncherLabelBinding) : ItemViewBinding {
+        override val launcherCheck: ImageView = binding.launcherCheck
+        override val launcherIcon: ImageView = binding.launcherIcon
+        override val launcherDragHandle: ImageView = binding.launcherDragHandle
+        override val launcherLabel: TextView = binding.launcherLabel
+
+        override fun getRoot(): View = binding.root
+    }
+
+    private class ItemLauncherNoLabelBindingAdapter(val binding: ItemLauncherNoLabelBinding) : ItemViewBinding {
+        override val launcherCheck: ImageView = binding.launcherCheck
+        override val launcherIcon: ImageView = binding.launcherIcon
+        override val launcherDragHandle: ImageView = binding.launcherDragHandle
+        override val launcherLabel: TextView? = null
+
+        override fun getRoot(): View = binding.root
+    }
 }

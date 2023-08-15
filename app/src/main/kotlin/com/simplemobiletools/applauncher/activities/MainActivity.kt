@@ -7,6 +7,7 @@ import com.simplemobiletools.applauncher.BuildConfig
 import com.simplemobiletools.applauncher.LauncherAdapterUpdateListener
 import com.simplemobiletools.applauncher.R
 import com.simplemobiletools.applauncher.adapters.LaunchersAdapter
+import com.simplemobiletools.applauncher.databinding.ActivityMainBinding
 import com.simplemobiletools.applauncher.dialogs.AddLaunchersDialog
 import com.simplemobiletools.applauncher.dialogs.ChangeSortingDialog
 import com.simplemobiletools.applauncher.extensions.config
@@ -22,11 +23,13 @@ import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
 import com.simplemobiletools.commons.views.MyGridLayoutManager
 import com.simplemobiletools.commons.views.MyRecyclerView
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
-    private val MAX_COLUMN_COUNT = 15
+    companion object {
+        private const val MAX_COLUMN_COUNT = 15
+    }
 
+    private val binding by lazy(LazyThreadSafetyMode.NONE) { ActivityMainBinding.inflate(layoutInflater) }
     private var launchersIgnoringSearch = ArrayList<AppLauncher>()
     private var allLaunchers: ArrayList<AppLauncher>? = null
     private var zoomListener: MyRecyclerView.MyZoomListener? = null
@@ -37,12 +40,12 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
         appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
 
-        updateMaterialActivityViews(main_coordinator, launchers_grid, useTransparentNavigation = true, useTopSearchMenu = true)
+        updateMaterialActivityViews(binding.mainCoordinator, binding.launchersGrid, useTransparentNavigation = true, useTopSearchMenu = true)
 
         setupEmptyView()
         setupLaunchers()
@@ -50,7 +53,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
         storeStateVariables()
         setupGridLayoutManager()
 
-        fab.setOnClickListener {
+        binding.fab.setOnClickListener {
             fabClicked()
         }
     }
@@ -70,10 +73,13 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
             }
         }
 
-        updateTextColors(coordinator_layout)
-        no_items_placeholder_2.setTextColor(properPrimaryColor)
-        launchers_fastscroller.updateColors(properPrimaryColor)
-        (fab.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = navigationBarHeight + resources.getDimension(R.dimen.activity_margin).toInt()
+        binding.apply {
+            updateTextColors(coordinatorLayout)
+            noItemsPlaceholder2.setTextColor(properPrimaryColor)
+            launchersFastscroller.updateColors(properPrimaryColor)
+            (fab.layoutParams as CoordinatorLayout.LayoutParams).bottomMargin = navigationBarHeight + resources.getDimension(R.dimen.activity_margin).toInt()
+
+        }
     }
 
     override fun onPause() {
@@ -82,39 +88,41 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     override fun onBackPressed() {
-        if (main_menu.isSearchOpen) {
-            main_menu.closeSearch()
+        if (binding.mainMenu.isSearchOpen) {
+            binding.mainMenu.closeSearch()
         } else {
             super.onBackPressed()
         }
     }
 
     private fun refreshMenuItems() {
-        main_menu.getToolbar().menu.apply {
+        binding.mainMenu.getToolbar().menu.apply {
             findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
 
     private fun setupOptionsMenu() {
-        main_menu.getToolbar().inflateMenu(R.menu.menu)
-        main_menu.toggleHideOnScroll(false)
-        main_menu.setupMenu()
+        binding.mainMenu.apply {
+            getToolbar().inflateMenu(R.menu.menu)
+            toggleHideOnScroll(false)
+            setupMenu()
 
-        main_menu.onSearchTextChangedListener = { text ->
-            searchTextChanged(text)
-        }
-
-        main_menu.getToolbar().setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.sort -> showSortingDialog()
-                R.id.toggle_app_name -> toggleAppName()
-                R.id.column_count -> changeColumnCount()
-                R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
-                R.id.settings -> launchSettings()
-                R.id.about -> launchAbout()
-                else -> return@setOnMenuItemClickListener false
+            onSearchTextChangedListener = { text ->
+                searchTextChanged(text)
             }
-            return@setOnMenuItemClickListener true
+
+            getToolbar().setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.sort -> showSortingDialog()
+                    R.id.toggle_app_name -> toggleAppName()
+                    R.id.column_count -> changeColumnCount()
+                    R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
+                    R.id.settings -> launchSettings()
+                    R.id.about -> launchAbout()
+                    else -> return@setOnMenuItemClickListener false
+                }
+                return@setOnMenuItemClickListener true
+            }
         }
     }
 
@@ -125,10 +133,10 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
 
     private fun updateMenuColors() {
         updateStatusbarColor(getProperBackgroundColor())
-        main_menu.updateColors()
+        binding.mainMenu.updateColors()
     }
 
-    private fun getGridAdapter() = launchers_grid.adapter as? LaunchersAdapter
+    private fun getGridAdapter() = binding.launchersGrid.adapter as? LaunchersAdapter
 
     private fun setupLaunchers() {
         launchersIgnoringSearch = dbHelper.getLaunchers()
@@ -145,7 +153,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
             activity = this,
             launchers = launchers,
             listener = this,
-            recyclerView = launchers_grid,
+            recyclerView = binding.launchersGrid,
         ) {
             hideKeyboard()
             val launchIntent = packageManager.getLaunchIntentForPackage((it as AppLauncher).packageName)
@@ -167,7 +175,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
             }
         }.apply {
             setupZoomListener(zoomListener)
-            launchers_grid.adapter = this
+            binding.launchersGrid.adapter = this
         }
 
         maybeShowEmptyView()
@@ -193,11 +201,11 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
             items.add(RadioItem(i, resources.getQuantityString(R.plurals.column_counts, i, i)))
         }
 
-        val currentColumnCount = (launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        val currentColumnCount = (binding.launchersGrid.layoutManager as MyGridLayoutManager).spanCount
         RadioGroupDialog(this, items, currentColumnCount) {
             val newColumnCount = it as Int
             if (currentColumnCount != newColumnCount) {
-                (launchers_grid.layoutManager as MyGridLayoutManager).spanCount = newColumnCount
+                (binding.launchersGrid.layoutManager as MyGridLayoutManager).spanCount = newColumnCount
                 if (portrait) {
                     config.portraitColumnCnt = newColumnCount
                 } else {
@@ -209,7 +217,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     private fun increaseColumnCount() {
-        val newColumnCount = ++(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        val newColumnCount = ++(binding.launchersGrid.layoutManager as MyGridLayoutManager).spanCount
         if (portrait) {
             config.portraitColumnCnt = newColumnCount
         } else {
@@ -219,7 +227,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     private fun reduceColumnCount() {
-        val newColumnCount = --(launchers_grid.layoutManager as MyGridLayoutManager).spanCount
+        val newColumnCount = --(binding.launchersGrid.layoutManager as MyGridLayoutManager).spanCount
         if (portrait) {
             config.portraitColumnCnt = newColumnCount
         } else {
@@ -237,7 +245,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     private fun setupGridLayoutManager() {
-        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
+        val layoutManager = binding.launchersGrid.layoutManager as MyGridLayoutManager
         if (portrait) {
             layoutManager.spanCount = config.portraitColumnCnt
         } else {
@@ -246,7 +254,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     private fun initZoomListener() {
-        val layoutManager = launchers_grid.layoutManager as MyGridLayoutManager
+        val layoutManager = binding.launchersGrid.layoutManager as MyGridLayoutManager
         zoomListener = object : MyRecyclerView.MyZoomListener {
             override fun zoomIn() {
                 if (layoutManager.spanCount > 1) {
@@ -283,7 +291,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     override fun refreshItems() {
-        main_menu.closeSearch()
+        binding.mainMenu.closeSearch()
         setupLaunchers()
     }
 
@@ -308,23 +316,27 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
     }
 
     private fun setupEmptyView() {
-        val properPrimaryColor = getProperPrimaryColor()
-        no_items_placeholder_2.underlineText()
-        no_items_placeholder_2.setTextColor(properPrimaryColor)
-        no_items_placeholder_2.setOnClickListener {
-            fabClicked()
+        binding.noItemsPlaceholder2.apply {
+            val properPrimaryColor = getProperPrimaryColor()
+            underlineText()
+            setTextColor(properPrimaryColor)
+            setOnClickListener {
+                fabClicked()
+            }
         }
     }
 
     private fun maybeShowEmptyView() {
-        if (getGridAdapter()?.launchers?.isEmpty() == true) {
-            launchers_fastscroller.beGone()
-            no_items_placeholder_2.beVisibleIf(main_menu.getCurrentQuery().isEmpty())
-            no_items_placeholder.beVisible()
-        } else {
-            no_items_placeholder_2.beGone()
-            no_items_placeholder.beGone()
-            launchers_fastscroller.beVisible()
+        binding.apply {
+            if (getGridAdapter()?.launchers?.isEmpty() == true) {
+                launchersFastscroller.beGone()
+                noItemsPlaceholder2.beVisibleIf(mainMenu.getCurrentQuery().isEmpty())
+                noItemsPlaceholder.beVisible()
+            } else {
+                noItemsPlaceholder2.beGone()
+                noItemsPlaceholder.beGone()
+                launchersFastscroller.beVisible()
+            }
         }
     }
 
