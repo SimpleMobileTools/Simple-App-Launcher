@@ -1,79 +1,93 @@
 package com.simplemobiletools.applauncher.activities
 
 import android.os.Bundle
-import com.simplemobiletools.applauncher.R
+import com.simplemobiletools.applauncher.databinding.ActivitySettingsBinding
 import com.simplemobiletools.applauncher.extensions.config
 import com.simplemobiletools.commons.extensions.*
 import com.simplemobiletools.commons.helpers.NavigationIcon
 import com.simplemobiletools.commons.helpers.isTiramisuPlus
-import kotlinx.android.synthetic.main.activity_settings.*
-import java.util.*
+import java.util.Locale
 import kotlin.system.exitProcess
 
 class SettingsActivity : SimpleActivity() {
+    private val binding by lazy(LazyThreadSafetyMode.NONE) { ActivitySettingsBinding.inflate(layoutInflater) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isMaterialActivity = true
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        setContentView(binding.root)
 
-        updateMaterialActivityViews(settings_coordinator, settings_holder, useTransparentNavigation = true, useTopSearchMenu = false)
-        setupMaterialScrollListener(settings_nested_scrollview, settings_toolbar)
+        binding.apply {
+            updateMaterialActivityViews(settingsCoordinator, settingsHolder, useTransparentNavigation = true, useTopSearchMenu = false)
+            setupMaterialScrollListener(settingsNestedScrollview, settingsToolbar)
+        }
     }
 
     override fun onResume() {
         super.onResume()
-        setupToolbar(settings_toolbar, NavigationIcon.Arrow)
+        setupToolbar(binding.settingsToolbar, NavigationIcon.Arrow)
 
         setupPurchaseThankYou()
         setupCustomizeColors()
         setupUseEnglish()
         setupLanguage()
         setupCloseApp()
-        updateTextColors(settings_holder)
+        updateTextColors(binding.settingsHolder)
 
-        arrayOf(settings_color_customization_section_label, settings_general_settings_label).forEach {
-            it.setTextColor(getProperPrimaryColor())
+        binding.apply {
+            arrayOf(settingsColorCustomizationSectionLabel, settingsGeneralSettingsLabel).forEach {
+                it.setTextColor(getProperPrimaryColor())
+            }
         }
     }
 
     private fun setupPurchaseThankYou() {
-        settings_purchase_thank_you_holder.beGoneIf(isOrWasThankYouInstalled())
-        settings_purchase_thank_you_holder.setOnClickListener {
-            launchPurchaseThankYouIntent()
+        binding.settingsPurchaseThankYouHolder.apply {
+            beGoneIf(isOrWasThankYouInstalled())
+            setOnClickListener {
+                launchPurchaseThankYouIntent()
+            }
         }
     }
 
     private fun setupCustomizeColors() {
-        settings_color_customization_label.text = getCustomizeColorsString()
-        settings_color_customization_holder.setOnClickListener {
-            handleCustomizeColorsClick()
+        binding.apply {
+            settingsColorCustomizationLabel.text = getCustomizeColorsString()
+            settingsColorCustomizationHolder.setOnClickListener {
+                handleCustomizeColorsClick()
+            }
         }
     }
 
     private fun setupUseEnglish() {
-        settings_use_english_holder.beVisibleIf((config.wasUseEnglishToggled || Locale.getDefault().language != "en") && !isTiramisuPlus())
-        settings_use_english.isChecked = config.useEnglish
-        settings_use_english_holder.setOnClickListener {
-            settings_use_english.toggle()
-            config.useEnglish = settings_use_english.isChecked
-            exitProcess(0)
+        binding.apply {
+            settingsUseEnglishHolder.beVisibleIf((config.wasUseEnglishToggled || Locale.getDefault().language != "en") && !isTiramisuPlus())
+            settingsUseEnglish.isChecked = config.useEnglish
+            settingsUseEnglishHolder.setOnClickListener {
+                settingsUseEnglish.toggle()
+                config.useEnglish = settingsUseEnglish.isChecked
+                exitProcess(0)
+            }
         }
     }
 
     private fun setupLanguage() {
-        settings_language.text = Locale.getDefault().displayLanguage
-        settings_language_holder.beVisibleIf(isTiramisuPlus())
-        settings_language_holder.setOnClickListener {
-            launchChangeAppLanguageIntent()
+        binding.apply {
+            settingsLanguage.text = Locale.getDefault().displayLanguage
+            settingsLanguageHolder.beVisibleIf(isTiramisuPlus())
+            settingsLanguageHolder.setOnClickListener {
+                launchChangeAppLanguageIntent()
+            }
         }
     }
 
     private fun setupCloseApp() {
-        settings_close_app.isChecked = config.closeApp
-        settings_close_app_holder.setOnClickListener {
-            settings_close_app.toggle()
-            config.closeApp = settings_close_app.isChecked
+        binding.apply {
+            settingsCloseApp.isChecked = config.closeApp
+            settingsCloseAppHolder.setOnClickListener {
+                settingsCloseApp.toggle()
+                config.closeApp = settingsCloseApp.isChecked
+            }
         }
     }
 }
