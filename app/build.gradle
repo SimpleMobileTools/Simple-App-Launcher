@@ -15,8 +15,8 @@ android {
         applicationId "com.simplemobiletools.applauncher"
         minSdk 23
         targetSdk 34
-        versionCode 51
-        versionName "5.11.2"
+        versionCode 52
+        versionName "5.11.3"
         multiDexEnabled true
         setProperty("archivesBaseName", "app-launcher")
     }
