@@ -29,7 +29,7 @@ class MainActivity : SimpleActivity(), LauncherAdapterUpdateListener {
         private const val MAX_COLUMN_COUNT = 15
     }
 
-    private val binding by lazy(LazyThreadSafetyMode.NONE) { ActivityMainBinding.inflate(layoutInflater) }
+    private val binding by viewBinding(ActivityMainBinding::inflate)
     private var launchersIgnoringSearch = ArrayList<AppLauncher>()
     private var allLaunchers: ArrayList<AppLauncher>? = null
     private var zoomListener: MyRecyclerView.MyZoomListener? = null
