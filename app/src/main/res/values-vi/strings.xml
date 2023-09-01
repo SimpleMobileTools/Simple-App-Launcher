@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple App Launcher</string>
-    <string name="app_launcher_name">App Launcher</string>
-    <string name="enter_launcher_name">Please enter a launcher name</string>
-    <string name="remove_explanation">This will just remove the launcher icon from this grid, not uninstall the actual app.</string>
-    <string name="close_app">Close this app at launching a different one</string>
-    <string name="toggle_app_name">Toggle app name visibility</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
-    <string name="faq_1_title">Can I make this app the default launcher\?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="app_name">Launcher đơn giản</string>
+    <string name="app_launcher_name">Launcher</string>
+    <string name="enter_launcher_name">Vui lòng nhập tên launcher</string>
+    <string name="remove_explanation">Hành động này sẽ chỉ xóa icon của app ra khỏi menu app, và sẽ không gỡ cài đặt App Launcher.</string>
+    <string name="close_app">Đóng ứng dụng này khi khởi chạy một ứng dụng khác</string>
+    <string name="toggle_app_name">Bật/tắt hiển thị tên app</string>
+    <string name="manage_visible_app_icons">Quản lý icon app</string>
+    <string name="faq_1_title">Tôi có thể dùng app này như launcher mặc định không\?</string>
+    <string name="faq_1_text">Không, bạn không thể vì đây cơ bản chỉ nơi chứa các icon để chạy app. Để dùng home screen launcher thực hãy tải xuống app khác của chúng tôi &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
 </resources>
