@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Launcher đơn giản</string>
+    <string name="app_launcher_name">Launcher</string>
+    <string name="enter_launcher_name">Vui lòng nhập tên launcher</string>
+    <string name="remove_explanation">Hành động này sẽ chỉ xóa icon của app ra khỏi menu app, và sẽ không gỡ cài đặt App Launcher.</string>
+    <string name="close_app">Đóng ứng dụng này khi khởi chạy một ứng dụng khác</string>
+    <string name="toggle_app_name">Bật/tắt hiển thị tên app</string>
+    <string name="manage_visible_app_icons">Quản lý icon app</string>
+    <!-- FAQ -->
+    <string name="faq_1_title">Tôi có thể dùng app này như launcher mặc định không\?</string>
+    <string name="faq_1_text">Không, bạn không thể vì đây cơ bản chỉ nơi chứa các icon để chạy app. Để dùng home screen launcher thực hãy tải xuống app khác của chúng tôi &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <!--
+        Haven't found some strings? There's more at
+        https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
+    -->
+</resources>
