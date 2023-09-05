@@ -1,6 +1,11 @@
 Changelog
 ==========
 
+Version 5.11.4 *(2023-09-05)*
+----------------------------
+
+ * Added some UI and translation improvements
+
 Version 5.11.3 *(2023-08-30)*
 ----------------------------
 
