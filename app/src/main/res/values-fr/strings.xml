@@ -2,10 +2,10 @@
 <resources>
     <string name="app_name">Simple lanceur d\'applis</string>
     <string name="app_launcher_name">Lanceur d\'applications</string>
-    <string name="enter_launcher_name">Veuillez entrer un nom de lanceur</string>
-    <string name="remove_explanation">Cette action ne fera que supprimer l\'icône du lanceur de cette liste et ne désinstallera pas l\'application.</string>
+    <string name="enter_launcher_name">Veuillez saisir un nom de lanceur</string>
+    <string name="remove_explanation">Cela supprimera uniquement l\'icône du lanceur de cette grille, mais ne désinstallera pas l\'application.</string>
     <string name="close_app">Fermer cette application lors du lancement d\'une autre</string>
-    <string name="toggle_app_name">Changer la visibilité du nom de l\'appli</string>
+    <string name="toggle_app_name">Activer/désactiver la visibilité du nom de l\'application</string>
     <string name="manage_visible_app_icons">Gérer les icônes d\'application visibles</string>
     <!-- FAQ -->
     <string name="faq_1_title">Puis-je faire de cette application le lanceur par défaut \?</string>
