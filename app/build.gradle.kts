@@ -5,6 +5,11 @@ import org.jetbrains.kotlin.konan.properties.Properties
 plugins {
     alias(libs.plugins.android)
     alias(libs.plugins.kotlinAndroid)
+    base
+}
+
+base {
+    archivesName.set("app-launcher")
 }
 
 val keystorePropertiesFile: File = rootProject.file("keystore.properties")
@@ -23,7 +28,6 @@ android {
         versionName = project.libs.versions.app.version.versionName.get()
         versionCode = project.libs.versions.app.version.versionCode.get().toInt()
         multiDexEnabled = true
-        setProperty("archivesBaseName", "app-launcher")
     }
 
     signingConfigs {
