@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">簡易應用程式啟動器</string>
+    <string name="app_name">Simple 應用程式啟動器</string>
     <string name="app_launcher_name">應用程式啟動器</string>
     <string name="enter_launcher_name">請輸入啟動器名稱</string>
-    <string name="remove_explanation">這只會從畫面移除啟動器圖標，不會解除安裝實際程式。</string>
-    <string name="close_app">當啟動不同程式時，關閉此應用程式</string>
-    <string name="toggle_app_name">開關 app 名顯示</string>
-    <string name="manage_visible_app_icons">Manage visible app icons</string>
+    <string name="remove_explanation">只會將啟動器的圖示從目前的桌面移除，不會實際解除安裝任何應用程式。</string>
+    <string name="close_app">啟動另一款應用程式時關閉當前應用程式</string>
+    <string name="toggle_app_name">切換是否顯示應用程式的名稱</string>
+    <string name="manage_visible_app_icons">管理您想要顯示的應用程式圖示</string>
     <!-- FAQ -->
-    <string name="faq_1_title">Can I make this app the default launcher?</string>
-    <string name="faq_1_text">Nope, you cannot as this is just a basic app icon holder. For a real home screen launcher get our other app &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_title">我能夠將此應用程式設為預設的啟動器嗎？</string>
+    <string name="faq_1_text">很遺憾，您不能夠這麼做，因為此工具僅作為一個基本的應用程式圖示容器。若您需要一個完整功能的應用程式啟動器，歡迎下載我們的另一款應用程式&lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;簡易啟動器&lt;/a&gt;。</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res

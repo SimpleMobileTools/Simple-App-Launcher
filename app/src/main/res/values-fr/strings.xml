@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Simple lanceur d\'applis</string>
+    <string name="app_name">Lanceur d\'applications simple</string>
     <string name="app_launcher_name">Lanceur d\'applications</string>
-    <string name="enter_launcher_name">Veuillez entrer un nom de lanceur</string>
-    <string name="remove_explanation">Cette action ne fera que supprimer l\'icône du lanceur de cette liste et ne désinstallera pas l\'application.</string>
+    <string name="enter_launcher_name">Veuillez saisir un nom de lanceur</string>
+    <string name="remove_explanation">Cela supprimera uniquement l\'icône du lanceur de cette grille, mais ne désinstallera pas l\'application.</string>
     <string name="close_app">Fermer cette application lors du lancement d\'une autre</string>
-    <string name="toggle_app_name">Changer la visibilité du nom de l\'appli</string>
+    <string name="toggle_app_name">Activer/désactiver la visibilité du nom de l\'application</string>
     <string name="manage_visible_app_icons">Gérer les icônes d\'application visibles</string>
     <!-- FAQ -->
     <string name="faq_1_title">Puis-je faire de cette application le lanceur par défaut \?</string>
-    <string name="faq_1_text">Non, vous ne pouvez pas car il s\'agit juste d\'un support d\'icône d\'application basique. Pour un véritable lanceur d\'écran d\'accueil, procurez-vous notre autre application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Lanceur simple&lt;/a&gt;.</string>
+    <string name="faq_1_text">Non, vous ne pouvez pas, puisqu\'il s\'agit seulement d\'un support d\'icône d\'application basique. Pour un véritable lanceur d\'écran d\'accueil, procurez-vous notre autre application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Lanceur simple&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
