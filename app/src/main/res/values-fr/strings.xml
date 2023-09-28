@@ -9,7 +9,7 @@
     <string name="manage_visible_app_icons">Gérer les icônes d\'application visibles</string>
     <!-- FAQ -->
     <string name="faq_1_title">Puis-je faire de cette application le lanceur par défaut \?</string>
-    <string name="faq_1_text">Non, vous ne pouvez pas, puisqu\'il s\'agit seulement d\'un support d\'icône d\'application basique. Pour un véritable lanceur d\'écran d\'accueil, procurez-vous notre autre application &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Lanceur simple&lt;/a&gt;.</string>
+    <string name="faq_1_text">Non, vous ne pouvez pas, puisqu\'il s\'agit seulement d\'un support d\'icône d\'application basique. Pour un véritable lanceur d\'écran d\'accueil, procurez-vous notre autre application : &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;« Lanceur simple »&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
