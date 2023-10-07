@@ -1,1 +1,1 @@
-Једноставни покрениер апл
+Simple App Launcher
