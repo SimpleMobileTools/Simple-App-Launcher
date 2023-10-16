@@ -3,7 +3,7 @@
     <string name="app_name">Eenvoudige Starter</string>
     <string name="app_launcher_name">Starter</string>
     <string name="enter_launcher_name">Voer een naam in</string>
-    <string name="remove_explanation">Hiermee wordt alleen het icoon uit dit overzicht verwijderd, de app zelf blijft geïnstalleerd.</string>
+    <string name="remove_explanation">Hiermee wordt het icoon uit dit overzicht verwijderd, maar de app zelf blijft geïnstalleerd.</string>
     <string name="close_app">Deze app sluiten bij het starten van een andere app</string>
     <string name="toggle_app_name">Namen van apps tonen/verbergen</string>
     <string name="manage_visible_app_icons">Zichtbare app-pictogrammen beheren</string>
