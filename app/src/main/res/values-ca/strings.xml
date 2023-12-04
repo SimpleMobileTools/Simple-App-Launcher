@@ -9,7 +9,7 @@
     <string name="manage_visible_app_icons">Gestiona les icones de les aplicacions visibles</string>
     <!-- FAQ -->
     <string name="faq_1_title">Puc fer que aquesta aplicació sigui el llançador predeterminat\?</string>
-    <string name="faq_1_text">No, no podeu, ja que només és un contenidor bàsic d\'icones d\'aplicació. Per obtenir un llançador de pantalla d\'inici real, aconseguiu la nostra altra aplicació &lt;a href=https://play.google.com/store/apps/details\?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
+    <string name="faq_1_text">No, no podeu, ja que només és un contenidor bàsic d\'icones d\'aplicació. Per a obtenir un llançador de pantalla d\'inici real, aconseguiu la nostra altra aplicació &lt;a href=https://play.google.com/store/apps/details?id=com.simplemobiletools.launcher&gt;Simple Launcher&lt;/a&gt;.</string>
     <!--
         Haven't found some strings? There's more at
         https://github.com/SimpleMobileTools/Simple-Commons/tree/master/commons/src/main/res
