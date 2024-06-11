@@ -31,7 +31,7 @@ Ethereum: 0xB7a2DD6f2408Bce77334655CF5E7639aE31feb30
 Litecoin: LYACbHTKaM9ZubKQGxJ4NRyVy1gHUuztRP  
 Bitcoin Cash: qz6dvmhq5vzkcsypxpp2mnur30muxdah4gvulx3y85  
 Tether: 0x250f9cC32863E59b87037a14955Ed64F879653F0  
-<a href="https://paypal.me/SimpleMobileTools?country.x=SK&locale.x=en_US">Paypal</a>  
+<a href="https://paypal.me/SimpleMobileTools?country.x=SK&locale.x=en_US">PayPal</a>  
 <a href="https://www.patreon.com/tiborkaputa">Patreon</a>
  
 <div style="display:flex;">
